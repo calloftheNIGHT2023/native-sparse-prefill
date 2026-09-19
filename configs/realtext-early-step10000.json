@@ -1,0 +1,68 @@
+{
+  "name": "realtext-early-step10000",
+  "model_id": "EleutherAI/pythia-70m-deduped",
+  "model_revision": "c890c8f6d8f86c36b2af66c3012a14ef1d35d3f3",
+  "dataset_id": "Salesforce/wikitext",
+  "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "dataset_config": "wikitext-2-raw-v1",
+  "device": "cpu",
+  "threads": 4,
+  "sequence_length": 256,
+  "layer_ids": [
+    1,
+    4
+  ],
+  "examples": {
+    "train": 24,
+    "validation": 8,
+    "test": 16
+  },
+  "selection_seed": 20260913,
+  "block_size": 4,
+  "selected_blocks": 8,
+  "probe_blocks": 2,
+  "index_heads": 2,
+  "index_head_dim": 32,
+  "rotary_dim": 16,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "methods": [
+    "selected_only",
+    "outside_probe",
+    "dense_warmup",
+    "full_supervision",
+    "selected_budget_match"
+  ],
+  "updates": 1200,
+  "warmup_updates": 120,
+  "learning_rate": 0.0001,
+  "gradient_clip_norm": 1.0,
+  "evaluation_every": 300,
+  "late_query_start": 128,
+  "primary_metric": "late-query relative attention-output squared error using actual frozen-model value vectors; lower is better",
+  "secondary_metrics": [
+    "teacher block mass",
+    "teacher top-1 recall",
+    "dense teacher KL"
+  ],
+  "candidate_gate": "Both preselected layers must show >1% relative mean output-error reduction versus selected_only and selected_budget_match, with consistent sign for all 3 paired seeds versus selected_only. Gate is only permission to investigate further locally, not evidence of native-training efficacy.",
+  "scope": "Frozen Pythia attention traces from real text; no backbone updates; no Qwen architectural claim; logical score budget is not measured GPU cost.",
+  "limits": [
+    "Small paragraphs rather than long documents",
+    "Pythia pretraining may overlap Wikipedia",
+    "3 indexer seeds do not repeat backbone pretraining",
+    "No test checkpoint selection or post-result parameter sweep"
+  ],
+  "revision_reason": "Predefined check at actual early Pythia checkpoints, keeping every optimization setting identical to repaired final-checkpoint experiment.",
+  "interpretation": "Exploratory frozen early-checkpoint diagnostic; same paragraph split. Not jointly trained sparse backbone or independent cross-model replication.",
+  "model_files": [
+    "config.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "special_tokens_map.json",
+    "model.safetensors"
+  ]
+}

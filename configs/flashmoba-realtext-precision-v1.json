@@ -1,0 +1,32 @@
+{
+  "model_source": "data/realtext-v0-r1/assets/model",
+  "model_id": "EleutherAI/pythia-70m-deduped",
+  "model_revision": "e93a9faa9c77e5d09219f6c868bfc7a1bd65593c",
+  "asset_manifest": "data/realtext-v0-r1/download-manifest.json",
+  "dataset_source": "data/realtext-v0-r1/assets/test.parquet",
+  "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "selection_seed": 2026091537,
+  "contexts": 16,
+  "lengths": [
+    1024,
+    2048
+  ],
+  "block_size": 128,
+  "topks": [
+    2,
+    4
+  ],
+  "dtype": "bfloat16",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 2026091538,
+  "probe_contexts": 4,
+  "scientific_optimizer_updates": 0,
+  "decision": "Do not expand precision-only training unless both K values at length2048 show absolute mean paired NLL change above0.01 with context-bootstrap95CI excluding0. Exploratory selection changes alone do not count as improved quality.",
+  "scope": "Frozen dense-pretrained Pythia70m with all six attention layers replaced for evaluation. Same weights, QKV dtype, blocks, topk and attention kernel between pooling variants. A FP32 pool is rounded back to BF16 before the unchanged router. This is not native sparse training, a new algorithm, long-context beyond2048, or a standard published WikiText perplexity protocol. Input windows are reused public test-corpus material, not pretraining-decontaminated new data.",
+  "text_protocol": "natural_newlines",
+  "protocol_revision_reason": "Inserted EOS per paragraph dominated dense NLL. Replace with newline-joined raw text and no synthetic special token insertion; preserve the excluded pilot and original thresholds.",
+  "excluded_prior_results": [
+    "results/flashmoba-realtext-precision-v0",
+    "results/flashmoba-realtext-precision-v1"
+  ]
+}

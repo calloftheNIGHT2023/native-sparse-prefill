@@ -1,0 +1,64 @@
+{
+  "dense": {
+    "completed_utc": "2026-09-19T09:33:42.728385+00:00",
+    "counts": {
+      "backward_attempts": 225946,
+      "backward_calls": 225946,
+      "engineering_updates": 0,
+      "forward_attempts": 225946,
+      "forward_calls": 225946,
+      "forward_input_tokens": 163224857,
+      "forward_word_exposures": 99998882,
+      "input_tokens": 163224857,
+      "loss_tokens": 162998911,
+      "scientific_updates": 14122,
+      "skipped_zero_target_input_tokens": 0,
+      "skipped_zero_target_word_exposures": 0,
+      "updates": 14122,
+      "windows": 225946,
+      "word_exposures": 99998882
+    },
+    "eval_counts": {
+      "evaluations": 58,
+      "forward_calls": 2784,
+      "input_tokens": 4509790,
+      "loss_tokens": 4507006,
+      "word_exposures": 2767412
+    },
+    "run_wall_hours": 33.02442946062268,
+    "final_panel_nll": 5.033447456358022,
+    "checkpoint_sha256": "a2353f906d35b252a5a8c8de53e24de51463c0a4ec9a78a55c573dd343ebb5b6",
+    "final_model_sha256": "5410c88b6c2e49903a4e7485ab07516564d8e85b47c8c4a7945161ca157595c4"
+  },
+  "sparse": {
+    "completed_utc": "2026-09-19T09:09:34.438786+00:00",
+    "counts": {
+      "backward_attempts": 225946,
+      "backward_calls": 225946,
+      "engineering_updates": 0,
+      "forward_attempts": 225946,
+      "forward_calls": 225946,
+      "forward_input_tokens": 163224857,
+      "forward_word_exposures": 99998882,
+      "input_tokens": 163224857,
+      "loss_tokens": 162998911,
+      "scientific_updates": 14122,
+      "skipped_zero_target_input_tokens": 0,
+      "skipped_zero_target_word_exposures": 0,
+      "updates": 14122,
+      "windows": 225946,
+      "word_exposures": 99998882
+    },
+    "eval_counts": {
+      "evaluations": 58,
+      "forward_calls": 2784,
+      "input_tokens": 4509790,
+      "loss_tokens": 4507006,
+      "word_exposures": 2767412
+    },
+    "run_wall_hours": 31.804434440198044,
+    "final_panel_nll": 4.984511853470196,
+    "checkpoint_sha256": "7bba7918e6dfd31e36f917e2486169d8cc057c072e5bae6adffd6c3a06e17a6c",
+    "final_model_sha256": "55f00595735efbbf3638d4d71893a7917401b593b840ed4265d6ffb8d02ba1d0"
+  }
+}

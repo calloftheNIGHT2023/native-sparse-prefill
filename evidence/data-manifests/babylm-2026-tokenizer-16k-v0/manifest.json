@@ -1,0 +1,286 @@
+{
+  "status": "tokenizer_and_unpacked_record_ledger_verified",
+  "started_utc": "2026-09-17T20:27:56.888471+00:00",
+  "completed_utc": "2026-09-17T20:28:13.107823+00:00",
+  "elapsed_seconds": 16.219240000000354,
+  "script_sha256": "a184fe906fa13f5572c7a97cc91ef14220885510366c7797b426add7e1fd2534",
+  "source_dataset": "BabyLM-community/BabyLM-2026-Strict-Small",
+  "source_revision": "c92ab16b4f08858304b0815706065b3354d8fc0a",
+  "source_manifest_sha256": "4c727e761dfcf8ef77212a1a85165d424733d301534b11d4f09d02c297e85fc0",
+  "tokenizer": {
+    "type": "byte-level BPE",
+    "vocab_size": 16384,
+    "normalizer": null,
+    "add_prefix_space": false,
+    "min_frequency": 2,
+    "special_tokens": {
+      "<|pad|>": 0,
+      "<|bos|>": 1,
+      "<|eos|>": 2
+    },
+    "post_processor": null,
+    "automatic_special_tokens": false,
+    "external_tokenizer_or_weights": false,
+    "training_sources": [
+      "bnc_spoken.train.txt",
+      "childes.train.txt",
+      "gutenberg.train.txt",
+      "open_subtitles.train.txt",
+      "simple_wiki.train.txt",
+      "switchboard.train.txt"
+    ]
+  },
+  "runtime": {
+    "tokenizers": "0.22.2",
+    "numpy": "2.4.2"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "files": [
+    {
+      "source": "bnc_spoken.train.txt",
+      "source_sha256": "8f3042f4104cf356052fda784682d8e8170fd1fd8c795a1c3e172f9eb2ebfa3c",
+      "records": 65220,
+      "whitespace_words": 762073,
+      "text_tokens": 1039290,
+      "zero_word_records": 0,
+      "record_token_p50": 10.0,
+      "record_token_p95": 50.0,
+      "record_token_p99": 86.0,
+      "record_token_max": 382,
+      "records_over_2048_tokens": 0,
+      "records_over_256_tokens": 3,
+      "roundtrip_checks": 65220,
+      "literal_special_occurrences": 0,
+      "ids_file": "bnc_spoken.ids.u32",
+      "offsets_file": "bnc_spoken.offsets.npy",
+      "words_file": "bnc_spoken.words.npy"
+    },
+    {
+      "source": "childes.train.txt",
+      "source_sha256": "c898c0a44f4380ce7a66766acd01e70eebbbd9410a1701ddf89452ea6f5aea45",
+      "records": 531305,
+      "whitespace_words": 2841101,
+      "text_tokens": 5741137,
+      "zero_word_records": 0,
+      "record_token_p50": 10.0,
+      "record_token_p95": 19.0,
+      "record_token_p99": 27.0,
+      "record_token_max": 194,
+      "records_over_2048_tokens": 0,
+      "records_over_256_tokens": 0,
+      "roundtrip_checks": 531305,
+      "literal_special_occurrences": 0,
+      "ids_file": "childes.ids.u32",
+      "offsets_file": "childes.offsets.npy",
+      "words_file": "childes.words.npy"
+    },
+    {
+      "source": "gutenberg.train.txt",
+      "source_sha256": "4ddcf5774a7947293ceb56dc76774f553b534231e7ac636c071559229cf2cb9b",
+      "records": 59934,
+      "whitespace_words": 2557721,
+      "text_tokens": 3482910,
+      "zero_word_records": 0,
+      "record_token_p50": 35.0,
+      "record_token_p95": 187.0,
+      "record_token_p99": 370.0,
+      "record_token_max": 1225,
+      "records_over_2048_tokens": 0,
+      "records_over_256_tokens": 1507,
+      "roundtrip_checks": 59934,
+      "literal_special_occurrences": 0,
+      "ids_file": "gutenberg.ids.u32",
+      "offsets_file": "gutenberg.offsets.npy",
+      "words_file": "gutenberg.words.npy"
+    },
+    {
+      "source": "open_subtitles.train.txt",
+      "source_sha256": "9b21adecf57dd97f611d9442a2f993d2f843278eb24fc98f4165322c1ba5670a",
+      "records": 386046,
+      "whitespace_words": 2282877,
+      "text_tokens": 3687419,
+      "zero_word_records": 0,
+      "record_token_p50": 8.0,
+      "record_token_p95": 20.0,
+      "record_token_p99": 31.0,
+      "record_token_max": 141,
+      "records_over_2048_tokens": 0,
+      "records_over_256_tokens": 0,
+      "roundtrip_checks": 386046,
+      "literal_special_occurrences": 0,
+      "ids_file": "open_subtitles.ids.u32",
+      "offsets_file": "open_subtitles.offsets.npy",
+      "words_file": "open_subtitles.words.npy"
+    },
+    {
+      "source": "simple_wiki.train.txt",
+      "source_sha256": "0ac614aa069ea3908c07c9755bf80bb500d4cee15cd972e9f93cccf89639e9a7",
+      "records": 58709,
+      "whitespace_words": 1531437,
+      "text_tokens": 2333310,
+      "zero_word_records": 0,
+      "record_token_p50": 23.0,
+      "record_token_p95": 119.0,
+      "record_token_p99": 191.0,
+      "record_token_max": 1026,
+      "records_over_2048_tokens": 0,
+      "records_over_256_tokens": 181,
+      "roundtrip_checks": 58709,
+      "literal_special_occurrences": 0,
+      "ids_file": "simple_wiki.ids.u32",
+      "offsets_file": "simple_wiki.offsets.npy",
+      "words_file": "simple_wiki.words.npy"
+    },
+    {
+      "source": "switchboard.train.txt",
+      "source_sha256": "89c99649777be2f76f5054e9f1aa364b7e1a62844e219fe810205be6d99399b5",
+      "records": 2892,
+      "whitespace_words": 24791,
+      "text_tokens": 41348,
+      "zero_word_records": 0,
+      "record_token_p50": 11.0,
+      "record_token_p95": 33.0,
+      "record_token_p99": 47.0,
+      "record_token_max": 84,
+      "records_over_2048_tokens": 0,
+      "records_over_256_tokens": 0,
+      "roundtrip_checks": 2892,
+      "literal_special_occurrences": 0,
+      "ids_file": "switchboard.ids.u32",
+      "offsets_file": "switchboard.offsets.npy",
+      "words_file": "switchboard.words.npy"
+    }
+  ],
+  "total_source_words": 10000000,
+  "total_text_tokens": 16325414,
+  "total_physical_line_records": 1104106,
+  "tokens_include_original_whitespace": true,
+  "inserted_bos_eos_tokens": 0,
+  "truncated_tokens": 0,
+  "packed_training_dataset_ready": false,
+  "document_boundaries_verified": false,
+  "dev_or_test_read": false,
+  "model_training_runs": 0,
+  "scientific_optimizer_updates": 0,
+  "gpu_hours": 0,
+  "isolated_record_topk64_block4_diagnostic": {
+    "dense_causal_pairs": 448258339,
+    "retained_pairs": 421579347,
+    "retained_pair_fraction": 0.9404829990234715,
+    "scope": "Exact combinatorial count conditional on physical-line isolation. All blocks ending <= query are eligible including current completed block; only incomplete tail 0..3 is mandatory. Not verified segmentation, runtime, or quality evidence."
+  },
+  "artifacts": [
+    {
+      "path": "tokenizer.json",
+      "bytes": 1119483,
+      "sha256": "230b9d6993dcaf32f40cec2c44ac79d7d713213616ba2d8e45ad4a96e5a9dbe6"
+    },
+    {
+      "path": "bnc_spoken.ids.u32",
+      "bytes": 4157160,
+      "sha256": "e466ee668a4a50aba752c16ca43b2694440828b32af975752624bdfd9fceafaa"
+    },
+    {
+      "path": "bnc_spoken.offsets.npy",
+      "bytes": 521896,
+      "sha256": "0525ac76ab25803fa78f3b9bdddd234bd1265784f9b3bee4fb4e909f20cfda39"
+    },
+    {
+      "path": "bnc_spoken.words.npy",
+      "bytes": 261008,
+      "sha256": "7471c910776d1431c27437f15166cb2ca10cf9f4beb3c36408aa2672ed565421"
+    },
+    {
+      "path": "childes.ids.u32",
+      "bytes": 22964548,
+      "sha256": "26408ee014b4e882b475dfe26965738916c80bc36cbc44670c1ed55d7953c850"
+    },
+    {
+      "path": "childes.offsets.npy",
+      "bytes": 4250576,
+      "sha256": "3835f08acabd7eaeffec581ab146ce0714a3ab1d321bf5e054898d18b3d6d4c5"
+    },
+    {
+      "path": "childes.words.npy",
+      "bytes": 2125348,
+      "sha256": "bb2ae0a669f044b6f105e5fe041e37a42e5cde420b441aaff5ba14f22ef9af8a"
+    },
+    {
+      "path": "gutenberg.ids.u32",
+      "bytes": 13931640,
+      "sha256": "5b3af1675e02adb951a1dacea99ca58e4f335baca7e183f750f8d4096ee227eb"
+    },
+    {
+      "path": "gutenberg.offsets.npy",
+      "bytes": 479608,
+      "sha256": "37469feeb670ff52580709647c168f63a6fc5b445642e9ba377043bfd41aad8f"
+    },
+    {
+      "path": "gutenberg.words.npy",
+      "bytes": 239864,
+      "sha256": "aa2981004bee8add082f86d35f9e073d534f07693ed25e54c4fdd700e5052a81"
+    },
+    {
+      "path": "open_subtitles.ids.u32",
+      "bytes": 14749676,
+      "sha256": "6bd00e9f0e0cf9cb8a01ce5bcb666457c7bfbb4cf7d6a9dcdbe67bd971aa0e0b"
+    },
+    {
+      "path": "open_subtitles.offsets.npy",
+      "bytes": 3088504,
+      "sha256": "1d14f3436b592a02dea30dd95a4b13729339136fbeb06cd3368ff79db1cf3c18"
+    },
+    {
+      "path": "open_subtitles.words.npy",
+      "bytes": 1544312,
+      "sha256": "32c112632dfe3c094dff18a410dc351a8c05ca016f267ea21fb69221eeda8e3a"
+    },
+    {
+      "path": "simple_wiki.ids.u32",
+      "bytes": 9333240,
+      "sha256": "b85a89930fc31ddfa6581d67194a4bafba5f1f3e6d1fbeec0e12a1bf9a2fd0e0"
+    },
+    {
+      "path": "simple_wiki.offsets.npy",
+      "bytes": 469808,
+      "sha256": "476ed28ac28124199fd10aa5ef01c019e31d1edf22861d26e9acf6c0287977a8"
+    },
+    {
+      "path": "simple_wiki.words.npy",
+      "bytes": 234964,
+      "sha256": "05b6e516365e87ba4453fa317c194d7fdf9e0e6352cf4f2954658798bd5345b3"
+    },
+    {
+      "path": "switchboard.ids.u32",
+      "bytes": 165392,
+      "sha256": "cb17e3f2fa8c8f2130be42d529e4efd4b721efcbde307f43c70a3c62393703e0"
+    },
+    {
+      "path": "switchboard.offsets.npy",
+      "bytes": 23272,
+      "sha256": "5b85e1bb47499cc5723d539bc0653732bdbd21249fdb10f404e3744d34532be6"
+    },
+    {
+      "path": "switchboard.words.npy",
+      "bytes": 11696,
+      "sha256": "70058caa178dc140795f0d6526c751669256f279ab1536854e792428ca4cf100"
+    },
+    {
+      "path": "record-token-length-histogram.json",
+      "bytes": 8849,
+      "sha256": "9a9ed25e18d462ee2ca980867aa243eb1fff5e0b5d794fd428a4fa9e68e35e2e"
+    }
+  ],
+  "diagnostic_correction": {
+    "utc": "2026-09-17T20:31:25.907600+00:00",
+    "reason": "Independent QSA source audit: a newly complete current block must enter top-k, not remain mandatory. Tokenizer and token records unchanged.",
+    "previous_diagnostic": {
+      "dense_causal_pairs": 448258339,
+      "retained_pairs": 421782591,
+      "retained_pair_fraction": 0.9409364072087011,
+      "scope": "Exact combinatorial mask count assuming every physical line is isolated; not verified document policy, not runtime or quality evidence. Includes all complete blocks if <=64 and causal current-block tail. No BOS/EOS added."
+    },
+    "preserved_before": "provenance/babylm-ledger-mask-correction-20260917",
+    "corrected_script_sha256": "17813a667b779071bb1847ea9373ef08900b0952789c563afbb539f0150642ef"
+  }
+}

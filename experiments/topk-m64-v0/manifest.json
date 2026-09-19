@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-09-16T04:59:51.111396+00:00",
+  "upstream_commit": "39d9ac043b271d046a2181a9991e99a26b67bca1",
+  "cutlass_commit": "a2439551c765c5393aebe557ee75d3a0412d2211",
+  "upstream_api_sha256": "39004dc92eed4fc35ac9ff742f04e1a2f6f6dcf466c3a243b6b06a3db7666ca1",
+  "files": {
+    "api.cpp": "bea4be56874cf0298233836688bf9e71696a115af1ab4966af5e3cc45aaf6a1f",
+    "block_info.h": "a5326c0659aa4f3e3b4aa9f068455df0294f65520a78a01f138f87864f420b38",
+    "flash_topk.h": "ddd9f866a5d8b50a722349b45817a77a38ae8fe46fe6f29c8cebe2bc4e3437cf",
+    "flash_topk_kernel.h": "2201e13b30991c06405f7196d6ebf61a22675542816805cd83161fc054b961c2",
+    "flash_topk_launch_template.h": "9e3b9ef363066112a2cb6dba7e5882d1dfa7b8e65fd4dbeeb755f59b3624a738",
+    "flash_topk_static_switch.h": "4d6ca6d997e063ff0c4eafcf3faec6fbb331a4e715a5c2dd7c93a5de93ea4156",
+    "hardware_info.h": "b0d8dac6f11ff5ae549ec8cf2cb6308c5dec0bd48e8ea63d530e6155318e9bfb",
+    "kernel.cu": "e570f3d593e285d3fdb01d419adca3f4106b967918ca827992273e89eccc15a9",
+    "kernel_traits.h": "7259cb6e60e6392001bbf21c8161e5d8522bf348a6e69da0b98d515c6975bd6a",
+    "mask.h": "fcffbbb2f6127ba118d1c3f2c1d72cd0afbfc16aae56753c400300bbd3ecbaf4",
+    "namespace_config.h": "97b493f5d3a12c05b01469af0f8acc6fc2715a81146de24a5fec46d7bbae431f",
+    "utils.h": "921a9ae22ee6a2c2c24b0147789363de1103efe7b602e1c2ed7fbef007ee3ec9"
+  },
+  "namespace": "nsp_topk_m64_v0",
+  "change": "Fused selection query tile128->64 forBF16,head64,K33..64,causal. Same scoring/selection/epilogue math; validate before use. Unmodified upstream headers. Separate module, original wheel untouched.",
+  "upstream_shared_bytes": 106496,
+  "candidate_shared_bytes": 57344
+}

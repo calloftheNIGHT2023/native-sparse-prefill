@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "scope": "engineering_fixture",
+  "upstream_commit": "6f825c291e2c4c78ad33b1935fd64d45f52642dc",
+  "files": [
+    {
+      "path": "toy_blimp.jsonl",
+      "sha256": "6c8a77fb1692a0600c5f390ec32bf0088bf4193a73c91dd3b0fab788271dd999",
+      "task": "blimp",
+      "split": "synthetic",
+      "records": 2,
+      "synthetic": true
+    }
+  ]
+}

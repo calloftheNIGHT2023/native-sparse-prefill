@@ -1,0 +1,18 @@
+{
+  "changes": [
+    "TokenEmbeddings default cuda -> cpu",
+    "prepare_data and prepare_continuous_data seed generation explicitly np.int64 for Windows C-long range"
+  ],
+  "files": [
+    {
+      "path": "zoology/model.py",
+      "upstream_sha256": "69168e62fa6493d778146658ea5683fde62e82b0d0791169c716406463923fc9",
+      "adapted_sha256": "c79e9cad82abce70e1920453c4993a27eb620f1dd2ce5382f80acf3454a7e151"
+    },
+    {
+      "path": "zoology/data/utils.py",
+      "upstream_sha256": "872c9ab7f27958c53b4c1d244ba77ccffb06ce9f2fb737eb7650d321990704ae",
+      "adapted_sha256": "b1131a8939898505cc0ed1a92d1f7f82a99f29e526e0b1f3f4d2bdf9a7a33710"
+    }
+  ]
+}

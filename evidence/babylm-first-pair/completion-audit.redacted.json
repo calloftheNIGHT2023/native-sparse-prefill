@@ -1,0 +1,118 @@
+{
+  "utc": "2026-09-19T16:54:59.184763+00:00",
+  "observed_utc": {
+    "dense": "2026-09-19T16:52:22.292135+00:00",
+    "sparse": "2026-09-19T16:52:22.714616+00:00"
+  },
+  "status": "both_scientific_trajectories_complete_full_quality_evaluation_pending",
+  "checks": {
+    "all_14122_update_counts_order_cursor_backbone_lr_match": true,
+    "data_fingerprint_match": true,
+    "source_hashes_match": true,
+    "initial_backbone_match": true,
+    "dense_parent_administrative_revocation_verified": true,
+    "both_remote_final_checkpoints_match_summary": true,
+    "both_training_complete_at_frozen_word_boundary": true,
+    "both_gpu_compute_process_lists_empty": true
+  },
+  "groups": {
+    "dense": {
+      "completed_utc": "2026-09-19T09:33:42.728385+00:00",
+      "counts": {
+        "backward_attempts": 225946,
+        "backward_calls": 225946,
+        "engineering_updates": 0,
+        "forward_attempts": 225946,
+        "forward_calls": 225946,
+        "forward_input_tokens": 163224857,
+        "forward_word_exposures": 99998882,
+        "input_tokens": 163224857,
+        "loss_tokens": 162998911,
+        "scientific_updates": 14122,
+        "skipped_zero_target_input_tokens": 0,
+        "skipped_zero_target_word_exposures": 0,
+        "updates": 14122,
+        "windows": 225946,
+        "word_exposures": 99998882
+      },
+      "eval_counts": {
+        "evaluations": 58,
+        "forward_calls": 2784,
+        "input_tokens": 4509790,
+        "loss_tokens": 4507006,
+        "word_exposures": 2767412
+      },
+      "run_wall_hours": 33.02442946062268,
+      "training_run_compute_cost_estimate_usd": 17.50294761413002,
+      "checkpoint_check": {
+        "path": "/workspace/native-sparse-prefill/babylm-de-20260918-v0/results/a6000-scientific-pair-20260918-v0/dense/checkpoint.pt",
+        "size": 1144925355,
+        "sha256": "a2353f906d35b252a5a8c8de53e24de51463c0a4ec9a78a55c573dd343ebb5b6",
+        "matches_summary": true
+      },
+      "final_panel_nll": 5.033447456358022,
+      "remote_model_snapshot_count": 19
+    },
+    "sparse": {
+      "completed_utc": "2026-09-19T09:09:34.438786+00:00",
+      "counts": {
+        "backward_attempts": 225946,
+        "backward_calls": 225946,
+        "engineering_updates": 0,
+        "forward_attempts": 225946,
+        "forward_calls": 225946,
+        "forward_input_tokens": 163224857,
+        "forward_word_exposures": 99998882,
+        "input_tokens": 163224857,
+        "loss_tokens": 162998911,
+        "scientific_updates": 14122,
+        "skipped_zero_target_input_tokens": 0,
+        "skipped_zero_target_word_exposures": 0,
+        "updates": 14122,
+        "windows": 225946,
+        "word_exposures": 99998882
+      },
+      "eval_counts": {
+        "evaluations": 58,
+        "forward_calls": 2784,
+        "input_tokens": 4509790,
+        "loss_tokens": 4507006,
+        "word_exposures": 2767412
+      },
+      "run_wall_hours": 31.804434440198044,
+      "training_run_compute_cost_estimate_usd": 16.856350253304964,
+      "checkpoint_check": {
+        "path": "/workspace/native-sparse-prefill/babylm-de-20260918-v0/results/a6000-scientific-sparse-parallel-20260918-v0/sparse/checkpoint.pt",
+        "size": 1162647371,
+        "sha256": "7bba7918e6dfd31e36f917e2486169d8cc057c072e5bae6adffd6c3a06e17a6c",
+        "matches_summary": true
+      },
+      "final_panel_nll": 4.984511853470196,
+      "remote_model_snapshot_count": 19
+    }
+  },
+  "aggregate_scientific_counts": {
+    "scientific_updates": 28244,
+    "input_tokens": 326449714,
+    "loss_tokens": 325997822,
+    "word_exposures": 199997764,
+    "forward_calls": 451892,
+    "backward_calls": 451892
+  },
+  "aggregate_separate_eval_counts": {
+    "evaluations": 116,
+    "forward_calls": 5568,
+    "input_tokens": 9019580,
+    "loss_tokens": 9014012,
+    "word_exposures": 5534824
+  },
+  "final_panel_E_minus_D": -0.04893560288782606,
+  "finding": "Both48-window dev curves worsen substantially after mid-training; consistent with overfitting but full dev and language evaluation pending. Sparse final panel mean slightly lower; no equivalence or speed conclusion.",
+  "raw_log_backup_receipt": "logs\\manual-status-20260919T165216Z\\raw-log-backup-receipt.json",
+  "cost_scope": "Run compute estimates only, not invoice or total project cost; excludes setup/idle/storage. Both Pods currently idle and not stopped.",
+  "automation_still_paused": true,
+  "new_model_calls_this_turn": 0,
+  "weights_downloaded_this_turn": false,
+  "remote_checkpoint_numeric_replay_this_turn": false,
+  "next_action": "User-requested status only. Preserve paused automation and no new experiments; next scientific work is a separately frozen full dev/language evaluation, with final model backup before any Pod deletion."
+}

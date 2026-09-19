@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-13",
+  "purpose": "User-confirmed total research budget and proposed staged spending limits; not a runtime enforcement mechanism",
+  "currency": "USD",
+  "user_confirmed_total_ceiling": 500,
+  "normal_work_envelope": 400,
+  "contingency_reserve": 100,
+  "normal_work_stages": [
+    {
+      "id": "first_cloud_probe_and_screen",
+      "ceiling": 30,
+      "initial_gpu_allocation": 25,
+      "initial_storage_and_misc_allocation": 5,
+      "prerequisites": [
+        "precise novelty screening",
+        "local correctness and mechanism diagnostics",
+        "runnable implementation",
+        "prepared data"
+      ],
+      "completion_guaranteed": false
+    },
+    {
+      "id": "conditional_key_repeats_and_evaluation",
+      "ceiling": 370,
+      "prerequisites": [
+        "useful development signal",
+        "measured per-method throughput",
+        "concrete cumulative costed run list"
+      ],
+      "completion_guaranteed": false
+    }
+  ],
+  "included_costs": [
+    "cloud initialization and compilation",
+    "training including warmup",
+    "necessary baselines and independent seed repeats",
+    "evaluation",
+    "failed retries",
+    "planned cloud storage"
+  ],
+  "excluded_non_cloud_costs": [
+    "existing personal computer purchase",
+    "local electricity",
+    "human time"
+  ],
+  "cloud_jobs_started_by_this_project": 2,
+  "cloud_bill_reconciled": false,
+  "historical_runpod_billing_status": "not_checked",
+  "automatic_budget_enforcement_implemented": false,
+  "on_infeasible_run_list": "reduce claim scope or stop; do not silently increase the total budget",
+  "old_budget_config": "native-sparse-budget-v0.json",
+  "old_budget_status": "historical scenarios only; no default replication or scaling stages",
+  "current_pod_stop_status": "manual_stop_needed_after_verified_backup",
+  "updated_utc": "2026-09-14T02:00:57.626567+00:00"
+}

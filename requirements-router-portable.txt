@@ -1,0 +1,8 @@
+# Clean Linux runtime for the CURRENT MQAR/router study, without Jupyter/system packages.
+# PyTorch/torchvision are installed separately from the official cu124 wheel index.
+numpy==1.26.3
+einops==0.8.2
+pydantic==2.13.5
+pandas==2.2.3
+wandb==0.30.0
+tqdm==4.70.1

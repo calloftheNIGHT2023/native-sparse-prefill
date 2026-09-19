@@ -1,0 +1,35 @@
+--- upstream/zoology/model.py
++++ windows-cpu/zoology/model.py
+@@ -18,7 +18,7 @@
+         word_embed_proj_dim=None,
+         learnable: bool = True,
+         init_type: str = "default",  # "default", "spherical", "normal"
+-        device='cuda',
++        device='cpu',
+         dtype=torch.float32,
+     ):
+         """
+--- upstream/zoology/data/utils.py
++++ windows-cpu/zoology/data/utils.py
+@@ -101,8 +101,8 @@
+     # the same seed for the train and test data segments.
+     MAX_SEED = 2 ** 32
+     np.random.seed(config.seed)
+-    train_seeds = np.random.randint(0, MAX_SEED // 2, size=len(config.train_configs))
+-    test_seeds = np.random.randint(MAX_SEED // 2, MAX_SEED, size=len(config.test_configs))
++    train_seeds = np.random.randint(0, MAX_SEED // 2, size=len(config.train_configs), dtype=np.int64)
++    test_seeds = np.random.randint(MAX_SEED // 2, MAX_SEED, size=len(config.test_configs), dtype=np.int64)
+     factory_kwargs = {"cache_dir": config.cache_dir, "force_cache": config.force_cache}
+     train_segments = _SyntheticDataset([
+         DataSegment.from_config(segment_config, seed=int(seed), **factory_kwargs)
+@@ -127,8 +127,8 @@
+     
+     MAX_SEED = 2 ** 32
+     np.random.seed(config.seed)
+-    train_seeds = np.random.randint(0, MAX_SEED // 2, size=len(config.train_configs))
+-    test_seeds = np.random.randint(MAX_SEED // 2, MAX_SEED, size=len(config.test_configs))
++    train_seeds = np.random.randint(0, MAX_SEED // 2, size=len(config.train_configs), dtype=np.int64)
++    test_seeds = np.random.randint(MAX_SEED // 2, MAX_SEED, size=len(config.test_configs), dtype=np.int64)
+     
+     # Inject embeddings into configs
+     for cfg in config.train_configs + config.test_configs:

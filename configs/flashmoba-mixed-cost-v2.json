@@ -1,0 +1,40 @@
+{
+  "seed": 2026091552,
+  "warmups": 3,
+  "samples": 10,
+  "configurations": [
+    [
+      "amp_bf16",
+      16384
+    ]
+  ],
+  "conditions_topk": [
+    0,
+    4,
+    16
+  ],
+  "rounds": 2,
+  "order": [
+    [
+      0,
+      4,
+      16
+    ],
+    [
+      16,
+      4,
+      0
+    ]
+  ],
+  "per_process_timeout_seconds": 360,
+  "candidate_extension_sha256": "72c3fda9e7d4da701bfc76b0e32f4d80fdbeec70d462c83b87b97f51d887ed1c",
+  "tokens_sha256": "11a156380ff6feed646230ff96b38a75aca668067297aa95d1216affdc91e78a",
+  "screen_max_paired_time_ratio": 0.95,
+  "stop_rule": "Stop a configuration on unchanged numerical tolerance, runtime, OOM or nonfinite failure. Preserve it; do not loosen gates. No automatic training expansion from timing alone.",
+  "scope": "Zero optimizer updates. FP32 master weights and LoRA with either FP32 operations (BF16 attention) or BF16 autocast. 0.5B Qwen2.5, not full-parameter pretraining or Qwen4. Prefill includes a fresh KV cache and final-token logits only; forward/backward includes full-token LM head, FP32 cross entropy and zero_grad, excludes optimizer, input transfer and gradient checks. Timings pair within the same precision and sequence length. Inputs concatenate two previously used training windows; the join is only for cost profiling, not language quality evaluation. No report/test windows or training checkpoint selection. Two reversed-order rounds are timing repeats, not independent training seeds. V1 adaptive cost-only stage; original v0 eager-equivalence failure remains. Not a claim of identical training trajectory to the native eager implementation. V2 prefill-only follow-up after the v1 16K backward OOM. Repeat dense and both sparse conditions from fresh process; exclude the interrupted v1 single dense timing block from paired aggregates. Zero updates; no 16K training success claim.",
+  "prepared_utc": "2026-09-15T17:29:45.225584+00:00",
+  "validation_revision": "Adaptive protocol after v0 native-eager AMP mismatch; v0 remains failed. Identical quantized BF16 QKV and BF16 output with independent FP32 score/softmax/AV arithmetic is the matched reference. Apply unchanged .02 logits, .05 NLL and .10 gradient tolerances to both dense and all-block sparse versus this reference. The v0 .01 dense-vs-sparse equivalence gate is not claimed passed or reused. Same-QKV direct reference and real-length causality checks required. Reference was changed for numerical comparability, not after observing AMP timing outcomes.",
+  "modes": [
+    "prefill"
+  ]
+}

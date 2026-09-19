@@ -1,0 +1,7 @@
+# PyTorch 2.4.1+cu124 and matching torchvision come from the verified Pod image.
+# Install into a fresh venv with --system-site-packages; do not reuse the damaged old volume venv.
+einops==0.8.2
+pydantic==2.13.5
+pandas==2.2.3
+wandb==0.30.0
+tqdm==4.70.1

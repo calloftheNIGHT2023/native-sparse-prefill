@@ -1,0 +1,24 @@
+{
+  "name": "indexer-calibration-v0",
+  "purpose": "Diagnose known zero-score failures on development data. Not a fresh efficacy test or official training reproduction.",
+  "cases": [
+    {"data": "data/realtext-early-step1000", "layer": 1},
+    {"data": "data/realtext-early-step10000", "layer": 4}
+  ],
+  "seeds": [11, 22, 33],
+  "variants": {
+    "legacy": {"affine": false, "scaled": false},
+    "affine_only": {"affine": true, "scaled": false},
+    "scale_only": {"affine": false, "scaled": true},
+    "affine_and_scale": {"affine": true, "scaled": true}
+  },
+  "methods": ["selected_only", "full_supervision", "outside_probe"],
+  "updates": 400,
+  "evaluation_every": 100,
+  "learning_rate": 0.0001,
+  "gradient_clip_norm": 1.0,
+  "threads": 4,
+  "scope": "Same 24 train and 8 development paragraphs from prior runs. Do not load or score the test split. Only RMS gains and positive score scale differ; dimensions, initialization, RoPE and data order held constant.",
+  "decision_rule": "Inspect development all-zero-query rate and nonzero training gradients together with dense-target KL and attention output error. No hyperparameter sweep or selected-seed claim. Calibration improvement is an implementation finding, not a novel sparse-training method.",
+  "cloud_spending_usd": 0
+}

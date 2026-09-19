@@ -1,0 +1,2 @@
+{"synthetic": true, "sentence_good": "The birds are sleeping.", "sentence_bad": "The birds is sleeping.", "field": "agreement", "UID": "synthetic_agreement", "linguistics_term": "subject_verb_agreement"}
+{"synthetic": true, "sentence_good": "A cat can sleep.", "sentence_bad": "A cat can sleeps."}

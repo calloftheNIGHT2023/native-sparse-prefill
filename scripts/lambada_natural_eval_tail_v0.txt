@@ -1,0 +1,25 @@
+  state['k']=0
+  before={n:p.detach().cpu().clone() for n,p in params.items()};selected=[]
+  if job['restore_qk']:
+   selected=[n for n in params if n.endswith('.B') and any('.'+q+'.' in n for q in ['q_proj','k_proj'])];assert len(selected)==48
+   with torch.no_grad():
+    for n in selected:params[n].zero_()
+   assert all(torch.count_nonzero(params[n])==0 for n in selected) and all(torch.equal(params[n].detach().cpu(),before[n]) for n in params if n not in selected)
+  expected_digest=hashlib.sha256(b''.join(p.detach().cpu().numpy().tobytes() for p in params.values())).hexdigest()
+  meta=json.loads((R/'data/lambada-natural-v0/tasks.json').read_text());arrays=np.load(R/'data/lambada-natural-v0/tasks.npz');flat=arrays['input_ids'];offsets=arrays['offsets'];predictions=[]
+  variants=['full','short32'] if job['phase']=='base_gate' else ['full']
+  with torch.no_grad():
+   for variant in variants:
+    for i,item in enumerate(meta):
+     original=flat[offsets[i]:offsets[i+1]];cut=max(0,item['context_length']-32) if variant=='short32' else 0;ids_np=original[cut:];ctx=item['context_length']-cut
+     assert ctx>0 and len(ids_np)-ctx==item['target_length'];ids=torch.tensor(ids_np[:-1][None],device='cuda',dtype=torch.long);target=torch.tensor(ids_np[ctx:],device='cuda',dtype=torch.long)
+     with amp():h=model.model(ids,use_cache=False).last_hidden_state[:,ctx-1:];logits=model.lm_head(h)[0].float()
+     assert len(logits)==len(target);losses=F.cross_entropy(logits,target,reduction='none');guess=logits.argmax(dim=-1)
+     assert torch.isfinite(losses).all();pred=dict(**item,variant=variant,context_tokens_used=ctx,target_token_ids=target.cpu().tolist(),predicted_token_ids=guess.cpu().tolist(),correct=bool(torch.equal(guess,target)),target_nll_sum=float(losses.sum()),token_nll=losses.cpu().tolist());predictions.append(pred)
+     with (out/'task-predictions.jsonl').open('a') as f:f.write(json.dumps(pred)+'\n')
+     if (i+1)%128==0:event('prediction_progress',variant=variant,completed=i+1)
+  assert expected_digest==hashlib.sha256(b''.join(p.detach().cpu().numpy().tobytes() for p in params.values())).hexdigest()
+  base_gate=None
+  if job['phase']=='base_gate':
+   full=np.mean([x['correct'] for x in predictions if x['variant']=='full']);short=np.mean([x['correct'] for x in predictions if x['variant']=='short32']);base_gate=dict(full_accuracy=float(full),short32_accuracy=float(short),context_gain=float(full-short),passed=full>=protocol['base_gate']['min_full_accuracy'] and full-short>=protocol['base_gate']['min_full_minus_short_accuracy'])
+  result=dict(status='complete',job=job,identity=identity,evaluation_k=0,environment=environment,started_utc=started,finished_utc=utc(),seconds=time.perf_counter()-tick,step=step,optimizer_updates=0,task_predictions=len(predictions),calibration_nll_forwards=4,calibration_values=vals,calibration_max_abs_error=error,checkpoint_sha256=sha(checkpoint),eval_source_sha256=sha(Path(__file__)),predictions=predictions,base_gate=base_gate,parameter_digest=expected_digest,selected_restore_B=selected,other_params_unchanged=True)

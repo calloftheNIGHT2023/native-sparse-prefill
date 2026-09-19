@@ -1,0 +1,12 @@
+--- a/csrc/flash_moba/src/flash_bwd_kernel.h
++++ b/csrc/flash_moba/src/flash_bwd_kernel.h
+@@ -87,6 +87,9 @@
+                                                           const int count, 
+                                                           const int actual_seqlen_q,
+                                                           IdxTensor& sMobaIdx) {
++    // Candidate fix: finish reads of the previous shared index tile before reuse.
++    // The trailing barrier publishes new indices but cannot protect earlier reads.
++    __syncthreads();
+     // Copy valid indices and pad with linear indices for out-of-bounds accesses
+     for (int idx = threadIdx.x; idx < kBlockM; idx += blockDim.x) {
+         sMobaIdx(idx) = (Check_OOB && idx >= count) ? 

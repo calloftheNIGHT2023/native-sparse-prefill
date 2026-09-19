@@ -1,0 +1,83 @@
+{
+  "status": "official_dev_raw_verified",
+  "created_utc": "2026-09-17T20:59:33.474880+00:00",
+  "dataset": "BabyLM-community/BabyLM-dev",
+  "revision": "169f42e32d0aaf65ec6b91d55bafad27a3afc729",
+  "total_bytes": 56752783,
+  "files": [
+    {
+      "path": "bnc_spoken.dev",
+      "url": "https://huggingface.co/datasets/BabyLM-community/BabyLM-dev/resolve/169f42e32d0aaf65ec6b91d55bafad27a3afc729/bnc_spoken.dev",
+      "bytes": 6539125,
+      "sha256": "2c546720837b059da82634b5554a7694bbb9bdeef18f52734da11ba443795cd8",
+      "official_git_oid": "0588e676da75f5a372a5facbe0bc0cabe6e78502",
+      "official_lfs_oid": null,
+      "validation": "Git blob SHA1 plus local SHA256",
+      "download_started_utc": "2026-09-17T20:59:30.973346+00:00",
+      "verified_utc": "2026-09-17T20:59:31.653081+00:00",
+      "used_verified_existing_file": false
+    },
+    {
+      "path": "childes.dev",
+      "url": "https://huggingface.co/datasets/BabyLM-community/BabyLM-dev/resolve/169f42e32d0aaf65ec6b91d55bafad27a3afc729/childes.dev",
+      "bytes": 14684091,
+      "sha256": "5823392e65a6da3344811845504c5d1ad9acec42315e2bd938be5eb01a8422a5",
+      "official_git_oid": "78ba89d41d214e7ba556469179f415008583d9d3",
+      "official_lfs_oid": "5823392e65a6da3344811845504c5d1ad9acec42315e2bd938be5eb01a8422a5",
+      "validation": "LFS SHA256",
+      "download_started_utc": "2026-09-17T20:59:30.973346+00:00",
+      "verified_utc": "2026-09-17T20:59:32.471213+00:00",
+      "used_verified_existing_file": false
+    },
+    {
+      "path": "gutenberg.dev",
+      "url": "https://huggingface.co/datasets/BabyLM-community/BabyLM-dev/resolve/169f42e32d0aaf65ec6b91d55bafad27a3afc729/gutenberg.dev",
+      "bytes": 15605575,
+      "sha256": "760ebc4c697b91308dd21f643ae3c3071e3e1222960fcf8af04119addc50e99b",
+      "official_git_oid": "80717cff502179608237b5f60a5fa8c5cfaa230f",
+      "official_lfs_oid": "760ebc4c697b91308dd21f643ae3c3071e3e1222960fcf8af04119addc50e99b",
+      "validation": "LFS SHA256",
+      "download_started_utc": "2026-09-17T20:59:30.974850+00:00",
+      "verified_utc": "2026-09-17T20:59:33.119895+00:00",
+      "used_verified_existing_file": false
+    },
+    {
+      "path": "open_subtitles.dev",
+      "url": "https://huggingface.co/datasets/BabyLM-community/BabyLM-dev/resolve/169f42e32d0aaf65ec6b91d55bafad27a3afc729/open_subtitles.dev",
+      "bytes": 11029539,
+      "sha256": "2e8038d3216c28d7319d0cb564011061d64e093e426b0ca816a9def481481e6b",
+      "official_git_oid": "e454f8333030a51915958c39a5e755642c05fc60",
+      "official_lfs_oid": "2e8038d3216c28d7319d0cb564011061d64e093e426b0ca816a9def481481e6b",
+      "validation": "LFS SHA256",
+      "download_started_utc": "2026-09-17T20:59:31.653081+00:00",
+      "verified_utc": "2026-09-17T20:59:32.998115+00:00",
+      "used_verified_existing_file": false
+    },
+    {
+      "path": "simple_wiki.dev",
+      "url": "https://huggingface.co/datasets/BabyLM-community/BabyLM-dev/resolve/169f42e32d0aaf65ec6b91d55bafad27a3afc729/simple_wiki.dev",
+      "bytes": 8170440,
+      "sha256": "0ca18973a91069bf917bae9072ff511d39b474d590ab2241cb717221d8532c98",
+      "official_git_oid": "6acfd2db24d9ac7b487fbfd680930d6a8e8417f2",
+      "official_lfs_oid": null,
+      "validation": "Git blob SHA1 plus local SHA256",
+      "download_started_utc": "2026-09-17T20:59:32.472218+00:00",
+      "verified_utc": "2026-09-17T20:59:33.245733+00:00",
+      "used_verified_existing_file": false
+    },
+    {
+      "path": "switchboard.dev",
+      "url": "https://huggingface.co/datasets/BabyLM-community/BabyLM-dev/resolve/169f42e32d0aaf65ec6b91d55bafad27a3afc729/switchboard.dev",
+      "bytes": 724013,
+      "sha256": "3dcd2a40051f8e90dadaa0ef656183c1ace7c62682f3306c86ed86aa8cfd057a",
+      "official_git_oid": "f30c821bb0ff40b4ccec4915e226394dfecd1be9",
+      "official_lfs_oid": null,
+      "validation": "Git blob SHA1 plus local SHA256",
+      "download_started_utc": "2026-09-17T20:59:32.998115+00:00",
+      "verified_utc": "2026-09-17T20:59:33.473375+00:00",
+      "used_verified_existing_file": false
+    }
+  ],
+  "official_tree_sha256": "4a57f9107f188f06d0b7a159cdca12c82fa6d5b2ee612b59261d491b4a93edc4",
+  "final_test_read": false
+}

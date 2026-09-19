@@ -1,0 +1,22 @@
+# Runtime data, credentials, environments and model weights
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+*.pem
+*.key
+*.pt
+*.pth
+*.safetensors
+*.npy
+*.npz
+*.u32
+logs/
+results/
+exports/
+provenance/
+data/*
+!data/babylm-task-engineering-fixtures-v0/

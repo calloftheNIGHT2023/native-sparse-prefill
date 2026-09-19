@@ -1,0 +1,4 @@
+# CPU correctness and mechanism experiments; install using the CPU wheel index.
+--index-url https://download.pytorch.org/whl/cpu
+torch==2.10.0
+numpy==2.4.2
