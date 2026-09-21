@@ -1,0 +1,31 @@
+{
+  "status": "dispatched",
+  "utc": "2026-09-21T23:40:05.766537+00:00",
+  "outer_pid": 3068329,
+  "pgid": 3068329,
+  "start_ticks": 84710152,
+  "protocol": "configs/babylm-dw-cost-profile-20260921-v0.json",
+  "protocol_sha256": "9d05291074b30520e2833001312bf3a2ab8a9ae2d56a62a7e47ce17fbacdd90b",
+  "runner_sha256": "7a6fe8bad969ac9fca99cf5bb3bc1af1d40082e9ce5c29dc04afbaf3f378fac2",
+  "hard_seconds": 900,
+  "expected_calls": {
+    "forward_attempts": 36,
+    "backward_attempts": 32,
+    "optimizer_updates": 0
+  },
+  "output_dir": "results/babylm-dw-cost-profile-20260921-v0",
+  "launch_relative": "logs/dw-cost-profile-launch-20260921-v0",
+  "static_validation": {
+    "status": "validated_no_model_calls",
+    "expected_calls": {
+      "forward_attempts": 36,
+      "backward_attempts": 32,
+      "optimizer_updates": 0
+    },
+    "model_calls": 0,
+    "cuda_calls": 0
+  },
+  "automatic_retry": false,
+  "monitor_remains_paused": true,
+  "shared_gpu_diagnostic_only": true
+}

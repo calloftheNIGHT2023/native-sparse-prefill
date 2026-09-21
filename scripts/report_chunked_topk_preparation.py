@@ -80,7 +80,7 @@ def main():
 
 本轮：分块精确top-k、紧凑索引和一阶反向已实现。两个冻结模型67584个答案保持一致，FP64输出及完整模型梯度检查通过；FP32有一个近并列选点导致logit差异的条件，保留失败记录，不声称逐步训练轨迹等价。
 
-本机发现可用CUDA环境：C:/Users/USER/AppData/Local/Programs/Python/Python314/python.exe，torch2.10.0+cu128，RTX5070。无需新装环境，未使用云机。4组本地GPU基准/54个有效计时条件完成；18个强制Flash条件不支持，实际完整注意力对照为CUDA memory-efficient SDPA。此工程版本目前不比该完整对照更划算，不启动扩大训练。硬件非独占，短测不能直接用作论文性能表。
+本机发现可用CUDA环境：C:/Users/callofthenight/AppData/Local/Programs/Python/Python314/python.exe，torch2.10.0+cu128，RTX5070。无需新装环境，未使用云机。4组本地GPU基准/54个有效计时条件完成；18个强制Flash条件不支持，实际完整注意力对照为CUDA memory-efficient SDPA。此工程版本目前不比该完整对照更划算，不启动扩大训练。硬件非独占，短测不能直接用作论文性能表。
 
 当前报告 docs/chunked-topk-preparation-results-2026-09-15.md；审计 results/chunked-topk-preparation-audit-v0/audit.json；运行说明 docs/chunked-topk-runbook-2026-09-15.md。下一步先处理选点及GPU调用开销，并精确筛查贡献重合，暂不租卡。
 

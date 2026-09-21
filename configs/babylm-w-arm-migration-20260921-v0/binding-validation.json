@@ -1,0 +1,35 @@
+{
+  "status": "passed_local_static_binding_validation",
+  "condition": "W_fixed_local",
+  "model_calls": 0,
+  "cuda_calls": 0,
+  "remote_calls": 0,
+  "logical_path_mapping": "Immutable manifest receipts map original Linux project paths to local backup only; all saved protocol paths are POSIX and no separator normalization is performed by validator.",
+  "source_pin_count_full": 26,
+  "source_pin_count_replay": 27,
+  "fixed_replay_windows": 48,
+  "source_final_panel_NLL": 3.942268438020266,
+  "full_dev": {
+    "path": "configs/babylm-w-arm-migration-20260921-v0/full-dev.json",
+    "sha256": "0c5e625ba993a3a0b51b12d167fe64d5a63a364f5cf31d99f7ff98e5f49d7d4d"
+  },
+  "replay": {
+    "path": "configs/babylm-w-arm-migration-20260921-v0/replay.json",
+    "sha256": "2d285a758a04d0102a86e22f9848bb065c7fd4190f97b6fceaa3285fe2bf23c1"
+  },
+  "runtime_origin": {
+    "path": "logs/babylm-w-arm-runtime-origin-binding-20260921.json",
+    "sha256": "de30a49d021f373848332aba1b71ea7b24d11f5451e117a5ac1322b49a67af43"
+  },
+  "absolute_deadline_utc": "2026-09-21T05:59:32.739689Z",
+  "utc": "2026-09-21T04:55:05.748112+00:00",
+  "all_deployment_paths_posix": true,
+  "previous_unlaunched_draft_sha256": {
+    "babylm-w-arm-runtime-origin-binding-20260921.json": "ef6ba94df664fd04884326099ef5e46d805002472006de0a5a2c0397683a1296",
+    "full-dev.json": "e1c1c5f8e25031caa0fea4236436b2da9026f43febd6e69327970f29eeceb5db",
+    "replay.json": "cb070884b0f995659f1815116bc2270f01ca574387fa9a7ce40556e1a60b5187",
+    "binding-validation.json": "106ca816da4466bd011b8f4fe155ccfd7dd4627a6d6c8d248b1ebb208f987f1d"
+  },
+  "draft_archive": "configs/babylm-w-arm-migration-20260921-v0/unlaunched-windows-path-drafts",
+  "torch_imported": false
+}

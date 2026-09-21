@@ -1,0 +1,96 @@
+{
+  "commit": "1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb",
+  "retrieved_utc": "2026-09-14T03:42:28.695413+00:00",
+  "files": [
+    {
+      "path": "LICENSE.md",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/LICENSE.md",
+      "sha256": "02a07d1c2d809a328ecb3cf23945ec5d2fa4e3c0120e24f365b4742aaa97c26b"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/README.md",
+      "sha256": "69dbffc840a5f963fc15faecb0279b3cae1e3eac480fea2af2e3fa553adaeeed"
+    },
+    {
+      "path": "usage.md",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/usage.md",
+      "sha256": "57821baf4e26694686296115d48b33b3a82de05a8bbb94b076bca7d1c0ff41c4"
+    },
+    {
+      "path": "setup.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/setup.py",
+      "sha256": "69ffaa24167766914fe39b268c7b7ba3e1211fe23bccf1e76ae37749d1277504"
+    },
+    {
+      "path": "zoology/__init__.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "zoology/config.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/config.py",
+      "sha256": "9f5a639f6bd6d726dc907d4699fda6c23ee473fd75919f4843c077a410d92830"
+    },
+    {
+      "path": "zoology/utils.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/utils.py",
+      "sha256": "e274e499eb54990a24b337dac742444aaaf7cc6d23010a8d3767ed8f5aac0d30"
+    },
+    {
+      "path": "zoology/model.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/model.py",
+      "sha256": "69168e62fa6493d778146658ea5683fde62e82b0d0791169c716406463923fc9"
+    },
+    {
+      "path": "zoology/train.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/train.py",
+      "sha256": "af1d1004d49b689b2746c1b96524ed0d454ade935c472a9dd21874679d3d98aa"
+    },
+    {
+      "path": "zoology/logger.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/logger.py",
+      "sha256": "5931163b0098d43580855bae091b55429c1308e3972c40e982eed95217c9a9f9"
+    },
+    {
+      "path": "zoology/metrics.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/metrics.py",
+      "sha256": "bfb3b3bf6ce46ec8eb673638ff6fe0eff022efa7d3c82dfa96b3920c03eab0c7"
+    },
+    {
+      "path": "zoology/launch.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/launch.py",
+      "sha256": "b32f95327bbd5ada880ace670a1d1328291fb57c0179363e46f082c5e1045a31"
+    },
+    {
+      "path": "zoology/data/__init__.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/data/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "zoology/data/utils.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/data/utils.py",
+      "sha256": "872c9ab7f27958c53b4c1d244ba77ccffb06ce9f2fb737eb7650d321990704ae"
+    },
+    {
+      "path": "zoology/data/multiquery_ar.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/data/multiquery_ar.py",
+      "sha256": "c53c345895a1c153df5461a5f4a812f507d4f7f3894b391028e3a467e3fe6bf3"
+    },
+    {
+      "path": "zoology/mixers/attention.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/mixers/attention.py",
+      "sha256": "ff000898fc725a4033bae86ee5aa225c8bf6566e64c7a459d108cbc2dd078b3c"
+    },
+    {
+      "path": "zoology/mixers/mlp.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/mixers/mlp.py",
+      "sha256": "3328e1aff3e4945f3ac3952fd9147c5871b4daedcdcba413e89c5f10e9edd351"
+    },
+    {
+      "path": "zoology/experiments/basic_examples/basic.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/zoology/1ad20d193b6113cae1e8f3c655c300d7b4b3f4bb/zoology/experiments/basic_examples/basic.py",
+      "sha256": "d4d21a7afc538c11aff0bd18f33dfbd3b7d0f1caab8d21cc763728aeb775587e"
+    }
+  ]
+}

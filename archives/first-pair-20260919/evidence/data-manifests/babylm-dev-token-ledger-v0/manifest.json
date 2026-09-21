@@ -1,0 +1,243 @@
+{
+  "status": "frozen_tokenizer_dev_record_ledger_verified",
+  "started_utc": "2026-09-17T20:59:30.813882+00:00",
+  "completed_utc": "2026-09-17T20:59:48.145040+00:00",
+  "elapsed_seconds": 17.33099769999899,
+  "script_sha256": "415573ad7263eccaa11e1aa8b9c05a77c9a953e39e4e473b2ac3bd76c0648d6d",
+  "dev_dataset": "BabyLM-community/BabyLM-dev",
+  "dev_revision": "169f42e32d0aaf65ec6b91d55bafad27a3afc729",
+  "raw_manifest_sha256": "c7d2ec92bd4c7cb2da8c81c68ed34ffbaa8be52d4814a1a4a78c65298e170f23",
+  "train_source_manifest_sha256": "4c727e761dfcf8ef77212a1a85165d424733d301534b11d4f09d02c297e85fc0",
+  "tokenizer_path_relative_to_project": "data/babylm-2026-tokenizer-16k-v0/tokenizer.json",
+  "tokenizer_sha256": "230b9d6993dcaf32f40cec2c44ac79d7d713213616ba2d8e45ad4a96e5a9dbe6",
+  "tokenizer_manifest_sha256": "78f732c949093ac17e18b7cad3b34cc8a3b56bffb3a139a866a6865b1f930f3e",
+  "tokenizer_retrained": false,
+  "vocab_size": 16384,
+  "files": [
+    {
+      "source": "bnc_spoken.dev",
+      "source_sha256": "2c546720837b059da82634b5554a7694bbb9bdeef18f52734da11ba443795cd8",
+      "records": 130000,
+      "whitespace_words": 1252593,
+      "text_tokens": 1755630,
+      "zero_word_records": 117,
+      "roundtrip_checks": 130000,
+      "record_token_p50": 8.0,
+      "record_token_p95": 42.0,
+      "record_token_max": 1055,
+      "literal_special_occurrences": 0,
+      "ids_file": "bnc_spoken.ids.u32",
+      "offsets_file": "bnc_spoken.offsets.npy",
+      "words_file": "bnc_spoken.words.npy"
+    },
+    {
+      "source": "childes.dev",
+      "source_sha256": "5823392e65a6da3344811845504c5d1ad9acec42315e2bd938be5eb01a8422a5",
+      "records": 520153,
+      "whitespace_words": 2716591,
+      "text_tokens": 5951802,
+      "zero_word_records": 870,
+      "roundtrip_checks": 520153,
+      "record_token_p50": 10.0,
+      "record_token_p95": 20.0,
+      "record_token_max": 199,
+      "literal_special_occurrences": 0,
+      "ids_file": "childes.ids.u32",
+      "offsets_file": "childes.offsets.npy",
+      "words_file": "childes.words.npy"
+    },
+    {
+      "source": "gutenberg.dev",
+      "source_sha256": "760ebc4c697b91308dd21f643ae3c3071e3e1222960fcf8af04119addc50e99b",
+      "records": 65000,
+      "whitespace_words": 2819070,
+      "text_tokens": 3898319,
+      "zero_word_records": 58,
+      "roundtrip_checks": 65000,
+      "record_token_p50": 40.0,
+      "record_token_p95": 183.0,
+      "record_token_max": 984,
+      "literal_special_occurrences": 0,
+      "ids_file": "gutenberg.ids.u32",
+      "offsets_file": "gutenberg.offsets.npy",
+      "words_file": "gutenberg.words.npy"
+    },
+    {
+      "source": "open_subtitles.dev",
+      "source_sha256": "2e8038d3216c28d7319d0cb564011061d64e093e426b0ca816a9def481481e6b",
+      "records": 375000,
+      "whitespace_words": 2077019,
+      "text_tokens": 3430198,
+      "zero_word_records": 405,
+      "roundtrip_checks": 375000,
+      "record_token_p50": 8.0,
+      "record_token_p95": 19.0,
+      "record_token_max": 162,
+      "literal_special_occurrences": 0,
+      "ids_file": "open_subtitles.ids.u32",
+      "offsets_file": "open_subtitles.offsets.npy",
+      "words_file": "open_subtitles.words.npy"
+    },
+    {
+      "source": "simple_wiki.dev",
+      "source_sha256": "0ca18973a91069bf917bae9072ff511d39b474d590ab2241cb717221d8532c98",
+      "records": 60000,
+      "whitespace_words": 1405366,
+      "text_tokens": 2150489,
+      "zero_word_records": 10637,
+      "roundtrip_checks": 60000,
+      "record_token_p50": 16.0,
+      "record_token_p95": 122.0,
+      "record_token_max": 857,
+      "literal_special_occurrences": 0,
+      "ids_file": "simple_wiki.ids.u32",
+      "offsets_file": "simple_wiki.offsets.npy",
+      "words_file": "simple_wiki.words.npy"
+    },
+    {
+      "source": "switchboard.dev",
+      "source_sha256": "3dcd2a40051f8e90dadaa0ef656183c1ace7c62682f3306c86ed86aa8cfd057a",
+      "records": 18000,
+      "whitespace_words": 148340,
+      "text_tokens": 251096,
+      "zero_word_records": 0,
+      "roundtrip_checks": 18000,
+      "record_token_p50": 11.0,
+      "record_token_p95": 32.0,
+      "record_token_max": 146,
+      "literal_special_occurrences": 0,
+      "ids_file": "switchboard.ids.u32",
+      "offsets_file": "switchboard.offsets.npy",
+      "words_file": "switchboard.words.npy"
+    }
+  ],
+  "total_source_words": 10418979,
+  "total_text_tokens": 17437534,
+  "total_physical_line_records": 1168153,
+  "tokens_include_original_whitespace": true,
+  "inserted_bos_eos_tokens": 0,
+  "truncated_tokens": 0,
+  "deduplicated": false,
+  "final_test_read": false,
+  "training_stream_modified": false,
+  "model_forward_calls": 0,
+  "scientific_optimizer_updates": 0,
+  "gpu_hours": 0,
+  "dev_subset_selected": false,
+  "document_boundaries_verified": false,
+  "loss_ready_window_index_created": false,
+  "overlap_summary": {
+    "dev_nonempty_line_occurrences": 1156066,
+    "dev_unique_nonempty_lines": 841108,
+    "exact_shared_unique_lines": 29913,
+    "dev_occurrences_matching_train": 189455,
+    "train_occurrences_matching_dev": 245420,
+    "dev_line_occurrences_ge20_words": 89095,
+    "exact_shared_unique_lines_ge20_words": 16,
+    "dev_occurrences_matching_train_ge20_words": 22,
+    "train_occurrences_matching_dev_ge20_words": 18,
+    "dev_word_occurrences_in_exact_matching_ge20_lines": 661
+  },
+  "runtime": {
+    "tokenizers": "0.22.2",
+    "numpy": "2.4.2"
+  },
+  "artifacts": [
+    {
+      "path": "bnc_spoken.ids.u32",
+      "bytes": 7022520,
+      "sha256": "aefc7b852f4eacb68e7a99f917d1f7db4f6f47d76820927e0185c4eb0c0d3b8c"
+    },
+    {
+      "path": "bnc_spoken.offsets.npy",
+      "bytes": 1040136,
+      "sha256": "a018cbe3c7e4fc2f07fd6ab8e8a956770f9e1a9b1c02d11dbf055839d4c0292c"
+    },
+    {
+      "path": "bnc_spoken.words.npy",
+      "bytes": 520128,
+      "sha256": "3dd46314a87bcd32a523406d0bd4859bf5cb5c3b70877547341afb182e1a4b63"
+    },
+    {
+      "path": "childes.ids.u32",
+      "bytes": 23807208,
+      "sha256": "7efd8937226920f8f3838b66c4ff57322d7e97055f594ec9e4a939111adce053"
+    },
+    {
+      "path": "childes.offsets.npy",
+      "bytes": 4161360,
+      "sha256": "cc44c699b992e5df67fc3f4e9541eb4f8774329037c1aa6d6b8f586fe0d524af"
+    },
+    {
+      "path": "childes.words.npy",
+      "bytes": 2080740,
+      "sha256": "b1fc411a465865e9b6c8cb83341937d37066c04f8d3152d7545bdaf410f514ba"
+    },
+    {
+      "path": "gutenberg.ids.u32",
+      "bytes": 15593276,
+      "sha256": "9fc3dcaf110406813d8ce22af69606b2ce554a3581cecb6a4a1259ad947e2ba6"
+    },
+    {
+      "path": "gutenberg.offsets.npy",
+      "bytes": 520136,
+      "sha256": "27ac95412654de7893d06a953f3f6f8ab4203ba0b6a27bbb6a1fc52dcc2932b4"
+    },
+    {
+      "path": "gutenberg.words.npy",
+      "bytes": 260128,
+      "sha256": "a15b445bf291de8ed0c92da0b58176e1e51733a8846d7c2c998e95c463252987"
+    },
+    {
+      "path": "open_subtitles.ids.u32",
+      "bytes": 13720792,
+      "sha256": "84a8895f28a3b901e4e8e3121fe5e01ebe81c5fb068012d6cdd1fa9f8bb448e6"
+    },
+    {
+      "path": "open_subtitles.offsets.npy",
+      "bytes": 3000136,
+      "sha256": "7664f7fc0ed036d9ba0a9e69d35f57b4270317730d511fa1639bfe8c50b07ec4"
+    },
+    {
+      "path": "open_subtitles.words.npy",
+      "bytes": 1500128,
+      "sha256": "be106433b8bc93ef945760eb36e986ad670c889aadc3965ec78ff397aa50ef96"
+    },
+    {
+      "path": "simple_wiki.ids.u32",
+      "bytes": 8601956,
+      "sha256": "a98de3d065a03958fc3b8e03cab812f75916766026596b554adac1aab4642260"
+    },
+    {
+      "path": "simple_wiki.offsets.npy",
+      "bytes": 480136,
+      "sha256": "2b55eacebdc63192103469b4e0165a545fd510e6433254de9a69e0f326676e57"
+    },
+    {
+      "path": "simple_wiki.words.npy",
+      "bytes": 240128,
+      "sha256": "c8a925bca3e8a43a5f25b1c5e67f3d42555f7d49a0ea82d7efee75f006b78b41"
+    },
+    {
+      "path": "switchboard.ids.u32",
+      "bytes": 1004384,
+      "sha256": "ff8fe0ba417fa5b900a4272ba4402c81df9729352f955ab0037f271a5a7a4837"
+    },
+    {
+      "path": "switchboard.offsets.npy",
+      "bytes": 144136,
+      "sha256": "b356762e4ccb48e53d4df6171c4b4fec7cbbc178b98b20e906e45292b404185f"
+    },
+    {
+      "path": "switchboard.words.npy",
+      "bytes": 72128,
+      "sha256": "8c2cbc1a1ed07493663ded4302aa3ba04c044989801d75aa34249eb85bb6e167"
+    },
+    {
+      "path": "train-dev-overlap.json",
+      "bytes": 10364,
+      "sha256": "9b1d6b5cb64f75f836cf63242f6216db551c4a9b833bb4f47c0f374ac16b4b95"
+    }
+  ],
+  "scope": "Frozen raw official dev and lossless line ledger only. Matching training window/reset/loss policy must be separately applied before NLL. Shared source metadata and exact phrases are disclosed; no independence or deduplication claim."
+}

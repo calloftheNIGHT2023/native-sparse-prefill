@@ -1,0 +1,39 @@
+  # Time postprocessing before quality data are loaded; exclude final evaluation
+  # equally from both candidates' time-to-trained-artifact comparison.
+  original={n:p.detach().cpu().clone() for n,p in params.items()}
+  selected=[n for n in params if n.endswith('.B') and any('.'+q+'.' in n for q in ['q_proj','k_proj'])];assert len(selected)==48
+  torch.cuda.synchronize();restore_start=time.perf_counter()
+  with torch.no_grad():
+   for n in selected:params[n].zero_()
+  restored={n:p.detach().cpu().clone() for n,p in params.items()}
+  torch.save(dict(params=restored,source_step=128,identity=new_identity,intervention='known_QK_Restore'),out/'restored-adapter.pt')
+  torch.cuda.synchronize();restore_seconds=time.perf_counter()-restore_start
+  assert all(torch.count_nonzero(restored[n])==0 for n in selected) and all(torch.equal(restored[n],original[n]) for n in params if n not in selected)
+  ablation=dict(selected_B_tensors=selected,selected_count=48,unchanged_other_tensors=144,restore_seconds_including_serialization=restore_seconds,artifact_sha256=sha(out/'restored-adapter.pt'))
+  save(out/'ablation.json',ablation)
+  report=np.load(R/'data/32k-expanded-training-v0/report.npz')['report']
+  pg=np.load(R/'data/pg19-external-v0/windows.npz')['windows'];assert pg.shape==(16,32769)
+  arrays=np.load(R/'data/fresh-word-dense-v0/tasks.npz');meta=json.loads((R/'data/fresh-word-dense-v0/tasks.json').read_text());flat=arrays['input_ids'];offsets=arrays['offsets'];labels=torch.tensor(protocol['answer_token_ids'],device='cuda')
+  conditions=[];all_predictions=[]
+  for name,weights in [('original',original),('restored',restored)]:
+   with torch.no_grad():
+    for n,p in params.items():p.copy_(weights[n])
+   expected_digest=digest(params);wiki=[nll(w) for w in report];pgrows=[]
+   for i,w in enumerate(pg):
+    row=dict(window=i,input_sha256=hashlib.sha256(w.tobytes()).hexdigest(),full_nll=nll(w),full_context_tail_nll=nll(w,28672),short_context_tail_nll=nll(w[-4097:]),utc=utc())
+    assert all(math.isfinite(row[n]) for n in ['full_nll','full_context_tail_nll','short_context_tail_nll'])
+    row['context_benefit_nats']=row['short_context_tail_nll']-row['full_context_tail_nll'];pgrows.append(row)
+    with (out/(name+'-pg19-nll.jsonl')).open('a') as f:f.write(json.dumps(row)+'\n')
+   predictions=[]
+   with torch.no_grad():
+    for i,item in enumerate(meta):
+     ids=torch.tensor(flat[offsets[i]:offsets[i+1]].astype(np.int64)[None],device='cuda')
+     with amp():h=model.model(ids,use_cache=False).last_hidden_state[:,-1:];logits=model.lm_head(h)[0,0].float()
+     values=logits[labels].cpu().tolist();assert np.isfinite(values).all();guess=int(np.argmax(values));pred=dict(**item,condition=name,prediction=guess,choice_logits=values)
+     if item['gold'] is not None:pred['correct']=guess==item['gold']
+     predictions.append(pred);all_predictions.append(pred)
+     with (out/'task-predictions.jsonl').open('a') as f:f.write(json.dumps(pred)+'\n')
+   assert len(predictions)==133 and all(math.isfinite(x) for x in wiki) and digest(params)==expected_digest
+   conditions.append(dict(name=name,parameter_digest=expected_digest,wiki_nll=wiki,pg19=pgrows,predictions=predictions))
+   event('quality_condition_complete',condition=name,task_predictions=133)
+  result=dict(status='complete',job=job,identity=new_identity,environment=environment,started_utc=started,finished_utc=utc(),seconds=time.perf_counter()-tick,training_completed_seconds=training_completed_seconds,step=step,optimizer_updates=local_updates,task_predictions=266,nll_forwards=126,gradient_gate_passes=2,gradient_gate=gate,rows=rows,evaluations=evaluations,loop_seconds=loop_seconds,complete_step_seconds=sum(x['seconds'] for x in rows),peak_allocated_bytes=peak,calibration_values=vals,calibration_max_abs_error=error,checkpoint_sha256=sha(checkpoint_path),checkpoint_hashes={str(i):sha(out/f'checkpoint-{i}.pt') for i in [0,64,128]},eval_source_sha256=sha(Path(__file__)),initial_parameter_digest=initial_vo_digest,conditions=conditions,ablation=ablation,restored_artifact_seconds=training_completed_seconds+restore_seconds)

@@ -1,0 +1,112 @@
+{
+  "utc": "2026-09-21T23:41:14.402693+00:00",
+  "receipt": {
+    "status": "dispatched",
+    "utc": "2026-09-21T23:40:05.766537+00:00",
+    "outer_pid": 3068329,
+    "pgid": 3068329,
+    "start_ticks": 84710152,
+    "protocol": "configs/babylm-dw-cost-profile-20260921-v0.json",
+    "protocol_sha256": "9d05291074b30520e2833001312bf3a2ab8a9ae2d56a62a7e47ce17fbacdd90b",
+    "runner_sha256": "7a6fe8bad969ac9fca99cf5bb3bc1af1d40082e9ce5c29dc04afbaf3f378fac2",
+    "hard_seconds": 900,
+    "expected_calls": {
+      "forward_attempts": 36,
+      "backward_attempts": 32,
+      "optimizer_updates": 0
+    },
+    "output_dir": "results/babylm-dw-cost-profile-20260921-v0",
+    "launch_relative": "logs/dw-cost-profile-launch-20260921-v0",
+    "static_validation": {
+      "status": "validated_no_model_calls",
+      "expected_calls": {
+        "forward_attempts": 36,
+        "backward_attempts": 32,
+        "optimizer_updates": 0
+      },
+      "model_calls": 0,
+      "cuda_calls": 0
+    },
+    "automatic_retry": false,
+    "monitor_remains_paused": true,
+    "shared_gpu_diagnostic_only": true
+  },
+  "outer_live": {
+    "same_identity": false,
+    "state": "exited"
+  },
+  "project_lock": "free",
+  "files": [
+    {
+      "path": "logs/dw-cost-profile-launch-20260921-v0/receipt.json",
+      "bytes": 980,
+      "sha256": "a559dfaa539627443b19fdd70f447a25bdbee454c36adf1049522dd2e1aad502",
+      "local_path": "logs/babylm-dw-cost-profile-backup-20260921/20260921T234120.236686Z/raw/logs/dw-cost-profile-launch-20260921-v0/receipt.json"
+    },
+    {
+      "path": "logs/dw-cost-profile-launch-20260921-v0/stderr.log",
+      "bytes": 251,
+      "sha256": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+      "local_path": "logs/babylm-dw-cost-profile-backup-20260921/20260921T234120.236686Z/raw/logs/dw-cost-profile-launch-20260921-v0/stderr.log"
+    },
+    {
+      "path": "logs/dw-cost-profile-launch-20260921-v0/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "local_path": "logs/babylm-dw-cost-profile-backup-20260921/20260921T234120.236686Z/raw/logs/dw-cost-profile-launch-20260921-v0/stdout.log"
+    },
+    {
+      "path": "results/babylm-dw-cost-profile-20260921-v0/events.jsonl",
+      "bytes": 419538,
+      "sha256": "0226a81d2e63b8bed0bf0965ca8c77a4b8b266b05d2ce150e1d054f0ea1ca19e",
+      "local_path": "logs/babylm-dw-cost-profile-backup-20260921/20260921T234120.236686Z/raw/results/babylm-dw-cost-profile-20260921-v0/events.jsonl"
+    },
+    {
+      "path": "results/babylm-dw-cost-profile-20260921-v0/protocol.json",
+      "bytes": 13446,
+      "sha256": "84f58af437862b9363448782c88dc39583376b7f6216b42d235beadb2564ad95",
+      "local_path": "logs/babylm-dw-cost-profile-backup-20260921/20260921T234120.236686Z/raw/results/babylm-dw-cost-profile-20260921-v0/protocol.json"
+    },
+    {
+      "path": "results/babylm-dw-cost-profile-20260921-v0/summary.json",
+      "bytes": 195916,
+      "sha256": "ce10d54e7cb7686e86b2f9bc27668fd921f6fa5a201dd1fd753fa68f235736e3",
+      "local_path": "logs/babylm-dw-cost-profile-backup-20260921/20260921T234120.236686Z/raw/results/babylm-dw-cost-profile-20260921-v0/summary.json"
+    }
+  ],
+  "last_event": {
+    "type": "arm_complete",
+    "utc": "2026-09-21T23:40:55.304664+00:00",
+    "counts": {
+      "forward_attempts": 36,
+      "forward_calls": 36,
+      "backward_attempts": 32,
+      "backward_calls": 32,
+      "warmup_forward_attempts": 4,
+      "warmup_forward_calls": 4,
+      "optimizer_updates": 0,
+      "scientific_updates": 0,
+      "submitted_input_tokens": 30664,
+      "submitted_loss_tokens": 30628,
+      "submitted_word_exposures": 21288
+    },
+    "arm": "W"
+  },
+  "result": {
+    "status": "complete_read_only_cost_diagnostic",
+    "counts": {
+      "forward_attempts": 36,
+      "forward_calls": 36,
+      "backward_attempts": 32,
+      "backward_calls": 32,
+      "warmup_forward_attempts": 4,
+      "warmup_forward_calls": 4,
+      "optimizer_updates": 0,
+      "scientific_updates": 0,
+      "submitted_input_tokens": 30664,
+      "submitted_loss_tokens": 30628,
+      "submitted_word_exposures": 21288
+    },
+    "elapsed_wall_seconds": 43.86355344601907
+  }
+}

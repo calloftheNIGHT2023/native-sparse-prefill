@@ -1,0 +1,91 @@
+"""Audit downloaded evidence and write the final human-readable report."""
+import json,math,statistics,hashlib
+from pathlib import Path
+from datetime import datetime,timezone
+R=Path(__file__).resolve().parents[1]
+E=R/'results/cloud-amp-recovery-final-evidence-v0';S=E/'results/amp-recovery-stage-v2'
+def read(p):return json.loads(p.read_text(encoding='utf-8'))
+def main():
+ verification=read(E/'LOCAL-VERIFICATION.json');assert verification['status']=='verified'
+ stage=read(S/'result.json');assert stage['status']=='complete' and len(stage['runs'])==21
+ cfg=read(E/'data/flashmoba-amp-recovery-v0/config.json');chosen=read(S/'selection-lock.json');analysis=read(S/'paired-analysis.json')
+ allruns=[read(S/x['name']/'result.json') for x in stage['runs']]
+ training=[d for d in allruns if d['phase']=='train'];assert len(training)==12
+ assert sum(d['optimizer_updates_this_process'] for d in training)==3072
+ assert all(d['status']=='complete' for d in allruns)
+ for seed in cfg['seeds']:
+  assert len({d['initial_sha256'] for d in training if d['identity']['seed']==seed})==1
+  orders={tuple(x['window_index'] for x in d['trace']) for d in training if d['identity']['seed']==seed};assert len(orders)==1
+ for d in training:
+  assert len(d['trace'])==256 and all(e['split']=='calibration' for e in d['evaluations'])
+  assert abs(sum(x['seconds'] for x in d['trace'])-d['training_seconds'])<1e-8
+ table=['|方法|种子|report NLL|对密集NLL差|困惑度变化|训练耗时降低|质量/时间联合门槛|','|---|---|---:|---:|---:|---:|---|'];summary=[];context=[]
+ for k in cfg['methods']:
+  for seed in cfg['seeds']:
+   report=read(S/f'report-k{k}-seed{seed}/result.json');vals=report['evaluations'][0]['values'];assert len(vals)==12
+   baseline=read(S/f'report-k0-seed{seed}/result.json')['evaluations'][0]['values']
+   gap=statistics.mean([a-b for a,b in zip(vals,baseline)])
+   row=next((x for x in analysis['paired_results'] if x['k']==k and x['seed']==seed),None)
+   if row:
+    assert abs(gap-row['mean_nll_gap'])<1e-12
+    assert max(abs(a-b-c) for a,b,c in zip(vals,baseline,row['paired_window_nll_differences']))<1e-12
+   reduction=0 if row is None else 100*(1-row['training_time_ratio'])
+   mean=statistics.mean(vals);ppldelta=100*math.expm1(gap)
+   table.append(f"|{'dense' if k==0 else 'K'+str(k)}|{seed}|{mean:.6f}|{gap:+.6f}|{ppldelta:+.2f}%|{reduction:.2f}%|{'基线' if row is None else '通过' if row['exploratory_screen_pass'] else '未通过'}|")
+   summary.append(dict(k=k,seed=seed,mean_nll=mean,gap=gap,ppl_increase_percent=ppldelta,time_reduction_percent=reduction))
+   c=read(S/f'report-k{k}-seed{seed}/context-diagnostic.json')
+   assert len(c['benefit_nats'])==12
+   context.append(dict(k=k,seed=seed,mean_extra_context_benefit=statistics.mean(c['benefit_nats'])))
+ timeline=['# AMP恢复实验时间轴（全部UTC）','','所有逐步时间和断点保存在已校验的原始归档；本表列任务起止。','','|任务|开始|结束|退出码|','|---|---|---|---:|']
+ for x in stage['runs']:timeline.append(f"|{x['name']}|{x['started_utc']}|{x['finished_utc']}|{x['returncode']}|")
+ (R/'docs/flashmoba-amp-recovery-run-index-2026-09-15.md').write_text('\n'.join(timeline)+'\n',encoding='utf-8')
+ text='''# AMP稀疏适配：完整实验结果（2026-09-15）
+
+结论：在这套固定训练预算下，K4/K16都确实减少训练耗时，但最终语言建模质量仍低于密集基线。两种子均没有达到事先设定的NLL差≤0.03 nats且时间比≤0.95的联合门槛。本轮不能支持“基本同效果且更快”的主张，也不能据此断言稀疏方向无效。
+
+## 完整结果
+
+'''+ '\n'.join(table)+f'''
+
+困惑度变化按exp(配对平均NLL差)-1计算；不是准确率下降百分比。训练耗时包括数据搬运、前反向、梯度裁剪和优化器/调度器，不含加载、评测和存档；下文另报完整成本。
+
+Qwen2.5-0.5B，RTX6000Ada48GB，FP32主参数、BF16 autocast、1,081,344个LoRA参数；输出头冻结、16K输入、256位置分块损失。12条训练×256步，共3072科学更新、50,331,648个处理目标token，唯一训练目标位置1,048,576。数据顺序及同种子初始化经本机逐项核对相同。
+
+三种方法分别搜索3个学习率；都按calibration选择0.0003，再用第二种子复跑。这个值是搜索网格上界，因此没有证明最优学习率已找到。9条调参后锁定选择，12条训练全部结束后才读report。选中轨迹的12个report窗口，在两个种子中都表现为稀疏NLL高于密集；原始逐窗口差保留。
+
+## 成本与日志
+
+完整控制器耗时 {stage['seconds']/60:.2f} 分钟，含GPU预检、所有调参、第二种子复跑及6次最终报告评测；环境恢复、传输和归档时间另计。Pod真实费率和账单未读取，不提供虚构美元支出。
+
+|方法|包括学习率搜索的训练分钟|对应训练进程总分钟（含加载/校准/存档）|
+|---|---:|---:|
+'''
+ for k,d in analysis['method_cost'].items():text+=f"|{'dense' if k=='0' else 'K'+k}|{d['training_seconds_including_lr_search']/60:.2f}|{d['process_wall_seconds_including_lr_search']/60:.2f}|\n"
+ text+='''
+每条训练保存2/64/128/256步完整断点，含模型适配参数、Adam状态、调度器、随机状态和数据游标。前置v0日志程序错误和v1 GPU恢复门槛失败未删除，共7个诊断更新；统一确定性后向后，v2三方法GPU恢复参数差为0，共18个通过预检的诊断更新。合计25个诊断更新不并入3072个科学更新。
+
+原非确定性路径在相同权重上重复反向本就存在梯度差；统一确定性设置后重复一致。没有放宽门槛，失败、诊断、修订前配置、当前源码都保存。这次时间结果是新设置实测，不能把此前非确定性prefill的28%收益当作本轮训练收益。
+
+## 上下文诊断
+
+同一最后4096个目标，对比16K上下文与截断4K上下文，正值表示额外上下文降低NLL。全部仅作描述性诊断，不用于调参。
+
+|方法|种子|额外上下文平均收益 nats|
+|---|---|---:|
+'''
+ for x in context:text+=f"|{'dense' if x['k']==0 else 'K'+str(x['k'])}|{x['seed']}|{x['mean_extra_context_benefit']:+.6f}|\n"
+ text+='''
+短输入重置位置，语料窗口可能跨文章边界。这项对比不能直接称为长距离推理能力或全局信息保持的证明。
+
+## 结论适用范围与下一步
+
+这是密集预训练模型的短程LoRA适配；不是原生全参数稀疏预训练，也未证明收敛。report来自同一WikiText训练语料中的本轮留出位置，排除了已知Qwen试验与本轮训练位置重叠，但不是外部未污染基准。两个初始化种子使用同一数据顺序；没有覆盖更多模型、任务、随机数据划分或训练长度。
+
+本轮证明了“有速度收益且存在质量代价”这一工作点，没有证明“同质量更便宜”，也没有确认新的ML贡献。暂不自动加训或扩大租卡。先在本机分析校准曲线，判断质量差是继续训练可能缩小，还是稀疏路由丢信息；若再试，应另立协议和新评测留出，不能反复用本轮report选择改法。现在可以停止本批GPU占用，保留已校验的完整证据。
+'''
+ text+=f"\n## 备份\n\n原始归档SHA256：{verification['sha256']}。本机 {verification['files']} 个清单文件逐项校验通过，路径results/cloud-amp-recovery-final-evidence-v0。真实账单/Pod停止状态与实验完成分开记录。\n"
+ (R/'docs/flashmoba-amp-recovery-results-2026-09-15.md').write_text(text,encoding='utf-8')
+ out=R/'results/amp-recovery-final-audit-v0';out.mkdir(exist_ok=False)
+ (out/'result.json').write_text(json.dumps(dict(status='passed',utc=datetime.now(timezone.utc).isoformat(),scientific_updates=3072,summary=summary,context=context,archive_verification=verification,scope='Arithmetic/input-order/initialization audit of verified evidence; no new GPU computation.'),indent=2)+'\n')
+ (out/'source.py').write_bytes(Path(__file__).read_bytes());print(json.dumps(dict(status='report_written',summary=summary,context=context)))
+if __name__=='__main__':main()

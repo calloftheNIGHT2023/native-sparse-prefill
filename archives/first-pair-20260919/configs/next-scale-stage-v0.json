@@ -1,0 +1,43 @@
+{
+  "status": "dense_controls_completed_local_backups_verified",
+  "purpose": "Check whether a more developed model and longer-context evaluation expose a meaningful global-routing problem",
+  "model_parameters_target": 70426624,
+  "increase_model_parameters": false,
+  "context_length_target": 2048,
+  "selected_block_size": 4,
+  "selected_blocks_target": 64,
+  "first_stage_tokens_per_run": 1048576,
+  "conditional_tokens_per_run_ceiling": 10000000,
+  "initial_paired_seeds": [
+    41
+  ],
+  "baseline_methods": [
+    "dense",
+    "sparse_step0",
+    "sparse_warmup"
+  ],
+  "first_run": "dense context-usage control; test whether global context matters before other runs",
+  "do_not_repeat_closed_candidates": [
+    "outside_probe",
+    "normalizer_sampled"
+  ],
+  "corpus_status": "Ready: data/cloud-articles-v2,384train windows,16dev articles,13test articles,2048context",
+  "architecture_status": "GPTNeoX proxy only; Qwen hybrid Gated DeltaNet architecture still requires separate validation",
+  "runtime_status": "A40 CUDA verified; 2K gather short test15.14GiB, dense formal training4.04GiB; formal runs complete",
+  "cuda_preflight_lengths": [
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "preflight_max_seconds_per_length": 60,
+  "first_cloud_stage_ceiling_usd": 30,
+  "total_research_ceiling_usd": 500,
+  "confirmed_new_cloud_spend_usd": null,
+  "cloud_launch_authorized_by_this_config": true,
+  "scientific_method_expansion_gate_passed": false,
+  "next_decision": "Freeze data, context-usage readout, sufficient warmup criterion, and measured memory/time before cloud execution; no throughput or completion guarantee",
+  "authorization_record": "logs/cloud-rental-recommendation-2026-09-14.json",
+  "context_gate_passed": false,
+  "results": "results/cloud-controls-summary.json"
+}

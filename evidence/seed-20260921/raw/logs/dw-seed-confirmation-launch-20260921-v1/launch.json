@@ -1,0 +1,35 @@
+{
+  "status": "dispatched",
+  "started_utc": "2026-09-21T07:31:22.804513+00:00",
+  "pid": 2745097,
+  "pgid": 2745097,
+  "start_ticks": 78897856,
+  "protocol": "configs/babylm-dw-seed-confirmation-20260921-v1/master.json",
+  "protocol_sha256": "5bc4ace6c97e9e85e7fa1340ef6aad03e05b2d1963a32559415794f017d8c9e4",
+  "output_dir": "results/babylm-dw-seed-confirmation-20260921-v1",
+  "source_sha256": "569d183c27a16bae53dee466b5c80987b0706a050dec1668caf9048fc4cef1af",
+  "queue_hard_seconds": 58200,
+  "hard_deadline_utc": "2026-09-21T23:41:22.804513+00:00",
+  "train_stage_hard_seconds": 21600,
+  "eval_stage_hard_seconds": 7200,
+  "backbone_seed": 20260921,
+  "expected_scientific_counts": {
+    "forward_calls": 83452,
+    "backward_calls": 45196,
+    "updates": 2826
+  },
+  "project_lock": "/tmp/babylm-one-epoch-GPU-43bd0f4d-6798-53e3-e996-f4b4c3854511.lock",
+  "static_validation": {
+    "status": "validated_no_model_calls",
+    "model_calls": 0
+  },
+  "detached_from_SSH": true,
+  "stdin_devnull": true,
+  "stdout_stderr_to_remote_files": true,
+  "local_computer_not_required": true,
+  "automatic_monitoring": "PAUSED",
+  "automatic_retry": false,
+  "unknown_hourly_rate": true,
+  "pod_power_action": false,
+  "other_shared_GPU_jobs_untouched": true
+}

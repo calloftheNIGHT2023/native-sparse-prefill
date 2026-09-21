@@ -175,6 +175,10 @@ def _validate_protocol(p):
     for key in ('max_word_exposures', 'max_updates', 'windows_per_update', 'checkpoint_every_updates'):
         if type(p[key]) is not int or p[key] <= 0:
             raise ValueError(f'{key} must be a positive integer')
+    if 'max_epochs' in p and (type(p['max_epochs']) is not int or p['max_epochs'] <= 0):
+        raise ValueError('max_epochs must be a positive integer when specified')
+    if p.get('gradient_clip_scope', 'global') not in ('global', 'separate_backbone_indexer'):
+        raise ValueError('Unsupported gradient_clip_scope')
     for key in ('backbone_seed', 'indexer_seed', 'data_order_seed', 'warmup_word_exposures', 'eval_every_updates'):
         if type(p[key]) is not int or p[key] < 0:
             raise ValueError(f'{key} must be a nonnegative integer')
@@ -263,6 +267,30 @@ def _gradient_l2_norm(parameters):
         norms = [torch.linalg.vector_norm(parameter.grad.detach(), 2)
                  for parameter in parameters if parameter.grad is not None]
         return float(torch.linalg.vector_norm(torch.stack(norms), 2)) if norms else 0.0
+
+
+def _clip_parameter_groups(model, main_params, index_params, max_norm, scope):
+    """Keep legacy clipping unchanged unless independent groups are explicit."""
+    def coefficient(norm):
+        return float(torch.clamp(max_norm / (norm.detach() + 1e-6), max=1.0))
+
+    if scope == 'global':
+        norm = torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm, error_if_nonfinite=True)
+        shared = coefficient(norm)
+        return norm, shared, shared, shared if index_params else 1.0
+    if scope != 'separate_backbone_indexer':
+        raise ValueError('Unsupported gradient_clip_scope')
+    main_norm = torch.nn.utils.clip_grad_norm_(main_params, max_norm, error_if_nonfinite=True)
+    if index_params:
+        index_norm = torch.nn.utils.clip_grad_norm_(index_params, max_norm, error_if_nonfinite=True)
+        index_coefficient = coefficient(index_norm)
+    else:
+        index_norm = main_norm.new_zeros(())
+        index_coefficient = 1.0
+    # clip_grad_norm_ returns each group's norm BEFORE modifying that group.
+    total_norm = torch.linalg.vector_norm(torch.stack((main_norm, index_norm)), 2)
+    main_coefficient = coefficient(main_norm)
+    return total_norm, main_coefficient, main_coefficient, index_coefficient
 
 
 def _advance(cursor, length):
@@ -402,7 +430,8 @@ def train_run(protocol: dict, mode: str, output_dir: Path, resume_checkpoint: Pa
                    'protocol_word_cap': p['max_word_exposures'],
                    'remaining_nominal_word_budget': p['max_word_exposures'] - counts['word_exposures'],
                    'nominal_milestones_reached': list(snapshot_state['crossed_milestones']),
-                   'protocol_completion_boundary': stop_reason in ('word_budget_reached', 'max_updates_reached'),
+                    'protocol_completion_boundary': (stop_reason == 'epoch_complete' if 'max_epochs' in p
+                                                     else stop_reason in ('word_budget_reached', 'max_updates_reached')),
                    'model_path': entry['path'], 'model_sha256': entry['sha256'],
                    'protocol_sha256': phash, 'source_hashes': shashes, 'saved_utc': _utc()}
         _immutable_save(receipt_path, receipt)
@@ -467,6 +496,8 @@ def train_run(protocol: dict, mode: str, output_dir: Path, resume_checkpoint: Pa
         budget_reason = cost_time_reason()
         if budget_reason:
             return budget_reason
+        if 'max_epochs' in p and cursor['epoch'] >= p['max_epochs']:
+            return 'epoch_complete'
         if counts['updates'] >= p['max_updates']:
             return 'max_updates_reached'
         if stop_after_updates is not None and counts['updates'] >= stop_after_updates:
@@ -597,7 +628,13 @@ def train_run(protocol: dict, mode: str, output_dir: Path, resume_checkpoint: Pa
             planned_cursor = dict(cursor)
             planned_words = counts['word_exposures']
             cap_pending = False
+            epoch_pending = False
             for _ in range(p['windows_per_update']):
+                # Do not even read a window or generate a permutation from the
+                # next epoch. A short final accumulation is committed normally.
+                if 'max_epochs' in p and planned_cursor['epoch'] >= p['max_epochs']:
+                    epoch_pending = True
+                    break
                 if boundary_reason():
                     stop_reason = boundary_reason()
                     break
@@ -625,7 +662,8 @@ def train_run(protocol: dict, mode: str, output_dir: Path, resume_checkpoint: Pa
                 pending = []  # No forward/data exposure occurred for this merely-read plan.
                 break
             if not planned:
-                stop_reason = 'word_budget_reached' if cap_pending else 'no_windows_planned'
+                stop_reason = ('epoch_complete' if epoch_pending else
+                               'word_budget_reached' if cap_pending else 'no_windows_planned')
                 break
             targets_total = sum(int(item['next_token_loss_positions']) for item, _, _ in planned)
             optimizer.zero_grad(set_to_none=True)
@@ -677,9 +715,9 @@ def train_run(protocol: dict, mode: str, output_dir: Path, resume_checkpoint: Pa
                 # forward/backward or in-place gradient operation is added.
                 backbone_grad_norm = _gradient_l2_norm(main_params)
                 indexer_grad_norm = _gradient_l2_norm(index_params)
-                grad_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), p['grad_clip_norm'], error_if_nonfinite=True)
-                # Match PyTorch clip_grad_norm_'s scalar coefficient and epsilon.
-                clip_coefficient = float(torch.clamp(p['grad_clip_norm'] / (grad_norm.detach() + 1e-6), max=1.0))
+                clip_scope = p.get('gradient_clip_scope', 'global')
+                grad_norm, clip_coefficient, backbone_clip_coefficient, indexer_clip_coefficient = _clip_parameter_groups(
+                    model, main_params, index_params, p['grad_clip_norm'], clip_scope)
                 optimizer.step()
                 if device.type == 'cuda':
                     torch.cuda.synchronize(device)
@@ -690,9 +728,14 @@ def train_run(protocol: dict, mode: str, output_dir: Path, resume_checkpoint: Pa
                        loss_token_weighted_ce=ce_sum / targets_total, loss_token_weighted_aux=auxiliary_sum / targets_total,
                        loss_tokens_this_update=targets_total, lr=dict(last_lr), lr_word_position=counts['word_exposures'],
                        lr_multiplier=multiplier, grad_norm=float(grad_norm.detach()), counts=dict(counts), cursor=dict(cursor),
-                       backbone_grad_norm=backbone_grad_norm, indexer_grad_norm=indexer_grad_norm,
-                       grad_clip_coefficient=clip_coefficient, grad_clip_max_norm=p['grad_clip_norm'],
-                       gradient_scope='combined_objective_before_global_clipping',
+                        backbone_grad_norm=backbone_grad_norm, indexer_grad_norm=indexer_grad_norm,
+                        grad_clip_coefficient=clip_coefficient, grad_clip_max_norm=p['grad_clip_norm'],
+                        gradient_clip_scope=clip_scope,
+                        backbone_grad_clip_coefficient=backbone_clip_coefficient,
+                        indexer_grad_clip_coefficient=indexer_clip_coefficient,
+                        grad_clip_coefficient_semantics=('global_coefficient' if clip_scope == 'global' else 'backbone_group_coefficient'),
+                        gradient_scope=('combined_objective_before_global_clipping' if clip_scope == 'global' else
+                                        'combined_objective_before_separate_group_clipping'),
                        gradient_attribution='These read-only group norms do not separate LM and auxiliary gradient contributions.',
                        aux_weight=p['aux_weight'], aux_weight_applied=p['aux_weight'] if mode == 'sparse' else 0.0,
                        weighted_aux_loss=(p['aux_weight'] if mode == 'sparse' else 0.0) * auxiliary_sum / targets_total,
@@ -709,11 +752,15 @@ def train_run(protocol: dict, mode: str, output_dir: Path, resume_checkpoint: Pa
                 evaluate('cadence')
             if counts['updates'] % p['checkpoint_every_updates'] == 0:
                 checkpoint(reason='committed_boundary')
-            if cap_pending or counts['word_exposures'] >= p['max_word_exposures']:
+            if 'max_epochs' in p and cursor['epoch'] >= p['max_epochs']:
+                stop_reason = 'epoch_complete'
+            elif cap_pending or counts['word_exposures'] >= p['max_word_exposures']:
                 stop_reason = 'word_budget_reached'
             elif zero_target_windows_since_update >= len(dataset):
                 stop_reason = 'no_trainable_targets_in_complete_epoch'
-        if p.get('eval_final', False) and stop_reason in ('word_budget_reached', 'max_updates_reached'):
+        complete = (stop_reason == 'epoch_complete' if 'max_epochs' in p else
+                    stop_reason in ('word_budget_reached', 'max_updates_reached'))
+        if p.get('eval_final', False) and complete:
             evaluate('final')
         record_final_snapshot(stop_reason)
         append('run_stop', status=stop_reason, counts=dict(counts), eval_counts=dict(eval_counts), cursor=dict(cursor),

@@ -1,0 +1,14 @@
+{
+  "pod_id": "REDACTED_CONNECTION_METADATA",
+  "execution_hardware": {
+    "physical_uuid": "GPU-afbf2b08-ba63-d6d5-71f7-2e60d0837bc0",
+    "mig_uuid": "MIG-6959a64c-f001-5749-92c3-3a597b1c91a2",
+    "driver_version": "580.126.16",
+    "mig_profile": "2g.48gb"
+  },
+  "service_exception": {
+    "child_pid": 78,
+    "parent_pid": 77
+  },
+  "model_calls": 0
+}

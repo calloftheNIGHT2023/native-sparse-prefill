@@ -1,0 +1,66 @@
+{
+  "upstream_commit": "6f825c291e2c4c78ad33b1935fd64d45f52642dc",
+  "fetched_utc": "2026-09-17T22:08:09.368385+00:00",
+  "sources": [
+    {
+      "path": "official-tree.json",
+      "url": "https://api.github.com/repos/babylm-org/babylm-eval/git/trees/6f825c291e2c4c78ad33b1935fd64d45f52642dc?recursive=1",
+      "sha256": "b7ade37cf9b0b86a91f2bdd8b8cf3e1ab7409516aca2c23be62fa78c40cf28cd",
+      "bytes": 1683332
+    },
+    {
+      "path": "strict/evaluation_pipeline/sentence_zero_shot/README.md",
+      "url": "https://raw.githubusercontent.com/babylm-org/babylm-eval/6f825c291e2c4c78ad33b1935fd64d45f52642dc/strict/evaluation_pipeline/sentence_zero_shot/README.md",
+      "sha256": "43a4488bb6b30fa296637a7b5fc5a2608dfa09604e4b5487a06ddd31d96aabb6",
+      "bytes": 3900
+    },
+    {
+      "path": "strict/evaluation_pipeline/sentence_zero_shot/compute_results.py",
+      "url": "https://raw.githubusercontent.com/babylm-org/babylm-eval/6f825c291e2c4c78ad33b1935fd64d45f52642dc/strict/evaluation_pipeline/sentence_zero_shot/compute_results.py",
+      "sha256": "ddce8de7185e1c29f13b05a8f76ac2fab04a386da86cae693c7b7f38b198fc83",
+      "bytes": 18784
+    },
+    {
+      "path": "strict/evaluation_pipeline/sentence_zero_shot/dataset.py",
+      "url": "https://raw.githubusercontent.com/babylm-org/babylm-eval/6f825c291e2c4c78ad33b1935fd64d45f52642dc/strict/evaluation_pipeline/sentence_zero_shot/dataset.py",
+      "sha256": "133da1300ddb10d3d7d2b42859d662c25986f6cdcb457721c3da693e8f00571a",
+      "bytes": 30623
+    },
+    {
+      "path": "strict/evaluation_pipeline/sentence_zero_shot/read_files.py",
+      "url": "https://raw.githubusercontent.com/babylm-org/babylm-eval/6f825c291e2c4c78ad33b1935fd64d45f52642dc/strict/evaluation_pipeline/sentence_zero_shot/read_files.py",
+      "sha256": "742386554d9c7f80e7ed15ef7dfa6d186b29a4adf6c832c94bfd4254840b1a8f",
+      "bytes": 12714
+    },
+    {
+      "path": "strict/evaluation_pipeline/sentence_zero_shot/run.py",
+      "url": "https://raw.githubusercontent.com/babylm-org/babylm-eval/6f825c291e2c4c78ad33b1935fd64d45f52642dc/strict/evaluation_pipeline/sentence_zero_shot/run.py",
+      "sha256": "1e4b11f53dd71a6203ed7936160774bb634220c54eea605bae70503b57432668",
+      "bytes": 9008
+    },
+    {
+      "path": "strict/evaluation_pipeline/utils.py",
+      "url": "https://raw.githubusercontent.com/babylm-org/babylm-eval/6f825c291e2c4c78ad33b1935fd64d45f52642dc/strict/evaluation_pipeline/utils.py",
+      "sha256": "b88b5bf4cf2ec1a55ee598d837faeb8b4df40fea6498b334a5fd1c22fb236b21",
+      "bytes": 13378
+    },
+    {
+      "path": "strict/scripts/eval_zero_shot.sh",
+      "url": "https://raw.githubusercontent.com/babylm-org/babylm-eval/6f825c291e2c4c78ad33b1935fd64d45f52642dc/strict/scripts/eval_zero_shot.sh",
+      "sha256": "1c79c8cfb56e43b8df648bd792a865cae3b90c9340ed50fcaae876a41bc7a2d5",
+      "bytes": 1425
+    },
+    {
+      "path": "strict/scripts/eval_zero_shot_fast.sh",
+      "url": "https://raw.githubusercontent.com/babylm-org/babylm-eval/6f825c291e2c4c78ad33b1935fd64d45f52642dc/strict/scripts/eval_zero_shot_fast.sh",
+      "sha256": "bb1775ac5fb1a3b2eead253ea8dcf7f50c7617303d6bc8476b1ec103264f534c",
+      "bytes": 1225
+    },
+    {
+      "path": "strict/scripts/eval_zero_shot_global_piqa.sh",
+      "url": "https://raw.githubusercontent.com/babylm-org/babylm-eval/6f825c291e2c4c78ad33b1935fd64d45f52642dc/strict/scripts/eval_zero_shot_global_piqa.sh",
+      "sha256": "43eab1ce450a4e60113a4bedb79f5711233c2a5f2435e32770c63b8fc1781301",
+      "bytes": 3072
+    }
+  ]
+}

@@ -994,7 +994,7 @@ PG19外部筛查通过后补齐当前4090完整训练成本；不拿不同卡历
 
 ## 2026-09-17T06:07:45.679406+00:00：RunPod确认停止
 
-Pod REDACTED_POD_ID stop_acknowledged，desiredStatus=EXITED。已有备份与检查点核验后请求停止；未删除Pod、磁盘或日志。自动续跑PAUSED，等待用户明确恢复。
+Pod REDACTED_CONNECTION_METADATA stop_acknowledged，desiredStatus=EXITED。已有备份与检查点核验后请求停止；未删除Pod、磁盘或日志。自动续跑PAUSED，等待用户明确恢复。
 
 
 ## 2026-09-17T18:27:19.322235+00:00：用户明确恢复，新Pod连接核验
@@ -1086,7 +1086,7 @@ attention7项/全模型9项CPU检查通过，全选支持D/E梯度和输出差0�
 
 ## 2026-09-18T00:20:00.876999+00:00 — New Pod connected; user resumes and waives historical budget blocking
 
-Pod REDACTED_POD_ID verified A6000 49140MiB idle, compute USD0.53/h; two1000GB storage allocations reported, exact storage billing pending. Existing project SSH key succeeds; user-template id_ed25519 absent. Relay requiresPTY; directSSH discovered and used. Old Pod untouched. Migration/install underway, scientific updates0. Existing pod-scoped credential cannot read account balance; user explicitly directs continue regardless. Keep current short-stage USD10 bound and full cost logs; no long training before numeric/throughput gates.
+Pod REDACTED_CONNECTION_METADATA verified A6000 49140MiB idle, compute USD0.53/h; two1000GB storage allocations reported, exact storage billing pending. Existing project SSH key succeeds; user-template id_ed25519 absent. Relay requiresPTY; directSSH discovered and used. Old Pod untouched. Migration/install underway, scientific updates0. Existing pod-scoped credential cannot read account balance; user explicitly directs continue regardless. Keep current short-stage USD10 bound and full cost logs; no long training before numeric/throughput gates.
 
 
 ## 2026-09-18T00:21:55.987501Z — A6000 paired engineering preflight started
@@ -1111,7 +1111,7 @@ Observed 2026-09-18T00:51:42.177057+00:00: controller2162/child2165 and both loc
 
 ## 2026-09-18T01:26:54.121186+00:00 — Two-Pod D/E scientific parallel execution established
 
-User supplied secondA6000 REDACTED_POD_ID. Quote0.53/h,driver570.195.03,20GB container1000GBvolume; conservative0.68/h.146migration hashes and atomic publication passed. Tiny9F9B3engineering + E12updates192F/B completed01:17:05Z;84replay scalar errors0. Engineering cumulative680F655B77updates. Old D2165 uninterrupted; master protocol atomically moved01:19:11Z, no old E launch/no signals; future parent missing-file administrative revocation expected. New sparse outer1888/controller1889/child1892 started01:21:13Z, same random backbone/source/data confirmed. Snapshot science aggregate370updates/4387278input tokens; group counts inresults/babylm-parallel-evidence-v0/20260918T012253Z/launch-audit.json. Small D17/E15 evidence files backed and hashed. Preserved local quoting/bootstrap errors and CRLF receipt checksum correction, no model retries. Automation updated both Pods, total150 cap/second75; no quality or speed claim.
+User supplied secondA6000 REDACTED_CONNECTION_METADATA. Quote0.53/h,driver570.195.03,20GB container1000GBvolume; conservative0.68/h.146migration hashes and atomic publication passed. Tiny9F9B3engineering + E12updates192F/B completed01:17:05Z;84replay scalar errors0. Engineering cumulative680F655B77updates. Old D2165 uninterrupted; master protocol atomically moved01:19:11Z, no old E launch/no signals; future parent missing-file administrative revocation expected. New sparse outer1888/controller1889/child1892 started01:21:13Z, same random backbone/source/data confirmed. Snapshot science aggregate370updates/4387278input tokens; group counts inresults/babylm-parallel-evidence-v0/20260918T012253Z/launch-audit.json. Small D17/E15 evidence files backed and hashed. Preserved local quoting/bootstrap errors and CRLF receipt checksum correction, no model retries. Automation updated both Pods, total150 cap/second75; no quality or speed claim.
 
 
 ## 2026-09-18T01:43:25.198213+00:00 — Parallel heartbeat healthy; dense3M snapshot preserved
@@ -1137,4 +1137,400 @@ Explicit clarification: stop automatic monitoring, keep training. Automation aut
 D旧父FileNotFoundError通过专用verify_terminal确认为预定撤销旧E，不是训练失败；两组子任务都returncode0。当前两GPU无计算进程、无活动锁，Pod未停机。自动监控仍暂停，未新增模型调用或后续实验。
 
 固定48窗终点NLL：D5.033447、E4.984512（E-D=-0.048936），并非完整dev。两组面板均从中期约3.4–3.5恶化至终点约5，有过拟合迹象；不得只报告稀疏略好而隐去共同退化，不能宣布等价、加速或论文成立。下一科学步骤应先固定完整dev/语言任务评测；终点证据和中期快照都保留，不事后挑最佳断点。详见`logs/manual-status-20260919T165216Z/completion-audit.json`。
+
+
+
+## 2026-09-19T17:27:39.436652+00:00 — 用户授权推送GitHub，私有仓库创建及远端校验完成
+
+仓库 https://github.com/calloftheNIGHT2023/native-sparse-prefill ，main提交d139d14047b42778bc87697b91f7abce3426f751。独立导出checkout为exports/github-native-sparse-prefill，1010文件约21.7MB；原实验源码和原始证据不被脱敏覆盖。README更新当前BabyLM结果、旧README归档；首对结果报告保留共同后期面板退化及未做完整评测的边界。上传源码、配置、报告、完整逐更新日志压缩版、58面板曲线和SHA清单；不含模型/优化器、原始或token语料、秘密与实时连接。1009个清单文件SHA、14122配对更新/58面板及训练时科学源码SHA复核通过；远端main、manifest与报告blob、private可见性核验一致。自动监控仍暂停，无新增模型调用或Pod操作。详见logs/github-publication-current.json。
+
+
+## 2026-09-19T17:41:13.229250+00:00 — 用户五点批评复核：先导结果不能作为胜出或论文主证据
+
+重新统计已有原始日志并核对 MiniMax B.4/B.6、MoBA 与 NSA 原文。D/E 最低观测面板均在5500更新，约3.409/3.396，终点退化至5.033/4.985；正则化为未验证竞争解释。E全程保留25.56175%逻辑因果边，但两组主注意力分数元素分配总量相同，E额外计算索引器；无真实稀疏成本收益证据。单种子48窗不足以建立等价或路由价值，W、完整dev和语言任务尚未运行。不能把当前结果写成推翻warmup先例或新原生稀疏方法。
+
+后续优先级更新为先冻结有限评测/诊断协议，利用已有固定暴露节点检查完整质量、global远距支持敏感性、全支持归一化路由覆盖与同GPU成本机会，再决定是否训练W/L或补seed。没有新增训练、模型前向、云端操作或GitHub推送；自动监控保持暂停。详见`docs/babylm-critique-and-validity-gates-2026-09-19.md`和`logs/babylm-critique-audit-20260919.json`，修改前状态保存在`logs/critique-review-before-20260919T174113229250Z`。以下旧计划受本条更新覆盖。
+
+
+
+## 2026-09-19T19:16:39.424194+00:00 — 用户授权严格1epoch对照，代码冻结，等待有效GPU连接
+
+按用户要求重新随机初始化D/E，只遍历22,598窗一遍，共1413更新（尾6窗），16,325,414输入token、16,302,816监督token、10,001,709保守词暴露。主干LR共同3e-4，前1M词warmup，按完整一轮cosine至3e-5；AdamW等共同参数一致。主干和索引器独立clip=1，消除索引器梯度进入主干全局裁剪的混杂；属控制修正，非新方法。
+
+末100更新固定1314–1413，主指标token加权纯LM NLL及exp(NLL)，另报逐步loss/PPL均值，辅助KL单列。22项引擎/回归、19项日志指标、1项worker身份mock测试通过；本轮新增CPU工程115F/113B/44updates，科学和GPU计数0。原源码存档，旧科学轨迹不改。
+
+协议`configs/babylm-one-epoch-20260919-v1.json` SHA256 `ccc18f81f37038093ab6d98efc53d5db70f26f9b2f0ceaa9223c58e6b7f2a1e0`；说明`docs/babylm-one-epoch-controlled-protocol-2026-09-19.md`；总状态`logs/babylm-one-epoch-current.json`。两旧直连超时，两relay公钥拒绝，已请求新SSH，未开跑、不盲重试。预期每组A6000约3–4小时，单组6h上限、两组$24额度；实际需接通后核验。用户授权此新一轮不恢复周期自动监控。当前结论仍为问题未复现、无改进方法证据。
+
+
+
+## 2026-09-19T19:47:46.447495+00:00 — 新Pod已开始严格1epoch D→E对照
+
+用户提供REDACTED_CONNECTION_METADATA连接后完成迁移。实际为RTX PRO6000 Blackwell的1g.24gb MIG，非整卡96GB；API核实GPU价$0.59/h，含存储保守记账$0.81/h。torch2.10.0+cu128环境、51数据文件SHA核验完成；原阈值数值检查7/7通过，新增工程9F/9B/3updates（其中CPU2F/2B、CUDA7F/7B），不计入科学训练，也不重复预飞。
+
+两次执行入口失败均发生在模型训练之前：SSH未继承Pod ID、模板nginx子进程FD权限。失败日志保留；Pod ID从已存在PID1环境仅提取该字段；MIG身份/锁/显存空闲仍强制核验，对已识别模板nginx只做狭义权限例外并记录不可见边界。没有修改数值阈值或科学配方。v3协议`configs/babylm-one-epoch-blackwell-mig-20260919-v3.json`，SHA`cc7efbb5da17c8798cc55e6f002585ecb76f8b35875e03b522508e2f1d9a500d`。
+
+19:43:45UTC启动单卡顺序D→E：outer6455/controller6456/Dworker6520/Dtrain6660。2026-09-19T19:45:56.041586+00:00原始日志核验D23/1413更新，254,200输入token、253,832监督token、155,376词暴露、368训练F/B；初始48窗评测48F独立记账。E尚未启动，D完整epoch和末100步审计通过后才自动接续。两组共同初始化/数据顺序/主干LR，主干与索引器分开clip=1；1epoch末100固定1314–1413。保存20份原始小日志/协议/失败收据到本机并逐SHA核验，详见`logs/one-epoch-cloud-20260919T191815Z/snapshot-20260919T194555Z`。
+
+本轮总额度$24、每组6h合作退出/6h10m硬限、外层12h30m。当前D实测约4.9s/update，预计D约2h，E本卡耗时尚未实测。周期自动监控仍PAUSED；只运行这一对，不恢复旧队列、不新增后续实验。尚无末100步对照结果，不主张复现/解决冷启动问题，也不主张真实稀疏加速。最新状态以`logs/babylm-one-epoch-current.json`为准。
+
+
+## 2026-09-19T19:54:39.699663+00:00 — 已核验111步，有限进程守卫生效
+
+截至2026-09-19T19:53:26.931725+00:00，D完成111/1413更新（7.86%），1,301,915输入token、1,300,139监督token、808,603词暴露、1776训练F/B，48过程dev前向单记。已完成更新的loss/梯度均有限，最新trainCE5.39468不是末100步或最终结果。前111平均5.09s/update，D全组约2h；E仍待D审核后接续，E本卡耗时尚未知。D末100/PPL对照尚未产生。
+
+为弥补训练子进程独立session不受外层timeout完整覆盖，部署独立有限安全守卫PID6933（7项mock通过+Pod本机pidfd信号0验证）。只对本轮已核PID/start_ticks/cwd/父子链做孤儿/截止清理，不读取GPU或数据、不产生模型调用、不派发新实验。截止2026-09-20T08:13:45.353180UTC；正常完成自行退出。实测状态正常、未向训练发任何信号。当前训练/科学源码及v3协议均未更改。周期automation保持PAUSED。
+
+新增14份原始日志/协议/守卫收据已本机保存逐SHA通过：`logs/one-epoch-cloud-20260919T191815Z/snapshot-20260919T195326Z`，旧失败20份快照另存未覆盖。首次部署观测以来GPU费用估算$0.346、含存储保守$0.475，不含此前租用、不是账单，额度仍$24。
+
+
+## 2026-09-19T21:21:37.885209+00:00 — 用户单次查询：D已971/1413，E待接续
+
+21:18:18UTC原始日志：D971更新（68.72%）、11,311,006输入token、11,295,470监督token、6,960,289词暴露、15,536训练F/B；四次48窗过程评测共192F独立记账。已完成loss/梯度有限，日志无解析失败，父子PID/start_ticks与既有记录匹配，守卫正常且未发送停止信号。E未启动，固定末100区间1314–1413尚未进入，无末100或D/E结果。
+
+近期5.903s/update，剩442更新；含评测与保存暂估D22:02–22:05UTC（纽约18:02–18:05，北京次日06:02–06:05）结束。E耗时仍未在该卡实测。此次只读查询，没有重启/停止/新实验/额外模型调用；周期自动监控仍暂停。13份小日志/协议和两个137/693更新model-only阶段模型（各约382MB）新增本机备份，远端、下载文件、原日志登记SHA相符；model-only快照不含optimizer/RNG，不当作断点恢复权重；活动可变checkpoint.pt只核验远端当时hash，未下载。证据：`logs/manual-oneepoch-status-20260919T211818Z`。
+
+
+## 2026-09-20T03:07:57.516684+00:00 — 严格1epoch D/E均完成：稀疏小幅落后，发现路由零分线索
+
+02:58:11UTC单次查询确认：D于2026-09-19 21:58:02UTC、E于2026-09-20 00:17:42UTC完整完成，各1413更新、22,598窗口恰好一次、16,325,414输入token、16,302,816监督token、10,001,709词暴露；每组过程dev另336F。共同初始主干hash、全部窗口顺序/计数/主干LR/裁剪规则核验一致，原始日志下载后独立复算末100通过。
+
+末100逐步mean LM loss D3.659724/E3.677594；逐步mean PPL44.266052/45.129687；token加权LM NLL3.654818/3.672284，PPL38.660479/39.341657（E+1.762%）。最终48窗面板NLL3.967740/4.002653（不是完整dev）。D约2h14m、E2h20m，reference E慢约4%，没有稀疏加速证据。单seed小gap不能确立等价、机制或论文贡献。
+
+只用既有日志/源码另发现：可见完整块查询全零分比例step0约0.017%，250约97.03%、500约98.25%，终点67.76%。稳定排序使全零的有效top64长查询选最早64完整块；这是当前实现路由退化的可核查现象，不证明其导致loss gap。详细分母与有效稀疏查询下界记录在routing-zero-score-log-audit.json。下一科学优先项应先排查该实现/目标并做小型冻结诊断，尚未开新GPU评测/训练。
+
+32份原始小文件、2最终optimizer/RNG检查点和6阶段模型（共4,615,185,680字节，已存2份复用）全部本地SHA核验；最终检查点CPU载入，epoch1/position0、pending为空、参数有限、optimizer/RNG齐全。本次无最终checkpoint前向重放，0新增模型调用。证据`logs/manual-oneepoch-status-20260920T025811Z`；报告`docs/babylm-one-epoch-results-2026-09-20.md`。
+
+所有已登记训练/控制器/守卫均已退出，守卫无强制信号。周期自动监控仍PAUSED、未接续其他实验。两个worker窗口GPU费用按$0.59/h估$2.6935，含存储保守$3.6979（不含部署及空闲，不是发票）；截至观测，完成后空闲2.67小时。Pod未被本次查询停机，结果已完整备份，可由用户停卡。
+
+
+## 2026-09-20T03:24:54.158935+00:00 — 用户要求优化方案：先查路由退化，再做单因素试验
+
+已编制 `docs/babylm-indexer-optimization-plan-2026-09-20.md`，以严格一轮 D/E 和训练后索引器全零分现象为依据。先补固定完整 dev 与已有模型的分层路由/覆盖/NLL干预；再按证据测试索引器 LR、温度或负区梯度，补 W 和合理预热 L；独立质量与真实稀疏成本后置确认。拟定首轮优化筛查 $20 上限，仅为计划，尚未冻结派发。改激活/调学习率不称新方法，也未证明复现原论文冷启动机制。
+
+本次模型调用/训练更新/云端操作均为0，自动监控保持PAUSED，未改变原派发权限；完整原始结果保留。计划与SHA见 `logs/babylm-optimization-plan-current.json`。
+
+
+## 2026-09-20T03:53:36.589055+00:00 — 已获优化方案授权：重放与12项路由干预完成，完整dev正在评测
+
+用户回复“可以”后启动首轮优化阶段A，共享总上限$20；本批只读评测4h硬限、含存储保守执行上限$3.24。master SHA `d83fd0d75667a1c3399579b3775516ca73253b40ca60774a635d4ace3420e368`，入口 `configs/babylm-optimization-stage-a-20260920-v0/master.json`。03:46:21UTC启动，outer14554/controller14555；03:53:36UTC核验两者进程组一致、D完整dev进程15696存活，无新训练。周期自动监控仍PAUSED。
+
+D/E final48重放与原NLL完全相同，finalE带诊断工具也通过相同重放门槛。137/693/1413更新三快照×4路由共12项完成：终点PPL learned54.7432、prefix55.2338、local54.9225、random55.0093；仅48窗临时mask干预，不能替代从头W。终点第4层global零分率3.236%、第8/12层约99.99%以上（有监督且候选块>64的精确分母66,866/层）；第一层learned覆盖0.4465，而local0.3154。说明两层仍退化，不能由此归因全部D/E质量差距。初步报告 `results/babylm-optimization-stage-a-initial-routing-20260920/REPORT.md`。
+
+完整dev每组18,792窗口；当前D已提交1532窗，E待顺序接续。本批已落盘评测前向2204（运行中下界），反向/训练更新0；额外诊断完整attention1728次等算子另计。当前81份小文件逐SHA本机核验，新采集复用80份不重复下载；目录 `logs/babylm-optimization-stage-a-20260920-v0-observation-20260920T035335Z`。预计仍约45–75分钟，未承诺完成；硬截止2026-09-20T07:46:21.742165+00:00。当前周期首次03:33:51观测以来含存储估$0.2668，不是发票，控制器成本是其子集不相加。下一步等完整dev并审计再选择W/索引器短试验，不能先开训练抢卡。
+
+本机runner9项、诊断9项、控制器5项通过；10 tiny LM F另记，失败argsort和部署前SyntaxError保留；旧科学源码hash全一致。当前状态 `logs/babylm-optimization-stage-a-current.json`；协议说明 `docs/babylm-stage-a-protocol-2026-09-20.md`。
+
+
+## 2026-09-20T03:59:33.387895+00:00 — 用户要求结果出来直接通知：本批自动监控已恢复
+
+已通过automation_update将原heartbeat `automation` 从PAUSED恢复ACTIVE并核验保存配置，沿用10分钟间隔和本任务；旧双A6000/十轮训练prompt已替换为当前有限StageA的只读监控、备份、完成审计与直接汇报。正常运行保持安静，完整结果/真实故障/必须介入时报告；本批结果汇报后暂停监控，避免重复通知。没有派发训练、重启队列、停止Pod或对外发送消息。
+
+03:57:47UTC单次核验：D完整dev3432/18792窗口，6024806输入token、6021374监督token；评测父14555/子15696在原进程组且存活。此前14项已完成；队列已落盘评测前向4104（运行中下界），BP/更新0。最新81份证据SHA通过，复用80份旧文件。现行监控恢复收据 `logs/user-monitor-resume-current.json`，进度 `logs/babylm-optimization-stage-a-current.json`；本条覆盖旧“自动监控暂停”状态，不恢复任何历史实验。
+
+
+## 2026-09-20T04:10:06.849228+00:00 — 自动巡检：完整dev正常推进，无需通知
+
+D完整dev已提交8336/18792窗，15,100,930输入token、15,092,594监督token、8,908,205词暴露，窗口0–8335连续唯一；所有已提交NLL/PPL有限、eval/no_grad。父14555/子15696的PID/start_ticks/父子链/进程组与先前相同且存活。此前14项完成，队列累计已落盘评测9008F、16,189,500输入token、16,180,492监督token、9,576,201词暴露；反向/训练更新0，运行中计数为下界，E完整dev仍待原队列接续。
+
+81份小证据SHA核验，80份原文件本地复用，仅下载新增日志；备份 `logs/babylm-optimization-stage-a-20260920-v0-observation-20260920T041006Z`，独立审计 `logs/babylm-optimization-stage-a-running-audit-20260920T041006Z.json`。原协议/训练源码/阈值未变，无新模型调用、训练或进程信号。首次本周期观测以来含存储估$0.4896，其中控制器窗口$0.3206，后者为子集不能相加，不是发票。当前正常推进，不发送结果/故障通知，监控保持ACTIVE，等完整D/E核验后汇报。
+
+
+
+## 2026-09-20T04:24:09.344715+00:00 — 自动巡检：D完整dev完成，E按原队列正常接续
+
+D已完成18,792窗，ID连续唯一，17,437,534输入token、17,418,742监督token、10,420,962词暴露；独立复算NLL3.9382995146699087/PPL51.33123902350856与summary完全一致，原日志SHA和逐窗eval/no_grad通过。E于04:20:54UTC由同一父控制器顺序派发，目前1237/18792窗，2,420,129输入token、2,418,892监督token；还没有完整D/E结果。
+
+父14555身份保持，E子16310/start_ticks99483434/父子链/进程组14554核验通过；D returncode0，无失败。队列已落盘20701F、20,946,233输入token、20,925,532监督token、12,653,396词暴露，反向/训练更新0；运行中为下界。86份小证据逐SHA验证，78份本地复用，不下载模型。备份 `logs/babylm-optimization-stage-a-20260920-v0-observation-20260920T042408Z`；审计 `logs/babylm-optimization-stage-a-running-audit-20260920T042409Z.json`。含存储周期累计估$0.6791，控制器$0.5102为子集不能相加，非发票。E剩余暂估25–40分钟，截止保持07:46:21UTC。
+
+只读监控，无新模型调用、远端信号或后续训练。正常推进不发结果通知，等完整E及D/E审计后直接报告，监控保持ACTIVE。
+
+
+
+## 2026-09-20T04:37:15.148431+00:00 — 自动巡检：E完整dev正常推进
+
+E已提交6338/18792窗，较04:24增加5101窗；11,751,159输入token、11,744,821监督token、6,878,692词暴露。窗口ID连续唯一，旧行完全保留，非空目标NLL/PPL均有限，eval/no_grad。父14555/子16310的PID/start_ticks/父子链/进程组保持且存活。D与前14项已完成证据SHA未变，无重复计算。
+
+队列累计已落盘25802F、30,277,263输入token、30,251,461监督token、17,967,650词暴露；0反向/0更新，运行中为下界。86文件SHA通过，85份复用，仅新增E窗口日志下载；备份 `logs/babylm-optimization-stage-a-20260920-v0-observation-20260920T043714Z`，审计 `logs/babylm-optimization-stage-a-running-audit-20260920T043715Z.json`。周期含存储估$0.8559；其中控制器$0.6870为子集，不相加、非发票。剩余暂估15–25分钟，硬截止不变。
+
+完整E尚未产生，不发布D/E最终结论。只读监控，无模型调用/信号/新实验；正常推进保持安静，等待完整结果审核后汇报。
+
+
+
+## 2026-09-20T04:49:36.851788+00:00 — 自动巡检：E继续推进，尚未完整
+
+E已提交15385/18792窗，较04:37增加9047窗；16,190,491输入token、16,175,106监督token、9,607,334词暴露。ID连续唯一，旧行完全保留，非空目标损失有限，eval/no_grad；父14555/子16310身份与进程组保持且存活。D及前14项SHA未变，未重复计算。
+
+整批累计已落盘34849F、34,716,595输入token、34,681,746监督token、20,696,292词暴露；0反向/0更新，运行中下界。86文件SHA核验，85份复用，仅下载新增E日志。备份 `logs/babylm-optimization-stage-a-20260920-v0-observation-20260920T044935Z`；审计 `logs/babylm-optimization-stage-a-running-audit-20260920T044936Z.json`。含存储周期累计估$1.0228，其中控制器$0.8539为子集，不相加、非发票；剩余暂估5–15分钟，截止不变。
+
+正常运行，完整E未完成，保留原队列与ACTIVE监控；无新实验、模型调用或进程信号。等待完整D/E核验后再通知用户。
+
+
+
+## 2026-09-20T04:57:59.136490+00:00 — 优化阶段A完成：全部备份，可停卡；监控已暂停
+
+全部16项于04:53:50UTC正常结束，D/E各18,792窗完整dev；独立复算D NLL3.938299515/PPL51.331239、E NLL3.983205566/PPL53.688862，E PPL高4.593%。完整结果存在质量差距，单seed不作非劣或机制结论；未启动改进训练。原48窗路由诊断仍提示后两层索引器几乎全零，但因果归因未完成。
+
+全部38,256 LM F、35,963,638输入token、35,925,382监督token、21,509,920词暴露，0B/0updates；额外诊断算子单列。87份最终证据本机SHA核验，83份复用；备份 `logs/babylm-optimization-stage-a-20260920-v0-observation-20260920T045631Z`。04:57:59UTC核实outer14554/controller14555/child16310均不存在。通过automation_update暂停本批monitor并核验PAUSED；用户希望停卡，无后续云端任务，不自动停止或删除Pod。模型此前已本机备份，本次复核与统计在本地进行。报告 `results/babylm-optimization-stage-a-final-20260920/REPORT.md`。
+
+控制器67.48分钟含存储估$0.9110，周期至完成估$1.0800；截至04:57:59估$1.1358，区间重叠不能相加、非发票。下一步本机定位梯度/优化原因，固定W与最小修正的后续协议；本批不接续训练。
+
+
+
+## 2026-09-20T05:01:32.987246+00:00 — 最终独立审计通过
+
+616项数值/账目核验全部通过；87/87原始证据及两完整检查点、六模型快照（4,615,185,680字节）重新SHA通过，安全停卡无备份阻碍。六来源/四位置桶均E更差，首1–256也掉分，不能归因只丢失长距信息。监控已PAUSED，无新任务；报告及两独立审计已本机保存。
+
+
+
+## 2026-09-20T05:02:45.816027+00:00 — 用户明确停止脚本，不接续实验
+
+用户要求“脚本停掉，得出了什么结果”。本批已自然完成，04:57:59UTC核验全部登记远端进程退出；本次核验自动监控仍PAUSED。保存明确停止收据 `logs/babylm-user-stop-current.json`，后续未经用户新指令不得恢复监控或派发训练。没有重新连接可能已停的Pod，没有模型调用/进程信号或Pod电源操作。完整报告与模型备份不变。
+
+
+## 2026-09-20T17:21:16.440455+00:00 — 用户恢复：新Pod迁移重放通过，B1有界诊断已启动
+
+新Pod REDACTED_CONNECTION_METADATA，Blackwell MIG2g.48gb，实价$1.09/h、含存储保守$1.40/h。本批上限$5，原优化周期$20；旧停止由最新“继续”撤销，旧队列不恢复。固定源码/数据/两快照已SHA迁移；原数值阈值7/7与48窗跨MIG重放通过（最大窗差4.467e-6<=1e-5）。工程数值9F/9B/3updates、重放48LMF分别记账。
+
+B1四臂固定hidden/teacher，各200索引器更新，24LM特征提取，不更新主模型。v2协议SHA 2ccebfd514b8d13113cfdd27ea20bbf6f18215c62dc72feece0d08ef9242338c；互斥锁及整组1800s硬限，outer 3081，截止 2026-09-20T17:51:16.440455+00:00。下一项最多一个仅降低索引器LR的fresh500步对照，须B1结果审计后派发。当前自动监控仍PAUSED，不自动扩大。部署前schema键错误0模型/0作业，收据保留。当前状态 logs/babylm-optimization-stage-b-current.json。
+
+
+## 2026-09-20T17:32:05.337103+00:00 — B1完成并独立审计通过，选择仅缩放索引分数
+
+B1四臂各200次router-only更新，24次LM特征提取，主干0反向/0更新；14文件485,750,754字节本机SHA通过，独立审计7195/7195。结果与边界见 results/babylm-stage-b1-audit-20260920/REPORT.md。原配方holdout三层全非正率82.34%/95.65%/100%；scale-only55.43%/4.08%/0%，三层平均coverage38.12%→49.56%。lowLR-only未过预定联合筛选，scale-only/联合均通过，选择更小单因素scale-only。恢复alpha1评价KL变大，且第一层仍退化，不能宣称语言质量改善或修复已完成。
+
+B2只改model_config.index_score_scale=1/sqrt128，保留indexerLR1e-3、主干3e-4、原1413步调度前缀及相同初始化/数据，最多fresh500更新。新源码8项tiny验证通过，5F/2B/2engineeringupdates，不算科学训练；当前尚未派发。master configs/babylm-stage-b2-score-scale-20260920-v0.json SHA7639b29f068993714a86c8ca7ecaaf324cf4e2f3f0f1e1e9f13cf28a2ebc03fe。执行最长90分钟，费用保守$2.10，部署/B1预留$1.50（储备不是实际支出），新Pod批次总上限$5。自动扩展禁用。
+
+
+## 2026-09-20T17:36:22.962462+00:00 — B2已启动并确认真实训练，结果监控已恢复
+
+17:33:19.880291UTC启动唯一scale-only500更新作业，outer3754/controller3755/child3823，同PGID3754；17:34:19核验科学更新10，160F/160B、109995输入/109835目标/65907词。共享fresh初始化参数map SHA与原E精确一致，初始48窗NLL9.8563859827。原学习率/数据/1413步调度保持，只改scale=1/sqrt128。正在运行，没有语言改善结论。
+
+整组硬截止19:03:19.880291UTC；90分钟、执行含存储最多$2.10，新Pod本批含部署总上限$5，优化周期$20。按同一UTC区间记部署/空闲/训练费用，不能再与子阶段重复相加。现行状态与费用 logs/babylm-optimization-stage-b-current.json。自动监控通过automation_update恢复ACTIVE，10分钟一次，只在已核验完整结果/真实故障时通知，完成后暂停、不自动续跑/扩大。小日志采集改为同次读取+SHA避免追加竞态；大.pt仍增量SCP校验。没有自动停止Pod。
+
+
+## 2026-09-20T17:53:57.993016+00:00 — B2正常推进：223/500更新，阶段检查点已本机备份
+
+17:48:37UTC采集已提交223更新，3568训练F/B，2687279输入token、2683711目标token、1664559词；初始48窗评测48F单列，共3616LM F。前223更新数据顺序/窗口与词token计数/初始化及LR逐条对齐原E，纯LM/梯度有限；独立运行审计15248项通过，无训练失败。快照不包含后续尚未采集工作，不能当最终质量结论。
+
+13文件全SHA通过，新增1551451800B、复用19232B；第137更新模型快照及完整checkpoint已备份。最新manifest logs/babylm-stage-b2-backup-20260920-v0/manifest-20260920T174835.066689Z-41212675.json；变动日志按receipts.local_relative_path读取。17:49:24核实outer3754/controller3755/child3823身份/start_ticks/父子/PGID保持；MIG flock由3755持有。GPU利用率读数因MIG权限不可用，未伪造。原始日志持续增长，未改远端作业。
+
+本次本机观察器/审计初版有状态标签、event_id起点与迁移绝对路径比较假设错误；经原schema和九份内容hash核实更正，失败原因保留，0模型/0远端修改，不属于训练失败、不放松科学阈值。新Pod观测区间含存储估$1.0597，B2执行子区间不能重复相加；原截止19:03:19UTC和$5上限不变。按输入token吞吐暂估约18:06UTC完成，非保证。监控ACTIVE，正常进展保持安静，等待完整500步审计后通知。
+
+
+## 2026-09-20T18:15:28.516532+00:00 — B2完整500步已独立核验：小幅语言改善，全部备份，监控暂停
+
+18:07:04UTC正常完成，科学500updates/8000F/8000B，5889824输入token、5881824目标token、3629398词；0/250/500面板各48F，共144evalF，全部LM F8144。末401–500按token加权纯LM NLL4.199231188→4.188188923，PPL66.6350815→65.9033268（-1.098%）；逐step平均PPL75.4101851→74.4935409。固定500面板NLL4.62524155→4.60748309，PPL102.027415→100.231559（-1.760%）。面板全零打分率228764/232833=98.2524%→155/232833=0.06657%，分母由真实长度独立复算，含最后无监督query，跨层聚合，不冒充每层或训练tail统计。
+
+统计34184项与checkpoint/provenance9988项独立核验通过。17文件1,940,901,231字节逐SHA本机备份；最终checkpoint有完整optimizer/RNG/cursor，两模型快照均核验，最终500权重与full checkpoint逐tensor一致。所有初次本机审计schema假设错误有记录，科学源码/阈值没有放宽。18:08:31核实登记三个进程退出、MIG flock释放。自动monitor已通过工具PAUSED，无后续训练，无自动Pod电源操作；现在可停卡。
+
+本轮worker2024.281秒，实GPU估$0.6129，含存储保守$0.7872；从本新Pod首次观测到18:08:31总体保守估$1.5057，包含worker不可重复相加，之后idle仍可能计费，非发票。报告 results/babylm-stage-b2-final-20260920/REPORT.md。这只是单seed/48窗500步探索，不能宣称完整epoch稳定、完整Qwen通用或实际省时/论文成立。下一批建议固定配方完成一轮并补完整dev，再加从头W；本批没有自动执行。
+
+
+
+## 2026-09-20T18:58:35.758778+00:00 — C1 已开始：接第500步完成原一轮，并自动评完整dev
+
+用户在 B2 完整报告后“继续”，授权这一有限后续。master `configs/babylm-stage-c1-scale-epoch-20260920-v0/master.json` SHA bfd30257291c9a9780a961fc19d8afa60e52d53d72c108416060f52aa66f1d86；说明 `docs/babylm-stage-c1-scale-epoch-protocol-2026-09-20.md`。科学配方不变：scale=1/sqrt128、indexer LR1e-3、主干3e-4、原1413步词数调度/完整optimizer/RNG/cursor均保留；不是重新训练前500步。
+
+新目录 `results/babylm-stage-c1-scale-epoch-20260920-v0`，18:53:34UTC派发；outer8290/controller8291/trainwrapper8292/trainer8360，PGID8290。18:55:08UTC核验已到512/1413，累计8192训练F/B、6017882input/6009690target/3707892词；相对B2新增12updates/192F/B。四进程身份、共享MIG锁正常，0/250/500面板未重评。先前8222启动因SSH未继承公开PodID被守门拒绝，0模型/0更新、无result目录；仅修环境继承，保留失败日志且原硬截止22:51:44UTC不延长。
+
+旧B2原件只读，行政分支仅重绑定目录/预算/协议来源。真实初始分支checkpoint与B2原full checkpoint逐字段/张量独立复核一致（model/optimizer/所有RNG/cursor/LR/counts/elapsed均保留），历史日志字节前缀不变。tiny恢复等价验证累计31F/14B/14工程updates，含首次本机路径schema失败，科学计数单列。初次28份证据共2715902488字节本机逐SHA通过，复用旧字节775158323B，新增下载1940744165B；原始manifest `logs/babylm-stage-c1-backup-20260920-v0/manifest-20260920T185432.204932Z-0b56d634.json`。初次raw审计过前4新增updates；更晚live512只作进展，不当终点。
+
+唯一后续为训练501..1413（913新updates/14598新F/B）和完整18792窗dev。新面板192F，dev18792F，本批预定33582新LM F、14598B。末100固定1314..1413；dev唯一final1413，对照原D/E全dev，单seed开发证据不作非劣、加速或完整Qwen结论。完整结果核验备份后直接通知用户，再暂停本monitor，不先开W/新种子。
+
+自动监控工具已ACTIVE、每10分钟静默巡检；最新状态 `logs/babylm-optimization-stage-c-current.json`。新批$6/优化周期$20，现卡实GPU1.09/h、含存储保守1.40/h；累计费用按Pod同一UTC区间记，保留B2 elapsed不重复相加，历史未观测idle/发票未知。此次检查至2026-09-20T18:58:35.758778+00:00周期已知保守估$3.8098（含已观测idle），不是实付。预计18:55UTC后再1.5–2h，硬截止不变；未自动停卡。
+
+
+
+## 2026-09-20T19:00:01.587997+00:00 — 用户暂停自动监控，训练和队列内完整dev继续
+
+最新指令“无需监控，告诉我几点就行”。已通过automation_update暂停monitor，并核验配置PAUSED。没有连接远端、发信号、修改训练/评测或操作Pod；已启动C1有限队列及原硬截止照常有效。此前18:55UTC进度估计剩余1.5–2小时，建议美东9月20日17:00（北京时间9月21日05:00）回来查看，仅估计、不保证已完成。后续等待用户查询，不自动恢复监控或推送。收据 logs/babylm-stage-c1-monitor-user-paused-20260920.json。
+
+
+
+## 2026-09-20T21:21:37.901660+00:00 — C1容器中断，1074步日志/1000步恢复点已完整保全，未重启训练
+
+用户到点手动查询。19:39:51UTC容器停止、21:09:03UTC重启，原因/操作人未知；最后日志19:39:50UTC。新直连11399，GPU/MIG已变；原进程不存在、running状态及锁为遗留，原timer不再存活。完整dev未开始。自动monitor仍PAUSED；本次无模型/GPU调用、新实验、进程信号或Pod电源操作。
+
+30文件3106587026字节独立SHA通过；恢复审计20846项、指标审计28061项通过。日志到1074/1413，完整optimizer/RNG/cursor checkpoint在1000；续跑需413步并保留重算74步的额外实际消耗。旧锁和原始日志未改，不能直接原地resume或复用旧500启动器。新恢复需原阈值迁移重放、独立分支及有限协议；未自动实施。
+
+累计已记录17184训练F/B、12521704input、12504520target、7687643词、240面板evalF；C1相对B2新增574updates/9184F/B/96evalF，最后在途未知。第1000步48窗PPL D57.933398、E60.614604、C1 58.189302，C1对E低4.001%、对D高0.442%；仅中途面板，无最终1314–1413或全dev结果。费用见execution-audit，至21:15:31UTC已观测周期保守估$5.1347，非发票。当前卡空闲，本机证据足够保全，可停卡但未代停。
+
+综合报告 results/babylm-stage-c1-interrupted-20260920/SUMMARY.md；最新manifest logs/babylm-stage-c1-backup-20260920-v0/manifest-20260920T211122.857236Z-7cfe1427.json。
+
+
+
+## 2026-09-20T21:55:36.774278+00:00 — 用户授权接着做：C2从1000步恢复，训练与完整dev有限队列已启动
+
+新Pod原阈值7/7 tiny通过，第1000步同48窗重放总NLL差0、最大逐窗差8.307132e-7，原1e-6/1e-5界限与attention计数均通过。仅GPU身份变更；恢复分支保留model/optimizer/RNG/data/LR/cursor和原日志前缀。CPU恢复等价25项通过，三项行政源码已冻结和独立审阅，科学引擎未改。新工程计数73F/19B/13updates（CPU tiny16F10B10u、GPU numerics9F9B3u、迁移重放48F），科学更新另计。
+
+21:50:37UTC唯一新队列已启动，outer5124/controller5125/worker5126/trainer5194，同PGID5124，原标识与start_ticks已核验。2026-09-20T21:52:54.815512+00:00读回1023/1413，新恢复23更新，纯LM有限；resume恰[500,1000]，没有重复初始/1000面板。原1074全日志、旧锁与checkpoint只读保留；回滚后74updates/1184F/B全部记作已消耗中断分支，未来完成时还需计入物理总量。新恢复413updates/6598F/B，之后96过程evalF与18792完整devF，不扩候选或种子。
+
+master SHA428accb183a4339a80a01e4d21809207183de1c4472775129ea75191d5a5f43b，协议docs/babylm-stage-c2-recovery-protocol-2026-09-20.md。训练5400s，完整dev3600s，整组硬截止2026-09-21T00:50:37.825607UTC，失败清理整组/不重试。队列$4.20、含预飞本批$6、优化周期$20；当前观测周期保守估$6.0070，非发票。预计23:15UTC（美东19:15/北京时间次日07:15）回来查，仅估计。
+
+自动monitor仍PAUSED，未创建/恢复周期监控，未操作Pod电源。当前状态logs/babylm-stage-c2-current.json，备份logs/babylm-stage-c2-backup-20260920-v0；旧已校验历史模型本机复用，变化文件依immutable manifest逐SHA存档。再次查询时先核验实际进程/计数与最新manifest，不重启任何旧队列。
+
+
+
+## 2026-09-20T21:59:47.940603+00:00 — C2启动证据完整备份、独立检查通过
+
+初始39文件4275257627字节逐SHA备份，旧已校验模型1937938290字节本机复用，不重复下载；最新manifest SHA5cb89f90465eb18abcc7c488a67fb22bb244f7ff2420a98430c492ad4224ce1f。独立checkpoint168项、指标26370项通过：原u1000 model/optimizer/RNG/cursor/LR/counts/elapsed全部精确保留，GPU身份变更与行政绑定单独记录；原1074全日志、旧锁和74更新费用保留。备份原始日志到1012，与废弃旧同12步的LM/aux/梯度范数误差均0，仅作为恢复一致性证据。
+
+21:57:56UTC额外只读核验活跃四进程身份/组保持，已到1101/1413（本次新增101步），损失有限，已超过原中断1074点。这个live点晚于备份快照，不冒充已本机备份到1101。训练随后按原队列接完整dev；无新实验/周期monitor/Pod电源操作，automation配置仍PAUSED。当前周期已观测费用保守估$6.1243，非发票、未知费用不补零；预估23:15UTC回来查，整组截止次日00:50:37UTC不变。
+
+报告：logs/babylm-stage-c2-initial-checkpoint-audit-20260920.json、logs/babylm-stage-c2-initial-metrics-audit-20260920.json。初次独立checkpoint审计仅把collector复用状态名写错，已按原schema修正，0模型/0CUDA，错误保留在该报告。
+
+
+
+## 2026-09-20T22:14:22.045200+00:00 — 手动查询C2进度：1316/1413，1250面板已备份核对
+
+用户询问“现在呢”。2026-09-20T22:11:27.807676UTC只读核验outer5124/controller5125/wrapper5126/trainer5194，PGID5124和登记start_ticks匹配，训练存活；22:12:22.636538UTC日志到1316/1413（93.1%），新恢复316更新，最近50步平均3.9043秒。完整dev尚未开始，由已有有限队列在训练审计通过后执行；训练预计22:20UTC前后完成，含完整dev仍预计23:15UTC（北京时间9月21日07:15、美东9月20日19:15）可查，仅估计，不改硬截止。
+
+新增immutable备份logs/babylm-stage-c2-backup-20260920-v0/manifest-20260920T221147.724203Z-7b68535b.json，39文件全部SHA核验，下载1169833290字节、复用3107052568字节；原版本保留，日志快照到1309步，与稍后live计数区分。1250固定48窗token加权NLL/PPL：D3.9806516806/53.55192161，原E4.0237240128/55.90892418，scale-only3.9912448739/54.12222279。同77707监督token、相同窗顺序和8925867训练词暴露，来源汇总独立复算通过；仅过程观察，不能代替末100步或完整dev，不判等价/加速/论文成立。详见logs/babylm-stage-c2-panel1250-comparison-20260920.json。
+
+保守周期已观测费用估$6.4611，按连续Pod时间含存储计，不与worker区间重复相加，非发票、未知闲置未计。未增加模型前向、未重启/信号/改远程作业、未操作Pod电源，自动监控仍PAUSED。
+
+
+
+## 2026-09-21T01:33:36.088604+00:00 — C2完整一轮及完整dev审计通过，已交付证据包
+
+唯一final1413模型完成一轮10001709词、16325414输入/16302816监督token；完整dev18792窗、17418742监督token。D/E/F完整dev NLL分别3.9382995147/3.9832055664/3.9470523930，PPL51.331239/53.688862/51.782507；F相对E降3.5507%、相对D高0.8791%，仅单seed点估计。F末1314–1413 token加权NLL3.6525485792、PPL38.57284684、meanstepPPL44.19184119。六来源和四位置均优于E，四位置仍略逊D；不能宣称非劣/稀疏加速/完整Qwen/论文成立。
+
+独立来源checkpoint27055项与raw指标333825项均通过。55文件4685069916字节完整逐SHA备份；final模型SHA2dc8cfee373743f22f0066a828f9cd211f3ab91cd5ed02cd14765eda8fa65dd8。本地初版metrics reader误把D无indexer当LR不匹配，1413失败保留，修正精确共有主干比较后通过；0模型/远端。C2实际413新更新、6598F/B+96panelF+18792devF，废弃74/1184F/B保留，物理训练下界1487更新/23782F/B。工程另记，不重复累加。
+
+队列21:50:37–22:41:55UTC完成，训练22:18:48结束；两stage exit0，全部登记研究进程退出，同硬件锁文件保留但无内核锁持有者。GPU进程级查询权限有限，不声称看见整机其它租户；本研究无后续作业。backup已完成，用户可停Pod，未代停。C2队列含存储保守约$1.197，完成后到01:23:38UTC空闲约$3.774；周期已观测保守$10.924，区间不重叠计、不当发票。自动monitor仍PAUSED。
+
+报告results/babylm-stage-c2-final-20260921/REPORT.md及evidence-index.json。已写本机后续方案docs/babylm-after-scale-one-epoch-next-step-2026-09-21.md，优先原定义从头纯local W，检验学习式路由是否必要；未派发新训练，不自动扩种子/重试/改变已完成协议。下一付费批次需另冻结协议与运行上限。
+
+
+
+## 2026-09-21T03:02:47.580611+00:00 — 用户“继续”：原定义纯local W单轮队列已启动
+
+W固定最近64个完整块（块长4）加原因果尾部，无sink/indexer/辅助目标；随机初始化全参数，95,391,000主干参数和原D逐tensor初始SHA完全一致，数据顺序、LR3e-4及原词数warmup/cosine、AdamW/clip保持。科学mode以W_fixed_local/actual_policy=local为准，旧引擎dense字段仅无indexer兼容；持久marker禁止旧D误载。不是临时mask干预。
+
+新CPU14/14与CUDA15/15原阈值通过；真实6update预飞96F/B、0panel完成，12文件1,526,736,431字节逐SHA备份，checkpoint协议/初始map/数据cursor/模型marker/optimizer/RNG与raw日志全部通过。工程合计116完整LM F、111B、13updates，另4组件F/B、56support调用，科学另计。首次CPU读回器weights_only不支持numpy RNG，改用已校验自有checkpoint完整读取；又把四个分列RNG误写为rng_state造成一次审计false，已按原schema修正并保留报告，不是模型/训练失败，无额外模型调用。
+
+正式队列02:59:32.739689UTC启动，outer6009/controller6010/train6013、PGID6009及start_ticks核验，共享MIG锁持有，当前同Pod/同MIG。03:00:16UTC读回初始48窗评测及1/1413科学update（16F/B，9852input、9836target、6276词），LM有限、aux/indexer0、全新cursor0开始；预飞权重未复用。启动备份13文件381,775,334字节已逐SHA通过，manifest见logs/babylm-stage-w-current.json。stage.json行政queue_*占位字段不作真实计算账目，计数必须读events/summary/windows。
+
+新master SHA927c12a4c942cf17553c51462b8fe638db8529cde1fd80faf546a3eabe2fdce8；训练6800s协作/6900s硬限，完整dev3300s、队列10800s硬截止05:59:32UTC（北京时间13:59:32），不自动resume/延长/重试/追加候选。实测6步按token归一估纯更新约100分钟，连面板/保存约100–110min，之后18792窗完整dev；建议北京时间9月21日13:30、美东01:30回来查，非保证。末100固定1314–1413，完整dev唯一final1413，不选最好点。
+
+本批执行上限$4.20、含准备$6、周期$20；派发时已观测周期保守$13.1617（准备$0.5417为其中子集），按同Pod连续UTC区间含闲置估计，非发票且未知旧费用不补零。不混用工程科学和重复区间。自动monitor仍PAUSED，不恢复周期任务，不操作Pod电源。完成后先本机增量SHA备份和独立raw复算W对D/E/F，再报告，不自动展开新实验；无真实稀疏内核加速或论文成立主张。
+
+协议docs/babylm-stage-w-local-protocol-2026-09-21.md；当前logs/babylm-stage-w-current.json；备份logs/babylm-stage-w-backup-20260921-v0。
+
+启动证据补充：独立只读48/48通过，initial checkpoint实际146个参数tensor逐byte与D一致、0训练cursor；已备份5科学更新/80F/B、30933词，前5步LM/梯度/clip/LR/连接预算与预飞同前缀完全相等。初始48窗另计。0新增模型/CUDA，只读取一份可信CPU mmap全checkpoint；详细收据logs/babylm-stage-w-independent-review-20260921.json。
+
+## 2026-09-21T04:54:04.560383+00:00 — W完整训练完成，迁移GB300，原数值门槛通过
+
+用户授权迁移新卡。原W于04:32:20UTC完成1413步、10001709词、16325414输入/16302816监督token，22598训练F/B与336面板F。独立55392项核验通过，完整checkpoint、优化器step1413、唯一final模型、数据序列和LR均一致。原48窗PPL W51.53537，对照D52.86490/E54.74320/F53.07137；W末100 token加权PPL37.77821。这里只是单seed过程面板/在线训练末100，不是完整dev或学习路由胜利。
+
+04:24:20仅撤销旧队列待执行eval-template，原训练不变；旧父完成训练后预期FileNotFoundError属行政调度撤销。04:43核验原组6009全退出，无旧完整dev调用，不恢复旧模板或队列。完整本机20文件2297687655字节逐SHA备份，独立审计logs/babylm-w-original-completion-audit-20260921.json。原训练/恢复无需重算。
+
+新卡aarch64/GB300，独立Python3.12环境，torch2.10+cu128、numpy2.4.2与原GDN源bytes相同；既有其他GPU进程保持。04:40:40源/数据/所有原模型81项2437729747字节在新root逐SHA通过。一次性服务器只读传输完成，04:40:34临时公钥授权已清理，秘密未持久化。慢速SCP中止的partial保留，未用作证据。用户已被告知旧卡可停，未代操作电源。
+
+新tiny04:41:54–04:42:58原15项通过，独立121项通过：9工程LM F(CPU1/CUDA8)、7B、3updates，另2组件F/B和28support。首次只读结果连接超时保留，之后同一结果读回，不重跑。manifest logs/babylm-w-arm-gate-evidence-20260921/manifest.json。下一步唯一final1413固定48窗迁移重放，aggregate abs1e-6/per-window abs1e-5不变，通过才评完整18792窗。完整dev最多3300s、原绝对截止05:59:32UTC保留；自动monitor仍PAUSED，无新训练候选。
+
+旧W执行区间保守$2.16525946，不与周期总额重复相加；新卡小时单价待用户回复，费用未知不记0、不套旧价，不声称金额上限已核实。旧卡之后闲置/实际停止时间未知。当前连接已指向新卡，原连接封存logs/cloud-connection-before-w-arm-20260921.json。方案docs/babylm-w-arm-migration-protocol-2026-09-21.md，实时迁移状态logs/babylm-w-migration-current-20260921.json。
+
+
+## 2026-09-21T05:00:25.717321+00:00 — ARM最终模型48窗重放通过并独立核验
+
+新GB300以原final1413、原48窗重放完成，2026-09-21T04:56:00.374213–04:56:21.143968UTC；48F、0B、0updates均工程计数。总NLL绝对差1.7899725701653324e-8、最大逐窗差4.849126540307225e-7，低于原1e-6/1e-5；77755输入、77707监督token、47714词、顺序来源和局部支持全部一致。8文件119237字节完整SHA备份，manifest SHA5c2c06df51999576793f486cd1502d8636b5af5d10eea5c8b18a349140c15719；独立1002项0失败，另root直接raw复算通过，无新模型调用。
+
+独立审计logs/babylm-w-arm-replay-independent-audit-20260921.json SHA321e800526b9d2e290ec5ee0056afa7d5673bca7bde2dd837ebfc058540e0612。工程W累计173LM F、118B、16updates，另6组件F/B、84support；其中新ARM57LM F、7B、3updates，不计入原科学1413更新。
+
+full-dev最终绑定configs/babylm-w-arm-migration-20260921-v0/full-dev.json SHA0c5e625ba993a3a0b51b12d167fe64d5a63a364f5cf31d99f7ff98e5f49d7d4d；replay SHA2d285a758a04d0102a86e22f9848bb065c7fd4190f97b6fceaa3285fe2bf23c1。初稿Windows反斜杠部署路径在任何远端执行前修正、旧稿保存，0模型消耗；冻结科学源码不改。派发器只有限单次replay/full分阶段，校验gate、checkpoint和协议，持有本项目GPU锁；共享其他GPU进程未改，不称独占或加速。外层启动前重取UTC，完整评测55min硬限且不得越原05:59:32UTC。
+
+
+## 2026-09-21T05:03:37.873257+00:00 — 迁移完成，GB300已接手W完整dev，当前435/18792窗
+
+05:00:21UTC在新卡唯一派发W完整dev，outer2686338、timeout2686339、python2686340，start_ticks77991729；timeout/worker PGID2686339，与flock外层2686338不同且父子关系完整。05:02:19UTC核验身份/共享项目锁和连续435窗均正常，890880输入/890445监督token，LM有限；0新训练/反向。实时435与稍早本机增量备份205分开记账。初始5文件219987字节逐SHA已本机备份，manifest SHA74d324c3f085ea1dd5da1d2e41a75582de754f32b261d7f2ee5525194990ca19。活动audit的scientific_forward_calls=0是尚未写终点的占位，不可覆盖真实逐窗435次已执行F。
+
+本轮3200s软限、3285s TERM+15s KILL，硬截止05:55:21UTC（北京时间13:55:21，美东01:55:21），未延长原05:59:32绝对截止；建议北京时间14:00/美东02:00手动回来查看。自动monitor保持PAUSED，不新建/恢复自动任务，不启动后续实验，不操作任何Pod电源。完整dev仍未完成，不能给最终质量分或胜负。源/模型/样本/排序/精度均冻结；新旧GPU计时不能混成稀疏加速证据，GB300还有既有共享任务保持原样。
+
+下一次采集results/babylm-w-arm-full-dev-20260921-v0与logs/arm-w-full-dev-launch-20260921-v0；另采集其顶层兄弟results/babylm-w-arm-full-dev-20260921-v0-local-evaluation-audit.json，不能漏掉最终审计。用最新manifest收据路径，独立复算完整18792窗/17418742监督token、各来源/位置及D/E/F对比后再报告。失败/超时保留，不自行retry或续跑。旧训练完全完成且所有检查点本机+新机均校验，旧卡可停；新卡小时价仍待核实，未知费用不按0算。
+
+
+## 2026-09-21T06:08:42.723816+00:00 — 手动查询：W完整dev在3200秒上限停止，12402窗完整保全
+
+用户问“现在呢”。06:03:09UTC只读核验，原登记flock2686338/timeout2686339/python2686340均已退出，项目GPU锁释放。实际05:53:44UTC评分器触及Frozen evaluation wall-time ceiling reached，summary evaluation_failed/TimeoutError，wrapper local_evaluation_failed/W full-dev evaluation incomplete；按原协议停止，没有模型数值失败迹象，未自动retry/延长/续跑/重训。整机已有其他GPU工作未查改，不能称整卡空闲。
+
+累计12402次评测F，0B/0updates，15739613输入/15727211监督token、9320813词；完整dev18792窗/17418742监督token尚未完成。剩6390窗、1691531监督token，窗口66.0%/target90.3%；0..12401为来源顺序前缀，非随机，不能和D/E/F全dev分数直接比较。原W1413训练及全部checkpoint已经完成并保全。
+
+完整本机备份：主manifest logs/babylm-w-arm-full-dev-backup-20260921-v0/manifest-20260921T060307.585991Z-dcee3b9a.json；顶层wrapper审计另存logs/babylm-w-arm-full-dev-terminal-audit-backup-20260921-v0/manifest-20260921T060412.834995Z-62af93ad.json。合并去重7文件12881366字节逐SHA通过，最新windows是.versions/c23183ba...路径，不能拿旧canonical205窗误当结果。执行审计results/babylm-stage-w-partial-20260921/execution-audit.json，状态报告同目录REPORT.md。
+
+评测elapsed3200.0796秒，launch至wrapper终态3202.7265秒；06:03观测时本研究完成后已565.6433秒无作业，不表示整卡无其他任务。新卡费率/币种未知，美元费用未编造，不套旧MIG单价。不新增任何GPU工作，自动monitor仍PAUSED。下一步只有在独立冻结剩余窗口/合并验证后补12402..18791；保留已算前缀且不从头重评，不改模型/精度/源码/阈值，不选checkpoint。补评尚未派发。
+
+
+## 2026-09-21T06:10:30.075707+00:00 — W超时前缀已独立复算，报告交付，无自动补评
+
+173721项原始逐窗/来源/位置/token/局部支持/检查点来源核验通过，0新增模型或远端计算。严格匹配0..12401窗PPL：D46.883359、E49.149624、F47.322143、W45.766998。W在已评前缀点估计更低，但这是单seed按来源顺序的非随机前缀，不能当全dev质量、统计非劣或加速证据。剩simple_wiki6267窗1440558target与switchboard123窗250973target未观测，不补值。baseline准备时本机Windows路径键曾导致KeyError，统一分隔符后通过；无模型/远端调用、无科学数值失败。
+
+证据包results/babylm-stage-w-partial-20260921/REPORT.md、metrics-audit.json SHA3a3faae58570e8bd74d699000daf99b12f147d0eb753ce9638d452e3a1cf12c4、execution-audit.json及evidence-index.json。旧所有检查点/新partial7文件12881366字节完整保全。用户此次仅问状态，补评未派发，自动monitor仍PAUSED，无Pod电源或其它共享GPU任务操作。
+
+
+## 2026-09-21T06:19:50.876610+00:00 — 用户要求补齐，固定剩余6390窗已启动
+
+用户新指令“不能补齐吗”授权补齐。新master configs/babylm-w-arm-remainder-20260921-v0.json SHA398473dbd38e14de840d70bd4395ed01fb19b984fe2b165f643764c2e7ff9530；新行政wrapper SHAbdad87ece451ffd2831cd862c74d9e49f99430cdae75e49d492001c1fb37624d，原26科学源码未改，12项本机零模型测试通过，独立审阅固定prefix/缺窗/零目标/加权规则无实质缺陷。
+
+06:18:14.669507UTC派发outer2723663，源/协议/旧重放gate/GB300物理UUID及driver595.58.03通过，项目flock保护，原旧作业不重启。新独立3200秒评分软限、3285TERM+15KILL，硬截止07:13:14UTC，不延长旧53分钟运行，失败不自动重试。只评12402..18791，6390新F、0B、0updates，1697921输入/1691531监督token；保留原12402前缀及超时费用。单价未知，新增占用最多55分钟，不代购买或操作电源。自动monitor仍PAUSED，本次为当前用户要求的单次补齐。
+
+结果results/babylm-w-arm-remainder-20260921-v0，启动logs/arm-w-remainder-launch-20260921-v0；日志本机用SSH-C压缩传输，仅传输压缩，原collector字节/SHA验证不变，不修改评分器。完成后独立union脚本results/babylm-stage-w-complete-20260921/audit_union.py（SHA4f27b7ff...）核0..18791并集、token/source/position、所有权重/来源与D/E/F，不直接平均两段PPL。原full-dev未完成前没有填入任何未观察分数。
+
+
+## 2026-09-21T06:38:42.590601+00:00 — W完整开发集补齐并独立核验
+
+- 原12,402窗超时前缀完整保留；新补6,390窗，合计18,792窗、17,418,742监督token，无重复/遗漏。新增0训练步、0反向。
+- 完整token加权结果：D PPL=51.331239; E PPL=53.688862; F PPL=51.782507; W PPL=50.071871。单种子开发集点估计，不作统计优势/等价、完整Qwen或加速结论。
+- 独立263,168项核验通过，所有原始日志已备份并逐SHA检查；报告 `results/babylm-stage-w-complete-20260921/REPORT.md`。
+- 两段评分活动时间合计4349.595秒；新主机租价未知，未虚构费用或抹去超时成本。
+- 本项目进程退出、锁释放；共享GPU其他任务未改动，未停Pod。自动监控仍PAUSED，未追加实验。
+
+## 2026-09-21T07:33:31.572949+00:00 — 新seed D/W已独立开训，本机关机不影响
+
+- 用户授权继续并准备关本机。新seed20260921、数据顺序20260919，95.391M D/W共同146tensor初始SHA 3f26ce064cc74c3f9544ec8e2fd3ef6a8489096a37bb1ce3c51701d07cb4792c；科学配置/一轮1413/末100/完整dev保持。
+- v0误估训练3h；首11更新吞吐推算约4.5h。07:29:45UTC向身份核验worker发TERM，整组退出/锁释放，保留19已提交科学更新、317F/316B(317次B尝试)、48panelF，225742输入/225425监督token。失败快照不可resume，全部metadata本机备份、权重远端逐SHA保留，不抹掉费用，不改称工程。
+- 新行政v1仅运行时限/协议身份变化，28原源码字节保持，另v1行政controller；新队列07:31:22UTC启动，PID/PGID2745097、controller2745098、worker2745101。首2科学更新32F/B和48panel已核，loss有限、初始SHA精确匹配，SSH断开后父PPID1正常。新日志本机快照已逐SHA保存。
+- 顺序D训练→W训练→D完整dev→W完整dev，每train6h每eval2h，总16h10硬截止23:41:22UTC；预计10–12h仅按新卡实測粗估。新费率未知，以秒计账，不套旧MIG价。
+- 当前入口logs/babylm-dw-seed-current.json，master configs/babylm-dw-seed-confirmation-20260921-v1/master.json SHA 5bc4ace6c97e9e85e7fa1340ef6aad03e05b2d1963a32559415794f017d8c9e4。只用现有shared GB300连接/密钥，其他GPU任务不改，不停服务器；自动monitor仍PAUSED，不依赖本机在线。关机后日志/检查点保存在远端，下次手动回来再采集核验。
+
+## 2026-09-21T16:35:04.559355+00:00 — 新初始化 D/W 一轮训练完成，进入完整dev
+
+- D于11:50:52UTC、W于16:25:26UTC完整结束，各1413更新、22598训练F/B、10001709词、16325414输入/16302816监督token；两组45196训练F/B、2826更新，672面板F另外统计。旧v0的317F/316B、19更新和48面板F保持单列。
+- 配对原始日志独立审计91225项通过：共同初始主干SHA、全部窗口顺序/词token、学习率、裁剪规则一致；W局部支持公式逐项通过。末100训练NLL/PPL：D 3.644607396/38.267745832，W 3.603605425/36.730424806；这不是完整开发集分数。报告 results/babylm-dw-seed-training-audit-20260921/REPORT.md。
+- 原有限队列正常衔接eval_D（16:25:28UTC起，worker2905281，PGID2745097）；16:32:36UTC已保存至少1248/18792窗，之后自动eval_W。外层/父身份保持，自动monitor仍PAUSED，本机关机不影响。没有启动新训练、改参数或改时限。
+- 19份训练/控制小文件完整本机SHA备份，另14份checkpoint元数据已备份；8个权重文件在远端逐SHA核验。D大文件SCP卡住，仅停止本机scp子进程，失败manifest与6.49MB partial保留，不能称权重已完整本机备份。二进制SSH 1MiB试读9.34秒，后续需可断点的传输。
+- 全dev未完成，无显著性/非劣/参考实现加速或完整Qwen外推结论。当前云费率未知，以真实墙时记账，不假设免费；共享其它GPU任务未修改。
+- 本次本地状态更新曾遇PowerShell默认GBK读取旧中文JSON失败；显式UTF-8修复后继续，属于本地记账错误，0模型/训练消耗，旧状态副本已保留。
+
+
+## 2026-09-21T16:41:10.239151+00:00 — 完整dev正常推进，断点备份传输验证通过
+
+- 16:40:20UTC D完整dev已完成连续0..2753共2754窗、4808247输入/4805493监督token；W dev尚未开始，原有限队列仍eval_D。此处为实时前缀计数，不提供非随机部分评分。远端磁盘剩余约1.51TB，无磁盘空间阻碍。
+- 本地分块备份工具7/7传输模拟测试通过；真实仅有界下载final D的首1MiB，块SHA独立复核，11.656秒，0模型/0远端写入。下次会复用已验证块，旧SCP partial及失败manifest不动。整模型备份尚未完成，本次没有留后台下载进程。helper SHA e87353a615ad16b4dc7ab476c26852d721ab2377a087d0588d2b57be794df014；收据 logs/babylm-dw-model-ranges-20260921-v1/D/f51e32e5ba997ef6d89539e51cd8e2bd1d69b52350412b2ec88791d692502b27/attempts/20260921T163944.742978Z-4278944e.json。
+- 完整dev后续审计入口已准备：results/babylm-dw-seed-training-audit-20260921/FULL-DEV-HANDOFF.md。预计北京时间9月22日03:00（美东9月21日15:00）左右可看完整结果，是基于当前速度和同卡历史评分时长的估计，非保证。自动监控保持PAUSED，远端队列独立运行。
+
+
+## 2026-09-21T21:27:45.804501+00:00 — 新seed完整开发集独立核验完成；两次初始化W均较低
+
+- 原有限队列18:59:08UTC（北京时间9月22日02:59）正常结束；D评测17:43:22UTC结束、W评测18:59:08UTC结束。21:16:30只读核验登记项目进程全部退出、锁释放；不意味着整张共享GPU空闲，未操作电源。自动monitor仍PAUSED。
+- 新seed完整dev每组18792窗/17418742监督token：D NLL3.996446633045969、PPL54.404487052655206；W NLL3.923130225200648、PPL50.55845669785953；W PPL低7.0693%。六来源、四位置桶均W较低；旧seed低2.4534%，仅描述性两初始化质量证据，不是非劣检验、实际省时、路由新方法或完整Qwen结论。
+- 45份终态原始文本完整本机SHA备份并复核，manifest logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/manifest.json，SHA ce20b32bbf460cba299e12f67fe16dd04e58ed0986b54c07803401decd08d103。独立逐窗/模型/数据/初始化/来源绑定1090371项及固定聚合器150648项通过，执行149项通过。metrics/execution分别SHA518c7babaf61b3a08014522dfb0210b887dedd182c1efb495a1f655043d94f54、b2984dbebb5088b5ab56c714e1e70540e0d8bcce4778f866221393da003a78e5。
+- 本正式批次83452F/45196B/2826更新（45196训练F、672面板F、37584完整devF）；旧v0的317训练F/316B/19更新、48面板F分账。总队列41265.625秒；美元费率未知，不能虚构成本或加速。
+- 本机21:22:22UTC启动最终D/W模型顺序分块备份，实际PID56844、外层64428，总上限7200秒、无自动retry、无模型或远端写入。已校验块复用，旧SCP失败partial保留；最终模型和优化器/中途快照尚不能统称已本机备份。收据 logs/babylm-dw-model-ranges-20260921-v1/final-pair-copy-20260921T212222.635769Z.json；本机关机只会中断备份，不改变已结束的云实验。
+- 下一阶段工作方案已写入 docs/babylm-dw-cost-validation-next-2026-09-21.md：先分解耗时、保持W精确支持集并核输出/梯度，再比较合理优化的D/W完整训练成本；新GPU试验未启动。
+- 首次本地探针误导入Linux fcntl而在Windows端退出，修正后远端只读探针成功，0模型消耗，不是远端故障。
+
+
+## 2026-09-21T23:35:55.636802+00:00 — 最终模型备份完成，准备有限耗时诊断
+
+D/W两个最终model-only快照已完整本机保存并重新计算SHA匹配；optimizer和中途快照仍未全部本机下载。自动监控保持PAUSED，科学训练/评测已完成，无新科学更新。正在审核现有权重8窗、36F/32B/0updates、最多15分钟的工程计时协议；共享GPU存在其他作业，不据此作实际加速结论。
+
+
+## 2026-09-21T23:49:54.741258+00:00 — D/W短成本诊断完成，原参数未更新
+
+- 既有最终D/W权重，固定8窗，完成36F/32B（含4个无梯度热身F）、0优化器/科学更新；实际43.864秒。输出与全部具名梯度在原hook一致性阈值内，前后参数与checkpoint文件SHA保持；原始日志和终态已本机逐SHA备份。
+- pooled前向GDN占比D82.4784%、W80.1161%；三层global前向占比D11.1823%、W13.3252%。计时含共享设备等待和host发射间隙，不是纯核忙碌，也不是完整训练占比。两次带hooks的F反而低于bare，不能把相减当纯hook开销；不据此称W加速。
+- 共享GPU前后利用率100%，8窗非语料加权、无optimizer、首次B无热身，全部样本保留。下一步优先排查两组共同GDN实现；尚未部署任何新内核或新增训练。
+- 两次部署包装字符串换行错误在远端Python解析前退出、0模型调用；确认目标目录/收据不存在和锁free后修复。同一固定诊断只实际执行一次；失败不抹除。最终外层已退出、锁释放，未操作其他共享任务/电源，自动monitor仍PAUSED。费率未知，仅记录真实秒数。
+- 协议 `configs/babylm-dw-cost-profile-20260921-v0.json`，报告 `results/babylm-dw-cost-profile-audit-20260921/REPORT.md`，终态备份 `logs/babylm-dw-cost-profile-backup-20260921/20260921T234120.236686Z/manifest.json`。
 

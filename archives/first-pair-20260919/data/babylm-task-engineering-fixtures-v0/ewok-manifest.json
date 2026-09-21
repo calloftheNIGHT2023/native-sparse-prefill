@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "scope": "engineering_fixture",
+  "upstream_commit": "6f825c291e2c4c78ad33b1935fd64d45f52642dc",
+  "files": [
+    {
+      "path": "toy_ewok.jsonl",
+      "sha256": "086dbe462d4823deb996b1fd840e97f0e9579279f8b54a3affafbc6eb425db4d",
+      "task": "ewok",
+      "split": "synthetic",
+      "records": 2,
+      "synthetic": true
+    }
+  ]
+}

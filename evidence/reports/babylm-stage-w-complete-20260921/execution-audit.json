@@ -1,0 +1,206 @@
+{
+  "status": "complete_W_two_segment_evaluation_evidence_verified",
+  "utc": "2026-09-21T06:38:42.488576+00:00",
+  "previous_timeout_record_preserved": {
+    "path": "results/babylm-stage-w-partial-20260921/execution-audit.json",
+    "sha256": "6cabcf6f80dc59d08904679384a65a58da88f8e14393b19edd63428659ffa059"
+  },
+  "remainder_manifest": {
+    "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/manifest-20260921T063743.774117Z-436d1eb8.json",
+    "sha256": "ada844233d770dc3d383566c1b9471d55f0d13b46af49692a6c5805d17ed41da"
+  },
+  "unique_files": 16,
+  "unique_bytes": 19484459,
+  "files": {
+    "logs/arm-w-remainder-launch-20260921-v0/launch.json": {
+      "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/logs/arm-w-remainder-launch-20260921-v0/launch.json",
+      "sha256": "bb6f986c8c2a60b9f2cb830268a4b9e05c872836ea7e65f0a48637cd6cc75fb9",
+      "bytes": 1214
+    },
+    "logs/arm-w-remainder-launch-20260921-v0/stderr.log": {
+      "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/logs/arm-w-remainder-launch-20260921-v0/stderr.log",
+      "sha256": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+      "bytes": 251
+    },
+    "logs/arm-w-remainder-launch-20260921-v0/stdout.log": {
+      "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/.versions/446076d07f8168df98382d064c524b6e7b31eaecbab0f4278447a64552a6f73d/logs/arm-w-remainder-launch-20260921-v0/stdout.log",
+      "sha256": "446076d07f8168df98382d064c524b6e7b31eaecbab0f4278447a64552a6f73d",
+      "bytes": 917
+    },
+    "results/babylm-w-arm-remainder-20260921-v0/combined-summary.json": {
+      "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/results/babylm-w-arm-remainder-20260921-v0/combined-summary.json",
+      "sha256": "764f9956f34b586518e9863727523822027e40b67c9975ef1c4fea4cadc82548",
+      "bytes": 11681
+    },
+    "results/babylm-w-arm-remainder-20260921-v0/evaluation-protocol.json": {
+      "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/results/babylm-w-arm-remainder-20260921-v0/evaluation-protocol.json",
+      "sha256": "36c0f5416df1dea982780691aa9c1c575054f97b9cc4fbecee23e54d4f3ff512",
+      "bytes": 77943
+    },
+    "results/babylm-w-arm-remainder-20260921-v0/evaluation/protocol.json": {
+      "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/results/babylm-w-arm-remainder-20260921-v0/evaluation/protocol.json",
+      "sha256": "36c0f5416df1dea982780691aa9c1c575054f97b9cc4fbecee23e54d4f3ff512",
+      "bytes": 77943
+    },
+    "results/babylm-w-arm-remainder-20260921-v0/evaluation/summary.json": {
+      "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/results/babylm-w-arm-remainder-20260921-v0/evaluation/summary.json",
+      "sha256": "26869330640237c72958e1fda927a1b95da923e3ee5f47a07250d013ea07243f",
+      "bytes": 160003
+    },
+    "results/babylm-w-arm-remainder-20260921-v0/evaluation/windows.jsonl": {
+      "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/.versions/5902690ab2afab01558537fdeeaa0fa9e65fba437b7ee8a6630259b495ca8f95/results/babylm-w-arm-remainder-20260921-v0/evaluation/windows.jsonl",
+      "sha256": "5902690ab2afab01558537fdeeaa0fa9e65fba437b7ee8a6630259b495ca8f95",
+      "bytes": 6265858
+    },
+    "results/babylm-w-arm-remainder-20260921-v0/remainder-receipt.json": {
+      "path": "logs/babylm-w-arm-remainder-backup-20260921-v0/.versions/d3ded77674c25cdf69779b0973f0d78e0ba96b489ee7cc198e5590d91c260606/results/babylm-w-arm-remainder-20260921-v0/remainder-receipt.json",
+      "sha256": "d3ded77674c25cdf69779b0973f0d78e0ba96b489ee7cc198e5590d91c260606",
+      "bytes": 7283
+    },
+    "logs/arm-w-full-dev-launch-20260921-v0/launch.json": {
+      "path": "logs/babylm-w-arm-full-dev-backup-20260921-v0/logs/arm-w-full-dev-launch-20260921-v0/launch.json",
+      "sha256": "a48066afc6e2d3a167b2611c36ea49f73d09654577845764570c6373cb58e2b9",
+      "bytes": 1012
+    },
+    "logs/arm-w-full-dev-launch-20260921-v0/stderr.log": {
+      "path": "logs/babylm-w-arm-full-dev-backup-20260921-v0/logs/arm-w-full-dev-launch-20260921-v0/stderr.log",
+      "sha256": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+      "bytes": 251
+    },
+    "logs/arm-w-full-dev-launch-20260921-v0/stdout.log": {
+      "path": "logs/babylm-w-arm-full-dev-backup-20260921-v0/.versions/1e3bd17f1db7f5820549ec1fbac5c6f95bfd4a93f9f1e11d53fc454387766f94/logs/arm-w-full-dev-launch-20260921-v0/stdout.log",
+      "sha256": "1e3bd17f1db7f5820549ec1fbac5c6f95bfd4a93f9f1e11d53fc454387766f94",
+      "bytes": 292
+    },
+    "results/babylm-w-arm-full-dev-20260921-v0/protocol.json": {
+      "path": "logs/babylm-w-arm-full-dev-backup-20260921-v0/results/babylm-w-arm-full-dev-20260921-v0/protocol.json",
+      "sha256": "191fff2faf5a1ac09895b0ff24405b91c5fdefe6ab592241a70ae39f57ab0412",
+      "bytes": 7357
+    },
+    "results/babylm-w-arm-full-dev-20260921-v0/summary.json": {
+      "path": "logs/babylm-w-arm-full-dev-backup-20260921-v0/results/babylm-w-arm-full-dev-20260921-v0/summary.json",
+      "sha256": "42e3f00f974f931f8793db287b0ed93ee4e4bcda7c2be1aac1eb4239b89ea990",
+      "bytes": 344156
+    },
+    "results/babylm-w-arm-full-dev-20260921-v0/windows.jsonl": {
+      "path": "logs/babylm-w-arm-full-dev-backup-20260921-v0/.versions/c23183ba0f66ef70d359cb970561876a5023c652d90ab2328a1274eccf3dd959/results/babylm-w-arm-full-dev-20260921-v0/windows.jsonl",
+      "sha256": "c23183ba0f66ef70d359cb970561876a5023c652d90ab2328a1274eccf3dd959",
+      "bytes": 12526611
+    },
+    "results/babylm-w-arm-full-dev-20260921-v0-local-evaluation-audit.json": {
+      "path": "logs/babylm-w-arm-full-dev-terminal-audit-backup-20260921-v0/results/babylm-w-arm-full-dev-20260921-v0-local-evaluation-audit.json",
+      "sha256": "2d1e6c2cf6d10abacb58c8b085c4ce355037d55ff200c4482c8dd7bfdef6a3d7",
+      "bytes": 1687
+    }
+  },
+  "registered_project_processes_exited": true,
+  "project_gpu_lock_free": true,
+  "other_shared_gpu_jobs_not_inspected_or_modified": true,
+  "pod_power_action": false,
+  "automatic_monitoring": "PAUSED",
+  "new_training_updates": 0,
+  "new_backward_calls": 0,
+  "evaluation_counts": {
+    "original_prefix": {
+      "forward_attempts": 12402,
+      "forward_calls": 12402,
+      "committed_windows": 12402,
+      "submitted_input_tokens": 15739613,
+      "submitted_word_exposures": 9320813,
+      "backward_calls": 0,
+      "optimizer_updates": 0
+    },
+    "new_remainder": {
+      "forward_attempts": 6390,
+      "forward_calls": 6390,
+      "committed_windows": 6390,
+      "submitted_input_tokens": 1697921,
+      "submitted_word_exposures": 1100149,
+      "backward_calls": 0,
+      "optimizer_updates": 0
+    },
+    "union_forward_calls": 18792,
+    "union_backward_calls": 0,
+    "union_optimizer_updates": 0,
+    "migration_engineering_replay_forward_calls_separate": 48,
+    "migration_tiny_engineering_separate": {
+      "model_forward_calls": 9,
+      "backward_calls": 7,
+      "updates": 3,
+      "component_forward_calls": 2,
+      "component_backward_calls": 2,
+      "support_calls": 28
+    }
+  },
+  "full_dev_complete": true,
+  "no_duplicate_or_missing_windows": true,
+  "terminal_status_receipt": "results/babylm-stage-w-complete-20260921/final-terminal-probe.json",
+  "terminal_status_receipt_sha256": "957e5454da956a1574ab0be6dd5bd9a8dc0c7f013f677724ac96be09e3bc6061",
+  "timing_segments": {
+    "original_prefix": {
+      "started_utc": "2026-09-21T05:00:24.121138+00:00",
+      "completed_utc": "2026-09-21T05:53:44.200753+00:00",
+      "elapsed_wall_seconds": 3200.0796305190306
+    },
+    "new_remainder": {
+      "started_utc": "2026-09-21T06:18:20.409153+00:00",
+      "completed_utc": "2026-09-21T06:37:29.924918+00:00",
+      "elapsed_wall_seconds": 1149.5157625429565
+    },
+    "new_authorized_launch": {
+      "status": "dispatched",
+      "started_utc": "2026-09-21T06:18:14.669507+00:00",
+      "pid": 2723663,
+      "pgid": 2723663,
+      "start_ticks": 78459042,
+      "protocol": "configs/babylm-w-arm-remainder-20260921-v0.json",
+      "protocol_sha256": "398473dbd38e14de840d70bd4395ed01fb19b984fe2b165f643764c2e7ff9530",
+      "source_sha256": "bdad87ece451ffd2831cd862c74d9e49f99430cdae75e49d492001c1fb37624d",
+      "output_dir": "results/babylm-w-arm-remainder-20260921-v0",
+      "lock": "/tmp/babylm-one-epoch-GPU-43bd0f4d-6798-53e3-e996-f4b4c3854511.lock",
+      "static_validation": {
+        "status": "static_validation_passed",
+        "fixed_remainder_windows": 6390,
+        "model_calls": 0,
+        "cuda_calls": 0
+      },
+      "hard_seconds": 3300,
+      "hard_deadline_utc": "2026-09-21T07:13:14.669507+00:00",
+      "remaining_window_range": [
+        12402,
+        18792
+      ],
+      "expected_new_forward_calls": 6390,
+      "backward_calls": 0,
+      "optimizer_updates": 0,
+      "old_run_not_restarted": true,
+      "automatic_retry": false,
+      "automatic_monitoring": "PAUSED",
+      "gpu": "GPU-43bd0f4d-6798-53e3-e996-f4b4c3854511, NVIDIA GB300, 595.58.03",
+      "shared_gpu_other_jobs_untouched": true,
+      "hourly_price": null,
+      "cost_status": "Time bounded, new-host monetary rate unknown"
+    },
+    "summed_scorer_active_wall_seconds": 4349.595393061987,
+    "interpretation": "Two separate evaluator segments, excluding migration/setup/idle. Not a single uninterrupted timing measurement."
+  },
+  "remainder_wrapper_seconds": 1159.27427,
+  "original_prefix_wrapper_seconds": 3202.726506,
+  "gap_between_original_completion_and_authorized_remainder_seconds": 1470.410628,
+  "cost": {
+    "hourly_rate": null,
+    "currency": null,
+    "invoice_or_total_spend_verified": false,
+    "old_GPU_rate_not_substituted": true,
+    "original_timeout_work_included": true,
+    "summed_scorer_active_seconds": 4349.595393061987,
+    "setup_migration_replay_and_between_segment_time_not_in_scorer_sum": true,
+    "not_a_whole_GPU_idle_or_exclusive_timing_claim": true
+  },
+  "independent_metrics_audit": {
+    "path": "results/babylm-stage-w-complete-20260921/metrics-audit.json",
+    "sha256": "eb2bce7cfacbe5077d23bb7b6d7d851c73b2c34333e9b8d17ad2e87a180ecc12"
+  },
+  "no_model_calls_in_local_audits": true,
+  "no_new_experiment_queued": true
+}

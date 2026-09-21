@@ -147,7 +147,7 @@
   "historical_total_reconciled": false,
   "actual_compute_hourly_rate_usd": 0.53,
   "cost_rate_basis": "Conservative USD0.81/hour allocation: verified0.53 compute plus storage allowance for reported1000GB container and1000GB volume at0.10/GB/30-day month; not an invoice.",
-  "pod_id": "REDACTED_POD_ID",
+  "pod_id": "REDACTED_CONNECTION_METADATA",
   "runtime_evidence": "logs/runtime-inspection.json",
   "migration_evidence": "logs/migration-receipt.json"
 }

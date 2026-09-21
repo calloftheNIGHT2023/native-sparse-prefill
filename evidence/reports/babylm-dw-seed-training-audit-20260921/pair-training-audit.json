@@ -1,0 +1,281 @@
+{
+  "status": "passed_independent_D_W_paired_training_metadata_audit",
+  "completed_utc": "2026-09-21T16:32:39.032914+00:00",
+  "checks": 91225,
+  "failures": [],
+  "input_sha256": {
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/receipt.json": "6bd821b184abe48952928b604d91a2094a1530836c5135398bbdbb15b9f0af4d",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/stage.json": "57a88454298ecedb03691ccf9d5c36d67e4fe8650a2dfc7c07f5614f129f627e",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/master.json": "fe5668e8e09e45b0d5b8d40c4376147f1209fcd2349624c46bc9f69416b819a6",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/D/train-worker.json": "5aaf4cd1abf0415ed57455d24a5afbac67ba100f8365856e5c52a0500177017d",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/D/eval-worker.json": "b8494db72f7a372abde3813046c47f6067a54ceb4bacc5b3e8f3708bbefcb187",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/D/train/audit.json": "d86f3fdb1f307c7bcb6001c0d573aa585da3bfd959b47570849eec6703c8e328",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/D/train/run/protocol.json": "196f8410ab461101ceb7e51ff10de60f379eab24e80e17a090b915248d954a7f",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/D/train/run/events.jsonl": "76bcd0fa6ef8363e5d5e1daa313f1b70967e6c2a54e50a94f79ae28d91523383",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/D/train/run/summary.json": "d338b3f26b0cdc9cc9fcf6d088e6d89465df2779a87a363fa9e888a0daaa275e",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/train_D.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/train_D.stderr.log": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/eval_D.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/eval_D.stderr.log": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/W/train-worker.json": "3e2cd5304f5bbd794e1e2877b5d89f90aeb8596c5d3f72de27ac1c007db3f79c",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/W/train/audit.json": "31287ea6ca3fdbcb283ba0cb3f06159b4664adf62de83cd40350175af950f551",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/W/train/run/protocol.json": "aa2a6417fe5558228d10b3af6b6786b6827f873315d85309311642c1b735ae6e",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/W/train/run/events.jsonl": "fc138fa4639753dc59ddc3fe122ade8e4530284d7c6f96726b20a46864bde424",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/W/train/run/summary.json": "27677ce1b82f9d1ae036e68915c168cd739c651d2c7536d1728f0757e044b8db",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/train_W.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/train_W.stderr.log": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+    "results/babylm-dw-seed-training-audit-20260921/D-audit.json": "d7fbe9006dc20dbd11845bacb9ae9856f4d5d0e5a7320a7755d1703ed6acd36a",
+    "scripts/check_babylm_gpu_numerics_v0.py": "7b44f465c7d540aa23b87abc5f0304e5dac318cfdad2bef094bfa673805cdbef",
+    "scripts/check_babylm_local_numerics_v0.py": "6ee0796527dd219c8950f7acdac21db3eb271c1a4c798ae3993762edfeed2f0d",
+    "scripts/prepare_babylm_optimization_stage_a_v0.py": "ec380604cc564513b0656d13ae62b3b370e7fc93ce3e3fd8f5202b9f18c97394",
+    "scripts/prepare_babylm_windows_v0.py": "706dcc92b0ffa663d16e8ac24c743750bb42ff0efb554a59472230a5c85ef69f",
+    "scripts/run_babylm_checkpoint_eval_v0.py": "216943a5acd448e4123a8323ddfa889c8210f45b3d9ade579db7afe36f8c1050",
+    "scripts/run_babylm_de_v0.py": "0c463cd3079977ce74f2f6464c2e0497ec60a7d0a7ce376ae8368c7fd7d533f5",
+    "scripts/run_babylm_local_eval_v0.py": "9b67135f81f373e855457d2ca5aa5ba4c800d6113a6b4effa32d145e61134d0c",
+    "scripts/run_babylm_local_queue_v0.py": "9d7e77a5fc6ccd856d0503904d4e8b6101d9d2b11a9b466a27683d20f93d6c67",
+    "scripts/run_babylm_local_train_v0.py": "9a9e62ae317904c7c185a34b794e7eb74526c0d31b13176e32769b0e70ee287c",
+    "scripts/run_babylm_one_epoch_mig_worker_v0.py": "1a8bd1903fcdfe65694f2dcbe951775d36b1bd2728552acff4695a73bba8fbe5",
+    "scripts/run_babylm_one_epoch_sequential_v0.py": "d8ded83075d1de0ffc9c8b72854946422699affe35dcb6e794b8e3ca614e8610",
+    "scripts/run_babylm_one_epoch_v0.py": "b8520461b85de767b2789b8363b362f69d92229560c3d0e9a28e6c3c84413018",
+    "scripts/run_babylm_optimization_stage_a_v0.py": "84e1eb7137290fefb97a9cb0766bad95d57f0d3c9082e584f7679c761b3a53d0",
+    "scripts/run_babylm_scientific_pair_v0.py": "593280477ca8457ad21f171c7a6cec137e7715029647f78db1ea75bb28fbafe7",
+    "scripts/run_babylm_sparse_parallel_v0.py": "0879da1142c1306822f64aeaf2fc49edfa36433db32d6b930de4e1bb7cde8ab5",
+    "scripts/summarize_babylm_one_epoch_v0.py": "f8c1087b7da80ec1bd6dbe09f3358dd722a1f110672c40ff481298fa6c47afeb",
+    "src/babylm_hybrid/__init__.py": "0faa2e1b9156f7292ea98890a5449105ec93c79eeb9df7c77160d787e6716b0f",
+    "src/babylm_hybrid/attention.py": "6aaacd6239c70854aad9eee0b6c116dafdb634cb7654b69a2100a1694fa439d9",
+    "src/babylm_hybrid/config.py": "c4a30217d5646d4ccf37c9b81bfccd9e24044363600e40d4e4d5bdd288c72c70",
+    "src/babylm_hybrid/evaluation.py": "5eda46b7c45eb1f0196839a04924a74cf6c419c44babcd8a5282fe9cd11d6c0f",
+    "src/babylm_hybrid/local_attention_v0.py": "087813356a96338232bbaf79d331463bccc322f383f88c0246d185d4ff111e8c",
+    "src/babylm_hybrid/model.py": "7497eb305be1a9fc9fe778e3bede27fc9c5765333dd9123cf0d6bd9f739ca270",
+    "src/babylm_hybrid/official_causal_scoring.py": "04e8434901e774b0c46256156c81be1acc6e899b1c97b1d0639609671b1a22c9",
+    "src/babylm_hybrid/official_task_records.py": "ec0158750a655ca1b391605f2790b676dac562a42d8f12bc06a694e245cea716",
+    "src/babylm_hybrid/routing_diagnostics.py": "e7fb902697a4c43f397e766f9c323d55fa2374fa33ff070d2b0c745cec0a3593",
+    "src/babylm_hybrid/training.py": "3c2af088027a689fe6281b7ee1c4ab8d27dcf156278449df5c553e95a85ab98f",
+    "scripts/run_babylm_dw_seed_confirmation_v0.py": "618af5b06764966b6a6ee131d9e6b67d16cf44b54f2663467525ba3ab381fbbc",
+    "src/babylm_hybrid/training_timebound_v0.py": "9b630f21e6939e64bf8c951662bb3703695d25e5c66233e09b96e8f958b6090d",
+    "scripts/run_babylm_dw_seed_confirmation_v1.py": "569d183c27a16bae53dee466b5c80987b0706a050dec1668caf9048fc4cef1af",
+    "data/babylm-2026-windows-v0/manifest.json": "08e19b2fe6d1dc5b957c28e2d0503d9da3fdd04e481900da947f4fc281f1a218",
+    "data/babylm-2026-windows-v0/windows.u64.npy": "4306d2b06a1f17c65e68282ae231ab95946b74b847ffca92a6a9aba70f6bbb6a",
+    "data/babylm-2026-windows-v0/known-boundaries.json": "8f91ee29cc1ffaa3dc875ba2917ba19356f447c516c4de8f92ddd88ecce3fe06",
+    "data/babylm-2026-windows-v0/window-length-histogram.json": "7c57e31baa32101d9de2c0f2d4b8d2c7e2e3eb4788c4b737ed479037c4b9a59e",
+    "data/babylm-2026-tokenizer-16k-v0/bnc_spoken.ids.u32": "e466ee668a4a50aba752c16ca43b2694440828b32af975752624bdfd9fceafaa",
+    "data/babylm-2026-tokenizer-16k-v0/childes.ids.u32": "26408ee014b4e882b475dfe26965738916c80bc36cbc44670c1ed55d7953c850",
+    "data/babylm-2026-tokenizer-16k-v0/gutenberg.ids.u32": "5b3af1675e02adb951a1dacea99ca58e4f335baca7e183f750f8d4096ee227eb",
+    "data/babylm-2026-tokenizer-16k-v0/open_subtitles.ids.u32": "6bd00e9f0e0cf9cb8a01ce5bcb666457c7bfbb4cf7d6a9dcdbe67bd971aa0e0b",
+    "data/babylm-2026-tokenizer-16k-v0/simple_wiki.ids.u32": "b85a89930fc31ddfa6581d67194a4bafba5f1f3e6d1fbeec0e12a1bf9a2fd0e0",
+    "data/babylm-2026-tokenizer-16k-v0/switchboard.ids.u32": "cb17e3f2fa8c8f2130be42d529e4efd4b721efcbde307f43c70a3c62393703e0"
+  },
+  "conditions": [
+    "D_dense",
+    "W_fixed_local"
+  ],
+  "backbone_seed": 20260921,
+  "data_order_seed": 20260919,
+  "initial_parameter_hashes_sha256": "3f26ce064cc74c3f9544ec8e2fd3ef6a8489096a37bb1ce3c51701d07cb4792c",
+  "pair_controls": {
+    "identical_named_parameter_initialization": true,
+    "identical_data_order_all_22598_windows": true,
+    "identical_all_1413_learning_rates_and_words": true,
+    "identical_gradient_clip_policy_not_identical_realized_gradients": true,
+    "auxiliary_objective_applied_in_either": false,
+    "indexers_present_in_either": false,
+    "data_order_sha256": "9aacc98fe670a462e63e9b3bb4b72d208a35a7fbeb9a2541a13d728c2ff713ff"
+  },
+  "only_condition_protocol_differences": {
+    "engine_compatibility_note": {
+      "D": null,
+      "W": "Dense optimizer API branch; scientific model is fixed-local W without indexer."
+    },
+    "aux_weight": {
+      "D": 1.0,
+      "W": 0.0
+    },
+    "scientific_condition": {
+      "D": "D_dense",
+      "W": "W_fixed_local"
+    },
+    "actual_policy": {
+      "D": "dense",
+      "W": "local"
+    },
+    "local_attention_contract": {
+      "D": null,
+      "W": {
+        "auxiliary_objective_applied": false,
+        "block_size": 4,
+        "indexer_present": false,
+        "persistent_identity_buffer": "local_attention_contract_v0",
+        "selected_complete_blocks": 64,
+        "selection": "most_recent_complete_blocks_plus_original_causal_tail"
+      }
+    }
+  },
+  "tail_update_range": [
+    1314,
+    1413
+  ],
+  "tail_loss_tokens_each": 1068212,
+  "tail_comparison_training_only": {
+    "token_weighted_lm_nll": {
+      "D": 3.6446073959942074,
+      "W": 3.603605425393351,
+      "W_minus_D": -0.0410019706008562
+    },
+    "token_weighted_lm_ppl": {
+      "D": 38.26774583161074,
+      "W": 36.73042480554056,
+      "W_minus_D": -1.537321026070181
+    },
+    "arithmetic_mean_step_lm_nll": {
+      "D": 3.6494080895665526,
+      "W": 3.607763308218365,
+      "W_minus_D": -0.04164478134818772
+    },
+    "arithmetic_mean_step_lm_ppl": {
+      "D": 43.78778542661842,
+      "W": 42.00248909523122,
+      "W_minus_D": -1.785296331387201
+    },
+    "exp_arithmetic_mean_step_lm_nll": {
+      "D": 38.451899231397455,
+      "W": 36.883463546092806,
+      "W_minus_D": -1.5684356853046495
+    }
+  },
+  "paired_monitoring_panels_not_full_dev": [
+    {
+      "update": 0,
+      "D_nll": 9.858579345591787,
+      "W_nll": 9.858402277650836,
+      "W_minus_D_nll": -0.0001770679409514031,
+      "D_ppl": 19121.70479581767,
+      "W_ppl": 19118.31925466624,
+      "W_relative_ppl_change_percent": -0.017705226534880936
+    },
+    {
+      "update": 250,
+      "D_nll": 4.911383934950775,
+      "W_nll": 4.9171646122171095,
+      "W_minus_D_nll": 0.005780677266334244,
+      "D_ppl": 135.8272604881639,
+      "W_ppl": 136.61470784173162,
+      "W_relative_ppl_change_percent": 0.5797417622483536
+    },
+    {
+      "update": 500,
+      "D_nll": 4.557992278830795,
+      "W_nll": 4.509549687755446,
+      "W_minus_D_nll": -0.048442591075349206,
+      "D_ppl": 95.3917673711648,
+      "W_ppl": 90.88088451958755,
+      "W_relative_ppl_change_percent": -4.7287968090848125
+    },
+    {
+      "update": 750,
+      "D_nll": 4.356512007918333,
+      "W_nll": 4.296725127022821,
+      "W_minus_D_nll": -0.059786880895511985,
+      "D_ppl": 77.98464964651023,
+      "W_ppl": 73.45883101323656,
+      "W_relative_ppl_change_percent": -5.803473701283979
+    },
+    {
+      "update": 1000,
+      "D_nll": 4.109253448242617,
+      "W_nll": 4.046729104756705,
+      "W_minus_D_nll": -0.0625243434859124,
+      "D_ppl": 60.90123467029555,
+      "W_ppl": 57.21002268241175,
+      "W_relative_ppl_change_percent": -6.060980549683636
+    },
+    {
+      "update": 1250,
+      "D_nll": 4.027454338353302,
+      "W_nll": 3.9646016868385274,
+      "W_minus_D_nll": -0.06285265151477493,
+      "D_ppl": 56.11787214498171,
+      "W_ppl": 52.69927439404215,
+      "W_relative_ppl_change_percent": -6.0918164218834665
+    },
+    {
+      "update": 1413,
+      "D_nll": 4.013306113279958,
+      "W_nll": 3.9516553093331694,
+      "W_minus_D_nll": -0.06165080394678846,
+      "D_ppl": 55.32949408526171,
+      "W_ppl": 52.02140712427556,
+      "W_relative_ppl_change_percent": -5.9788852504026995
+    }
+  ],
+  "counts_successful_training_both": {
+    "forward_calls": 45196,
+    "backward_calls": 45196,
+    "updates": 2826,
+    "input_tokens": 32650828,
+    "loss_tokens": 32605632,
+    "word_exposures": 20003418
+  },
+  "counts_successful_panels_both": {
+    "forward_calls": 672,
+    "backward_calls": 0,
+    "optimizer_updates": 0
+  },
+  "failed_v0_kept_separate": {
+    "counts": {
+      "backward_attempts": 317,
+      "backward_calls": 316,
+      "engineering_updates": 0,
+      "forward_attempts": 317,
+      "forward_calls": 317,
+      "forward_input_tokens": 225742,
+      "forward_word_exposures": 137510,
+      "input_tokens": 225742,
+      "loss_tokens": 225425,
+      "scientific_updates": 19,
+      "skipped_zero_target_input_tokens": 0,
+      "skipped_zero_target_word_exposures": 0,
+      "updates": 19,
+      "windows": 317,
+      "word_exposures": 137510
+    },
+    "eval_counts": {
+      "evaluations": 1,
+      "forward_calls": 48,
+      "input_tokens": 77755,
+      "loss_tokens": 77707,
+      "word_exposures": 47714
+    },
+    "error_type": "InterruptedError",
+    "error": "Bounded D/W worker terminated",
+    "pending_next_update_windows_planned": 16,
+    "next_update_forward_completed": 13,
+    "next_update_backward_completed": 12,
+    "not_part_of_successful_one_epoch": true
+  },
+  "known_physical_training_plus_panels_including_failed_v0_but_excluding_active_full_dev": {
+    "forward_calls": 46233,
+    "backward_calls": 45512,
+    "backward_attempts": 45513,
+    "updates": 2845
+  },
+  "full_dev_status_at_snapshot": "D running, W not started; no full-dev result claimed",
+  "checkpoint_backup_status": "Metadata verified; D checkpoint local transfer failed/preserved, weights not yet fully backed up by this audit",
+  "limitations": [
+    "Metadata and raw-log audit only; no checkpoint tensors loaded or replayed.",
+    "D checkpoint local transfer failed and is preserved by root; checkpoint weights are not yet fully backed up in this audit.",
+    "Final48 monitoring panel is not full dev. At snapshot eval_D was running and eval_W not yet started.",
+    "Tail100 scores describe online training minibatches on changing weights; no generalization/equivalence conclusion.",
+    "Both implementations allocate full reference score tensors; logical W support does not establish acceleration.",
+    "Unknown hourly rate remains null; failed v0 extra work must remain separate."
+  ],
+  "analysis_counts": {
+    "model_calls": 0,
+    "forward_calls": 0,
+    "backward_calls": 0,
+    "optimizer_updates": 0,
+    "cuda_calls": 0,
+    "remote_calls": 0,
+    "checkpoint_loads": 0,
+    "torch_imported": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-21T17:43:22.879716+00:00",
+  "arm": "W",
+  "master_protocol_sha256": "ffdc5e3f21e2a6185e1581141f38bb7ed86d734f1626ffdf53183c6f3093e0a0",
+  "template_file_sha256": "516154c82409cb29b5a086ed666874702d321678c23aca676939e21c7b482a40",
+  "checkpoint_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816.pt",
+  "checkpoint_sha256": "22f15fca893e3310cf32c103edb5e252acad9a19d81669a2e9867905fa20f316",
+  "training_audit_sha256": "31287ea6ca3fdbcb283ba0cb3f06159b4664adf62de83cd40350175af950f551",
+  "selection": "Only prespecified final1413; no score selection",
+  "model_calls": 0
+}

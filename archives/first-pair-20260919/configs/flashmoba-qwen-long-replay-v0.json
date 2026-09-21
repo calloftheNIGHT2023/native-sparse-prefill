@@ -1,0 +1,38 @@
+{
+  "model_source": "data/flashmoba-qwen-precision-v0/model",
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "asset_manifest": "data/realtext-v0-r1/download-manifest.json",
+  "dataset_source": "/workspace/flashmoba-wikitext-natural.txt",
+  "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "selection_seed": 2026091540,
+  "contexts": 2,
+  "lengths": [
+    8192
+  ],
+  "block_size": 128,
+  "topks": [
+    2,
+    4
+  ],
+  "dtype": "bfloat16",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 2026091538,
+  "probe_contexts": 0,
+  "scientific_optimizer_updates": 0,
+  "decision": "Exploratory8K boundary check after2K negative result. Same absolute .01 NLL and context-bootstrap95CI threshold, both K values required. Not an independent confirmatory study or a training authorization trigger by itself.",
+  "scope": "Order/repeat check of first2 saved8K contexts, no new independent scientific examples.",
+  "text_protocol": "natural_newlines",
+  "protocol_revision_reason": "Inserted EOS per paragraph dominated dense NLL. Replace with newline-joined raw text and no synthetic special token insertion; preserve the excluded pilot and original thresholds.",
+  "excluded_prior_results": [
+    "results/flashmoba-realtext-precision-v0",
+    "results/flashmoba-realtext-precision-v1",
+    "results/flashmoba-realtext-precision-v2"
+  ],
+  "model_dtype": "float32",
+  "attention_qkv_dtype": "bfloat16",
+  "numerical_revision_reason": "Qwen BF16 eager-vs-Flash NLL difference0.00875 was small, but relative logit norm0.02519 exceeded unchanged0.02 gate. Use FP32 backbone with BF16 attention QKV, preserving thresholds; this is the same mixed protocol tried for Pythia.",
+  "raw_text_sha256": "71fa921e51ba607b4364d8787d05f4513b41b33732dd3504ff1af8952c6e7e77",
+  "reverse_sparse_order": true,
+  "control_only": true
+}

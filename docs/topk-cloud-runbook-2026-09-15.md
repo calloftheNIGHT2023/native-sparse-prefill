@@ -5,7 +5,7 @@
 当前 Pod `xe89d7w13itaek`，RTX 6000 Ada 48GB。直连命令：
 
 ```powershell
-ssh -i REDACTED_SSH_KEY_PATH -p 22100 root@REDACTED_IPV4
+ssh -i REDACTED_CONNECTION_METADATA -p 22100 root@REDACTED_IPV4
 ```
 
 远端目录 `/workspace/native-sparse-prefill/efficiency-20260915-v1`。本轮环境为 Python 3.11.10，torch2.4.1+cu124，torchvision0.19.1+cu124，Triton3.0.0；运行模型使用 `.venv-cloud/bin/python`。完整包清单见 `logs/cloud-environment-freeze-v0.txt`。虚拟环境采用系统 PyTorch，新容器如更换模板，需重建环境，不能直接假设旧虚拟环境有效。

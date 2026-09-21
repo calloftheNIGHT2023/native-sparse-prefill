@@ -1,0 +1,330 @@
+{
+  "status": "complete_all_terminal_text_sha_verified",
+  "started_utc": "2026-09-21T21:18:14.453961+00:00",
+  "scope": "All terminal text evidence; model weights explicitly not included",
+  "receipts": [
+    {
+      "remote_relative_path": "logs/dw-seed-confirmation-launch-20260921-v1/launch.json",
+      "sha256": "c0c35aad2cfb292b5e79023cfdc3d08ce64555d984743991b92224279adbdee5",
+      "size_bytes": 1256,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/logs/dw-seed-confirmation-launch-20260921-v1/launch.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "logs/dw-seed-confirmation-launch-20260921-v1/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/logs/dw-seed-confirmation-launch-20260921-v1/stderr.log",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "logs/dw-seed-confirmation-launch-20260921-v1/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/logs/dw-seed-confirmation-launch-20260921-v1/stdout.log",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/bound-eval.json",
+      "sha256": "4d3c9658070d63c764d6b21527c9e0cebffffb5c35b8a1109d2dbd65a48eb319",
+      "size_bytes": 6645,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/D/bound-eval.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/checkpoint-binding.json",
+      "sha256": "7a9ef18d547d446d9ec37ac8ea31ab61dc96dbd95920795f21b9a22728b4681c",
+      "size_bytes": 679,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/D/checkpoint-binding.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/eval/protocol.json",
+      "sha256": "4d3c9658070d63c764d6b21527c9e0cebffffb5c35b8a1109d2dbd65a48eb319",
+      "size_bytes": 6645,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/D/eval/protocol.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/eval/summary.json",
+      "sha256": "dc390e14966a82b3f1e618ef5145a3bb05113d363b31ed915bba34f43bb30f4e",
+      "size_bytes": 415783,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/D/eval/summary.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/eval/windows.jsonl",
+      "sha256": "87371d3cd4ff5d264a2155e8f70d9a4799b3f2d87171c55aa3b1a63d33e0f4ba",
+      "size_bytes": 18793334,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/D/eval/windows.jsonl",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/eval-audit.json",
+      "sha256": "3d1150222c5a0ae436c74c105d63e33eb66154e5447336190b67df4f1aad8689",
+      "size_bytes": 4866,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/D/eval-audit.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/eval-worker.json",
+      "sha256": "d281d6cb6bbfd0882f0ab64a39e9c2ac858b54969d89f7da194e5ec05123e6d3",
+      "size_bytes": 1373,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/D/eval-worker.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/train/audit.json",
+      "sha256": "d86f3fdb1f307c7bcb6001c0d573aa585da3bfd959b47570849eec6703c8e328",
+      "size_bytes": 18158,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/D/train/audit.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/events.jsonl",
+      "sha256": "76bcd0fa6ef8363e5d5e1daa313f1b70967e6c2a54e50a94f79ae28d91523383",
+      "size_bytes": 7706615,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/D/train/run/events.jsonl",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/protocol.json",
+      "sha256": "196f8410ab461101ceb7e51ff10de60f379eab24e80e17a090b915248d954a7f",
+      "size_bytes": 5960,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/protocol.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00000137-w000001003757-i000001616327-l000001614135.json",
+      "sha256": "f8382a010d0d3d70781b2ba832298f47d0b893a39f7d53302c26f5621c0cb1ee",
+      "size_bytes": 22865,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00000137-w000001003757-i000001616327-l000001614135.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00000693-w000005001525-i000008130586-l000008119498.json",
+      "sha256": "012953060969f3d19a5bbb363e9d3d603671e37565d61ed53fb4fa3429d2eebe",
+      "size_bytes": 22871,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00000693-w000005001525-i000008130586-l000008119498.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816-final-epoch_complete.json",
+      "sha256": "c45321d698dbe6cb581a0add876c7b86e7eda9b3f41144d6f2f5f2363d8455a9",
+      "size_bytes": 6326,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816-final-epoch_complete.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816.json",
+      "sha256": "28f02e021f56f63d62cdef451170992881aba885b98160546cd1f9100a945651",
+      "size_bytes": 22879,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/summary.json",
+      "sha256": "d338b3f26b0cdc9cc9fcf6d088e6d89465df2779a87a363fa9e888a0daaa275e",
+      "size_bytes": 99385,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/summary.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/D/train-worker.json",
+      "sha256": "5aaf4cd1abf0415ed57455d24a5afbac67ba100f8365856e5c52a0500177017d",
+      "size_bytes": 1118,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/D/train-worker.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/eval_D.stderr.log",
+      "sha256": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+      "size_bytes": 251,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/eval_D.stderr.log",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/eval_D.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/eval_D.stdout.log",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/eval_W.stderr.log",
+      "sha256": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+      "size_bytes": 251,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/eval_W.stderr.log",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/eval_W.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/eval_W.stdout.log",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/master.json",
+      "sha256": "fe5668e8e09e45b0d5b8d40c4376147f1209fcd2349624c46bc9f69416b819a6",
+      "size_bytes": 5952,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/master.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/stage.json",
+      "sha256": "549f26d9be9685f7927317d5a20a034d72711389f8c090f25b5f4a34e398f053",
+      "size_bytes": 7685,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/stage.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/train_D.stderr.log",
+      "sha256": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+      "size_bytes": 251,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/train_D.stderr.log",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/train_D.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/train_D.stdout.log",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/train_W.stderr.log",
+      "sha256": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+      "size_bytes": 251,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/train_W.stderr.log",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/train_W.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/train_W.stdout.log",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/bound-eval.json",
+      "sha256": "e67927a53fea900c5dec15147d30a9addefe8aebe3242da07ed9041d1b8ee0f7",
+      "size_bytes": 6651,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/W/bound-eval.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/checkpoint-binding.json",
+      "sha256": "1096b12f9fb3c8e952b6fad3bd74b2d51bbe98b89dd96ab5da9b661117bacbcd",
+      "size_bytes": 679,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/W/checkpoint-binding.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/eval/protocol.json",
+      "sha256": "e67927a53fea900c5dec15147d30a9addefe8aebe3242da07ed9041d1b8ee0f7",
+      "size_bytes": 6651,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/W/eval/protocol.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/eval/summary.json",
+      "sha256": "98e10e28152318d6dbe81869a56dd8a89d8ce6dc24cf35151189703d518e0ed3",
+      "size_bytes": 415894,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/W/eval/summary.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/eval/windows.jsonl",
+      "sha256": "37f0c11c2702aedeea82e7a763c453d3b3c82f8d369f3cc5078a2585df9e7b84",
+      "size_bytes": 18792683,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/W/eval/windows.jsonl",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/eval-audit.json",
+      "sha256": "b8be9f2dc096bcbac886b386d4c2d009e5b94de32f25c235a684ed7ecff14530",
+      "size_bytes": 4887,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/W/eval-audit.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/eval-worker.json",
+      "sha256": "f3cf75a4a9173690753760e16f998271ecf632690a2ab26e405e6b90a8a52634",
+      "size_bytes": 1394,
+      "local_path": "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/raw/results/babylm-dw-seed-confirmation-20260921-v1/W/eval-worker.json",
+      "status": "downloaded_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train/audit.json",
+      "sha256": "31287ea6ca3fdbcb283ba0cb3f06159b4664adf62de83cd40350175af950f551",
+      "size_bytes": 18178,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/W/train/audit.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/events.jsonl",
+      "sha256": "fc138fa4639753dc59ddc3fe122ade8e4530284d7c6f96726b20a46864bde424",
+      "size_bytes": 7705771,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/W/train/run/events.jsonl",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/protocol.json",
+      "sha256": "aa2a6417fe5558228d10b3af6b6786b6827f873315d85309311642c1b735ae6e",
+      "size_bytes": 6336,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/protocol.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00000137-w000001003757-i000001616327-l000001614135.json",
+      "sha256": "a24fe14e934d78458acfad0b219c25144237d788645f399eee5096358b421471",
+      "size_bytes": 22865,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00000137-w000001003757-i000001616327-l000001614135.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00000693-w000005001525-i000008130586-l000008119498.json",
+      "sha256": "592fb7bff32bc837ab8b71cffbcf9454cce9eced3dbc5b0bbdf37d5829fdd276",
+      "size_bytes": 22871,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00000693-w000005001525-i000008130586-l000008119498.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816-final-epoch_complete.json",
+      "sha256": "045bf89a557c18b29402674feac5693685f4d06ad5dad15cf7db7f70b4216c1d",
+      "size_bytes": 6326,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816-final-epoch_complete.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816.json",
+      "sha256": "cf27d1ec0b34510be9f661ebce20709a757b9ca170aab398fa407a37ea99d268",
+      "size_bytes": 22879,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/summary.json",
+      "sha256": "27677ce1b82f9d1ae036e68915c168cd739c651d2c7536d1728f0757e044b8db",
+      "size_bytes": 99385,
+      "local_path": "logs/babylm-dw-completion-metadata-20260921/20260921T163240.837240Z/results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/summary.json",
+      "status": "reused_sha_verified"
+    },
+    {
+      "remote_relative_path": "results/babylm-dw-seed-confirmation-20260921-v1/W/train-worker.json",
+      "sha256": "3e2cd5304f5bbd794e1e2877b5d89f90aeb8596c5d3f72de27ac1c007db3f79c",
+      "size_bytes": 1124,
+      "local_path": "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162953.732821Z/raw/W/train-worker.json",
+      "status": "reused_sha_verified"
+    }
+  ],
+  "arms": [
+    "D",
+    "W"
+  ],
+  "model_calls": 0,
+  "remote_writes": 0,
+  "weights_local_backup_complete": false,
+  "completed_utc": "2026-09-21T21:18:58.384407+00:00"
+}

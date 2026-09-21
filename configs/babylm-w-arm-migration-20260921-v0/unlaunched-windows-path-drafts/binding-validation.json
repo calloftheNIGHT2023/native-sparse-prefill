@@ -1,0 +1,25 @@
+{
+  "status": "passed_local_static_binding_validation",
+  "condition": "W_fixed_local",
+  "model_calls": 0,
+  "cuda_calls": 0,
+  "remote_calls": 0,
+  "logical_path_mapping": "Immutable latest manifest receipts used only during local validation; saved protocols retain deployment paths.",
+  "source_pin_count_full": 26,
+  "source_pin_count_replay": 27,
+  "fixed_replay_windows": 48,
+  "source_final_panel_NLL": 3.942268438020266,
+  "full_dev": {
+    "path": "configs\\babylm-w-arm-migration-20260921-v0\\full-dev.json",
+    "sha256": "e1c1c5f8e25031caa0fea4236436b2da9026f43febd6e69327970f29eeceb5db"
+  },
+  "replay": {
+    "path": "configs\\babylm-w-arm-migration-20260921-v0\\replay.json",
+    "sha256": "cb070884b0f995659f1815116bc2270f01ca574387fa9a7ce40556e1a60b5187"
+  },
+  "runtime_origin": {
+    "path": "logs\\babylm-w-arm-runtime-origin-binding-20260921.json",
+    "sha256": "ef6ba94df664fd04884326099ef5e46d805002472006de0a5a2c0397683a1296"
+  },
+  "absolute_deadline_utc": "2026-09-21T05:59:32.739689Z"
+}

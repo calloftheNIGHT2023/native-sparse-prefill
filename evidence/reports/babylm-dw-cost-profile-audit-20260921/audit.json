@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "utc": "2026-09-21T23:49:54.590288+00:00",
+  "input_manifest": "logs/babylm-dw-cost-profile-backup-20260921/20260921T234120.236686Z/manifest.json",
+  "sha_verified_files": 6,
+  "event_counts": {
+    "forward_attempt": 36,
+    "forward_complete": 36,
+    "warmup_complete": 4,
+    "backward_attempt": 32,
+    "backward_complete": 32,
+    "hook_equivalence": 16,
+    "paired_measurement_complete": 16,
+    "arm_complete": 2
+  },
+  "counts": {
+    "forward_attempts": 36,
+    "forward_calls": 36,
+    "backward_attempts": 32,
+    "backward_calls": 32,
+    "warmup_forward_attempts": 4,
+    "warmup_forward_calls": 4,
+    "optimizer_updates": 0,
+    "scientific_updates": 0,
+    "submitted_input_tokens": 30664,
+    "submitted_loss_tokens": 30628,
+    "submitted_word_exposures": 21288
+  },
+  "named_gradient_records_checked": 2336,
+  "arms": {
+    "D": {
+      "pooled_forward_shares": {
+        "embedding": 4.189779572901816e-05,
+        "normalization": 0.006362496760338185,
+        "gdn_mixer": 0.824784433177466,
+        "ffn": 0.01472902208972881,
+        "global_mixer": 0.11182330868555655
+      },
+      "bare_forward_sum_ms": 2373.2022705078125,
+      "bare_backward_sum_ms": 3282.7505493164062,
+      "instrumented_forward_sum_ms": 2128.608383178711,
+      "instrumented_minus_bare_forward_percent": -10.306491375333293,
+      "parameters_unchanged": true,
+      "all_8_pairs_passed": true
+    },
+    "W": {
+      "pooled_forward_shares": {
+        "embedding": 4.114453086507681e-05,
+        "normalization": 0.006250272792589259,
+        "gdn_mixer": 0.8011608729077742,
+        "ffn": 0.017743213104345422,
+        "global_mixer": 0.13325170275522602
+      },
+      "bare_forward_sum_ms": 2280.7247161865234,
+      "bare_backward_sum_ms": 3279.279296875,
+      "instrumented_forward_sum_ms": 2164.467483520508,
+      "instrumented_minus_bare_forward_percent": -5.097381189449424,
+      "parameters_unchanged": true,
+      "all_8_pairs_passed": true
+    }
+  },
+  "elapsed_wall_seconds": 43.86355344601907,
+  "finished_utc": "2026-09-21T23:40:55.371292+00:00",
+  "model_calls": 0,
+  "new_tensor_replay": false,
+  "new_gradient_computation": false,
+  "usd_cost": null,
+  "scope": "Offline SHA/counter/logged loss+gradient tolerance/state-hash/forward-timing recomputation. Logged numerical comparisons verified; no independent fresh tensor replay.",
+  "limitations": [
+    "Shared GPU at 100 percent utilization",
+    "Forward-only attribution",
+    "No optimizer/full-step accounting",
+    "Not corpus weighted",
+    "First backward cold retained",
+    "No causal kernel attribution or speed claim"
+  ]
+}

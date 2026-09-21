@@ -1,0 +1,32 @@
+{
+  "name": "cloud-dense-context-10m-v0",
+  "asset_source": "data/realtext-v0-r1",
+  "pretrained_source": "data/realtext-early-step1000/assets/model",
+  "pretrained_revision": "66bac1f7ae4b7faa77c34ee6a50d41cd09579a88",
+  "sequence_length": 2048,
+  "updates": 4882,
+  "lm_learning_rate": 0.0001,
+  "indexer_learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "gradient_clip_norm": 1.0,
+  "lr_warmup_updates": 32,
+  "aux_weight": 1.0,
+  "threads": 4,
+  "evaluation_every": 512,
+  "late_query_start": 1024,
+  "block_size": 4,
+  "selected_blocks": 64,
+  "index_heads": 2,
+  "index_head_dim": 32,
+  "rotary_dim": 16,
+  "indexer_calibration": {
+    "affine": true,
+    "scaled": true
+  },
+  "scope": "Exploratory 9,998,336-token dense from-scratch control, same seed and article set as separate 1M pilot; repeated corpus epochs, not independent replication. Pure GPTNeoX, not Qwen hybrid. Launched only if the frozen 1M context gate fails.",
+  "rationale": "Failed uniform-probe and sampled-head-normalizer candidates are closed. Measure whether a joint-training cold-start problem actually appears before designing further methods. Native training and warmup already have prior work.",
+  "core_backend": "gathered",
+  "initialization": "random",
+  "seed": 41,
+  "context_gate_nats": 0.02
+}

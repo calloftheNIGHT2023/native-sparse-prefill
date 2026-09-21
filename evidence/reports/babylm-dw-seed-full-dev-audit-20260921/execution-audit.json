@@ -1,0 +1,881 @@
+{
+  "status": "passed_terminal_execution_cost_audit",
+  "audited_utc": "2026-09-21T21:24:09.245979+00:00",
+  "scope": "Local immutable metadata, execution timing, cost limits, source identity, physical-work accounting; no model construction or checkpoint tensor loading; quality audit separate.",
+  "inputs": {
+    "logs/babylm-dw-final-text-backup-20260921/20260921T211814.452452Z/manifest.json": "ce20b32bbf460cba299e12f67fe16dd04e58ed0986b54c07803401decd08d103",
+    "logs/babylm-dw-seed-small-probes-20260921/20260921T211631.079289Z.json": "c96db944587aca187b437101ae6a0b2be43be79e5f32822dbc1d8251ea25967c",
+    "logs/babylm-dw-seed-launch-20260921-v1.json": "ce78424a0e395f90a911c312c10e522963e582a97025dba49adfdf1129b27312",
+    "configs/babylm-dw-seed-confirmation-20260921-v1/master.json": "5bc4ace6c97e9e85e7fa1340ef6aad03e05b2d1963a32559415794f017d8c9e4",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/manifest.json": "2f9491f8d9d438322a317ae686f9d74cb8d7eb78d5c77399f2892f4ec7027457",
+    "logs/babylm-dw-seed-manual-snapshots-20260921/20260921T073059.863835Z/receipt.json": "a60e5ffd81c4e07a71e2a04f9fa6dd1af1d509d1d2468a533b2f6b1985f1e4bc"
+  },
+  "checks_passed": 149,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "check": "immutable terminal manifest hash",
+      "passed": true
+    },
+    {
+      "check": "terminal text collection complete",
+      "passed": true
+    },
+    {
+      "check": "unique terminal artifact paths",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: logs/dw-seed-confirmation-launch-20260921-v1/launch.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: logs/dw-seed-confirmation-launch-20260921-v1/stderr.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: logs/dw-seed-confirmation-launch-20260921-v1/stdout.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/bound-eval.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/checkpoint-binding.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/eval/protocol.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/eval/summary.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/eval/windows.jsonl",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/eval-audit.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/eval-worker.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/train/audit.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/events.jsonl",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/protocol.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00000137-w000001003757-i000001616327-l000001614135.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00000693-w000005001525-i000008130586-l000008119498.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816-final-epoch_complete.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/train/run/summary.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/D/train-worker.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/eval_D.stderr.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/eval_D.stdout.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/eval_W.stderr.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/eval_W.stdout.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/master.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/stage.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/train_D.stderr.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/train_D.stdout.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/train_W.stderr.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/train_W.stdout.log",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/bound-eval.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/checkpoint-binding.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/eval/protocol.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/eval/summary.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/eval/windows.jsonl",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/eval-audit.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/eval-worker.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/train/audit.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/events.jsonl",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/protocol.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00000137-w000001003757-i000001616327-l000001614135.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00000693-w000005001525-i000008130586-l000008119498.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816-final-epoch_complete.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/snapshots/model-u00001413-w000010001709-i000016325414-l000016302816.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/train/run/summary.json",
+      "passed": true
+    },
+    {
+      "check": "terminal SHA/size: results/babylm-dw-seed-confirmation-20260921-v1/W/train-worker.json",
+      "passed": true
+    },
+    {
+      "check": "terminal probe exactly matches immutable final stage",
+      "passed": true
+    },
+    {
+      "check": "no registered project processes observed",
+      "passed": true
+    },
+    {
+      "check": "project flock observed free",
+      "passed": true
+    },
+    {
+      "check": "read-only probe made no model calls",
+      "passed": true
+    },
+    {
+      "check": "launch, stage and master file SHA binding",
+      "passed": true
+    },
+    {
+      "check": "immutable remote launch equals local launch",
+      "passed": true
+    },
+    {
+      "check": "controller source pin",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/check_babylm_gpu_numerics_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/check_babylm_local_numerics_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/prepare_babylm_optimization_stage_a_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/prepare_babylm_windows_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_checkpoint_eval_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_de_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_local_eval_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_local_queue_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_local_train_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_one_epoch_mig_worker_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_one_epoch_sequential_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_one_epoch_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_optimization_stage_a_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_scientific_pair_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_sparse_parallel_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/summarize_babylm_one_epoch_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/attention.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/config.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/evaluation.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/local_attention_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/model.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/official_causal_scoring.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/official_task_records.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/routing_diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/training.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_dw_seed_confirmation_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: src/babylm_hybrid/training_timebound_v0.py",
+      "passed": true
+    },
+    {
+      "check": "source SHA: scripts/run_babylm_dw_seed_confirmation_v1.py",
+      "passed": true
+    },
+    {
+      "check": "master binding: reference_dense_protocol",
+      "passed": true
+    },
+    {
+      "check": "master binding: initialization_receipt",
+      "passed": true
+    },
+    {
+      "check": "master binding: authorization",
+      "passed": true
+    },
+    {
+      "check": "master binding: training_protocol_D",
+      "passed": true
+    },
+    {
+      "check": "master binding: training_protocol_W",
+      "passed": true
+    },
+    {
+      "check": "master binding: eval_template",
+      "passed": true
+    },
+    {
+      "check": "bounded unknown-price authorization",
+      "passed": true
+    },
+    {
+      "check": "no retry or automatic follow-up",
+      "passed": true
+    },
+    {
+      "check": "exact queue/stage caps",
+      "passed": true
+    },
+    {
+      "check": "launch hard deadline bound",
+      "passed": true
+    },
+    {
+      "check": "complete terminal state, no next stage",
+      "passed": true
+    },
+    {
+      "check": "exact four-stage sequence",
+      "passed": true
+    },
+    {
+      "check": "train_D return0/identity/order/bound",
+      "passed": true
+    },
+    {
+      "check": "train_W return0/identity/order/bound",
+      "passed": true
+    },
+    {
+      "check": "eval_D return0/identity/order/bound",
+      "passed": true
+    },
+    {
+      "check": "eval_W return0/identity/order/bound",
+      "passed": true
+    },
+    {
+      "check": "UTC and monotonic elapsed agree",
+      "passed": true
+    },
+    {
+      "check": "queue ended before deadline",
+      "passed": true
+    },
+    {
+      "check": "D completed training audit and epoch",
+      "passed": true
+    },
+    {
+      "check": "D train audit metadata hashes",
+      "passed": true
+    },
+    {
+      "check": "D common initialization and seed",
+      "passed": true
+    },
+    {
+      "check": "D train protocol/source bindings",
+      "passed": true
+    },
+    {
+      "check": "D train counts agreement",
+      "passed": true
+    },
+    {
+      "check": "D exact training workload",
+      "passed": true
+    },
+    {
+      "check": "D exact panel workload",
+      "passed": true
+    },
+    {
+      "check": "D final checkpoint binding",
+      "passed": true
+    },
+    {
+      "check": "D evaluation completion and file binding",
+      "passed": true
+    },
+    {
+      "check": "D evaluation exact workload",
+      "passed": true
+    },
+    {
+      "check": "D actual runtime and hardware identity",
+      "passed": true
+    },
+    {
+      "check": "D no fictitious priced training estimate",
+      "passed": true
+    },
+    {
+      "check": "D train immutable worker receipt",
+      "passed": true
+    },
+    {
+      "check": "D train worker within controller stage",
+      "passed": true
+    },
+    {
+      "check": "D eval immutable worker receipt",
+      "passed": true
+    },
+    {
+      "check": "D eval worker within controller stage",
+      "passed": true
+    },
+    {
+      "check": "W completed training audit and epoch",
+      "passed": true
+    },
+    {
+      "check": "W train audit metadata hashes",
+      "passed": true
+    },
+    {
+      "check": "W common initialization and seed",
+      "passed": true
+    },
+    {
+      "check": "W train protocol/source bindings",
+      "passed": true
+    },
+    {
+      "check": "W train counts agreement",
+      "passed": true
+    },
+    {
+      "check": "W exact training workload",
+      "passed": true
+    },
+    {
+      "check": "W exact panel workload",
+      "passed": true
+    },
+    {
+      "check": "W final checkpoint binding",
+      "passed": true
+    },
+    {
+      "check": "W evaluation completion and file binding",
+      "passed": true
+    },
+    {
+      "check": "W evaluation exact workload",
+      "passed": true
+    },
+    {
+      "check": "W actual runtime and hardware identity",
+      "passed": true
+    },
+    {
+      "check": "W no fictitious priced training estimate",
+      "passed": true
+    },
+    {
+      "check": "W train immutable worker receipt",
+      "passed": true
+    },
+    {
+      "check": "W train worker within controller stage",
+      "passed": true
+    },
+    {
+      "check": "W eval immutable worker receipt",
+      "passed": true
+    },
+    {
+      "check": "W eval worker within controller stage",
+      "passed": true
+    },
+    {
+      "check": "summed successful scientific workload",
+      "passed": true
+    },
+    {
+      "check": "prespecified successful total matched",
+      "passed": true
+    },
+    {
+      "check": "old attempt retained artifact: D/train/run/events.jsonl",
+      "passed": true
+    },
+    {
+      "check": "old attempt retained artifact: D/train/run/failures/20260921T072945589277Z-8f124ccf.json",
+      "passed": true
+    },
+    {
+      "check": "old attempt retained artifact: D/train/run/protocol.json",
+      "passed": true
+    },
+    {
+      "check": "old attempt retained artifact: D/train-worker.json",
+      "passed": true
+    },
+    {
+      "check": "old attempt retained artifact: master.json",
+      "passed": true
+    },
+    {
+      "check": "old attempt retained artifact: stage.json",
+      "passed": true
+    },
+    {
+      "check": "old attempt retained artifact: train_D.stderr.log",
+      "passed": true
+    },
+    {
+      "check": "old attempt retained artifact: train_D.stdout.log",
+      "passed": true
+    },
+    {
+      "check": "old physical partial work preserved",
+      "passed": true
+    },
+    {
+      "check": "old committed19 plus partial batch",
+      "passed": true
+    },
+    {
+      "check": "old initial panel48 preserved",
+      "passed": true
+    },
+    {
+      "check": "old failure not a resume point",
+      "passed": true
+    },
+    {
+      "check": "old interrupted attempt terminated before fresh v1",
+      "passed": true
+    }
+  ],
+  "terminal_artifacts_independently_sha_verified": 45,
+  "master_file_sha256": "5bc4ace6c97e9e85e7fa1340ef6aad03e05b2d1963a32559415794f017d8c9e4",
+  "master_canonical_sha256": "ffdc5e3f21e2a6185e1581141f38bb7ed86d734f1626ffdf53183c6f3093e0a0",
+  "canonical_hash_note": "checkpoint-binding records canonical master SHA; launch and workers record raw file SHA. Both independently matched.",
+  "timeline": [
+    {
+      "stage": "train_D",
+      "status": "complete",
+      "started_utc": "2026-09-21T07:31:22.852708+00:00",
+      "pid": 2745101,
+      "pgid": 2745097,
+      "returncode": 0,
+      "finished_utc": "2026-09-21T11:50:56.087663+00:00",
+      "wall_seconds": 15573.234955,
+      "hard_limit_seconds": 21600
+    },
+    {
+      "stage": "train_W",
+      "status": "complete",
+      "started_utc": "2026-09-21T11:50:56.112244+00:00",
+      "pid": 2829256,
+      "pgid": 2745097,
+      "returncode": 0,
+      "finished_utc": "2026-09-21T16:25:28.264064+00:00",
+      "wall_seconds": 16472.15182,
+      "hard_limit_seconds": 21600
+    },
+    {
+      "stage": "eval_D",
+      "status": "complete",
+      "started_utc": "2026-09-21T16:25:28.713388+00:00",
+      "pid": 2905281,
+      "pgid": 2745097,
+      "returncode": 0,
+      "finished_utc": "2026-09-21T17:43:22.440154+00:00",
+      "wall_seconds": 4673.726766,
+      "hard_limit_seconds": 7200
+    },
+    {
+      "stage": "eval_W",
+      "status": "complete",
+      "started_utc": "2026-09-21T17:43:22.879998+00:00",
+      "pid": 2931411,
+      "pgid": 2745097,
+      "returncode": 0,
+      "finished_utc": "2026-09-21T18:59:08.467665+00:00",
+      "wall_seconds": 4545.587667,
+      "hard_limit_seconds": 7200
+    }
+  ],
+  "successful_v1": {
+    "started_utc": "2026-09-21T07:31:22.850072+00:00",
+    "finished_utc": "2026-09-21T18:59:08.475236+00:00",
+    "controller_elapsed_wall_seconds": 41265.625183718046,
+    "controller_elapsed_hours": 11.462673662143901,
+    "hard_limit_seconds": 58200,
+    "counts": {
+      "training_forward_calls": 45196,
+      "training_backward_calls": 45196,
+      "training_updates": 2826,
+      "training_panel_forward_calls": 672,
+      "full_dev_forward_calls": 37584,
+      "total_model_forward_calls": 83452,
+      "total_model_backward_calls": 45196
+    },
+    "arms": {
+      "D": {
+        "condition": "D_dense",
+        "training_counts": {
+          "backward_attempts": 22598,
+          "backward_calls": 22598,
+          "engineering_updates": 0,
+          "forward_attempts": 22598,
+          "forward_calls": 22598,
+          "forward_input_tokens": 16325414,
+          "forward_word_exposures": 10001709,
+          "input_tokens": 16325414,
+          "loss_tokens": 16302816,
+          "scientific_updates": 1413,
+          "skipped_zero_target_input_tokens": 0,
+          "skipped_zero_target_word_exposures": 0,
+          "updates": 1413,
+          "windows": 22598,
+          "word_exposures": 10001709
+        },
+        "panel_counts": {
+          "evaluations": 7,
+          "forward_calls": 336,
+          "input_tokens": 544285,
+          "loss_tokens": 543949,
+          "word_exposures": 333998
+        },
+        "full_dev_counts": {
+          "forward_attempts": 18792,
+          "forward_calls": 18792,
+          "committed_windows": 18792,
+          "submitted_input_tokens": 17437534,
+          "submitted_word_exposures": 10420962,
+          "backward_calls": 0,
+          "optimizer_updates": 0
+        },
+        "final_model_checkpoint_sha256": "f51e32e5ba997ef6d89539e51cd8e2bd1d69b52350412b2ec88791d692502b27",
+        "full_checkpoint_sha256": "9fb3c413a3638ea51e8c6e30675bfe775c132830e3ee8a20614ea897e5dd9104",
+        "initial_parameter_hashes_sha256": "3f26ce064cc74c3f9544ec8e2fd3ef6a8489096a37bb1ce3c51701d07cb4792c",
+        "training_engine_elapsed_seconds": 15567.550603626994,
+        "full_dev_scorer_elapsed_seconds": 4668.673475207994,
+        "runtime": {
+          "torch": "2.10.0+cu128",
+          "numpy": "2.4.2",
+          "torch_num_threads": 1,
+          "device": "cuda",
+          "dtype": "float32",
+          "cuda_version": "12.8",
+          "float32_matmul_precision": "highest",
+          "cuda_matmul_allow_tf32": false,
+          "cudnn_allow_tf32": false,
+          "cudnn_deterministic": true,
+          "cudnn_benchmark": false,
+          "deterministic_algorithms": true,
+          "deterministic_warn_only": false,
+          "gpu": {
+            "device_index": 0,
+            "name": "NVIDIA GB300",
+            "uuid": "43bd0f4d-6798-53e3-e996-f4b4c3854511",
+            "capability": [
+              10,
+              3
+            ],
+            "total_memory_bytes": 267898585088
+          }
+        },
+        "estimated_gpu_usd": null
+      },
+      "W": {
+        "condition": "W_fixed_local",
+        "training_counts": {
+          "backward_attempts": 22598,
+          "backward_calls": 22598,
+          "engineering_updates": 0,
+          "forward_attempts": 22598,
+          "forward_calls": 22598,
+          "forward_input_tokens": 16325414,
+          "forward_word_exposures": 10001709,
+          "input_tokens": 16325414,
+          "loss_tokens": 16302816,
+          "scientific_updates": 1413,
+          "skipped_zero_target_input_tokens": 0,
+          "skipped_zero_target_word_exposures": 0,
+          "updates": 1413,
+          "windows": 22598,
+          "word_exposures": 10001709
+        },
+        "panel_counts": {
+          "evaluations": 7,
+          "forward_calls": 336,
+          "input_tokens": 544285,
+          "loss_tokens": 543949,
+          "word_exposures": 333998
+        },
+        "full_dev_counts": {
+          "forward_attempts": 18792,
+          "forward_calls": 18792,
+          "committed_windows": 18792,
+          "submitted_input_tokens": 17437534,
+          "submitted_word_exposures": 10420962,
+          "backward_calls": 0,
+          "optimizer_updates": 0
+        },
+        "final_model_checkpoint_sha256": "22f15fca893e3310cf32c103edb5e252acad9a19d81669a2e9867905fa20f316",
+        "full_checkpoint_sha256": "ec0bab5d309f3b2ed3d889d8cf9d30ce845d215b08476b558ef893a8e6f4d704",
+        "initial_parameter_hashes_sha256": "3f26ce064cc74c3f9544ec8e2fd3ef6a8489096a37bb1ce3c51701d07cb4792c",
+        "training_engine_elapsed_seconds": 16464.573854027898,
+        "full_dev_scorer_elapsed_seconds": 4541.044298553024,
+        "runtime": {
+          "torch": "2.10.0+cu128",
+          "numpy": "2.4.2",
+          "torch_num_threads": 1,
+          "device": "cuda",
+          "dtype": "float32",
+          "cuda_version": "12.8",
+          "float32_matmul_precision": "highest",
+          "cuda_matmul_allow_tf32": false,
+          "cudnn_allow_tf32": false,
+          "cudnn_deterministic": true,
+          "cudnn_benchmark": false,
+          "deterministic_algorithms": true,
+          "deterministic_warn_only": false,
+          "gpu": {
+            "device_index": 0,
+            "name": "NVIDIA GB300",
+            "uuid": "43bd0f4d-6798-53e3-e996-f4b4c3854511",
+            "capability": [
+              10,
+              3
+            ],
+            "total_memory_bytes": 267898585088
+          }
+        },
+        "estimated_gpu_usd": null
+      }
+    }
+  },
+  "old_v0_separate_waste": {
+    "status": "failed_or_incomplete",
+    "interruption": "Administrative duration correction; preserve partial work, no checkpoint reuse.",
+    "counts": {
+      "backward_attempts": 317,
+      "backward_calls": 316,
+      "engineering_updates": 0,
+      "forward_attempts": 317,
+      "forward_calls": 317,
+      "forward_input_tokens": 225742,
+      "forward_word_exposures": 137510,
+      "input_tokens": 225742,
+      "loss_tokens": 225425,
+      "scientific_updates": 19,
+      "skipped_zero_target_input_tokens": 0,
+      "skipped_zero_target_word_exposures": 0,
+      "updates": 19,
+      "windows": 317,
+      "word_exposures": 137510
+    },
+    "panel_forward_calls": 48,
+    "total_model_forward_calls": 365,
+    "controller_elapsed_wall_seconds": 245.86417962890118,
+    "engine_elapsed_wall_seconds": 242.3772214949131,
+    "overlapping_times_must_not_be_added": true,
+    "failed_backward_attempts": 1,
+    "failure_snapshot_resume_supported": false,
+    "local_tensor_backup_complete_not_asserted": true
+  },
+  "combined_physical_work_v0_plus_v1_only": {
+    "model_forward_calls": 83817,
+    "backward_calls": 45512,
+    "backward_attempts": 45513,
+    "committed_updates": 2845,
+    "not_successful_pair_scientific_counts": true,
+    "prior_engineering_and_previous_seed_excluded": true
+  },
+  "cost": {
+    "actual_hourly_rate_usd": null,
+    "estimated_total_usd": null,
+    "controller_time_sum_v0_plus_v1_seconds": 41511.48936334695,
+    "controller_time_sum_v0_plus_v1_hours": 11.530969267596374,
+    "billing_basis_unknown": true,
+    "idle_setup_transfer_storage_not_in_controller_time": true,
+    "no_sparse_speed_or_savings_claim": true,
+    "shared_gpu_no_whole_host_idle_claim": true
+  },
+  "terminal_observation": {
+    "observed_utc": "2026-09-21T21:16:30.882403+00:00",
+    "registered_research_processes": [],
+    "project_lock_free": true,
+    "seconds_since_controller_completion": 8242.407167,
+    "boundary": "Endpoint observation of registered project work only; no claim of continuous inactivity, whole GPU availability, power-off, or billing termination."
+  },
+  "evidence_boundary": {
+    "all_terminal_text_local": true,
+    "all_checkpoint_weights_local": false,
+    "statement": "This audit verifies checkpoint identity from SHA-bound terminal receipts. Complete tensor backup and tensor-state audit are not claimed."
+  },
+  "audit_work": {
+    "model_forward_calls": 0,
+    "model_backward_calls": 0,
+    "optimizer_updates": 0,
+    "cuda_calls": 0,
+    "remote_calls": 0
+  }
+}

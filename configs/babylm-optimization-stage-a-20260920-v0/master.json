@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "launch_allowed": true,
+  "frozen_utc": "2026-09-20T03:44:43.460811+00:00",
+  "scope": "finite_existing_checkpoint_evaluation_and_routing_intervention_only",
+  "authorization": "logs/babylm-optimization-authorization-current.json",
+  "cycle_cap_usd": 20,
+  "output_dir": "results/babylm-optimization-stage-a-20260920-v0",
+  "jobs": [
+    {
+      "name": "replay-dense",
+      "role": "replay",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/replay-dense.json",
+      "protocol_sha256": "03894dcd3d9c3e0ba0da31069f704aa319b50700cd9c7608cde7198f816712f8",
+      "replay_reference": "configs/babylm-optimization-stage-a-20260920-v0/dense-replay-reference.json",
+      "replay_reference_sha256": "dc6c4cda6edf7a6413d2acb667d5c57a79cbdc9ba00ccba47a02651b123cc3ff"
+    },
+    {
+      "name": "replay-sparse",
+      "role": "replay",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/replay-sparse.json",
+      "protocol_sha256": "37d8628a4107e36baef302177ec480275a5f0d377fc7ad07cef5a7a924364a58",
+      "replay_reference": "configs/babylm-optimization-stage-a-20260920-v0/sparse-replay-reference.json",
+      "replay_reference_sha256": "7f030bd4c7ee65cc83a5b61443b0e801561eae84c5bf6e7d75234141e143b116"
+    },
+    {
+      "name": "routing-u0137-learned",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u0137-learned.json",
+      "protocol_sha256": "844f3f1d7b20429fab69b89d6c7e0961654560622910f5ef992bb94bebe6eca8"
+    },
+    {
+      "name": "routing-u0137-prefix",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u0137-prefix.json",
+      "protocol_sha256": "e71e65bc78023e46afcaea8283cb15fcd911a33b3f76470a75f4fc2dcf7fbe38"
+    },
+    {
+      "name": "routing-u0137-local",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u0137-local.json",
+      "protocol_sha256": "183ef5da3eedfe00f1ea0e45dd1db6350e4a5b75ea30dc6048e576c199bf40ac"
+    },
+    {
+      "name": "routing-u0137-random",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u0137-random.json",
+      "protocol_sha256": "4a61f8e54154192c29365c59d8deaa109f0968fe1ad8e30659e073d7f6d29e36"
+    },
+    {
+      "name": "routing-u0693-learned",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u0693-learned.json",
+      "protocol_sha256": "ee2e86ec41ffc918dcf3ef8923f13448b51b2f2c4bd8337c4215497a41d2a0ab"
+    },
+    {
+      "name": "routing-u0693-prefix",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u0693-prefix.json",
+      "protocol_sha256": "2caf059b7a08c98eca96a1cd20acd6d56a5ae0f6cdb8c8a721a82212d4bde974"
+    },
+    {
+      "name": "routing-u0693-local",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u0693-local.json",
+      "protocol_sha256": "6b2051159742bc021b27316190b22554f8b88fce95b802b7dd785679e6496c03"
+    },
+    {
+      "name": "routing-u0693-random",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u0693-random.json",
+      "protocol_sha256": "1914cd2daa82bf7233b2a4f004a1e61dce030532dc2594894f9783ff689cb9d0"
+    },
+    {
+      "name": "routing-u1413-learned",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u1413-learned.json",
+      "protocol_sha256": "8c3456091a51979f7f985be9db1747f28236fbd4b554aabad6f5c0a58e065352",
+      "replay_reference": "configs/babylm-optimization-stage-a-20260920-v0/sparse-replay-reference.json",
+      "replay_reference_sha256": "7f030bd4c7ee65cc83a5b61443b0e801561eae84c5bf6e7d75234141e143b116"
+    },
+    {
+      "name": "routing-u1413-prefix",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u1413-prefix.json",
+      "protocol_sha256": "328abcf170b8a7f081d31a309dc1b9844acd431973a69219caa53d0caa544664"
+    },
+    {
+      "name": "routing-u1413-local",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u1413-local.json",
+      "protocol_sha256": "7003c53902242b279feee5faed1603a2ca0e9cbde757830c208e29cbf0e9fafd"
+    },
+    {
+      "name": "routing-u1413-random",
+      "role": "diagnostic",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/routing-u1413-random.json",
+      "protocol_sha256": "a47474147be2bdbd8b03a99b337aec5f72fae5cde4b2ef726bb5e2cb5c3ec420"
+    },
+    {
+      "name": "full-dev-dense",
+      "role": "full_dev",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/full-dev-dense.json",
+      "protocol_sha256": "7543fccc1a7ddbc45f8851298d6efe094e9f9bb4d169ed0b21bb06a6eb792468"
+    },
+    {
+      "name": "full-dev-sparse",
+      "role": "full_dev",
+      "protocol": "configs/babylm-optimization-stage-a-20260920-v0/full-dev-sparse.json",
+      "protocol_sha256": "7bc1fd79a2007299aaaa828f0e102fc7f556f6fa33b94236ee349a68d8b66802"
+    }
+  ],
+  "execution_hardware": {
+    "physical_uuid": "GPU-753a81b8-728e-2d13-ea85-0f1786e6bd74",
+    "mig_uuid": "MIG-e8b41c86-543f-5196-81bd-05a67c68eaf3",
+    "driver_version": "580.178.04",
+    "mig_profile": "1g.24gb"
+  },
+  "source_sha256": {
+    "src/babylm_hybrid/__init__.py": "0faa2e1b9156f7292ea98890a5449105ec93c79eeb9df7c77160d787e6716b0f",
+    "src/babylm_hybrid/attention.py": "6aaacd6239c70854aad9eee0b6c116dafdb634cb7654b69a2100a1694fa439d9",
+    "src/babylm_hybrid/config.py": "c4a30217d5646d4ccf37c9b81bfccd9e24044363600e40d4e4d5bdd288c72c70",
+    "src/babylm_hybrid/evaluation.py": "5eda46b7c45eb1f0196839a04924a74cf6c419c44babcd8a5282fe9cd11d6c0f",
+    "src/babylm_hybrid/model.py": "7497eb305be1a9fc9fe778e3bede27fc9c5765333dd9123cf0d6bd9f739ca270",
+    "src/babylm_hybrid/official_causal_scoring.py": "04e8434901e774b0c46256156c81be1acc6e899b1c97b1d0639609671b1a22c9",
+    "src/babylm_hybrid/official_task_records.py": "ec0158750a655ca1b391605f2790b676dac562a42d8f12bc06a694e245cea716",
+    "src/babylm_hybrid/training.py": "3c2af088027a689fe6281b7ee1c4ab8d27dcf156278449df5c553e95a85ab98f",
+    "scripts/run_babylm_de_v0.py": "0c463cd3079977ce74f2f6464c2e0497ec60a7d0a7ce376ae8368c7fd7d533f5",
+    "scripts/run_babylm_one_epoch_v0.py": "b8520461b85de767b2789b8363b362f69d92229560c3d0e9a28e6c3c84413018",
+    "scripts/summarize_babylm_one_epoch_v0.py": "f8c1087b7da80ec1bd6dbe09f3358dd722a1f110672c40ff481298fa6c47afeb",
+    "scripts/run_babylm_sparse_parallel_v0.py": "0879da1142c1306822f64aeaf2fc49edfa36433db32d6b930de4e1bb7cde8ab5",
+    "scripts/run_babylm_scientific_pair_v0.py": "593280477ca8457ad21f171c7a6cec137e7715029647f78db1ea75bb28fbafe7",
+    "scripts/check_babylm_gpu_numerics_v0.py": "7b44f465c7d540aa23b87abc5f0304e5dac318cfdad2bef094bfa673805cdbef",
+    "scripts/prepare_babylm_windows_v0.py": "706dcc92b0ffa663d16e8ac24c743750bb42ff0efb554a59472230a5c85ef69f",
+    "scripts/run_babylm_one_epoch_mig_worker_v0.py": "1a8bd1903fcdfe65694f2dcbe951775d36b1bd2728552acff4695a73bba8fbe5",
+    "scripts/run_babylm_one_epoch_sequential_v0.py": "d8ded83075d1de0ffc9c8b72854946422699affe35dcb6e794b8e3ca614e8610",
+    "scripts/run_babylm_checkpoint_eval_v0.py": "216943a5acd448e4123a8323ddfa889c8210f45b3d9ade579db7afe36f8c1050",
+    "src/babylm_hybrid/routing_diagnostics.py": "e7fb902697a4c43f397e766f9c323d55fa2374fa33ff070d2b0c745cec0a3593",
+    "scripts/run_babylm_optimization_stage_a_v0.py": "84e1eb7137290fefb97a9cb0766bad95d57f0d3c9082e584f7679c761b3a53d0",
+    "scripts/prepare_babylm_optimization_stage_a_v0.py": "ec380604cc564513b0656d13ae62b3b370e7fc93ce3e3fd8f5202b9f18c97394"
+  },
+  "max_wall_seconds": 14280,
+  "hard_timeout_seconds": 14400,
+  "hourly_rate_usd": 0.81,
+  "actual_gpu_quote_usd_per_hour": 0.59,
+  "stage_cost_cap_usd": 3.24,
+  "replay_tolerance": {
+    "aggregate_nll_abs": 1e-06,
+    "window_nll_abs": 1e-05
+  },
+  "expected_lm_forward_calls_if_all_complete": 38256,
+  "expected_backward_calls": 0,
+  "expected_optimizer_updates": 0,
+  "recurring_automation_resumed": false,
+  "no_training_dispatch": true,
+  "no_automatic_retry_or_resume": true,
+  "diagnostic_attention_calls_are_separately_counted": true,
+  "notes": [
+    "Two exact checkpoint panel replays must pass before any new evaluation.",
+    "Four-hour hard process-group timeout includes termination reserve.",
+    "MIG isolation reuses existing hardware gate; no repeated tiny numerics training.",
+    "All 16 jobs are frozen before observing any result; no adaptive selection within this queue."
+  ]
+}

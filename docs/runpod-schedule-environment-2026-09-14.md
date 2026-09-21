@@ -5,7 +5,7 @@
 本机SSH使用已有的专用密钥文件；不需要复制私钥到云端。RunPod给出的默认id_ed25519路径在本机不存在。本次成功命令：
 
 ```powershell
-ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -i REDACTED_SSH_KEY_PATH -p 22168 root@REDACTED_IPV4
+ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -i REDACTED_CONNECTION_METADATA -p 22168 root@REDACTED_IPV4
 ```
 
 IP/端口只适用于此次已验证的Pod，重新部署后可能改变。代理入口也可连接，但本次代理忽略远程命令，因此部署、传输与监测使用直接TCP SSH。

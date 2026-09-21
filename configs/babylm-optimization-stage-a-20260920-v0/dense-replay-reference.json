@@ -1,0 +1,1859 @@
+{
+  "aggregation": "sum(window_lm_loss * effective_next_token_targets) / sum(targets)",
+  "attention_counts_scope": "Sum over all model global layers; reference allocations are not runtime speed measurements",
+  "auxiliary_loss_included_in_nll": false,
+  "completed_utc": "2026-09-19T21:57:58.128489+00:00",
+  "device": "cuda",
+  "elapsed_seconds": 6.504480692092329,
+  "grad_enabled_during_model_forward": false,
+  "manifest_path": "/workspace/native-sparse-prefill/babylm-one-epoch-20260919-v1/data/babylm-dev-windows-v0/manifest.json",
+  "manifest_sha256": "baa53c08d1c26e6dda2f238d2221a1d2cfef4c754ec46327765987f423519619",
+  "model_training_mode_restored": true,
+  "nll_units": "natural_log_per_loss_token",
+  "optimizer_updates": 0,
+  "per_source": {
+    "bnc_spoken.dev": {
+      "attention_counts": {
+        "allocated_main_score_elements": 603979776,
+        "aux_loss_query_count": 49128,
+        "aux_nonempty_support_query_count": 0,
+        "indexer_score_elements": 0,
+        "indexer_zero_score_visible_query_count": 0,
+        "logical_dense_causal_pairs": 50356224,
+        "logical_kept_pairs": 50356224,
+        "segments": 24,
+        "valid_tokens": 49152
+      },
+      "forward_calls": 8,
+      "input_tokens": 16384,
+      "logical_retained_fraction": 1.0,
+      "loss_tokens": 16376,
+      "nll": 4.782379388809204,
+      "nll_sum": 78316.24487113953,
+      "source": "bnc_spoken.dev",
+      "windows": 8,
+      "word_exposures": 12104,
+      "zero_target_windows": 0
+    },
+    "childes.dev": {
+      "attention_counts": {
+        "allocated_main_score_elements": 375420078,
+        "aux_loss_query_count": 34641,
+        "aux_nonempty_support_query_count": 0,
+        "indexer_score_elements": 0,
+        "indexer_zero_score_visible_query_count": 0,
+        "logical_dense_causal_pairs": 31302339,
+        "logical_kept_pairs": 31302339,
+        "segments": 24,
+        "valid_tokens": 34665
+      },
+      "forward_calls": 8,
+      "input_tokens": 11555,
+      "logical_retained_fraction": 1.0,
+      "loss_tokens": 11547,
+      "nll": 2.803267412663869,
+      "nll_sum": 32369.328814029694,
+      "source": "childes.dev",
+      "windows": 8,
+      "word_exposures": 5008,
+      "zero_target_windows": 0
+    },
+    "gutenberg.dev": {
+      "attention_counts": {
+        "allocated_main_score_elements": 603979776,
+        "aux_loss_query_count": 49128,
+        "aux_nonempty_support_query_count": 0,
+        "indexer_score_elements": 0,
+        "indexer_zero_score_visible_query_count": 0,
+        "logical_dense_causal_pairs": 50356224,
+        "logical_kept_pairs": 50356224,
+        "segments": 24,
+        "valid_tokens": 49152
+      },
+      "forward_calls": 8,
+      "input_tokens": 16384,
+      "logical_retained_fraction": 1.0,
+      "loss_tokens": 16376,
+      "nll": 4.692575216293335,
+      "nll_sum": 76845.61174201965,
+      "source": "gutenberg.dev",
+      "windows": 8,
+      "word_exposures": 11505,
+      "zero_target_windows": 0
+    },
+    "open_subtitles.dev": {
+      "attention_counts": {
+        "allocated_main_score_elements": 603979776,
+        "aux_loss_query_count": 49128,
+        "aux_nonempty_support_query_count": 0,
+        "indexer_score_elements": 0,
+        "indexer_zero_score_visible_query_count": 0,
+        "logical_dense_causal_pairs": 50356224,
+        "logical_kept_pairs": 50356224,
+        "segments": 24,
+        "valid_tokens": 49152
+      },
+      "forward_calls": 8,
+      "input_tokens": 16384,
+      "logical_retained_fraction": 1.0,
+      "loss_tokens": 16376,
+      "nll": 4.203281372785568,
+      "nll_sum": 68832.93576073647,
+      "source": "open_subtitles.dev",
+      "windows": 8,
+      "word_exposures": 9004,
+      "zero_target_windows": 0
+    },
+    "simple_wiki.dev": {
+      "attention_counts": {
+        "allocated_main_score_elements": 1160928,
+        "aux_loss_query_count": 1968,
+        "aux_nonempty_support_query_count": 0,
+        "indexer_score_elements": 0,
+        "indexer_zero_score_visible_query_count": 0,
+        "logical_dense_causal_pairs": 97740,
+        "logical_kept_pairs": 97740,
+        "segments": 24,
+        "valid_tokens": 1992
+      },
+      "forward_calls": 8,
+      "input_tokens": 664,
+      "logical_retained_fraction": 1.0,
+      "loss_tokens": 656,
+      "nll": 4.363376237997195,
+      "nll_sum": 2862.3748121261597,
+      "source": "simple_wiki.dev",
+      "windows": 8,
+      "word_exposures": 423,
+      "zero_target_windows": 0
+    },
+    "switchboard.dev": {
+      "attention_counts": {
+        "allocated_main_score_elements": 603979776,
+        "aux_loss_query_count": 49128,
+        "aux_nonempty_support_query_count": 0,
+        "indexer_score_elements": 0,
+        "indexer_zero_score_visible_query_count": 0,
+        "logical_dense_causal_pairs": 50356224,
+        "logical_kept_pairs": 50356224,
+        "segments": 24,
+        "valid_tokens": 49152
+      },
+      "forward_calls": 8,
+      "input_tokens": 16384,
+      "logical_retained_fraction": 1.0,
+      "loss_tokens": 16376,
+      "nll": 2.9979628324508667,
+      "nll_sum": 49094.63934421539,
+      "source": "switchboard.dev",
+      "windows": 8,
+      "word_exposures": 9670,
+      "zero_target_windows": 0
+    }
+  },
+  "position_diagnostics": {
+    "extra_model_forwards": 0,
+    "per_source_query_history_bins": {
+      "bnc_spoken.dev": {
+        "1-256": {
+          "loss_tokens": 2048,
+          "nll": 4.788761974239208,
+          "nll_sum": 9807.384523241897
+        },
+        "1025-2048": {
+          "loss_tokens": 8184,
+          "nll": 4.760081432507279,
+          "nll_sum": 38956.50644363958
+        },
+        "257-512": {
+          "loss_tokens": 2048,
+          "nll": 4.8180616257421605,
+          "nll_sum": 9867.390209519945
+        },
+        "513-1024": {
+          "loss_tokens": 4096,
+          "nll": 4.805899091636178,
+          "nll_sum": 19684.962679341785
+        }
+      },
+      "childes.dev": {
+        "1-256": {
+          "loss_tokens": 1876,
+          "nll": 2.6324201487256973,
+          "nll_sum": 4938.420199009408
+        },
+        "1025-2048": {
+          "loss_tokens": 4799,
+          "nll": 2.6733998535545798,
+          "nll_sum": 12829.64589720843
+        },
+        "257-512": {
+          "loss_tokens": 1792,
+          "nll": 3.142028383481159,
+          "nll_sum": 5630.514863198237
+        },
+        "513-1024": {
+          "loss_tokens": 3080,
+          "nll": 2.91258079975462,
+          "nll_sum": 8970.74886324423
+        }
+      },
+      "gutenberg.dev": {
+        "1-256": {
+          "loss_tokens": 2048,
+          "nll": 4.79616555642292,
+          "nll_sum": 9822.547059554141
+        },
+        "1025-2048": {
+          "loss_tokens": 8184,
+          "nll": 4.66883519387212,
+          "nll_sum": 38209.74722664943
+        },
+        "257-512": {
+          "loss_tokens": 2048,
+          "nll": 4.678304286979483,
+          "nll_sum": 9581.16717973398
+        },
+        "513-1024": {
+          "loss_tokens": 4096,
+          "nll": 4.69534900493511,
+          "nll_sum": 19232.149524214212
+        }
+      },
+      "open_subtitles.dev": {
+        "1-256": {
+          "loss_tokens": 2048,
+          "nll": 4.273181416952383,
+          "nll_sum": 8751.47554191848
+        },
+        "1025-2048": {
+          "loss_tokens": 8184,
+          "nll": 4.151284854992968,
+          "nll_sum": 33974.115253262455
+        },
+        "257-512": {
+          "loss_tokens": 2048,
+          "nll": 4.2360036972506805,
+          "nll_sum": 8675.335571969394
+        },
+        "513-1024": {
+          "loss_tokens": 4096,
+          "nll": 4.25586194195364,
+          "nll_sum": 17432.01051424211
+        }
+      },
+      "simple_wiki.dev": {
+        "1-256": {
+          "loss_tokens": 656,
+          "nll": 4.363376086814741,
+          "nll_sum": 2862.37471295047
+        },
+        "1025-2048": {
+          "loss_tokens": 0,
+          "nll": null,
+          "nll_sum": 0.0
+        },
+        "257-512": {
+          "loss_tokens": 0,
+          "nll": null,
+          "nll_sum": 0.0
+        },
+        "513-1024": {
+          "loss_tokens": 0,
+          "nll": null,
+          "nll_sum": 0.0
+        }
+      },
+      "switchboard.dev": {
+        "1-256": {
+          "loss_tokens": 2048,
+          "nll": 2.9887882483803025,
+          "nll_sum": 6121.03833268286
+        },
+        "1025-2048": {
+          "loss_tokens": 8184,
+          "nll": 3.0312565658270456,
+          "nll_sum": 24807.803734728543
+        },
+        "257-512": {
+          "loss_tokens": 2048,
+          "nll": 2.929440385277047,
+          "nll_sum": 5999.493909047393
+        },
+        "513-1024": {
+          "loss_tokens": 4096,
+          "nll": 2.9702891226913692,
+          "nll_sum": 12166.304246543848
+        }
+      }
+    },
+    "per_window": [
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.203837768089003,
+        "nll_sum": 8605.25591127819,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1156.3138594975462
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4263.248526563984
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1151.0958935146919
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2034.5976317019667
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "bnc_spoken.dev",
+        "source_token_end": 661504,
+        "source_token_start": 659456,
+        "window_index": 322,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.869128600836758,
+        "nll_sum": 9967.106245912844,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1309.8934078086168
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4746.741307292832
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1311.9212157016154
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2598.55031510978
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "bnc_spoken.dev",
+        "source_token_end": 102400,
+        "source_token_start": 100352,
+        "window_index": 49,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.586463700741942,
+        "nll_sum": 9388.491195418756,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1171.1786462774035
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4676.311398095917
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1208.833424275159
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2332.167726770276
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "bnc_spoken.dev",
+        "source_token_end": 69632,
+        "source_token_start": 67584,
+        "window_index": 33,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 5.348388720551789,
+        "nll_sum": 10948.151710969512,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1367.9208396533504
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 5353.07041579613
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1350.0404412245844
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2877.1200142954476
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "bnc_spoken.dev",
+        "source_token_end": 151552,
+        "source_token_start": 149504,
+        "window_index": 73,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.816617527539122,
+        "nll_sum": 9859.616078872583,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1175.2158968299627
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 5052.373553979676
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1220.2998111770721
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2411.726816885872
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "bnc_spoken.dev",
+        "source_token_end": 239616,
+        "source_token_start": 237568,
+        "window_index": 116,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 5.087495337723377,
+        "nll_sum": 10414.102956319752,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1309.844546019216
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 5277.998220176552
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1186.9175961544388
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2639.3425939695444
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "bnc_spoken.dev",
+        "source_token_end": 1734656,
+        "source_token_start": 1732608,
+        "window_index": 846,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.355837156298406,
+        "nll_sum": 8916.398658942839,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1016.9578084981767
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4464.040561073634
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1128.3609139923938
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2307.039375378634
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "bnc_spoken.dev",
+        "source_token_end": 1134592,
+        "source_token_start": 1132544,
+        "window_index": 553,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.991265802652041,
+        "nll_sum": 10217.121098028729,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1300.0595186576247
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 5122.722460660851
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1309.9209134799894
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2484.418205230264
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "bnc_spoken.dev",
+        "source_token_end": 686080,
+        "source_token_start": 684032,
+        "window_index": 334,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 521,
+        "loss_tokens": 520,
+        "nll": 2.7503864193861145,
+        "nll_sum": 1430.2009380807795,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 666.3300072229395
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 716.7029336130945
+          },
+          "513-1024": {
+            "loss_tokens": 8,
+            "nll_sum": 47.16799724474549
+          }
+        },
+        "segment_index_in_source": 920,
+        "source": "childes.dev",
+        "source_token_end": 5176545,
+        "source_token_start": 5176024,
+        "window_index": 3909,
+        "window_length_bin": "513-1024"
+      },
+      {
+        "input_tokens": 1390,
+        "loss_tokens": 1389,
+        "nll": 2.431676416131555,
+        "nll_sum": 3377.59854200673,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 563.0942846021135
+          },
+          "1025-2048": {
+            "loss_tokens": 365,
+            "nll_sum": 986.6936137964803
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 707.9122016709953
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1119.898441937141
+          }
+        },
+        "segment_index_in_source": 910,
+        "source": "childes.dev",
+        "source_token_end": 5002534,
+        "source_token_start": 5001144,
+        "window_index": 3820,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 3.3361118751500123,
+        "nll_sum": 6829.021008432075,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 861.7978844360769
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 3115.451261072005
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 914.0597458418488
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1937.7121170821447
+          }
+        },
+        "segment_index_in_source": 840,
+        "source": "childes.dev",
+        "source_token_end": 4134705,
+        "source_token_start": 4132657,
+        "window_index": 3360,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 85,
+        "loss_tokens": 84,
+        "nll": 3.111096429122751,
+        "nll_sum": 261.3321000463111,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 84,
+            "nll_sum": 261.3321000463111
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "513-1024": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          }
+        },
+        "segment_index_in_source": 840,
+        "source": "childes.dev",
+        "source_token_end": 4220806,
+        "source_token_start": 4220721,
+        "window_index": 3403,
+        "window_length_bin": "1-256"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 2.47770355500297,
+        "nll_sum": 5071.859177091079,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 637.5276023541446
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 2378.7979548849253
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 744.4138067006788
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1311.1198131513302
+          }
+        },
+        "segment_index_in_source": 969,
+        "source": "childes.dev",
+        "source_token_end": 5664243,
+        "source_token_start": 5662195,
+        "window_index": 4173,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 3.2672032804514313,
+        "nll_sum": 6687.96511508408,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 639.6866947825183
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 2999.730192590723
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1038.1307467896986
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2010.41748092114
+          }
+        },
+        "segment_index_in_source": 140,
+        "source": "childes.dev",
+        "source_token_end": 799131,
+        "source_token_start": 797083,
+        "window_index": 1316,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 2.4673206632245246,
+        "nll_sum": 5050.605397620602,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 563.1628744971458
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 2367.183138761393
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 756.279046940348
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1363.9803374217154
+          }
+        },
+        "segment_index_in_source": 620,
+        "source": "childes.dev",
+        "source_token_end": 2566014,
+        "source_token_start": 2563966,
+        "window_index": 2453,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 1367,
+        "loss_tokens": 1366,
+        "nll": 2.6799030338935923,
+        "nll_sum": 3660.747544298647,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 745.4887510681583
+          },
+          "1025-2048": {
+            "loss_tokens": 342,
+            "nll_sum": 981.7897361029027
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 753.0163816415734
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1180.4526754860126
+          }
+        },
+        "segment_index_in_source": 634,
+        "source": "childes.dev",
+        "source_token_end": 2602122,
+        "source_token_start": 2600755,
+        "window_index": 2479,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.8605376912399665,
+        "nll_sum": 9949.520653968211,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1239.515127927065
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4948.488083643839
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1295.0191887230612
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2466.4982536742464
+          }
+        },
+        "segment_index_in_source": 39,
+        "source": "gutenberg.dev",
+        "source_token_end": 2572858,
+        "source_token_start": 2570810,
+        "window_index": 5607,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.713233531293021,
+        "nll_sum": 9647.989038556814,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1210.4282349329442
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4702.073597053997
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1192.3712245561182
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2543.1159820137545
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "gutenberg.dev",
+        "source_token_end": 4096,
+        "source_token_start": 2048,
+        "window_index": 4330,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.661949792901408,
+        "nll_sum": 9543.011226069182,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1231.8429980278015
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4736.520701408386
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1091.8003750145435
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2482.847151618451
+          }
+        },
+        "segment_index_in_source": 48,
+        "source": "gutenberg.dev",
+        "source_token_end": 3280527,
+        "source_token_start": 3278479,
+        "window_index": 5958,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 5.1443448764070485,
+        "nll_sum": 10530.473962005228,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1353.0212261672132
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 5251.72292351583
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1319.5685523487628
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2606.1612599734217
+          }
+        },
+        "segment_index_in_source": 30,
+        "source": "gutenberg.dev",
+        "source_token_end": 1961339,
+        "source_token_start": 1959291,
+        "window_index": 5302,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.149330164434622,
+        "nll_sum": 8493.678846597672,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 997.998739561066
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4319.931970225647
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1004.5566094499081
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2171.1915273610502
+          }
+        },
+        "segment_index_in_source": 51,
+        "source": "gutenberg.dev",
+        "source_token_end": 3411807,
+        "source_token_start": 3409759,
+        "window_index": 6024,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.402426353648931,
+        "nll_sum": 9011.766745919362,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1180.157389242202
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4323.761928508058
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1171.4673534445465
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2336.380074724555
+          }
+        },
+        "segment_index_in_source": 48,
+        "source": "gutenberg.dev",
+        "source_token_end": 3182223,
+        "source_token_start": 3180175,
+        "window_index": 5910,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.703758612265342,
+        "nll_sum": 9628.593879307155,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1315.7282148115337
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4804.831224080175
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1270.2958150729537
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2237.738625342492
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "gutenberg.dev",
+        "source_token_end": 43008,
+        "source_token_start": 40960,
+        "window_index": 4349,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.9050203408540005,
+        "nll_sum": 10040.57663772814,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1293.8551288843155
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 5122.416798213497
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1236.0880611240864
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2388.216649506241
+          }
+        },
+        "segment_index_in_source": 10,
+        "source": "gutenberg.dev",
+        "source_token_end": 502194,
+        "source_token_start": 500146,
+        "window_index": 4578,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 5.600724160767119,
+        "nll_sum": 11464.682357090292,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1401.0603499596473
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 5674.228799409699
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1419.2947344775312
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2970.0984732434154
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "open_subtitles.dev",
+        "source_token_end": 923648,
+        "source_token_start": 921600,
+        "window_index": 6717,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 3.635436100038801,
+        "nll_sum": 7441.737696779426,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 855.5065380895976
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 3742.83933920064
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 933.640442554839
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1909.7513769343495
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "open_subtitles.dev",
+        "source_token_end": 2891776,
+        "source_token_start": 2889728,
+        "window_index": 7678,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.057513418766567,
+        "nll_sum": 8305.729968215164,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1029.3317073486396
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4257.498559127795
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1062.0459152441472
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1956.853786494583
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "open_subtitles.dev",
+        "source_token_end": 905216,
+        "source_token_start": 903168,
+        "window_index": 6708,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 3.9640490930559524,
+        "nll_sum": 8114.408493485535,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1034.6616298654117
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4078.336576379603
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1095.4860641462728
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1905.9242230942473
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "open_subtitles.dev",
+        "source_token_end": 198656,
+        "source_token_start": 196608,
+        "window_index": 6363,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.526814595201977,
+        "nll_sum": 9266.389476378448,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1174.6199307381175
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4470.022772054421
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1143.4771220514085
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2478.2696515345015
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "open_subtitles.dev",
+        "source_token_end": 3319808,
+        "source_token_start": 3317760,
+        "window_index": 7887,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.079401849909925,
+        "nll_sum": 8350.535586765618,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1057.8930247336393
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 3887.603012812324
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1072.6146859342698
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2332.424863285385
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "open_subtitles.dev",
+        "source_token_end": 2637824,
+        "source_token_start": 2635776,
+        "window_index": 7554,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 3.46236700010743,
+        "nll_sum": 7087.465249219909,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1184.7331531485543
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 3257.252695614705
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 929.0281961099245
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1716.4512043467257
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "open_subtitles.dev",
+        "source_token_end": 2725888,
+        "source_token_start": 2723840,
+        "window_index": 7597,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 4.2999453118993864,
+        "nll_sum": 8801.988053458044,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 1013.669208034873
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 4606.333498663269
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 1019.7484114510007
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 2162.2369353089016
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "open_subtitles.dev",
+        "source_token_end": 1142784,
+        "source_token_start": 1140736,
+        "window_index": 6824,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 56,
+        "loss_tokens": 55,
+        "nll": 2.780643516128343,
+        "nll_sum": 152.93539338705887,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 55,
+            "nll_sum": 152.93539338705887
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "513-1024": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          }
+        },
+        "segment_index_in_source": 4599,
+        "source": "simple_wiki.dev",
+        "source_token_end": 726923,
+        "source_token_start": 726867,
+        "window_index": 12552,
+        "window_length_bin": "1-256"
+      },
+      {
+        "input_tokens": 90,
+        "loss_tokens": 89,
+        "nll": 4.769502137122176,
+        "nll_sum": 424.4856902038737,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 89,
+            "nll_sum": 424.4856902038737
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "513-1024": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          }
+        },
+        "segment_index_in_source": 5328,
+        "source": "simple_wiki.dev",
+        "source_token_end": 851267,
+        "source_token_start": 851177,
+        "window_index": 13284,
+        "window_length_bin": "1-256"
+      },
+      {
+        "input_tokens": 52,
+        "loss_tokens": 51,
+        "nll": 5.295946813459843,
+        "nll_sum": 270.093287486452,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 51,
+            "nll_sum": 270.093287486452
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "513-1024": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          }
+        },
+        "segment_index_in_source": 8584,
+        "source": "simple_wiki.dev",
+        "source_token_end": 1509127,
+        "source_token_start": 1509075,
+        "window_index": 16565,
+        "window_length_bin": "1-256"
+      },
+      {
+        "input_tokens": 46,
+        "loss_tokens": 45,
+        "nll": 3.8170899254405715,
+        "nll_sum": 171.76904664482572,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 45,
+            "nll_sum": 171.76904664482572
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "513-1024": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          }
+        },
+        "segment_index_in_source": 6288,
+        "source": "simple_wiki.dev",
+        "source_token_end": 988735,
+        "source_token_start": 988689,
+        "window_index": 14246,
+        "window_length_bin": "1-256"
+      },
+      {
+        "input_tokens": 116,
+        "loss_tokens": 115,
+        "nll": 4.581735665253971,
+        "nll_sum": 526.8996015042067,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 115,
+            "nll_sum": 526.8996015042067
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "513-1024": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          }
+        },
+        "segment_index_in_source": 7673,
+        "source": "simple_wiki.dev",
+        "source_token_end": 1266006,
+        "source_token_start": 1265890,
+        "window_index": 15645,
+        "window_length_bin": "1-256"
+      },
+      {
+        "input_tokens": 72,
+        "loss_tokens": 71,
+        "nll": 4.648805104913214,
+        "nll_sum": 330.06516244883824,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 71,
+            "nll_sum": 330.06516244883824
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "513-1024": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          }
+        },
+        "segment_index_in_source": 623,
+        "source": "simple_wiki.dev",
+        "source_token_end": 109618,
+        "source_token_start": 109546,
+        "window_index": 8565,
+        "window_length_bin": "1-256"
+      },
+      {
+        "input_tokens": 154,
+        "loss_tokens": 153,
+        "nll": 3.8256523254771833,
+        "nll_sum": 585.324805798009,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 153,
+            "nll_sum": 585.324805798009
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "513-1024": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          }
+        },
+        "segment_index_in_source": 3042,
+        "source": "simple_wiki.dev",
+        "source_token_end": 440772,
+        "source_token_start": 440618,
+        "window_index": 10984,
+        "window_length_bin": "1-256"
+      },
+      {
+        "input_tokens": 78,
+        "loss_tokens": 77,
+        "nll": 5.205217213989685,
+        "nll_sum": 400.80172547720576,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 77,
+            "nll_sum": 400.80172547720576
+          },
+          "1025-2048": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "257-512": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          },
+          "513-1024": {
+            "loss_tokens": 0,
+            "nll_sum": 0.0
+          }
+        },
+        "segment_index_in_source": 8437,
+        "source": "simple_wiki.dev",
+        "source_token_end": 1476846,
+        "source_token_start": 1476768,
+        "window_index": 16417,
+        "window_length_bin": "1-256"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 3.268396042281805,
+        "nll_sum": 6690.406698550854,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 722.5446515082731
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 3514.5745543497032
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 790.5638008500682
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1662.7236918428098
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "switchboard.dev",
+        "source_token_end": 112640,
+        "source_token_start": 110592,
+        "window_index": 18723,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 2.8607590144013204,
+        "nll_sum": 5855.973702479503,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 710.6658731371281
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 2894.008284185489
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 693.9280143440701
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1557.3715308128158
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "switchboard.dev",
+        "source_token_end": 57344,
+        "source_token_start": 55296,
+        "window_index": 18696,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 2.9393260905862175,
+        "nll_sum": 6016.800507429987,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 784.4134496924817
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 3014.4727828984614
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 648.7759998505353
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1569.1382749885088
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "switchboard.dev",
+        "source_token_end": 129024,
+        "source_token_start": 126976,
+        "window_index": 18731,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 2.9914179475431255,
+        "nll_sum": 6123.432538620778,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 733.5361768439179
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 3318.1809816929162
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 638.8203003950184
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1432.8950796889258
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "switchboard.dev",
+        "source_token_end": 10240,
+        "source_token_start": 8192,
+        "window_index": 18673,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 2.561546057977263,
+        "nll_sum": 5243.484780679457,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 640.2558240555227
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 2692.6483294832287
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 684.6888670116314
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1225.891760129074
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "switchboard.dev",
+        "source_token_end": 196608,
+        "source_token_start": 194560,
+        "window_index": 18764,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 3.066595661852968,
+        "nll_sum": 6277.321319813025,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 766.3037286005565
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 3117.729327242123
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 706.6434940726613
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1686.6447698976845
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "switchboard.dev",
+        "source_token_end": 184320,
+        "source_token_start": 182272,
+        "window_index": 18758,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 3.455809797496379,
+        "nll_sum": 7074.042655475088,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 941.3240561184939
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 3500.866070302378
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 956.8431053899694
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1675.0094236642472
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "switchboard.dev",
+        "source_token_end": 79872,
+        "source_token_start": 77824,
+        "window_index": 18707,
+        "window_length_bin": "1025-2048"
+      },
+      {
+        "input_tokens": 2048,
+        "loss_tokens": 2047,
+        "nll": 2.8398524767728137,
+        "nll_sum": 5813.17801995395,
+        "query_history_bins": {
+          "1-256": {
+            "loss_tokens": 256,
+            "nll_sum": 821.9945727264858
+          },
+          "1025-2048": {
+            "loss_tokens": 1023,
+            "nll_sum": 2755.323404574243
+          },
+          "257-512": {
+            "loss_tokens": 256,
+            "nll_sum": 879.2303271334385
+          },
+          "513-1024": {
+            "loss_tokens": 512,
+            "nll_sum": 1356.6297155197826
+          }
+        },
+        "segment_index_in_source": 0,
+        "source": "switchboard.dev",
+        "source_token_end": 45056,
+        "source_token_start": 43008,
+        "window_index": 18690,
+        "window_length_bin": "1025-2048"
+      }
+    ],
+    "position_definition": "1-based query history length within reset window; target is the next token",
+    "protocol": "babylm-dev-position-v0",
+    "query_history_bins": {
+      "1-256": {
+        "loss_tokens": 10724,
+        "nll": 3.944725883006085,
+        "nll_sum": 42303.240369357256
+      },
+      "1025-2048": {
+        "loss_tokens": 37535,
+        "nll": 3.9637090330488456,
+        "nll_sum": 148777.81855548843
+      },
+      "257-512": {
+        "loss_tokens": 9984,
+        "nll": 3.981760990932387,
+        "nll_sum": 39753.90173346895
+      },
+      "513-1024": {
+        "loss_tokens": 19464,
+        "nll": 3.9809995801267046,
+        "nll_sum": 77486.17582758618
+      }
+    },
+    "scope": "Descriptive diagnostics, not independent token samples or proof of long-range causality; no scores used to choose bins or windows",
+    "window_length_bins": {
+      "1-256": {
+        "loss_tokens": 740,
+        "nll": 4.221225422968623,
+        "nll_sum": 3123.706812996781,
+        "windows": 9
+      },
+      "1025-2048": {
+        "loss_tokens": 76447,
+        "nll": 3.9735663758528554,
+        "nll_sum": 303767.22873482323,
+        "windows": 38
+      },
+      "257-512": {
+        "loss_tokens": 0,
+        "nll": null,
+        "nll_sum": 0.0,
+        "windows": 0
+      },
+      "513-1024": {
+        "loss_tokens": 520,
+        "nll": 2.7503864193861145,
+        "nll_sum": 1430.2009380807795,
+        "windows": 1
+      }
+    }
+  },
+  "started_utc": "2026-09-19T21:57:51.624021+00:00",
+  "status": "nll_evaluation_complete",
+  "total": {
+    "attention_counts": {
+      "allocated_main_score_elements": 2792500110,
+      "aux_loss_query_count": 233121,
+      "aux_nonempty_support_query_count": 0,
+      "indexer_score_elements": 0,
+      "indexer_zero_score_visible_query_count": 0,
+      "logical_dense_causal_pairs": 232824975,
+      "logical_kept_pairs": 232824975,
+      "segments": 144,
+      "valid_tokens": 233265
+    },
+    "forward_calls": 48,
+    "input_tokens": 77755,
+    "logical_retained_fraction": 1.0,
+    "loss_tokens": 77707,
+    "nll": 3.9677395259663464,
+    "nll_sum": 308321.1353442669,
+    "source": "all",
+    "windows": 48,
+    "word_exposures": 47714,
+    "zero_target_windows": 0
+  },
+  "window_indices": [
+    322,
+    49,
+    33,
+    73,
+    116,
+    846,
+    553,
+    334,
+    3909,
+    3820,
+    3360,
+    3403,
+    4173,
+    1316,
+    2453,
+    2479,
+    5607,
+    4330,
+    5958,
+    5302,
+    6024,
+    5910,
+    4349,
+    4578,
+    6717,
+    7678,
+    6708,
+    6363,
+    7887,
+    7554,
+    7597,
+    6824,
+    12552,
+    13284,
+    16565,
+    14246,
+    15645,
+    8565,
+    10984,
+    16417,
+    18723,
+    18696,
+    18731,
+    18673,
+    18764,
+    18758,
+    18707,
+    18690
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "stage": "eval_D",
+  "arm": "D",
+  "condition": "D_dense",
+  "started_utc": "2026-09-21T16:25:28.753707+00:00",
+  "master_protocol_sha256": "5bc4ace6c97e9e85e7fa1340ef6aad03e05b2d1963a32559415794f017d8c9e4",
+  "automatic_retry": false,
+  "counts": {
+    "forward_attempts": 18792,
+    "forward_calls": 18792,
+    "committed_windows": 18792,
+    "submitted_input_tokens": 17437534,
+    "submitted_word_exposures": 10420962,
+    "backward_calls": 0,
+    "optimizer_updates": 0
+  },
+  "total": {
+    "source": "all",
+    "windows": 18792,
+    "word_exposures": 10420962,
+    "input_tokens": 17437534,
+    "loss_tokens": 17418742,
+    "forward_calls": 18792,
+    "zero_target_windows": 1,
+    "nll_sum": 69613072.81779641,
+    "nll": 3.996446633045969,
+    "attention_counts": {
+      "valid_tokens": 52312602,
+      "aux_loss_query_count": 52256226,
+      "segments": 56376,
+      "logical_dense_causal_pairs": 47973731922,
+      "logical_kept_pairs": 47973731922,
+      "allocated_main_score_elements": 575370907452,
+      "indexer_score_elements": 0,
+      "aux_nonempty_support_query_count": 0,
+      "indexer_zero_score_visible_query_count": 0
+    },
+    "logical_retained_fraction": 1.0,
+    "ppl": 54.404487052655206
+  },
+  "eval_counts": null,
+  "engine_status": "evaluation_complete",
+  "finished_utc": "2026-09-21T17:43:21.210325+00:00"
+}

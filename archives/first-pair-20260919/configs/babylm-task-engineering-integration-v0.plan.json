@@ -1,0 +1,32 @@
+{
+  "utc": "2026-09-17T22:37:39.336221+00:00",
+  "scope": "bounded synthetic CPU checkpoint-to-score engineering integration; not language quality evidence",
+  "synthetic_fixture_manifests": {
+    "blimp": {
+      "manifest": "data/babylm-task-engineering-fixtures-v0/blimp-manifest.json",
+      "sha256": "bae0bb1ecb4b2bc87500bc8832627763d56e9177e11c522188449f0fa878ff33"
+    },
+    "ewok": {
+      "manifest": "data/babylm-task-engineering-fixtures-v0/ewok-manifest.json",
+      "sha256": "5515afac53994be6586f3ea06b1ba711b36baa545ffcee3fde6b8ec72c68cbdf"
+    }
+  },
+  "snapshot_plan": {
+    "creation": "train_run engineering_smoke with stop_after_updates=0 and evaluations disabled",
+    "model": "HybridConfig tiny hidden32 with fixed vocab16384; under1M parameters; random sparse model",
+    "training_word_exposures": 0,
+    "training_forward_calls": 0,
+    "optimizer_updates": 0
+  },
+  "execution_limits": {
+    "real_tiny_model_forward_calls_total": 4,
+    "backward_calls_total": 0,
+    "optimizer_updates_total": 0,
+    "max_seconds_per_eval_invocation": 120,
+    "paid_gpu_spend_usd": 0
+  },
+  "scientific_training_runs": 0,
+  "benchmark_items_read": 0,
+  "no_external_downloads": true,
+  "stop_on_unexpected_failure_no_silent_full_rerun": true
+}

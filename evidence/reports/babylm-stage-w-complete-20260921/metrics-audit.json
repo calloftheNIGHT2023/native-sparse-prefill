@@ -1,0 +1,1736 @@
+{
+  "schema_version": 1,
+  "status": "passed_complete_two_segment_W_union_audit",
+  "started_utc": "2026-09-21T06:38:02.190368+00:00",
+  "checks": 263168,
+  "failures": [],
+  "input_files": {
+    "logs/babylm-w-arm-full-dev-backup-20260921-v0/manifest-20260921T060307.585991Z-dcee3b9a.json": {
+      "sha256": "5a528008bdece2e7b6c4bc6c7fb1866fc0ba2739873e8efe38d2e56ec10c981a",
+      "bytes": 8894
+    },
+    "logs/babylm-w-arm-full-dev-backup-20260921-v0/logs/arm-w-full-dev-launch-20260921-v0/launch.json": {
+      "sha256": "a48066afc6e2d3a167b2611c36ea49f73d09654577845764570c6373cb58e2b9",
+      "bytes": 1012
+    },
+    "logs/babylm-w-arm-full-dev-backup-20260921-v0/logs/arm-w-full-dev-launch-20260921-v0/stderr.log": {
+      "sha256": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+      "bytes": 251
+    },
+    "logs/babylm-w-arm-full-dev-backup-20260921-v0/.versions/1e3bd17f1db7f5820549ec1fbac5c6f95bfd4a93f9f1e11d53fc454387766f94/logs/arm-w-full-dev-launch-20260921-v0/stdout.log": {
+      "sha256": "1e3bd17f1db7f5820549ec1fbac5c6f95bfd4a93f9f1e11d53fc454387766f94",
+      "bytes": 292
+    },
+    "logs/babylm-w-arm-full-dev-backup-20260921-v0/results/babylm-w-arm-full-dev-20260921-v0/protocol.json": {
+      "sha256": "191fff2faf5a1ac09895b0ff24405b91c5fdefe6ab592241a70ae39f57ab0412",
+      "bytes": 7357
+    },
+    "logs/babylm-w-arm-full-dev-backup-20260921-v0/results/babylm-w-arm-full-dev-20260921-v0/summary.json": {
+      "sha256": "42e3f00f974f931f8793db287b0ed93ee4e4bcda7c2be1aac1eb4239b89ea990",
+      "bytes": 344156
+    },
+    "logs/babylm-w-arm-full-dev-backup-20260921-v0/.versions/c23183ba0f66ef70d359cb970561876a5023c652d90ab2328a1274eccf3dd959/results/babylm-w-arm-full-dev-20260921-v0/windows.jsonl": {
+      "sha256": "c23183ba0f66ef70d359cb970561876a5023c652d90ab2328a1274eccf3dd959",
+      "bytes": 12526611
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/manifest-20260921T063743.774117Z-436d1eb8.json": {
+      "sha256": "ada844233d770dc3d383566c1b9471d55f0d13b46af49692a6c5805d17ed41da",
+      "bytes": 13262
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/logs/arm-w-remainder-launch-20260921-v0/launch.json": {
+      "sha256": "bb6f986c8c2a60b9f2cb830268a4b9e05c872836ea7e65f0a48637cd6cc75fb9",
+      "bytes": 1214
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/logs/arm-w-remainder-launch-20260921-v0/stderr.log": {
+      "sha256": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+      "bytes": 251
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/.versions/446076d07f8168df98382d064c524b6e7b31eaecbab0f4278447a64552a6f73d/logs/arm-w-remainder-launch-20260921-v0/stdout.log": {
+      "sha256": "446076d07f8168df98382d064c524b6e7b31eaecbab0f4278447a64552a6f73d",
+      "bytes": 917
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/results/babylm-w-arm-remainder-20260921-v0/combined-summary.json": {
+      "sha256": "764f9956f34b586518e9863727523822027e40b67c9975ef1c4fea4cadc82548",
+      "bytes": 11681
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/results/babylm-w-arm-remainder-20260921-v0/evaluation-protocol.json": {
+      "sha256": "36c0f5416df1dea982780691aa9c1c575054f97b9cc4fbecee23e54d4f3ff512",
+      "bytes": 77943
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/results/babylm-w-arm-remainder-20260921-v0/evaluation/protocol.json": {
+      "sha256": "36c0f5416df1dea982780691aa9c1c575054f97b9cc4fbecee23e54d4f3ff512",
+      "bytes": 77943
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/results/babylm-w-arm-remainder-20260921-v0/evaluation/summary.json": {
+      "sha256": "26869330640237c72958e1fda927a1b95da923e3ee5f47a07250d013ea07243f",
+      "bytes": 160003
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/.versions/5902690ab2afab01558537fdeeaa0fa9e65fba437b7ee8a6630259b495ca8f95/results/babylm-w-arm-remainder-20260921-v0/evaluation/windows.jsonl": {
+      "sha256": "5902690ab2afab01558537fdeeaa0fa9e65fba437b7ee8a6630259b495ca8f95",
+      "bytes": 6265858
+    },
+    "logs/babylm-w-arm-remainder-backup-20260921-v0/.versions/d3ded77674c25cdf69779b0973f0d78e0ba96b489ee7cc198e5590d91c260606/results/babylm-w-arm-remainder-20260921-v0/remainder-receipt.json": {
+      "sha256": "d3ded77674c25cdf69779b0973f0d78e0ba96b489ee7cc198e5590d91c260606",
+      "bytes": 7283
+    },
+    "configs/babylm-w-arm-remainder-20260921-v0.json": {
+      "sha256": "398473dbd38e14de840d70bd4395ed01fb19b984fe2b165f643764c2e7ff9530",
+      "bytes": 4723
+    },
+    "logs/babylm-w-original-completion-audit-20260921.json": {
+      "sha256": "611e45bfd07976dfbeba96d8f0559d7ed9c595712d8b00d1fb5f22fa06bf6f3c",
+      "bytes": 19738
+    },
+    "results/babylm-stage-w-partial-20260921/metrics-audit.json": {
+      "sha256": "3a3faae58570e8bd74d699000daf99b12f147d0eb753ce9638d452e3a1cf12c4",
+      "bytes": 42897
+    },
+    "logs/babylm-w-arm-replay-independent-audit-20260921.json": {
+      "sha256": "321e800526b9d2e290ec5ee0056afa7d5673bca7bde2dd837ebfc058540e0612",
+      "bytes": 12238
+    },
+    "scripts/check_babylm_gpu_numerics_v0.py": {
+      "sha256": "7b44f465c7d540aa23b87abc5f0304e5dac318cfdad2bef094bfa673805cdbef",
+      "bytes": 22708
+    },
+    "scripts/check_babylm_local_numerics_v0.py": {
+      "sha256": "6ee0796527dd219c8950f7acdac21db3eb271c1a4c798ae3993762edfeed2f0d",
+      "bytes": 17710
+    },
+    "scripts/prepare_babylm_optimization_stage_a_v0.py": {
+      "sha256": "ec380604cc564513b0656d13ae62b3b370e7fc93ce3e3fd8f5202b9f18c97394",
+      "bytes": 6875
+    },
+    "scripts/prepare_babylm_windows_v0.py": {
+      "sha256": "706dcc92b0ffa663d16e8ac24c743750bb42ff0efb554a59472230a5c85ef69f",
+      "bytes": 22946
+    },
+    "scripts/run_babylm_checkpoint_eval_v0.py": {
+      "sha256": "216943a5acd448e4123a8323ddfa889c8210f45b3d9ade579db7afe36f8c1050",
+      "bytes": 21629
+    },
+    "scripts/run_babylm_de_v0.py": {
+      "sha256": "0c463cd3079977ce74f2f6464c2e0497ec60a7d0a7ce376ae8368c7fd7d533f5",
+      "bytes": 1621
+    },
+    "scripts/run_babylm_local_eval_v0.py": {
+      "sha256": "9b67135f81f373e855457d2ca5aa5ba4c800d6113a6b4effa32d145e61134d0c",
+      "bytes": 8489
+    },
+    "scripts/run_babylm_local_queue_v0.py": {
+      "sha256": "9d7e77a5fc6ccd856d0503904d4e8b6101d9d2b11a9b466a27683d20f93d6c67",
+      "bytes": 12193
+    },
+    "scripts/run_babylm_local_train_v0.py": {
+      "sha256": "9a9e62ae317904c7c185a34b794e7eb74526c0d31b13176e32769b0e70ee287c",
+      "bytes": 26337
+    },
+    "scripts/run_babylm_one_epoch_mig_worker_v0.py": {
+      "sha256": "1a8bd1903fcdfe65694f2dcbe951775d36b1bd2728552acff4695a73bba8fbe5",
+      "bytes": 20764
+    },
+    "scripts/run_babylm_one_epoch_sequential_v0.py": {
+      "sha256": "d8ded83075d1de0ffc9c8b72854946422699affe35dcb6e794b8e3ca614e8610",
+      "bytes": 6460
+    },
+    "scripts/run_babylm_one_epoch_v0.py": {
+      "sha256": "b8520461b85de767b2789b8363b362f69d92229560c3d0e9a28e6c3c84413018",
+      "bytes": 10010
+    },
+    "scripts/run_babylm_optimization_stage_a_v0.py": {
+      "sha256": "84e1eb7137290fefb97a9cb0766bad95d57f0d3c9082e584f7679c761b3a53d0",
+      "bytes": 12419
+    },
+    "scripts/run_babylm_scientific_pair_v0.py": {
+      "sha256": "593280477ca8457ad21f171c7a6cec137e7715029647f78db1ea75bb28fbafe7",
+      "bytes": 15309
+    },
+    "scripts/run_babylm_sparse_parallel_v0.py": {
+      "sha256": "0879da1142c1306822f64aeaf2fc49edfa36433db32d6b930de4e1bb7cde8ab5",
+      "bytes": 20497
+    },
+    "scripts/summarize_babylm_one_epoch_v0.py": {
+      "sha256": "f8c1087b7da80ec1bd6dbe09f3358dd722a1f110672c40ff481298fa6c47afeb",
+      "bytes": 20062
+    },
+    "src/babylm_hybrid/__init__.py": {
+      "sha256": "0faa2e1b9156f7292ea98890a5449105ec93c79eeb9df7c77160d787e6716b0f",
+      "bytes": 84
+    },
+    "src/babylm_hybrid/attention.py": {
+      "sha256": "6aaacd6239c70854aad9eee0b6c116dafdb634cb7654b69a2100a1694fa439d9",
+      "bytes": 13231
+    },
+    "src/babylm_hybrid/config.py": {
+      "sha256": "c4a30217d5646d4ccf37c9b81bfccd9e24044363600e40d4e4d5bdd288c72c70",
+      "bytes": 3308
+    },
+    "src/babylm_hybrid/evaluation.py": {
+      "sha256": "5eda46b7c45eb1f0196839a04924a74cf6c419c44babcd8a5282fe9cd11d6c0f",
+      "bytes": 11100
+    },
+    "src/babylm_hybrid/local_attention_v0.py": {
+      "sha256": "087813356a96338232bbaf79d331463bccc322f383f88c0246d185d4ff111e8c",
+      "bytes": 5720
+    },
+    "src/babylm_hybrid/model.py": {
+      "sha256": "7497eb305be1a9fc9fe778e3bede27fc9c5765333dd9123cf0d6bd9f739ca270",
+      "bytes": 8209
+    },
+    "src/babylm_hybrid/official_causal_scoring.py": {
+      "sha256": "04e8434901e774b0c46256156c81be1acc6e899b1c97b1d0639609671b1a22c9",
+      "bytes": 11928
+    },
+    "src/babylm_hybrid/official_task_records.py": {
+      "sha256": "ec0158750a655ca1b391605f2790b676dac562a42d8f12bc06a694e245cea716",
+      "bytes": 17158
+    },
+    "src/babylm_hybrid/routing_diagnostics.py": {
+      "sha256": "e7fb902697a4c43f397e766f9c323d55fa2374fa33ff070d2b0c745cec0a3593",
+      "bytes": 18870
+    },
+    "src/babylm_hybrid/training.py": {
+      "sha256": "3c2af088027a689fe6281b7ee1c4ab8d27dcf156278449df5c553e95a85ab98f",
+      "bytes": 49705
+    },
+    "scripts/run_babylm_local_eval_remainder_v0.py": {
+      "sha256": "bdad87ece451ffd2831cd862c74d9e49f99430cdae75e49d492001c1fb37624d",
+      "bytes": 21201
+    },
+    "logs/babylm-optimization-stage-a-20260920-v0-observation-20260920T045631Z/raw/results/babylm-optimization-stage-a-20260920-v0/full-dev-dense/windows.jsonl": {
+      "sha256": "d2fa9e73e52d4b86ea77d725f6a2ad1a9bc0365bd734294f6d50a182c3dec50c",
+      "bytes": 18793337
+    },
+    "logs/babylm-optimization-stage-a-20260920-v0-observation-20260920T045631Z/raw/results/babylm-optimization-stage-a-20260920-v0/full-dev-sparse/windows.jsonl": {
+      "sha256": "5ad78902705d2f7e1dd3da11305718f856bf9c60aa811449ca71dd7c016849e5",
+      "bytes": 18968084
+    },
+    "logs/babylm-stage-c2-backup-20260920-v0/results/babylm-stage-c2-scale-recovery-20260920-v0/full-dev/evaluation/windows.jsonl": {
+      "sha256": "4ad4589b3943cacab88be4afcb2cb7dc7c4af7b0628b1eacd3a1d4eeaa3d4fa4",
+      "bytes": 18923728
+    }
+  },
+  "analysis_counts": {
+    "model_calls": 0,
+    "forward_calls": 0,
+    "backward_calls": 0,
+    "optimizer_updates": 0,
+    "cuda_calls": 0,
+    "remote_calls": 0,
+    "checkpoint_loads": 0
+  },
+  "script_sha256": "4f27b7ff87f81327bf7b7f9288bfd76b17ff47c7a6f2ce76aecd63a5ad049d90",
+  "requested_manifest": "logs\\babylm-w-arm-remainder-backup-20260921-v0\\manifest-20260921T063743.774117Z-436d1eb8.json",
+  "requested_manifest_sha256": "ada844233d770dc3d383566c1b9471d55f0d13b46af49692a6c5805d17ed41da",
+  "complete_quality_evidence": true,
+  "full_dev": {
+    "W": {
+      "total": {
+        "records": 18792,
+        "loss_tokens": 17418742,
+        "nll_sum": 68167539.55710828,
+        "nll": 3.913459396614766,
+        "ppl": 50.07187116452748
+      },
+      "per_source": {
+        "bnc_spoken.dev": {
+          "records": 858,
+          "loss_tokens": 1754772,
+          "nll_sum": 7741575.453527927,
+          "nll": 4.411727252046378,
+          "ppl": 82.41168639542474
+        },
+        "childes.dev": {
+          "records": 3471,
+          "loss_tokens": 5948331,
+          "nll_sum": 16113558.82213831,
+          "nll": 2.7089210103032784,
+          "ppl": 15.013067826982224
+        },
+        "gutenberg.dev": {
+          "records": 1938,
+          "loss_tokens": 3896381,
+          "nll_sum": 18895276.44893861,
+          "nll": 4.8494427133636595,
+          "ppl": 127.66922166622639
+        },
+        "open_subtitles.dev": {
+          "records": 1675,
+          "loss_tokens": 3428523,
+          "nll_sum": 13968111.614305496,
+          "nll": 4.074090100695109,
+          "ppl": 58.79695693122953
+        },
+        "simple_wiki.dev": {
+          "records": 10727,
+          "loss_tokens": 2139762,
+          "nll_sum": 10701470.044627786,
+          "nll": 5.001243149765154,
+          "ppl": 148.59777361442863
+        },
+        "switchboard.dev": {
+          "records": 123,
+          "loss_tokens": 250973,
+          "nll_sum": 747547.1735701561,
+          "nll": 2.9785959986538635,
+          "ppl": 19.66019431911933
+        }
+      },
+      "position": {
+        "1-256": {
+          "records": 18792,
+          "loss_tokens": 3411752,
+          "nll_sum": 14281556.541795872,
+          "nll": 4.185989058347697,
+          "ppl": 65.75850776469228
+        },
+        "257-512": {
+          "records": 18792,
+          "loss_tokens": 2328039,
+          "nll_sum": 9195685.652797649,
+          "nll": 3.949970620250627,
+          "ppl": 51.93384100918452
+        },
+        "513-1024": {
+          "records": 18792,
+          "loss_tokens": 4126276,
+          "nll_sum": 15847107.349457627,
+          "nll": 3.84053498831819,
+          "ppl": 46.55037168438642
+        },
+        "1025-2048": {
+          "records": 18792,
+          "loss_tokens": 7552675,
+          "nll_sum": 28843190.04399519,
+          "nll": 3.8189370049678013,
+          "ppl": 45.55575703025925
+        }
+      },
+      "per_source_position": {
+        "bnc_spoken.dev": {
+          "1-256": {
+            "records": 858,
+            "loss_tokens": 219648,
+            "nll_sum": 977096.3536010818,
+            "nll": 4.448464605191405,
+            "ppl": 85.49557371534006
+          },
+          "257-512": {
+            "records": 858,
+            "loss_tokens": 219629,
+            "nll_sum": 964859.1903857365,
+            "nll": 4.393132010735087,
+            "ppl": 80.89338157239635
+          },
+          "513-1024": {
+            "records": 858,
+            "loss_tokens": 438784,
+            "nll_sum": 1937138.6260933192,
+            "nll": 4.414788657046107,
+            "ppl": 82.66436852801485
+          },
+          "1025-2048": {
+            "records": 858,
+            "loss_tokens": 876711,
+            "nll_sum": 3862481.279218548,
+            "nll": 4.405649386421008,
+            "ppl": 81.9123183228138
+          }
+        },
+        "childes.dev": {
+          "1-256": {
+            "records": 3471,
+            "loss_tokens": 853325,
+            "nll_sum": 2368243.606899499,
+            "nll": 2.7753125794972595,
+            "ppl": 16.04364112523493
+          },
+          "257-512": {
+            "records": 3471,
+            "loss_tokens": 819915,
+            "nll_sum": 2207009.1430702996,
+            "nll": 2.6917535879576535,
+            "ppl": 14.757531873651063
+          },
+          "513-1024": {
+            "records": 3471,
+            "loss_tokens": 1537234,
+            "nll_sum": 4143538.0107384603,
+            "nll": 2.6954504068596323,
+            "ppl": 14.81218876249081
+          },
+          "1025-2048": {
+            "records": 3471,
+            "loss_tokens": 2737857,
+            "nll_sum": 7394768.098323689,
+            "nll": 2.700932918820701,
+            "ppl": 14.893619783854481
+          }
+        },
+        "gutenberg.dev": {
+          "1-256": {
+            "records": 1938,
+            "loss_tokens": 495023,
+            "nll_sum": 2429257.913710885,
+            "nll": 4.9073637259498755,
+            "ppl": 135.28230266911723
+          },
+          "257-512": {
+            "records": 1938,
+            "loss_tokens": 492030,
+            "nll_sum": 2383664.3779490185,
+            "nll": 4.844550897199396,
+            "ppl": 127.04621236985069
+          },
+          "513-1024": {
+            "records": 1938,
+            "loss_tokens": 976535,
+            "nll_sum": 4733450.512079772,
+            "nll": 4.847189821235052,
+            "ppl": 127.38192043253002
+          },
+          "1025-2048": {
+            "records": 1938,
+            "loss_tokens": 1932793,
+            "nll_sum": 9348903.621814447,
+            "nll": 4.83699166015939,
+            "ppl": 126.08946064793231
+          }
+        },
+        "open_subtitles.dev": {
+          "1-256": {
+            "records": 1675,
+            "loss_tokens": 428800,
+            "nll_sum": 1764228.0135607056,
+            "nll": 4.114337718191944,
+            "ppl": 61.211661465714734
+          },
+          "257-512": {
+            "records": 1675,
+            "loss_tokens": 428800,
+            "nll_sum": 1751156.597519355,
+            "nll": 4.083854005408943,
+            "ppl": 59.37385662984838
+          },
+          "513-1024": {
+            "records": 1675,
+            "loss_tokens": 857600,
+            "nll_sum": 3484604.649306852,
+            "nll": 4.0632050481656385,
+            "ppl": 58.160419622445964
+          },
+          "1025-2048": {
+            "records": 1675,
+            "loss_tokens": 1713323,
+            "nll_sum": 6968122.38736862,
+            "nll": 4.06702203108732,
+            "ppl": 58.382841170442845
+          }
+        },
+        "simple_wiki.dev": {
+          "1-256": {
+            "records": 10727,
+            "loss_tokens": 1383468,
+            "nll_sum": 6645888.716866612,
+            "nll": 4.803789257768602,
+            "ppl": 121.97172526729598
+          },
+          "257-512": {
+            "records": 10727,
+            "loss_tokens": 336177,
+            "nll_sum": 1796257.6188777336,
+            "nll": 5.343190101874113,
+            "ppl": 209.17894919694797
+          },
+          "513-1024": {
+            "records": 10727,
+            "loss_tokens": 253147,
+            "nll_sum": 1361735.4553112276,
+            "nll": 5.379228097947942,
+            "ppl": 216.85482012306477
+          },
+          "1025-2048": {
+            "records": 10727,
+            "loss_tokens": 166970,
+            "nll_sum": 897588.2419218629,
+            "nll": 5.375745594549098,
+            "ppl": 216.10093593896212
+          }
+        },
+        "switchboard.dev": {
+          "1-256": {
+            "records": 123,
+            "loss_tokens": 31488,
+            "nll_sum": 96841.93715708784,
+            "nll": 3.0755188375599545,
+            "ppl": 21.661117597912337
+          },
+          "257-512": {
+            "records": 123,
+            "loss_tokens": 31488,
+            "nll_sum": 92738.72499550553,
+            "nll": 2.945208491981248,
+            "ppl": 19.014626370349298
+          },
+          "513-1024": {
+            "records": 123,
+            "loss_tokens": 62976,
+            "nll_sum": 186640.0959279975,
+            "nll": 2.9636702224339033,
+            "ppl": 19.368929740509387
+          },
+          "1025-2048": {
+            "records": 123,
+            "loss_tokens": 125021,
+            "nll_sum": 371326.4153480235,
+            "nll": 2.970112343910411,
+            "ppl": 19.494109517509823
+          }
+        }
+      }
+    },
+    "D": {
+      "total": {
+        "records": 18792,
+        "loss_tokens": 17418742,
+        "nll_sum": 68600223.16476035,
+        "nll": 3.9382995146699087,
+        "ppl": 51.33123902350856
+      },
+      "per_source": {
+        "bnc_spoken.dev": {
+          "records": 858,
+          "loss_tokens": 1754772,
+          "nll_sum": 7785599.0557329655,
+          "nll": 4.436815184954493,
+          "ppl": 84.5053786461455
+        },
+        "childes.dev": {
+          "records": 3471,
+          "loss_tokens": 5948331,
+          "nll_sum": 16254944.564685702,
+          "nll": 2.7326899872730186,
+          "ppl": 15.374187815251814
+        },
+        "gutenberg.dev": {
+          "records": 1938,
+          "loss_tokens": 3896381,
+          "nll_sum": 18983742.62283063,
+          "nll": 4.872147416495109,
+          "ppl": 130.60107087904322
+        },
+        "open_subtitles.dev": {
+          "records": 1675,
+          "loss_tokens": 3428523,
+          "nll_sum": 14047532.838397741,
+          "nll": 4.097254951592199,
+          "ppl": 60.17487771989459
+        },
+        "simple_wiki.dev": {
+          "records": 10727,
+          "loss_tokens": 2139762,
+          "nll_sum": 10777721.539082408,
+          "nll": 5.036878652430695,
+          "ppl": 153.98861212369997
+        },
+        "switchboard.dev": {
+          "records": 123,
+          "loss_tokens": 250973,
+          "nll_sum": 750682.5440309048,
+          "nll": 2.9910888582871653,
+          "ppl": 19.907346974376956
+        }
+      },
+      "position": {
+        "1-256": {
+          "records": 18792,
+          "loss_tokens": 3411752,
+          "nll_sum": 14378921.104059396,
+          "nll": 4.214527053566436,
+          "ppl": 67.66215772627568
+        },
+        "257-512": {
+          "records": 18792,
+          "loss_tokens": 2328039,
+          "nll_sum": 9252695.04117232,
+          "nll": 3.974458778900319,
+          "ppl": 53.221304616518495
+        },
+        "513-1024": {
+          "records": 18792,
+          "loss_tokens": 4126276,
+          "nll_sum": 15941849.76537396,
+          "nll": 3.863495744194998,
+          "ppl": 47.631568452299504
+        },
+        "1025-2048": {
+          "records": 18792,
+          "loss_tokens": 7552675,
+          "nll_sum": 29026757.26875005,
+          "nll": 3.8432419333216443,
+          "ppl": 46.6765516845377
+        }
+      },
+      "per_source_position": {
+        "bnc_spoken.dev": {
+          "1-256": {
+            "records": 858,
+            "loss_tokens": 219648,
+            "nll_sum": 982519.1040744783,
+            "nll": 4.4731529723670524,
+            "ppl": 87.63259102074161
+          },
+          "257-512": {
+            "records": 858,
+            "loss_tokens": 219629,
+            "nll_sum": 970336.5628046979,
+            "nll": 4.418071214660623,
+            "ppl": 82.93616492999544
+          },
+          "513-1024": {
+            "records": 858,
+            "loss_tokens": 438784,
+            "nll_sum": 1947747.3693421788,
+            "nll": 4.438966255246725,
+            "ppl": 84.68735130350647
+          },
+          "1025-2048": {
+            "records": 858,
+            "loss_tokens": 876711,
+            "nll_sum": 3884996.0130579327,
+            "nll": 4.4313302936291805,
+            "ppl": 84.0431446383382
+          }
+        },
+        "childes.dev": {
+          "1-256": {
+            "records": 3471,
+            "loss_tokens": 853325,
+            "nll_sum": 2388760.602085215,
+            "nll": 2.79935616803119,
+            "ppl": 16.434062589372918
+          },
+          "257-512": {
+            "records": 3471,
+            "loss_tokens": 819915,
+            "nll_sum": 2224870.310505143,
+            "nll": 2.713537757578704,
+            "ppl": 15.082539610406164
+          },
+          "513-1024": {
+            "records": 3471,
+            "loss_tokens": 1537234,
+            "nll_sum": 4176597.4597879876,
+            "nll": 2.7169562082207315,
+            "ppl": 15.134186753931376
+          },
+          "1025-2048": {
+            "records": 3471,
+            "loss_tokens": 2737857,
+            "nll_sum": 7464716.22660404,
+            "nll": 2.726481414699175,
+            "ppl": 15.27903175175984
+          }
+        },
+        "gutenberg.dev": {
+          "1-256": {
+            "records": 1938,
+            "loss_tokens": 495023,
+            "nll_sum": 2438654.23172244,
+            "nll": 4.926345304606937,
+            "ppl": 137.87470040253774
+          },
+          "257-512": {
+            "records": 1938,
+            "loss_tokens": 492030,
+            "nll_sum": 2395646.096320443,
+            "nll": 4.868902498466441,
+            "ppl": 130.1779679480038
+          },
+          "513-1024": {
+            "records": 1938,
+            "loss_tokens": 976535,
+            "nll_sum": 4755677.218583539,
+            "nll": 4.869950609638711,
+            "ppl": 130.31448045824015
+          },
+          "1025-2048": {
+            "records": 1938,
+            "loss_tokens": 1932793,
+            "nll_sum": 9393765.077504223,
+            "nll": 4.860202348365409,
+            "ppl": 129.05031258538997
+          }
+        },
+        "open_subtitles.dev": {
+          "1-256": {
+            "records": 1675,
+            "loss_tokens": 428800,
+            "nll_sum": 1773729.059851509,
+            "nll": 4.136495008982064,
+            "ppl": 62.58308343895334
+          },
+          "257-512": {
+            "records": 1675,
+            "loss_tokens": 428800,
+            "nll_sum": 1762346.027603611,
+            "nll": 4.109948758403943,
+            "ppl": 60.9435946425521
+          },
+          "513-1024": {
+            "records": 1675,
+            "loss_tokens": 857600,
+            "nll_sum": 3504858.667164877,
+            "nll": 4.0868221398844184,
+            "ppl": 59.550348016166076
+          },
+          "1025-2048": {
+            "records": 1675,
+            "loss_tokens": 1713323,
+            "nll_sum": 7006599.074398732,
+            "nll": 4.089479376859315,
+            "ppl": 59.70879782889985
+          }
+        },
+        "simple_wiki.dev": {
+          "1-256": {
+            "records": 10727,
+            "loss_tokens": 1383468,
+            "nll_sum": 6698283.320184813,
+            "nll": 4.841661187815557,
+            "ppl": 126.67961567184655
+          },
+          "257-512": {
+            "records": 10727,
+            "loss_tokens": 336177,
+            "nll_sum": 1806315.0876169878,
+            "nll": 5.3731072846059895,
+            "ppl": 215.53154613462868
+          },
+          "513-1024": {
+            "records": 10727,
+            "loss_tokens": 253147,
+            "nll_sum": 1369463.6491012312,
+            "nll": 5.409756580568726,
+            "ppl": 223.57715803154383
+          },
+          "1025-2048": {
+            "records": 10727,
+            "loss_tokens": 166970,
+            "nll_sum": 903659.480020793,
+            "nll": 5.4121068456656465,
+            "ppl": 224.10324159829383
+          }
+        },
+        "switchboard.dev": {
+          "1-256": {
+            "records": 123,
+            "loss_tokens": 31488,
+            "nll_sum": 96974.78614094079,
+            "nll": 3.079737872870325,
+            "ppl": 21.75269967608213
+          },
+          "257-512": {
+            "records": 123,
+            "loss_tokens": 31488,
+            "nll_sum": 93180.95632143784,
+            "nll": 2.9592529319562324,
+            "ppl": 19.2835602413558
+          },
+          "513-1024": {
+            "records": 123,
+            "loss_tokens": 62976,
+            "nll_sum": 187505.4013941447,
+            "nll": 2.9774104642108847,
+            "ppl": 19.636900292262233
+          },
+          "1025-2048": {
+            "records": 123,
+            "loss_tokens": 125021,
+            "nll_sum": 373021.39716433064,
+            "nll": 2.983669920767956,
+            "ppl": 19.76020211517077
+          }
+        }
+      }
+    },
+    "E": {
+      "total": {
+        "records": 18792,
+        "loss_tokens": 17418742,
+        "nll_sum": 69382430.09377354,
+        "nll": 3.9832055663820927,
+        "ppl": 53.68886188863034
+      },
+      "per_source": {
+        "bnc_spoken.dev": {
+          "records": 858,
+          "loss_tokens": 1754772,
+          "nll_sum": 7819337.659255981,
+          "nll": 4.4560419583034045,
+          "ppl": 86.14586449689601
+        },
+        "childes.dev": {
+          "records": 3471,
+          "loss_tokens": 5948331,
+          "nll_sum": 16804468.63762313,
+          "nll": 2.825072888113175,
+          "ppl": 16.862173993344882
+        },
+        "gutenberg.dev": {
+          "records": 1938,
+          "loss_tokens": 3896381,
+          "nll_sum": 19072732.379996777,
+          "nll": 4.894986496442924,
+          "ppl": 133.61820228134349
+        },
+        "open_subtitles.dev": {
+          "records": 1675,
+          "loss_tokens": 3428523,
+          "nll_sum": 14098014.24827528,
+          "nll": 4.111978904115644,
+          "ppl": 61.067444694159654
+        },
+        "simple_wiki.dev": {
+          "records": 10727,
+          "loss_tokens": 2139762,
+          "nll_sum": 10833539.094530225,
+          "nll": 5.062964523405045,
+          "ppl": 158.0583902663928
+        },
+        "switchboard.dev": {
+          "records": 123,
+          "loss_tokens": 250973,
+          "nll_sum": 754338.0740921497,
+          "nll": 3.0056542898724157,
+          "ppl": 20.199428054495407
+        }
+      },
+      "position": {
+        "1-256": {
+          "records": 18792,
+          "loss_tokens": 3411752,
+          "nll_sum": 14489155.337316921,
+          "nll": 4.246837207779733,
+          "ppl": 69.88403376568817
+        },
+        "257-512": {
+          "records": 18792,
+          "loss_tokens": 2328039,
+          "nll_sum": 9364872.915782718,
+          "nll": 4.022644343923241,
+          "ppl": 55.84859362579597
+        },
+        "513-1024": {
+          "records": 18792,
+          "loss_tokens": 4126276,
+          "nll_sum": 16142837.778785158,
+          "nll": 3.9122050436725897,
+          "ppl": 50.009102740720515
+        },
+        "1025-2048": {
+          "records": 18792,
+          "loss_tokens": 7552675,
+          "nll_sum": 29385564.144546,
+          "nll": 3.890749190789488,
+          "ppl": 48.94754383936819
+        }
+      },
+      "per_source_position": {
+        "bnc_spoken.dev": {
+          "1-256": {
+            "records": 858,
+            "loss_tokens": 219648,
+            "nll_sum": 985374.1411828274,
+            "nll": 4.486151210950372,
+            "ppl": 88.77909547352708
+          },
+          "257-512": {
+            "records": 858,
+            "loss_tokens": 219629,
+            "nll_sum": 974449.5685217334,
+            "nll": 4.43679827582757,
+            "ppl": 84.50394974605308
+          },
+          "513-1024": {
+            "records": 858,
+            "loss_tokens": 438784,
+            "nll_sum": 1956665.9104132822,
+            "nll": 4.459291839295148,
+            "ppl": 86.42628372218759
+          },
+          "1025-2048": {
+            "records": 858,
+            "loss_tokens": 876711,
+            "nll_sum": 3902848.011342912,
+            "nll": 4.451692760034849,
+            "ppl": 85.77201261945213
+          }
+        },
+        "childes.dev": {
+          "1-256": {
+            "records": 3471,
+            "loss_tokens": 853325,
+            "nll_sum": 2451324.519972685,
+            "nll": 2.87267397529978,
+            "ppl": 17.68424226071339
+          },
+          "257-512": {
+            "records": 3471,
+            "loss_tokens": 819915,
+            "nll_sum": 2305591.744240902,
+            "nll": 2.811988735711509,
+            "ppl": 16.642983824791322
+          },
+          "513-1024": {
+            "records": 3471,
+            "loss_tokens": 1537234,
+            "nll_sum": 4322869.085674745,
+            "nll": 2.812108687210109,
+            "ppl": 16.64498029537971
+          },
+          "1025-2048": {
+            "records": 3471,
+            "loss_tokens": 2737857,
+            "nll_sum": 7724683.310483607,
+            "nll": 2.8214341766146322,
+            "ppl": 16.80092890113037
+          }
+        },
+        "gutenberg.dev": {
+          "1-256": {
+            "records": 1938,
+            "loss_tokens": 495023,
+            "nll_sum": 2444778.753996414,
+            "nll": 4.9387175020078145,
+            "ppl": 139.591109393581
+          },
+          "257-512": {
+            "records": 1938,
+            "loss_tokens": 492030,
+            "nll_sum": 2406926.120094209,
+            "nll": 4.891827978160293,
+            "ppl": 133.19683254885447
+          },
+          "513-1024": {
+            "records": 1938,
+            "loss_tokens": 976535,
+            "nll_sum": 4779478.698950643,
+            "nll": 4.894324011889633,
+            "ppl": 133.52971160138432
+          },
+          "1025-2048": {
+            "records": 1938,
+            "loss_tokens": 1932793,
+            "nll_sum": 9441548.845006084,
+            "nll": 4.8849249997315205,
+            "ppl": 132.2805438859377
+          }
+        },
+        "open_subtitles.dev": {
+          "1-256": {
+            "records": 1675,
+            "loss_tokens": 428800,
+            "nll_sum": 1776540.4571196677,
+            "nll": 4.143051439178329,
+            "ppl": 62.994753124070044
+          },
+          "257-512": {
+            "records": 1675,
+            "loss_tokens": 428800,
+            "nll_sum": 1769297.0769995889,
+            "nll": 4.126159228077399,
+            "ppl": 61.93956973728769
+          },
+          "513-1024": {
+            "records": 1675,
+            "loss_tokens": 857600,
+            "nll_sum": 3518819.731039868,
+            "nll": 4.103101365484921,
+            "ppl": 60.52771537345384
+          },
+          "1025-2048": {
+            "records": 1675,
+            "loss_tokens": 1713323,
+            "nll_sum": 7033357.020840327,
+            "nll": 4.105096949518758,
+            "ppl": 60.64862411751221
+          }
+        },
+        "simple_wiki.dev": {
+          "1-256": {
+            "records": 10727,
+            "loss_tokens": 1383468,
+            "nll_sum": 6734113.16247454,
+            "nll": 4.867559757417259,
+            "ppl": 130.00328994664702
+          },
+          "257-512": {
+            "records": 10727,
+            "loss_tokens": 336177,
+            "nll_sum": 1814920.3021361527,
+            "nll": 5.398704557825647,
+            "ppl": 221.119782693618
+          },
+          "513-1024": {
+            "records": 10727,
+            "loss_tokens": 253147,
+            "nll_sum": 1376591.0545211323,
+            "nll": 5.437911784540731,
+            "ppl": 229.9614726192611
+          },
+          "1025-2048": {
+            "records": 10727,
+            "loss_tokens": 166970,
+            "nll_sum": 907914.5850513717,
+            "nll": 5.437591094516211,
+            "ppl": 229.88773809256375
+          }
+        },
+        "switchboard.dev": {
+          "1-256": {
+            "records": 123,
+            "loss_tokens": 31488,
+            "nll_sum": 97024.30257078607,
+            "nll": 3.0813104220905125,
+            "ppl": 21.786933777344526
+          },
+          "257-512": {
+            "records": 123,
+            "loss_tokens": 31488,
+            "nll_sum": 93688.1037901328,
+            "nll": 2.975358987237449,
+            "ppl": 19.59665693675546
+          },
+          "513-1024": {
+            "records": 123,
+            "loss_tokens": 62976,
+            "nll_sum": 188413.29818548643,
+            "nll": 2.9918270164107983,
+            "ppl": 19.92204716913268
+          },
+          "1025-2048": {
+            "records": 123,
+            "loss_tokens": 125021,
+            "nll_sum": 375212.3718216964,
+            "nll": 3.001194773851564,
+            "ppl": 20.10954893910609
+          }
+        }
+      }
+    },
+    "F": {
+      "total": {
+        "records": 18792,
+        "loss_tokens": 17418742,
+        "nll_sum": 68752687.29418325,
+        "nll": 3.9470523930019317,
+        "ppl": 51.78250717987149
+      },
+      "per_source": {
+        "bnc_spoken.dev": {
+          "records": 858,
+          "loss_tokens": 1754772,
+          "nll_sum": 7774767.762883186,
+          "nll": 4.430642706222339,
+          "ppl": 83.98537749271037
+        },
+        "childes.dev": {
+          "records": 3471,
+          "loss_tokens": 5948331,
+          "nll_sum": 16423661.622863412,
+          "nll": 2.7610537515251607,
+          "ppl": 15.816500831958205
+        },
+        "gutenberg.dev": {
+          "records": 1938,
+          "loss_tokens": 3896381,
+          "nll_sum": 18951998.99660039,
+          "nll": 4.864000465201014,
+          "ppl": 129.54139274983328
+        },
+        "open_subtitles.dev": {
+          "records": 1675,
+          "loss_tokens": 3428523,
+          "nll_sum": 14063680.969326735,
+          "nll": 4.101964889641031,
+          "ppl": 60.4589661603556
+        },
+        "simple_wiki.dev": {
+          "records": 10727,
+          "loss_tokens": 2139762,
+          "nll_sum": 10788791.839244962,
+          "nll": 5.042052265272942,
+          "ppl": 154.7873539939308
+        },
+        "switchboard.dev": {
+          "records": 123,
+          "loss_tokens": 250973,
+          "nll_sum": 749786.1032645702,
+          "nll": 2.9875169969063213,
+          "ppl": 19.836367530355695
+        }
+      },
+      "position": {
+        "1-256": {
+          "records": 18792,
+          "loss_tokens": 3411752,
+          "nll_sum": 14400999.127219152,
+          "nll": 4.2209982223852,
+          "ppl": 68.10143074357418
+        },
+        "257-512": {
+          "records": 18792,
+          "loss_tokens": 2328039,
+          "nll_sum": 9275485.644283835,
+          "nll": 3.9842483928679178,
+          "ppl": 53.7448792589238
+        },
+        "513-1024": {
+          "records": 18792,
+          "loss_tokens": 4126276,
+          "nll_sum": 15985047.031479385,
+          "nll": 3.873964570348514,
+          "ppl": 48.13283431637359
+        },
+        "1025-2048": {
+          "records": 18792,
+          "loss_tokens": 7552675,
+          "nll_sum": 29091155.51145409,
+          "nll": 3.851768480896383,
+          "ppl": 47.07624309548807
+        }
+      },
+      "per_source_position": {
+        "bnc_spoken.dev": {
+          "1-256": {
+            "records": 858,
+            "loss_tokens": 219648,
+            "nll_sum": 980878.5269748375,
+            "nll": 4.46568385314156,
+            "ppl": 86.98049108803681
+          },
+          "257-512": {
+            "records": 858,
+            "loss_tokens": 219629,
+            "nll_sum": 969098.9550416932,
+            "nll": 4.412436222182377,
+            "ppl": 82.47013453648144
+          },
+          "513-1024": {
+            "records": 858,
+            "loss_tokens": 438784,
+            "nll_sum": 1945098.6157292966,
+            "nll": 4.432929677766957,
+            "ppl": 84.17766946051844
+          },
+          "1025-2048": {
+            "records": 858,
+            "loss_tokens": 876711,
+            "nll_sum": 3879691.681255511,
+            "nll": 4.425280030997114,
+            "ppl": 83.53619667145198
+          }
+        },
+        "childes.dev": {
+          "1-256": {
+            "records": 3471,
+            "loss_tokens": 853325,
+            "nll_sum": 2405741.425825756,
+            "nll": 2.8192557651841397,
+            "ppl": 16.7643694008436
+          },
+          "257-512": {
+            "records": 3471,
+            "loss_tokens": 819915,
+            "nll_sum": 2249526.217881513,
+            "nll": 2.7436090544526115,
+            "ppl": 15.542979451419196
+          },
+          "513-1024": {
+            "records": 3471,
+            "loss_tokens": 1537234,
+            "nll_sum": 4225284.345246086,
+            "nll": 2.748627954654975,
+            "ppl": 15.621184200889168
+          },
+          "1025-2048": {
+            "records": 3471,
+            "loss_tokens": 2737857,
+            "nll_sum": 7543109.655353014,
+            "nll": 2.755114549573997,
+            "ppl": 15.722841844488382
+          }
+        },
+        "gutenberg.dev": {
+          "1-256": {
+            "records": 1938,
+            "loss_tokens": 495023,
+            "nll_sum": 2435895.5804347144,
+            "nll": 4.920772530639414,
+            "ppl": 137.10849279519041
+          },
+          "257-512": {
+            "records": 1938,
+            "loss_tokens": 492030,
+            "nll_sum": 2392133.683802517,
+            "nll": 4.861763883914634,
+            "ppl": 129.25198665576573
+          },
+          "513-1024": {
+            "records": 1938,
+            "loss_tokens": 976535,
+            "nll_sum": 4747845.685768036,
+            "nll": 4.86193089420045,
+            "ppl": 129.2735748696761
+          },
+          "1025-2048": {
+            "records": 1938,
+            "loss_tokens": 1932793,
+            "nll_sum": 9376124.042811789,
+            "nll": 4.851075124346885,
+            "ppl": 127.87780050276815
+          }
+        },
+        "open_subtitles.dev": {
+          "1-256": {
+            "records": 1675,
+            "loss_tokens": 428800,
+            "nll_sum": 1774619.1444656854,
+            "nll": 4.1385707660113935,
+            "ppl": 62.71312563562733
+          },
+          "257-512": {
+            "records": 1675,
+            "loss_tokens": 428800,
+            "nll_sum": 1763984.3455972162,
+            "nll": 4.113769462680075,
+            "ppl": 61.17688748288565
+          },
+          "513-1024": {
+            "records": 1675,
+            "loss_tokens": 857600,
+            "nll_sum": 3509388.6594648366,
+            "nll": 4.092104313741647,
+            "ppl": 59.86573554020169
+          },
+          "1025-2048": {
+            "records": 1675,
+            "loss_tokens": 1713323,
+            "nll_sum": 7015688.80312979,
+            "nll": 4.094784697999029,
+            "ppl": 60.026413959053485
+          }
+        },
+        "simple_wiki.dev": {
+          "1-256": {
+            "records": 10727,
+            "loss_tokens": 1383468,
+            "nll_sum": 6707103.833722477,
+            "nll": 4.848036841995968,
+            "ppl": 127.48986127131396
+          },
+          "257-512": {
+            "records": 10727,
+            "loss_tokens": 336177,
+            "nll_sum": 1807656.439674786,
+            "nll": 5.377097301941495,
+            "ppl": 216.3932386809574
+          },
+          "513-1024": {
+            "records": 10727,
+            "loss_tokens": 253147,
+            "nll_sum": 1370188.3157672377,
+            "nll": 5.41261921242297,
+            "ppl": 224.21809407027902
+          },
+          "1025-2048": {
+            "records": 10727,
+            "loss_tokens": 166970,
+            "nll_sum": 903843.2519356768,
+            "nll": 5.41320747401136,
+            "ppl": 224.35003176557683
+          }
+        },
+        "switchboard.dev": {
+          "1-256": {
+            "records": 123,
+            "loss_tokens": 31488,
+            "nll_sum": 96760.61579568166,
+            "nll": 3.072936223186028,
+            "ppl": 21.605247460812237
+          },
+          "257-512": {
+            "records": 123,
+            "loss_tokens": 31488,
+            "nll_sum": 93086.00228611007,
+            "nll": 2.9562373693505486,
+            "ppl": 19.225497048784028
+          },
+          "513-1024": {
+            "records": 123,
+            "loss_tokens": 62976,
+            "nll_sum": 187241.40950389052,
+            "nll": 2.973218519815335,
+            "ppl": 19.554755791016547
+          },
+          "1025-2048": {
+            "records": 123,
+            "loss_tokens": 125021,
+            "nll_sum": 372698.07696830994,
+            "nll": 2.9810837936691432,
+            "ppl": 19.709165742720113
+          }
+        }
+      }
+    }
+  },
+  "W_minus_baseline": {
+    "D": {
+      "total": {
+        "nll_difference": -0.024840118055142746,
+        "ppl_relative_difference": -0.024534141059878105
+      },
+      "per_source": {
+        "bnc_spoken.dev": {
+          "nll_difference": -0.025087932908114396,
+          "ppl_relative_difference": -0.02477584603801144
+        },
+        "childes.dev": {
+          "nll_difference": -0.02376897696974023,
+          "ppl_relative_difference": -0.02348871970403174
+        },
+        "gutenberg.dev": {
+          "nll_difference": -0.022704703131449122,
+          "ppl_relative_difference": -0.02244889106255619
+        },
+        "open_subtitles.dev": {
+          "nll_difference": -0.023164850897090083,
+          "ppl_relative_difference": -0.022898605545641253
+        },
+        "simple_wiki.dev": {
+          "nll_difference": -0.035635502665541274,
+          "ppl_relative_difference": -0.03500803361316644
+        },
+        "switchboard.dev": {
+          "nll_difference": -0.012492859633301823,
+          "ppl_relative_difference": -0.01241514781330426
+        }
+      },
+      "position": {
+        "1-256": {
+          "nll_difference": -0.028537995218739454,
+          "ppl_relative_difference": -0.028134632792594903
+        },
+        "257-512": {
+          "nll_difference": -0.024488158649692338,
+          "ppl_relative_difference": -0.024190756250916514
+        },
+        "513-1024": {
+          "nll_difference": -0.022960755876808125,
+          "ppl_relative_difference": -0.022699163664867524
+        },
+        "1025-2048": {
+          "nll_difference": -0.024304928353843014,
+          "ppl_relative_difference": -0.024011942052902944
+        }
+      }
+    },
+    "E": {
+      "total": {
+        "nll_difference": -0.06974616976732673,
+        "ppl_relative_difference": -0.06736948031429271
+      },
+      "per_source": {
+        "bnc_spoken.dev": {
+          "nll_difference": -0.04431470625702616,
+          "ppl_relative_difference": -0.04334715454165331
+        },
+        "childes.dev": {
+          "nll_difference": -0.11615187780989666,
+          "ppl_relative_difference": -0.10966000985949126
+        },
+        "gutenberg.dev": {
+          "nll_difference": -0.04554378307926488,
+          "ppl_relative_difference": -0.044522232102711966
+        },
+        "open_subtitles.dev": {
+          "nll_difference": -0.03788880342053513,
+          "ppl_relative_difference": -0.03718000277072781
+        },
+        "simple_wiki.dev": {
+          "nll_difference": -0.06172137363989094,
+          "ppl_relative_difference": -0.059855200575048166
+        },
+        "switchboard.dev": {
+          "nll_difference": -0.02705829121855219,
+          "ppl_relative_difference": -0.026695495234879654
+        }
+      },
+      "position": {
+        "1-256": {
+          "nll_difference": -0.060848149432036536,
+          "ppl_relative_difference": -0.059033884833096975
+        },
+        "257-512": {
+          "nll_difference": -0.07267372367261382,
+          "ppl_relative_difference": -0.07009581374316404
+        },
+        "513-1024": {
+          "nll_difference": -0.07167005535439985,
+          "ppl_relative_difference": -0.06916202984617403
+        },
+        "1025-2048": {
+          "nll_difference": -0.07181218582168691,
+          "ppl_relative_difference": -0.0692943208803246
+        }
+      }
+    },
+    "F": {
+      "total": {
+        "nll_difference": -0.03359299638716573,
+        "ppl_relative_difference": -0.03303501719995807
+      },
+      "per_source": {
+        "bnc_spoken.dev": {
+          "nll_difference": -0.018915454175960633,
+          "ppl_relative_difference": -0.018737679632650668
+        },
+        "childes.dev": {
+          "nll_difference": -0.052132741221882384,
+          "ppl_relative_difference": -0.050797139867535986
+        },
+        "gutenberg.dev": {
+          "nll_difference": -0.014557751837354083,
+          "ppl_relative_difference": -0.01445230010165465
+        },
+        "open_subtitles.dev": {
+          "nll_difference": -0.027874788945921658,
+          "ppl_relative_difference": -0.02748987180359517
+        },
+        "simple_wiki.dev": {
+          "nll_difference": -0.04080911550778854,
+          "ppl_relative_difference": -0.039987636068414635
+        },
+        "switchboard.dev": {
+          "nll_difference": -0.008920998252457846,
+          "ppl_relative_difference": -0.008881324212548676
+        }
+      },
+      "position": {
+        "1-256": {
+          "nll_difference": -0.035009164037503204,
+          "ppl_relative_difference": -0.034403432546135954
+        },
+        "257-512": {
+          "nll_difference": -0.034277772617290925,
+          "ppl_relative_difference": -0.03369694517340596
+        },
+        "513-1024": {
+          "nll_difference": -0.03342958203032431,
+          "ppl_relative_difference": -0.03287698832746402
+        },
+        "1025-2048": {
+          "nll_difference": -0.03283147592858171,
+          "ppl_relative_difference": -0.03229837313365705
+        }
+      }
+    }
+  },
+  "original_prefix_failure_preserved": {
+    "status": "evaluation_failed",
+    "error_type": "TimeoutError",
+    "partial_metrics_only": true,
+    "windows": 12402,
+    "raw_sha256": "c23183ba0f66ef70d359cb970561876a5023c652d90ab2328a1274eccf3dd959"
+  },
+  "partition": {
+    "prefix_indices": [
+      0,
+      12401
+    ],
+    "remainder_indices": [
+      12402,
+      18791
+    ],
+    "no_duplicates_or_omissions": true,
+    "complete_totals": {
+      "windows": 18792,
+      "input_tokens": 17437534,
+      "loss_tokens": 17418742,
+      "word_exposures": 10420962
+    },
+    "prefix_raw_sha256": "c23183ba0f66ef70d359cb970561876a5023c652d90ab2328a1274eccf3dd959",
+    "remainder_raw_sha256": "5902690ab2afab01558537fdeeaa0fa9e65fba437b7ee8a6630259b495ca8f95",
+    "ordered_union_raw_sha256": "5a08d124d169a975dd36169c320ea8fa9741a684d427d39c1b1e436fdb34f689",
+    "original_files_never_rewritten": true
+  },
+  "physical_evaluation_counts": {
+    "original_prefix": {
+      "forward_attempts": 12402,
+      "forward_calls": 12402,
+      "committed_windows": 12402,
+      "submitted_input_tokens": 15739613,
+      "submitted_word_exposures": 9320813,
+      "backward_calls": 0,
+      "optimizer_updates": 0
+    },
+    "new_remainder": {
+      "forward_attempts": 6390,
+      "forward_calls": 6390,
+      "committed_windows": 6390,
+      "submitted_input_tokens": 1697921,
+      "submitted_word_exposures": 1100149,
+      "backward_calls": 0,
+      "optimizer_updates": 0
+    },
+    "union_forward_calls": 18792,
+    "union_backward_calls": 0,
+    "union_optimizer_updates": 0,
+    "migration_engineering_replay_forward_calls_separate": 48,
+    "migration_tiny_engineering_separate": {
+      "model_forward_calls": 9,
+      "backward_calls": 7,
+      "updates": 3,
+      "component_forward_calls": 2,
+      "component_backward_calls": 2,
+      "support_calls": 28
+    }
+  },
+  "timing_segments": {
+    "original_prefix": {
+      "started_utc": "2026-09-21T05:00:24.121138+00:00",
+      "completed_utc": "2026-09-21T05:53:44.200753+00:00",
+      "elapsed_wall_seconds": 3200.0796305190306
+    },
+    "new_remainder": {
+      "started_utc": "2026-09-21T06:18:20.409153+00:00",
+      "completed_utc": "2026-09-21T06:37:29.924918+00:00",
+      "elapsed_wall_seconds": 1149.5157625429565
+    },
+    "new_authorized_launch": {
+      "status": "dispatched",
+      "started_utc": "2026-09-21T06:18:14.669507+00:00",
+      "pid": 2723663,
+      "pgid": 2723663,
+      "start_ticks": 78459042,
+      "protocol": "configs/babylm-w-arm-remainder-20260921-v0.json",
+      "protocol_sha256": "398473dbd38e14de840d70bd4395ed01fb19b984fe2b165f643764c2e7ff9530",
+      "source_sha256": "bdad87ece451ffd2831cd862c74d9e49f99430cdae75e49d492001c1fb37624d",
+      "output_dir": "results/babylm-w-arm-remainder-20260921-v0",
+      "lock": "/tmp/babylm-one-epoch-GPU-43bd0f4d-6798-53e3-e996-f4b4c3854511.lock",
+      "static_validation": {
+        "status": "static_validation_passed",
+        "fixed_remainder_windows": 6390,
+        "model_calls": 0,
+        "cuda_calls": 0
+      },
+      "hard_seconds": 3300,
+      "hard_deadline_utc": "2026-09-21T07:13:14.669507+00:00",
+      "remaining_window_range": [
+        12402,
+        18792
+      ],
+      "expected_new_forward_calls": 6390,
+      "backward_calls": 0,
+      "optimizer_updates": 0,
+      "old_run_not_restarted": true,
+      "automatic_retry": false,
+      "automatic_monitoring": "PAUSED",
+      "gpu": "GPU-43bd0f4d-6798-53e3-e996-f4b4c3854511, NVIDIA GB300, 595.58.03",
+      "shared_gpu_other_jobs_untouched": true,
+      "hourly_price": null,
+      "cost_status": "Time bounded, new-host monetary rate unknown"
+    },
+    "summed_scorer_active_wall_seconds": 4349.595393061987,
+    "interpretation": "Two separate evaluator segments, excluding migration/setup/idle. Not a single uninterrupted timing measurement."
+  },
+  "cost_boundary": "Original timeout work and later remainder both count. No time or charge is erased. Original launch hourly price unknown; provider invoice/rate and idle intervals require separate accounting, never assumed zero.",
+  "checkpoint_sha256": "854b912cb76e889abd6c3fb7ef101c004b42576cc01425b6dde19033b790ab39",
+  "checkpoint_training_protocol_sha256": "e59de1c0d9133490876dd31f8f32694bcc82a344b96225f8e0be35e039b01389",
+  "runtime": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.4.2",
+    "torch_num_threads": 1,
+    "device": "cuda",
+    "dtype": "float32",
+    "cuda_version": "12.8",
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "gpu": {
+      "device_index": 0,
+      "name": "NVIDIA GB300",
+      "uuid": "43bd0f4d-6798-53e3-e996-f4b4c3854511",
+      "capability": [
+        10,
+        3
+      ],
+      "total_memory_bytes": 267898585088
+    }
+  },
+  "attention_counts": {
+    "valid_tokens": 52312602,
+    "aux_loss_query_count": 52256226,
+    "segments": 56376,
+    "logical_dense_causal_pairs": 47973731922,
+    "logical_kept_pairs": 11981542434,
+    "allocated_main_score_elements": 575370907452,
+    "indexer_score_elements": 0,
+    "aux_nonempty_support_query_count": 0,
+    "indexer_zero_score_visible_query_count": 0
+  },
+  "remainder_receipt": {
+    "status": "complete_local_remainder_and_union_audited",
+    "condition": "W_fixed_local",
+    "master_protocol_sha256": "398473dbd38e14de840d70bd4395ed01fb19b984fe2b165f643764c2e7ff9530",
+    "started_utc": "2026-09-21T06:18:14.698828+00:00",
+    "scope": "administrative_scoring_remainder",
+    "prefix_windows_sha256": "c23183ba0f66ef70d359cb970561876a5023c652d90ab2328a1274eccf3dd959",
+    "prefix_summary_sha256": "42e3f00f974f931f8793db287b0ed93ee4e4bcda7c2be1aac1eb4239b89ea990",
+    "prefix_windows_path": "results/babylm-w-arm-full-dev-20260921-v0/windows.jsonl",
+    "prefix_summary_path": "results/babylm-w-arm-full-dev-20260921-v0/summary.json",
+    "source_sha256": {
+      "scripts/check_babylm_gpu_numerics_v0.py": "7b44f465c7d540aa23b87abc5f0304e5dac318cfdad2bef094bfa673805cdbef",
+      "scripts/check_babylm_local_numerics_v0.py": "6ee0796527dd219c8950f7acdac21db3eb271c1a4c798ae3993762edfeed2f0d",
+      "scripts/prepare_babylm_optimization_stage_a_v0.py": "ec380604cc564513b0656d13ae62b3b370e7fc93ce3e3fd8f5202b9f18c97394",
+      "scripts/prepare_babylm_windows_v0.py": "706dcc92b0ffa663d16e8ac24c743750bb42ff0efb554a59472230a5c85ef69f",
+      "scripts/run_babylm_checkpoint_eval_v0.py": "216943a5acd448e4123a8323ddfa889c8210f45b3d9ade579db7afe36f8c1050",
+      "scripts/run_babylm_de_v0.py": "0c463cd3079977ce74f2f6464c2e0497ec60a7d0a7ce376ae8368c7fd7d533f5",
+      "scripts/run_babylm_local_eval_v0.py": "9b67135f81f373e855457d2ca5aa5ba4c800d6113a6b4effa32d145e61134d0c",
+      "scripts/run_babylm_local_queue_v0.py": "9d7e77a5fc6ccd856d0503904d4e8b6101d9d2b11a9b466a27683d20f93d6c67",
+      "scripts/run_babylm_local_train_v0.py": "9a9e62ae317904c7c185a34b794e7eb74526c0d31b13176e32769b0e70ee287c",
+      "scripts/run_babylm_one_epoch_mig_worker_v0.py": "1a8bd1903fcdfe65694f2dcbe951775d36b1bd2728552acff4695a73bba8fbe5",
+      "scripts/run_babylm_one_epoch_sequential_v0.py": "d8ded83075d1de0ffc9c8b72854946422699affe35dcb6e794b8e3ca614e8610",
+      "scripts/run_babylm_one_epoch_v0.py": "b8520461b85de767b2789b8363b362f69d92229560c3d0e9a28e6c3c84413018",
+      "scripts/run_babylm_optimization_stage_a_v0.py": "84e1eb7137290fefb97a9cb0766bad95d57f0d3c9082e584f7679c761b3a53d0",
+      "scripts/run_babylm_scientific_pair_v0.py": "593280477ca8457ad21f171c7a6cec137e7715029647f78db1ea75bb28fbafe7",
+      "scripts/run_babylm_sparse_parallel_v0.py": "0879da1142c1306822f64aeaf2fc49edfa36433db32d6b930de4e1bb7cde8ab5",
+      "scripts/summarize_babylm_one_epoch_v0.py": "f8c1087b7da80ec1bd6dbe09f3358dd722a1f110672c40ff481298fa6c47afeb",
+      "src/babylm_hybrid/__init__.py": "0faa2e1b9156f7292ea98890a5449105ec93c79eeb9df7c77160d787e6716b0f",
+      "src/babylm_hybrid/attention.py": "6aaacd6239c70854aad9eee0b6c116dafdb634cb7654b69a2100a1694fa439d9",
+      "src/babylm_hybrid/config.py": "c4a30217d5646d4ccf37c9b81bfccd9e24044363600e40d4e4d5bdd288c72c70",
+      "src/babylm_hybrid/evaluation.py": "5eda46b7c45eb1f0196839a04924a74cf6c419c44babcd8a5282fe9cd11d6c0f",
+      "src/babylm_hybrid/local_attention_v0.py": "087813356a96338232bbaf79d331463bccc322f383f88c0246d185d4ff111e8c",
+      "src/babylm_hybrid/model.py": "7497eb305be1a9fc9fe778e3bede27fc9c5765333dd9123cf0d6bd9f739ca270",
+      "src/babylm_hybrid/official_causal_scoring.py": "04e8434901e774b0c46256156c81be1acc6e899b1c97b1d0639609671b1a22c9",
+      "src/babylm_hybrid/official_task_records.py": "ec0158750a655ca1b391605f2790b676dac562a42d8f12bc06a694e245cea716",
+      "src/babylm_hybrid/routing_diagnostics.py": "e7fb902697a4c43f397e766f9c323d55fa2374fa33ff070d2b0c745cec0a3593",
+      "src/babylm_hybrid/training.py": "3c2af088027a689fe6281b7ee1c4ab8d27dcf156278449df5c553e95a85ab98f",
+      "scripts/run_babylm_local_eval_remainder_v0.py": "bdad87ece451ffd2831cd862c74d9e49f99430cdae75e49d492001c1fb37624d"
+    },
+    "new_scientific_forward_calls": 6390,
+    "counts": {
+      "forward_attempts": 6390,
+      "forward_calls": 6390,
+      "committed_windows": 6390,
+      "submitted_input_tokens": 1697921,
+      "submitted_word_exposures": 1100149,
+      "backward_calls": 0,
+      "optimizer_updates": 0
+    },
+    "training_resume": false,
+    "automatic_retry": false,
+    "old_run_extended_or_written": false,
+    "hard_timeout_seconds_required": 3300,
+    "gpu_lock_owner": "enclosing bounded controller",
+    "checkpoint_sha256": "854b912cb76e889abd6c3fb7ef101c004b42576cc01425b6dde19033b790ab39",
+    "checkpoint_protocol_sha256": "e59de1c0d9133490876dd31f8f32694bcc82a344b96225f8e0be35e039b01389",
+    "total": {
+      "source": "all",
+      "windows": 6390,
+      "word_exposures": 1100149,
+      "input_tokens": 1697921,
+      "loss_tokens": 1691531,
+      "forward_calls": 6390,
+      "zero_target_windows": 0,
+      "nll_sum": 8033553.190988064,
+      "nll": 4.74927931618638,
+      "attention_counts": {
+        "valid_tokens": 5093763,
+        "aux_loss_query_count": 5074593,
+        "segments": 19170,
+        "logical_dense_causal_pairs": 2343713130,
+        "logical_kept_pairs": 880417746,
+        "allocated_main_score_elements": 28093994982,
+        "indexer_score_elements": 0,
+        "aux_nonempty_support_query_count": 0,
+        "indexer_zero_score_visible_query_count": 0
+      },
+      "logical_retained_fraction": 0.37565081439809145,
+      "ppl": 115.50101481339158
+    },
+    "combined_total": {
+      "source": "all",
+      "windows": 18792,
+      "forward_calls": 18792,
+      "zero_target_windows": 1,
+      "word_exposures": 10420962,
+      "input_tokens": 17437534,
+      "attention_counts": {
+        "valid_tokens": 52312602,
+        "aux_loss_query_count": 52256226,
+        "segments": 56376,
+        "logical_dense_causal_pairs": 47973731922,
+        "logical_kept_pairs": 11981542434,
+        "allocated_main_score_elements": 575370907452,
+        "indexer_score_elements": 0,
+        "aux_nonempty_support_query_count": 0,
+        "indexer_zero_score_visible_query_count": 0
+      },
+      "loss_tokens": 17418742,
+      "nll_sum": 68167539.55710828,
+      "nll": 3.913459396614766,
+      "ppl": 50.07187116452748,
+      "logical_retained_fraction": 0.24975214464200257
+    },
+    "cumulative_scientific_forward_calls": 18792,
+    "backward_calls": 0,
+    "optimizer_updates": 0,
+    "original_evidence_unchanged": true,
+    "summary_sha256": "26869330640237c72958e1fda927a1b95da923e3ee5f47a07250d013ea07243f",
+    "windows_jsonl_sha256": "5902690ab2afab01558537fdeeaa0fa9e65fba437b7ee8a6630259b495ca8f95",
+    "combined_summary_sha256": "764f9956f34b586518e9863727523822027e40b67c9975ef1c4fea4cadc82548",
+    "evaluator_protocol_sha256": "62e944acb61ae3185333789a482e4bac776353614c5c32511a0eb9db30e29bce",
+    "verified_runtime": {
+      "torch": "2.10.0+cu128",
+      "numpy": "2.4.2",
+      "torch_num_threads": 1,
+      "device": "cuda",
+      "dtype": "float32",
+      "cuda_version": "12.8",
+      "float32_matmul_precision": "highest",
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false,
+      "cudnn_deterministic": true,
+      "cudnn_benchmark": false,
+      "deterministic_algorithms": true,
+      "deterministic_warn_only": false,
+      "gpu": {
+        "device_index": 0,
+        "name": "NVIDIA GB300",
+        "uuid": "43bd0f4d-6798-53e3-e996-f4b4c3854511",
+        "capability": [
+          10,
+          3
+        ],
+        "total_memory_bytes": 267898585088
+      }
+    },
+    "observed_window_indices_sha256": "875e278b46330d11ad8e61c5e802fc2ccdd00a104fae0b19e9b71db436a1a1a8",
+    "completed_utc": "2026-09-21T06:37:33.943777+00:00",
+    "elapsed_wall_seconds": 1159.2447788529098
+  },
+  "limitations": [
+    "Evaluation resume only; original W training remains one completed1413-update run with no new optimizer steps.",
+    "This is the complete frozen development dataset, already used for development; not an independent unseen confirmation.",
+    "One paired seed/small architecture; no statistical equivalence, full Qwen architecture claim, or paper-level proof.",
+    "Reference full-score sparse code and hardware/migration differences do not establish speedup or lower end-to-end cost.",
+    "Original timeout and prefix are preserved rather than hidden by the successful union."
+  ],
+  "completed_utc": "2026-09-21T06:38:03.845614+00:00"
+}

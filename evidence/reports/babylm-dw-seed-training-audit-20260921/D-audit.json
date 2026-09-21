@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "status": "passed_independent_D_training_and_v0_prefix_audit",
+  "completed_utc": "2026-09-21T16:26:14.606183+00:00",
+  "checks": 71086,
+  "failures": [],
+  "input_sha256": {
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162233.864260Z/receipt.json": "8d1e1f17db11ca6b95aac6f2233d2e5865eb1d56b283d207f0ae5b7b52b60636",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162233.864260Z/raw/master.json": "fe5668e8e09e45b0d5b8d40c4376147f1209fcd2349624c46bc9f69416b819a6",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162233.864260Z/raw/D/train-worker.json": "5aaf4cd1abf0415ed57455d24a5afbac67ba100f8365856e5c52a0500177017d",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162233.864260Z/raw/D/train/audit.json": "d86f3fdb1f307c7bcb6001c0d573aa585da3bfd959b47570849eec6703c8e328",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162233.864260Z/raw/D/train/run/protocol.json": "196f8410ab461101ceb7e51ff10de60f379eab24e80e17a090b915248d954a7f",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162233.864260Z/raw/D/train/run/events.jsonl": "76bcd0fa6ef8363e5d5e1daa313f1b70967e6c2a54e50a94f79ae28d91523383",
+    "logs/babylm-dw-seed-manual-snapshots-20260921-v1/20260921T162233.864260Z/raw/D/train/run/summary.json": "d338b3f26b0cdc9cc9fcf6d088e6d89465df2779a87a363fa9e888a0daaa275e",
+    "scripts/check_babylm_gpu_numerics_v0.py": "7b44f465c7d540aa23b87abc5f0304e5dac318cfdad2bef094bfa673805cdbef",
+    "scripts/check_babylm_local_numerics_v0.py": "6ee0796527dd219c8950f7acdac21db3eb271c1a4c798ae3993762edfeed2f0d",
+    "scripts/prepare_babylm_optimization_stage_a_v0.py": "ec380604cc564513b0656d13ae62b3b370e7fc93ce3e3fd8f5202b9f18c97394",
+    "scripts/prepare_babylm_windows_v0.py": "706dcc92b0ffa663d16e8ac24c743750bb42ff0efb554a59472230a5c85ef69f",
+    "scripts/run_babylm_checkpoint_eval_v0.py": "216943a5acd448e4123a8323ddfa889c8210f45b3d9ade579db7afe36f8c1050",
+    "scripts/run_babylm_de_v0.py": "0c463cd3079977ce74f2f6464c2e0497ec60a7d0a7ce376ae8368c7fd7d533f5",
+    "scripts/run_babylm_local_eval_v0.py": "9b67135f81f373e855457d2ca5aa5ba4c800d6113a6b4effa32d145e61134d0c",
+    "scripts/run_babylm_local_queue_v0.py": "9d7e77a5fc6ccd856d0503904d4e8b6101d9d2b11a9b466a27683d20f93d6c67",
+    "scripts/run_babylm_local_train_v0.py": "9a9e62ae317904c7c185a34b794e7eb74526c0d31b13176e32769b0e70ee287c",
+    "scripts/run_babylm_one_epoch_mig_worker_v0.py": "1a8bd1903fcdfe65694f2dcbe951775d36b1bd2728552acff4695a73bba8fbe5",
+    "scripts/run_babylm_one_epoch_sequential_v0.py": "d8ded83075d1de0ffc9c8b72854946422699affe35dcb6e794b8e3ca614e8610",
+    "scripts/run_babylm_one_epoch_v0.py": "b8520461b85de767b2789b8363b362f69d92229560c3d0e9a28e6c3c84413018",
+    "scripts/run_babylm_optimization_stage_a_v0.py": "84e1eb7137290fefb97a9cb0766bad95d57f0d3c9082e584f7679c761b3a53d0",
+    "scripts/run_babylm_scientific_pair_v0.py": "593280477ca8457ad21f171c7a6cec137e7715029647f78db1ea75bb28fbafe7",
+    "scripts/run_babylm_sparse_parallel_v0.py": "0879da1142c1306822f64aeaf2fc49edfa36433db32d6b930de4e1bb7cde8ab5",
+    "scripts/summarize_babylm_one_epoch_v0.py": "f8c1087b7da80ec1bd6dbe09f3358dd722a1f110672c40ff481298fa6c47afeb",
+    "src/babylm_hybrid/__init__.py": "0faa2e1b9156f7292ea98890a5449105ec93c79eeb9df7c77160d787e6716b0f",
+    "src/babylm_hybrid/attention.py": "6aaacd6239c70854aad9eee0b6c116dafdb634cb7654b69a2100a1694fa439d9",
+    "src/babylm_hybrid/config.py": "c4a30217d5646d4ccf37c9b81bfccd9e24044363600e40d4e4d5bdd288c72c70",
+    "src/babylm_hybrid/evaluation.py": "5eda46b7c45eb1f0196839a04924a74cf6c419c44babcd8a5282fe9cd11d6c0f",
+    "src/babylm_hybrid/local_attention_v0.py": "087813356a96338232bbaf79d331463bccc322f383f88c0246d185d4ff111e8c",
+    "src/babylm_hybrid/model.py": "7497eb305be1a9fc9fe778e3bede27fc9c5765333dd9123cf0d6bd9f739ca270",
+    "src/babylm_hybrid/official_causal_scoring.py": "04e8434901e774b0c46256156c81be1acc6e899b1c97b1d0639609671b1a22c9",
+    "src/babylm_hybrid/official_task_records.py": "ec0158750a655ca1b391605f2790b676dac562a42d8f12bc06a694e245cea716",
+    "src/babylm_hybrid/routing_diagnostics.py": "e7fb902697a4c43f397e766f9c323d55fa2374fa33ff070d2b0c745cec0a3593",
+    "src/babylm_hybrid/training.py": "3c2af088027a689fe6281b7ee1c4ab8d27dcf156278449df5c553e95a85ab98f",
+    "scripts/run_babylm_dw_seed_confirmation_v0.py": "618af5b06764966b6a6ee131d9e6b67d16cf44b54f2663467525ba3ab381fbbc",
+    "src/babylm_hybrid/training_timebound_v0.py": "9b630f21e6939e64bf8c951662bb3703695d25e5c66233e09b96e8f958b6090d",
+    "scripts/run_babylm_dw_seed_confirmation_v1.py": "569d183c27a16bae53dee466b5c80987b0706a050dec1668caf9048fc4cef1af",
+    "data/babylm-2026-windows-v0/manifest.json": "08e19b2fe6d1dc5b957c28e2d0503d9da3fdd04e481900da947f4fc281f1a218",
+    "data/babylm-2026-windows-v0/windows.u64.npy": "4306d2b06a1f17c65e68282ae231ab95946b74b847ffca92a6a9aba70f6bbb6a",
+    "data/babylm-2026-windows-v0/known-boundaries.json": "8f91ee29cc1ffaa3dc875ba2917ba19356f447c516c4de8f92ddd88ecce3fe06",
+    "data/babylm-2026-windows-v0/window-length-histogram.json": "7c57e31baa32101d9de2c0f2d4b8d2c7e2e3eb4788c4b737ed479037c4b9a59e",
+    "data/babylm-2026-tokenizer-16k-v0/bnc_spoken.ids.u32": "e466ee668a4a50aba752c16ca43b2694440828b32af975752624bdfd9fceafaa",
+    "data/babylm-2026-tokenizer-16k-v0/childes.ids.u32": "26408ee014b4e882b475dfe26965738916c80bc36cbc44670c1ed55d7953c850",
+    "data/babylm-2026-tokenizer-16k-v0/gutenberg.ids.u32": "5b3af1675e02adb951a1dacea99ca58e4f335baca7e183f750f8d4096ee227eb",
+    "data/babylm-2026-tokenizer-16k-v0/open_subtitles.ids.u32": "6bd00e9f0e0cf9cb8a01ce5bcb666457c7bfbb4cf7d6a9dcdbe67bd971aa0e0b",
+    "data/babylm-2026-tokenizer-16k-v0/simple_wiki.ids.u32": "b85a89930fc31ddfa6581d67194a4bafba5f1f3e6d1fbeec0e12a1bf9a2fd0e0",
+    "data/babylm-2026-tokenizer-16k-v0/switchboard.ids.u32": "cb17e3f2fa8c8f2130be42d529e4efd4b721efcbde307f43c70a3c62393703e0",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/manifest.json": "2f9491f8d9d438322a317ae686f9d74cb8d7eb78d5c77399f2892f4ec7027457",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/raw/D/train/run/events.jsonl": "af7e0a8b6c8fcf0c2cbbb3cadc9a967b8e0fb02f09f75b6552bd927e16356e4e",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/raw/D/train/run/failures/20260921T072945589277Z-8f124ccf.json": "e97156444f6d110c5bec7f91f2a57d16057539a7013c96fa13111b107f2bae9a",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/raw/D/train/run/protocol.json": "6b32f7b3347b5a54f336b4c0f277918542d7c4235e1c582d1f0be3f504bca172",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/raw/D/train-worker.json": "807fe500ae91be7b99d746d9ea7a824a85446cf43cc1c1b3fcfff36e5c841905",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/raw/master.json": "3ff29bede38d587c9a7da75d245b4bb11eedaa8fecf393b2119e5ace833983da",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/raw/stage.json": "3cb83bcc8ef93c597e9fe84012651869a2da1188a35104eb87646fcc47568954",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/raw/train_D.stderr.log": "f9a08ad390c7686f0e21f4cac08e967111f2a5bbcd0c3ea155fe14b6efdb4eed",
+    "logs/babylm-dw-v0-interruption-evidence-20260921/raw/train_D.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "condition": "D_dense",
+  "backbone_seed": 20260921,
+  "epoch_and_tail_audit": {
+    "schema_version": 1,
+    "status": "audited_epoch_complete",
+    "mode": "dense",
+    "scope": "online_training_loss_on_changing_model_and_training_minibatches_not_heldout_evaluation",
+    "interpretation": "No held-out quality, equivalence, speed, or novelty claim follows from this statistic.",
+    "primary_metric": "token_weighted_lm_nll_and_its_exponential_ppl",
+    "tail": {
+      "first_update": 1314,
+      "last_update": 1413,
+      "updates": 100,
+      "loss_tokens": 1068212,
+      "windows": 1590,
+      "input_tokens": 1069802,
+      "word_exposures": 650104,
+      "metrics": {
+        "token_weighted_lm_nll": 3.6446073959942074,
+        "token_weighted_lm_ppl": 38.26774583161074,
+        "arithmetic_mean_step_lm_nll": 3.6494080895665526,
+        "arithmetic_mean_step_lm_ppl": 43.78778542661842,
+        "exp_arithmetic_mean_step_lm_nll": 38.451899231397455,
+        "auxiliary_loss_separate": {
+          "token_weighted_mean": 0.0,
+          "arithmetic_mean_step": 0.0
+        }
+      },
+      "controls": {
+        "learning_rates": {
+          "backbone": {
+            "min": 2.9999999999999997e-05,
+            "max": 3.339341590378958e-05,
+            "count": 100
+          }
+        },
+        "clip_coefficients": {
+          "backbone": {
+            "min": 0.8547173738479614,
+            "max": 1.0,
+            "count": 100
+          }
+        },
+        "clip_coefficient_sources": [
+          "separate_group_fields"
+        ],
+        "gradient_clip_scopes": [
+          "separate_backbone_indexer"
+        ]
+      }
+    },
+    "whole_run_controls": {
+      "learning_rates": {
+        "backbone": {
+          "min": 1.8828e-06,
+          "max": 0.0002999998839524683,
+          "count": 1413
+        }
+      },
+      "clip_coefficients": {
+        "backbone": {
+          "min": 0.09050039947032928,
+          "max": 1.0,
+          "count": 1413
+        }
+      },
+      "clip_coefficient_sources": [
+        "separate_group_fields"
+      ],
+      "gradient_clip_scopes": [
+        "separate_backbone_indexer"
+      ]
+    },
+    "counts": {
+      "backward_attempts": 22598,
+      "backward_calls": 22598,
+      "engineering_updates": 0,
+      "forward_attempts": 22598,
+      "forward_calls": 22598,
+      "forward_input_tokens": 16325414,
+      "forward_word_exposures": 10001709,
+      "input_tokens": 16325414,
+      "loss_tokens": 16302816,
+      "scientific_updates": 1413,
+      "skipped_zero_target_input_tokens": 0,
+      "skipped_zero_target_word_exposures": 0,
+      "updates": 1413,
+      "windows": 22598,
+      "word_exposures": 10001709
+    },
+    "lr_schedule_audit": {
+      "all_update_lrs_verified_against_protocol": true,
+      "verified_updates": 1413,
+      "method": "Independently recomputed word-based linear warmup and cosine decay; skipped only when base schedule fields are absent."
+    },
+    "eval_counts_recorded_by_run": {
+      "evaluations": 7,
+      "forward_calls": 336,
+      "input_tokens": 544285,
+      "loss_tokens": 543949,
+      "word_exposures": 333998
+    },
+    "epoch_coverage": {
+      "epoch": 0,
+      "first_window_id": 0,
+      "last_window_id": 22597,
+      "every_window_exactly_once": true,
+      "final_update_windows": 6
+    },
+    "protocol_canonical_sha256": "6932d7ca9c87e7351a7067490da473d5483029507039c103e435a4e2b2170776",
+    "input_file_sha256": {
+      "protocol.json": "196f8410ab461101ceb7e51ff10de60f379eab24e80e17a090b915248d954a7f",
+      "summary.json": "d338b3f26b0cdc9cc9fcf6d088e6d89465df2779a87a363fa9e888a0daaa275e",
+      "events.jsonl": "76bcd0fa6ef8363e5d5e1daa313f1b70967e6c2a54e50a94f79ae28d91523383"
+    },
+    "source_hashes_recorded_by_training": {
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/check_babylm_gpu_numerics_v0.py": "7b44f465c7d540aa23b87abc5f0304e5dac318cfdad2bef094bfa673805cdbef",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/check_babylm_local_numerics_v0.py": "6ee0796527dd219c8950f7acdac21db3eb271c1a4c798ae3993762edfeed2f0d",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/prepare_babylm_optimization_stage_a_v0.py": "ec380604cc564513b0656d13ae62b3b370e7fc93ce3e3fd8f5202b9f18c97394",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/prepare_babylm_windows_v0.py": "706dcc92b0ffa663d16e8ac24c743750bb42ff0efb554a59472230a5c85ef69f",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_checkpoint_eval_v0.py": "216943a5acd448e4123a8323ddfa889c8210f45b3d9ade579db7afe36f8c1050",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_de_v0.py": "0c463cd3079977ce74f2f6464c2e0497ec60a7d0a7ce376ae8368c7fd7d533f5",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_dw_seed_confirmation_v0.py": "618af5b06764966b6a6ee131d9e6b67d16cf44b54f2663467525ba3ab381fbbc",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_dw_seed_confirmation_v1.py": "569d183c27a16bae53dee466b5c80987b0706a050dec1668caf9048fc4cef1af",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_local_eval_v0.py": "9b67135f81f373e855457d2ca5aa5ba4c800d6113a6b4effa32d145e61134d0c",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_local_queue_v0.py": "9d7e77a5fc6ccd856d0503904d4e8b6101d9d2b11a9b466a27683d20f93d6c67",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_local_train_v0.py": "9a9e62ae317904c7c185a34b794e7eb74526c0d31b13176e32769b0e70ee287c",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_one_epoch_mig_worker_v0.py": "1a8bd1903fcdfe65694f2dcbe951775d36b1bd2728552acff4695a73bba8fbe5",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_one_epoch_sequential_v0.py": "d8ded83075d1de0ffc9c8b72854946422699affe35dcb6e794b8e3ca614e8610",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_one_epoch_v0.py": "b8520461b85de767b2789b8363b362f69d92229560c3d0e9a28e6c3c84413018",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_optimization_stage_a_v0.py": "84e1eb7137290fefb97a9cb0766bad95d57f0d3c9082e584f7679c761b3a53d0",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_scientific_pair_v0.py": "593280477ca8457ad21f171c7a6cec137e7715029647f78db1ea75bb28fbafe7",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/run_babylm_sparse_parallel_v0.py": "0879da1142c1306822f64aeaf2fc49edfa36433db32d6b930de4e1bb7cde8ab5",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/scripts/summarize_babylm_one_epoch_v0.py": "f8c1087b7da80ec1bd6dbe09f3358dd722a1f110672c40ff481298fa6c47afeb",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/__init__.py": "0faa2e1b9156f7292ea98890a5449105ec93c79eeb9df7c77160d787e6716b0f",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/attention.py": "6aaacd6239c70854aad9eee0b6c116dafdb634cb7654b69a2100a1694fa439d9",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/config.py": "c4a30217d5646d4ccf37c9b81bfccd9e24044363600e40d4e4d5bdd288c72c70",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/evaluation.py": "5eda46b7c45eb1f0196839a04924a74cf6c419c44babcd8a5282fe9cd11d6c0f",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/local_attention_v0.py": "087813356a96338232bbaf79d331463bccc322f383f88c0246d185d4ff111e8c",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/model.py": "7497eb305be1a9fc9fe778e3bede27fc9c5765333dd9123cf0d6bd9f739ca270",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/official_causal_scoring.py": "04e8434901e774b0c46256156c81be1acc6e899b1c97b1d0639609671b1a22c9",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/official_task_records.py": "ec0158750a655ca1b391605f2790b676dac562a42d8f12bc06a694e245cea716",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/routing_diagnostics.py": "e7fb902697a4c43f397e766f9c323d55fa2374fa33ff070d2b0c745cec0a3593",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/training.py": "3c2af088027a689fe6281b7ee1c4ab8d27dcf156278449df5c553e95a85ab98f",
+      "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/src/babylm_hybrid/training_timebound_v0.py": "9b630f21e6939e64bf8c951662bb3703695d25e5c66233e09b96e8f958b6090d",
+      "/workspace/native-sparse-prefill/envs/babylm-arm-cu128-v0/lib/python3.12/site-packages/transformers/models/qwen3_next/modeling_qwen3_next.py": "ce8dd330895e7b589a773e3aa1574f3f6b1749ad052d0b55efc94a0dc8502dd4"
+    },
+    "source_hash_validation": "Start and summary agree; source files were not loaded or replayed by this audit.",
+    "data_fingerprint": {
+      "artifacts": {
+        "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-tokenizer-16k-v0/bnc_spoken.ids.u32": "e466ee668a4a50aba752c16ca43b2694440828b32af975752624bdfd9fceafaa",
+        "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-tokenizer-16k-v0/childes.ids.u32": "26408ee014b4e882b475dfe26965738916c80bc36cbc44670c1ed55d7953c850",
+        "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-tokenizer-16k-v0/gutenberg.ids.u32": "5b3af1675e02adb951a1dacea99ca58e4f335baca7e183f750f8d4096ee227eb",
+        "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-tokenizer-16k-v0/open_subtitles.ids.u32": "6bd00e9f0e0cf9cb8a01ce5bcb666457c7bfbb4cf7d6a9dcdbe67bd971aa0e0b",
+        "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-tokenizer-16k-v0/simple_wiki.ids.u32": "b85a89930fc31ddfa6581d67194a4bafba5f1f3e6d1fbeec0e12a1bf9a2fd0e0",
+        "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-tokenizer-16k-v0/switchboard.ids.u32": "cb17e3f2fa8c8f2130be42d529e4efd4b721efcbde307f43c70a3c62393703e0",
+        "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-windows-v0/known-boundaries.json": "8f91ee29cc1ffaa3dc875ba2917ba19356f447c516c4de8f92ddd88ecce3fe06",
+        "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-windows-v0/window-length-histogram.json": "7c57e31baa32101d9de2c0f2d4b8d2c7e2e3eb4788c4b737ed479037c4b9a59e",
+        "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-windows-v0/windows.u64.npy": "4306d2b06a1f17c65e68282ae231ab95946b74b847ffca92a6a9aba70f6bbb6a"
+      },
+      "manifest_path": "/workspace/native-sparse-prefill/babylm-optimization-20260920-v0/data/babylm-2026-windows-v0/manifest.json",
+      "manifest_sha256": "08e19b2fe6d1dc5b957c28e2d0503d9da3fdd04e481900da947f4fc281f1a218",
+      "tokenizer_sha256": "230b9d6993dcaf32f40cec2c44ac79d7d713213616ba2d8e45ad4a96e5a9dbe6",
+      "total_windows": 22598
+    },
+    "analysis_counts": {
+      "forward_calls": 0,
+      "backward_calls": 0,
+      "optimizer_updates": 0
+    }
+  },
+  "exact_data_order_verified": true,
+  "epoch_order_sha256": "9aacc98fe670a462e63e9b3bb4b72d208a35a7fbeb9a2541a13d728c2ff713ff",
+  "initial_parameter_hashes_sha256": "3f26ce064cc74c3f9544ec8e2fd3ef6a8489096a37bb1ce3c51701d07cb4792c",
+  "scientific_parameter_count": 95391000,
+  "panel_only": [
+    {
+      "update": 0,
+      "nll": 9.858579345591787,
+      "ppl": 19121.70479581767,
+      "loss_tokens": 77707
+    },
+    {
+      "update": 250,
+      "nll": 4.911383934950775,
+      "ppl": 135.8272604881639,
+      "loss_tokens": 77707
+    },
+    {
+      "update": 500,
+      "nll": 4.557992278830795,
+      "ppl": 95.3917673711648,
+      "loss_tokens": 77707
+    },
+    {
+      "update": 750,
+      "nll": 4.356512007918333,
+      "ppl": 77.98464964651023,
+      "loss_tokens": 77707
+    },
+    {
+      "update": 1000,
+      "nll": 4.109253448242617,
+      "ppl": 60.90123467029555,
+      "loss_tokens": 77707
+    },
+    {
+      "update": 1250,
+      "nll": 4.027454338353302,
+      "ppl": 56.11787214498171,
+      "loss_tokens": 77707
+    },
+    {
+      "update": 1413,
+      "nll": 4.013306113279958,
+      "ppl": 55.32949408526171,
+      "loss_tokens": 77707
+    }
+  ],
+  "panel_counts": {
+    "forward_calls": 336,
+    "evaluations": 7,
+    "word_exposures": 333998,
+    "input_tokens": 544285,
+    "loss_tokens": 543949
+  },
+  "full_dev_status_at_snapshot": "not_started",
+  "v0_vs_v1_committed_prefix": {
+    "updates": 19,
+    "windows": 304,
+    "mathematical_event_fields_exact": true,
+    "ignored_timing_fields": [
+      "elapsed_wall_seconds",
+      "update_seconds",
+      "utc"
+    ],
+    "maximum_lm_nll_absolute_difference": 0.0,
+    "each_update": [
+      {
+        "update": 1,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 2,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 3,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 4,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 5,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 6,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 7,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 8,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 9,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 10,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 11,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 12,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 13,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 14,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 15,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 16,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 17,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 18,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      },
+      {
+        "update": 19,
+        "exact_all_non_timing_fields": true,
+        "lm_nll_abs_difference": 0.0
+      }
+    ],
+    "initial_backbone_exact": true,
+    "initial_panel_metrics_exact": true,
+    "scientific_protocol_unchanged": true,
+    "administrative_changed_keys": [
+      "hard_timeout_seconds",
+      "max_wall_seconds",
+      "protocol_document",
+      "source_sha256"
+    ]
+  },
+  "old_interrupted_attempt_separate_accounting": {
+    "counts": {
+      "backward_attempts": 317,
+      "backward_calls": 316,
+      "engineering_updates": 0,
+      "forward_attempts": 317,
+      "forward_calls": 317,
+      "forward_input_tokens": 225742,
+      "forward_word_exposures": 137510,
+      "input_tokens": 225742,
+      "loss_tokens": 225425,
+      "scientific_updates": 19,
+      "skipped_zero_target_input_tokens": 0,
+      "skipped_zero_target_word_exposures": 0,
+      "updates": 19,
+      "windows": 317,
+      "word_exposures": 137510
+    },
+    "eval_counts": {
+      "evaluations": 1,
+      "forward_calls": 48,
+      "input_tokens": 77755,
+      "loss_tokens": 77707,
+      "word_exposures": 47714
+    },
+    "error_type": "InterruptedError",
+    "error": "Bounded D/W worker terminated",
+    "pending_next_update_windows_planned": 16,
+    "next_update_forward_completed": 13,
+    "next_update_backward_completed": 12,
+    "not_part_of_successful_one_epoch": true
+  },
+  "limitations": [
+    "Tail metrics are online training minibatch statistics, not heldout quality.",
+    "Seven48-window panels are monitoring only; full dev was not started at this snapshot.",
+    "No checkpoint tensors loaded or numerically replayed by this audit.",
+    "Exact19-step match establishes no observed mathematical prefix change, not proof about unseen trajectories.",
+    "Failed v0 physical work and its48 evaluation forwards remain separately charged; hourly dollar price is unknown."
+  ],
+  "analysis_counts": {
+    "model_calls": 0,
+    "forward_calls": 0,
+    "backward_calls": 0,
+    "optimizer_updates": 0,
+    "cuda_calls": 0,
+    "remote_calls": 0,
+    "torch_imported": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "stage": "train_W",
+  "arm": "W",
+  "condition": "W_fixed_local",
+  "started_utc": "2026-09-21T11:50:56.180327+00:00",
+  "master_protocol_sha256": "5bc4ace6c97e9e85e7fa1340ef6aad03e05b2d1963a32559415794f017d8c9e4",
+  "automatic_retry": false,
+  "counts": {
+    "backward_attempts": 22598,
+    "backward_calls": 22598,
+    "engineering_updates": 0,
+    "forward_attempts": 22598,
+    "forward_calls": 22598,
+    "forward_input_tokens": 16325414,
+    "forward_word_exposures": 10001709,
+    "input_tokens": 16325414,
+    "loss_tokens": 16302816,
+    "scientific_updates": 1413,
+    "skipped_zero_target_input_tokens": 0,
+    "skipped_zero_target_word_exposures": 0,
+    "updates": 1413,
+    "windows": 22598,
+    "word_exposures": 10001709
+  },
+  "eval_counts": {
+    "evaluations": 7,
+    "forward_calls": 336,
+    "input_tokens": 544285,
+    "loss_tokens": 543949,
+    "word_exposures": 333998
+  },
+  "initial_parameter_hashes_sha256": "3f26ce064cc74c3f9544ec8e2fd3ef6a8489096a37bb1ce3c51701d07cb4792c",
+  "engine_status": "epoch_complete",
+  "finished_utc": "2026-09-21T16:25:27.356699+00:00"
+}

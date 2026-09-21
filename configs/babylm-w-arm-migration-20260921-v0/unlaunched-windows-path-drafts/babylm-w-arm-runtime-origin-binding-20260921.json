@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "status": "source_and_target_runtime_bound_from_observed_evidence",
+  "utc": "2026-09-21T04:51:28.168401+00:00",
+  "original_completion_audit_path": "logs\\babylm-w-original-completion-audit-20260921.json",
+  "original_completion_audit_sha256": "611e45bfd07976dfbeba96d8f0559d7ed9c595712d8b00d1fb5f22fa06bf6f3c",
+  "original_runtime_field": "full_checkpoint.runtime",
+  "original_full_checkpoint_sha256": "6aa2435b3b28e96d0c17ca6b917a16ea532676605b5b70f7b72fdde6dea7f63e",
+  "original_runtime_sha256": "3dc45f0847249d9f2ad1b54917a8bbae77f0fd129b1d1b2f006cc2af533a4a03",
+  "target_runtime_path": "logs\\babylm-w-arm-runtime-20260921.json",
+  "target_runtime_file_sha256": "c95710177d93158f830058ab5117880c91bba0a6a096f79e61295ef57e693b82",
+  "target_runtime_field": "runtime",
+  "target_runtime_sha256": "8c694d4832fd4941c4632da66218e5976265bf4bf1bb9be961441eb446101dee",
+  "target_driver_evidence_path": "logs\\cloud-connection-w-migration-20260921.json",
+  "target_driver_evidence_sha256": "2d66f5940197afb049f41baf779d8911f3dfddd53469bf61b25f6f76e2fb8a01",
+  "target_driver_evidence_field": "driver",
+  "expected_driver_version": "595.58.03",
+  "reference_runtime": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.4.2",
+    "torch_num_threads": 1,
+    "cuda_version": "12.8",
+    "gpu": {
+      "device_index": 0,
+      "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+      "capability": [
+        12,
+        0
+      ],
+      "total_memory_bytes": 50868518912,
+      "uuid": "52d84956-19b4-cb5f-7ad1-ebca6d1d533c"
+    },
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false
+  },
+  "expected_runtime": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.4.2",
+    "torch_num_threads": 1,
+    "cuda_version": "12.8",
+    "gpu": {
+      "device_index": 0,
+      "name": "NVIDIA GB300",
+      "capability": [
+        10,
+        3
+      ],
+      "total_memory_bytes": 267898585088,
+      "uuid": "43bd0f4d-6798-53e3-e996-f4b4c3854511"
+    },
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false
+  },
+  "runtime_comparison": {
+    "changed_fields": [
+      "gpu.capability",
+      "gpu.name",
+      "gpu.total_memory_bytes",
+      "gpu.uuid"
+    ],
+    "software_and_precision_exact": true,
+    "hardware_change_requires_numerical_replay": true
+  },
+  "source_GDN_sha256": "ce8dd330895e7b589a773e3aa1574f3f6b1749ad052d0b55efc94a0dc8502dd4",
+  "machine": "aarch64",
+  "python": "3.12.3",
+  "model_calls": 0,
+  "gpu_calls": 0,
+  "remote_calls": 0,
+  "deadline_utc": "2026-09-21T05:59:32.739689Z",
+  "scorer_runtime_schema_note": "Full evaluator adds device=cuda and dtype=float32 to observed training._runtime_signature. Replay master retains exact _runtime_signature schema without dtype/device."
+}

@@ -162,7 +162,7 @@
   "budget_basis": "User supplied second card for same D/E; shared total150, thisPod75 including conservative setup reserve1.1; account balance not inferred.",
   "account_balance_verified": false,
   "historical_total_reconciled": false,
-  "pod_id": "REDACTED_POD_ID",
+  "pod_id": "REDACTED_CONNECTION_METADATA",
   "expected_stop_reason": "word_budget_reached",
   "actual_compute_hourly_rate_usd": 0.53,
   "cost_rate_basis": "0.53 compute plus conservative storage allowance for20GB container+1000GBvolume;0.68/h not invoice.",

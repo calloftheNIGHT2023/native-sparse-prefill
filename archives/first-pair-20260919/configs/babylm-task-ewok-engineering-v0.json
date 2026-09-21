@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "scope": "engineering_fixture",
+  "device": "cpu",
+  "snapshot": "logs/babylm-task-integration-v0/initialization/snapshots/model-u00000000-w000000000000-i000000000000-l000000000000.pt",
+  "snapshot_sha256": "40fea6bec59711817b1346c7e7fb5a2ba562d6c199f97f931c0076f6980308e7",
+  "snapshot_metadata_sha256": "8579b5a2c9f6e818d1d02f0e904010f1a2453c31b862c76339b11e59029e7400",
+  "training_protocol_sha256": "3f55d226f327e7db591b8740685fd26751867e97d1c0e83224393c4baa65ee07",
+  "mode": "sparse",
+  "tokenizer": "data/babylm-2026-tokenizer-16k-v0/tokenizer.json",
+  "tokenizer_sha256": "230b9d6993dcaf32f40cec2c44ac79d7d713213616ba2d8e45ad4a96e5a9dbe6",
+  "task_manifest": "data/babylm-task-engineering-fixtures-v0/ewok-manifest.json",
+  "task_manifest_sha256": "5515afac53994be6586f3ea06b1ba711b36baa545ffcee3fde6b8ec72c68cbdf",
+  "seed": 20260917,
+  "temperature": 1.0,
+  "batch_size": 2,
+  "max_items": 2,
+  "max_forward_attempts": 2,
+  "max_wall_seconds": 120,
+  "max_input_tokens": 128,
+  "max_model_parameters": 1000000
+}

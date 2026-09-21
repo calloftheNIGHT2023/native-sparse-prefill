@@ -1,0 +1,12 @@
+{
+  "status": "built",
+  "started_utc": "2026-09-16T05:02:31.436060+00:00",
+  "finished_utc": "2026-09-16T05:03:57.642334+00:00",
+  "seconds": 86.20626914128661,
+  "module_path": "/workspace/native-sparse-prefill/amp-confirmation-20260915-v0/experiments/topk-m64-v0/build/nsp_topk_m64_v0.so",
+  "module_sha256": "bd64a9456360a268d66d88aee35a73e9506ff5acdacec2fa6c5dfdfac3f044bf",
+  "manifest_sha256": "7bb376a7688a4fe3c84b6faeb344ccb7bd974a3ca4efce83b7df09627b32eb95",
+  "cutlass_archive_sha256": "14b93aa4779d12c909bb1617718e94722ff398796a5aea9c6cc97470f8a67ad4",
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2024 NVIDIA Corporation\nBuilt on Thu_Mar_28_02:18:24_PDT_2024\nCuda compilation tools, release 12.4, V12.4.131\nBuild cuda_12.4.r12.4/compiler.34097967_0\n",
+  "scope": "Build only; math/runtime not yet validated. Does not replace original wheel."
+}

@@ -167,7 +167,7 @@
   "budget_basis": "User authorized start then explicitly removed historical-budget blocking. Bounded first scientific D/E pair allocated up to USD150 including costs accrued on this Pod; not an account balance claim.",
   "account_balance_verified": false,
   "historical_total_reconciled": false,
-  "pod_id": "REDACTED_POD_ID",
+  "pod_id": "REDACTED_CONNECTION_METADATA",
   "preflight_stage_path": "results/a6000-preflight-20260918-v0/stage.json",
   "preflight_stage_sha256": "f1d407b2745406d55409c52475a27b3d3dee18f00256fe12cbcd9f77c69cf42c",
   "preflight_numerics_sha256": "f43ed7db19d844f7d4f697991db3662209b1215d62e48ded79c775b7b6094fea",

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "launch_allowed": true,
+  "pod_id": "REDACTED_CONNECTION_METADATA",
+  "output_dir": "results/babylm-stage-c2-scale-recovery-20260920-v0",
+  "hard_timeout_seconds": 10800,
+  "batch_cost_cap_usd": 4.2,
+  "cycle_cost_cap_usd": 20,
+  "conservative_hourly_rate_usd": 1.4,
+  "source_sha256": {
+    "src/babylm_hybrid/__init__.py": "0faa2e1b9156f7292ea98890a5449105ec93c79eeb9df7c77160d787e6716b0f",
+    "src/babylm_hybrid/attention.py": "6aaacd6239c70854aad9eee0b6c116dafdb634cb7654b69a2100a1694fa439d9",
+    "src/babylm_hybrid/config.py": "c4a30217d5646d4ccf37c9b81bfccd9e24044363600e40d4e4d5bdd288c72c70",
+    "src/babylm_hybrid/evaluation.py": "5eda46b7c45eb1f0196839a04924a74cf6c419c44babcd8a5282fe9cd11d6c0f",
+    "src/babylm_hybrid/model.py": "7497eb305be1a9fc9fe778e3bede27fc9c5765333dd9123cf0d6bd9f739ca270",
+    "src/babylm_hybrid/official_causal_scoring.py": "04e8434901e774b0c46256156c81be1acc6e899b1c97b1d0639609671b1a22c9",
+    "src/babylm_hybrid/official_task_records.py": "ec0158750a655ca1b391605f2790b676dac562a42d8f12bc06a694e245cea716",
+    "src/babylm_hybrid/training.py": "3c2af088027a689fe6281b7ee1c4ab8d27dcf156278449df5c553e95a85ab98f",
+    "scripts/run_babylm_de_v0.py": "0c463cd3079977ce74f2f6464c2e0497ec60a7d0a7ce376ae8368c7fd7d533f5",
+    "scripts/run_babylm_one_epoch_v0.py": "b8520461b85de767b2789b8363b362f69d92229560c3d0e9a28e6c3c84413018",
+    "scripts/summarize_babylm_one_epoch_v0.py": "f8c1087b7da80ec1bd6dbe09f3358dd722a1f110672c40ff481298fa6c47afeb",
+    "scripts/run_babylm_sparse_parallel_v0.py": "0879da1142c1306822f64aeaf2fc49edfa36433db32d6b930de4e1bb7cde8ab5",
+    "scripts/run_babylm_scientific_pair_v0.py": "593280477ca8457ad21f171c7a6cec137e7715029647f78db1ea75bb28fbafe7",
+    "scripts/check_babylm_gpu_numerics_v0.py": "7b44f465c7d540aa23b87abc5f0304e5dac318cfdad2bef094bfa673805cdbef",
+    "scripts/prepare_babylm_windows_v0.py": "706dcc92b0ffa663d16e8ac24c743750bb42ff0efb554a59472230a5c85ef69f",
+    "scripts/run_babylm_one_epoch_mig_worker_v0.py": "1a8bd1903fcdfe65694f2dcbe951775d36b1bd2728552acff4695a73bba8fbe5",
+    "scripts/run_babylm_one_epoch_sequential_v0.py": "d8ded83075d1de0ffc9c8b72854946422699affe35dcb6e794b8e3ca614e8610",
+    "scripts/run_babylm_checkpoint_eval_v0.py": "216943a5acd448e4123a8323ddfa889c8210f45b3d9ade579db7afe36f8c1050",
+    "src/babylm_hybrid/routing_diagnostics.py": "e7fb902697a4c43f397e766f9c323d55fa2374fa33ff070d2b0c745cec0a3593",
+    "scripts/run_babylm_optimization_stage_a_v0.py": "84e1eb7137290fefb97a9cb0766bad95d57f0d3c9082e584f7679c761b3a53d0",
+    "scripts/prepare_babylm_optimization_stage_a_v0.py": "ec380604cc564513b0656d13ae62b3b370e7fc93ce3e3fd8f5202b9f18c97394",
+    "scripts/run_babylm_score_scale_probe_v0.py": "ddefac93f93f63f5a89a8b190f114a55f04ca6daa06b16217237eeaf2bba50de",
+    "scripts/run_babylm_scale_epoch_continuation_v0.py": "28e91441a73603d78f53c9513270e50750eb5f706963a68a0d050e4fafe665fc",
+    "scripts/run_babylm_scale_full_dev_v0.py": "cdcda008df9fdab42f5c222e32628121f62f831bfe390dc6ccae1af0f9b037cf",
+    "scripts/run_babylm_scale_epoch_queue_v0.py": "d6f9c879c6ba243d17305f6354dd13184eb7d326558dc68a9bfe568a23bac78d",
+    "scripts/run_babylm_scale_epoch_recovery_v0.py": "09c1942e8961a8cab8bb4a41bfe355328efef7b5a695ed887f2a084f6b7641f6",
+    "scripts/run_babylm_scale_recovery_queue_v0.py": "8915ca27fe570cbacbe18b5343149f0df8a90f083ac5fa1976bfcb803b18dbba",
+    "scripts/replay_babylm_scale_checkpoint_v0.py": "b1c56afacbe698e1420f8a7907e319c4c557b2c19d36374a316a7d42b5f1a9f9",
+    "scripts/check_babylm_stage_b_mig_v0.py": "1611d03e51d9172ebdce1e085fca6e985b065a579abdd5976fca6b84e890897d"
+  },
+  "protocol_document": "docs/babylm-stage-c2-recovery-protocol-2026-09-20.md",
+  "no_extra_candidate_seed_retry_or_followup": true,
+  "stages": {
+    "train": {
+      "script": "scripts/run_babylm_scale_epoch_recovery_v0.py",
+      "protocol": "configs/babylm-stage-c2-scale-recovery-20260920-v0/train.json",
+      "protocol_sha256": "81c459818e6729b853037322fa9db1259de7cf08930945eda243be38cc72ca79",
+      "timeout_seconds": 5400
+    },
+    "full_dev": {
+      "script": "scripts/run_babylm_scale_full_dev_v0.py",
+      "protocol": "configs/babylm-stage-c2-scale-recovery-20260920-v0/eval.json",
+      "protocol_sha256": "f6774d5bfdfa085d04fddb94f18e682c3e2dc3ae38ce89b3f9c850da3079f4b6",
+      "timeout_seconds": 3600
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "status": "complete_evidence_index",
+  "utc": "2026-09-21T06:40:41.903756+00:00",
+  "files": [
+    {
+      "path": "results/babylm-stage-w-complete-20260921/REPORT.md",
+      "sha256": "14a121cab585e1c915e8f75b1ca6a32a86972936bbe6399ea804e7edaf897b01",
+      "bytes": 4417
+    },
+    {
+      "path": "results/babylm-stage-w-complete-20260921/metrics-audit.json",
+      "sha256": "eb2bce7cfacbe5077d23bb7b6d7d851c73b2c34333e9b8d17ad2e87a180ecc12",
+      "bytes": 62525
+    },
+    {
+      "path": "results/babylm-stage-w-complete-20260921/execution-audit.json",
+      "sha256": "2f9e114f081877fc7bcdc97fe049b680688d4188aa7d3d934a2396a542d3d4fc",
+      "bytes": 10356
+    },
+    {
+      "path": "results/babylm-stage-w-complete-20260921/audit_union.py",
+      "sha256": "4f27b7ff87f81327bf7b7f9288bfd76b17ff47c7a6f2ce76aecd63a5ad049d90",
+      "bytes": 24424
+    },
+    {
+      "path": "results/babylm-stage-w-complete-20260921/write_report.py",
+      "sha256": "850bd2c5e9746cc0c2f591be7fede991fd140b60aac7360bf996771b8087d20a",
+      "bytes": 5687
+    },
+    {
+      "path": "results/babylm-stage-w-complete-20260921/finalize_evidence.py",
+      "sha256": "01fc4f9426fae8cd46d8b2dc54e298c7b08eec5b1409ff6fe8656e32b8b23c2a",
+      "bytes": 10429
+    },
+    {
+      "path": "configs/babylm-w-arm-remainder-20260921-v0.json",
+      "sha256": "398473dbd38e14de840d70bd4395ed01fb19b984fe2b165f643764c2e7ff9530",
+      "bytes": 4723
+    },
+    {
+      "path": "scripts/run_babylm_local_eval_remainder_v0.py",
+      "sha256": "bdad87ece451ffd2831cd862c74d9e49f99430cdae75e49d492001c1fb37624d",
+      "bytes": 21201
+    },
+    {
+      "path": "logs/babylm-w-remainder-authorization-20260921.json",
+      "sha256": "6cd0aceb11cff9ee336c07f9439518cb87cc5a92bb550953718d32cde1970bdc",
+      "bytes": 1031
+    },
+    {
+      "path": "docs/babylm-w-remainder-protocol-2026-09-21.md",
+      "sha256": "bcc01865ff83247c906b4e685d23c1aeccfd54f46483e97ad73d03f1ae54a8c9",
+      "bytes": 3131
+    },
+    {
+      "path": "results/babylm-stage-w-complete-20260921/final-terminal-probe.json",
+      "sha256": "957e5454da956a1574ab0be6dd5bd9a8dc0c7f013f677724ac96be09e3bc6061",
+      "bytes": 6689
+    }
+  ],
+  "raw_evidence_manifest": "execution-audit.json",
+  "no_scientific_source_modified": true
+}

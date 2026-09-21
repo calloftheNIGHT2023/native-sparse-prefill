@@ -1,0 +1,16 @@
+  wiki=[nll(w) for w in np.load(R/'data/32k-expanded-training-v0/report.npz')['report']];assert len(wiki)==9 and all(math.isfinite(x) for x in wiki)
+  pgrows=[]
+  for i,w in enumerate(np.load(R/'data/pg19-external-v0/windows.npz')['windows']):
+   row=dict(window=i,input_sha256=hashlib.sha256(w.tobytes()).hexdigest(),full_nll=nll(w),full_context_tail_nll=nll(w,28672),short_context_tail_nll=nll(w[-4097:]),utc=utc())
+   assert all(math.isfinite(row[n]) for n in ['full_nll','full_context_tail_nll','short_context_tail_nll']);row['context_benefit_nats']=row['short_context_tail_nll']-row['full_context_tail_nll'];pgrows.append(row)
+   with (out/'pg19-nll.jsonl').open('a') as f:f.write(json.dumps(row)+'\n')
+  wm=json.loads((R/'data/fresh-word-dense-v0/tasks.json').read_text());wa=np.load(R/'data/fresh-word-dense-v0/tasks.npz');wf=wa['input_ids'];wo=wa['offsets'];labels=torch.tensor(protocol['answer_token_ids'],device='cuda');word_preds=[]
+  with torch.no_grad():
+   for i,item in enumerate(wm):
+    ids=torch.tensor(wf[wo[i]:wo[i+1]][None],device='cuda',dtype=torch.long)
+    with amp():h=model.model(ids,use_cache=False).last_hidden_state[:,-1:];logits=model.lm_head(h)[0,0].float()
+    values=logits[labels].cpu().tolist();assert np.isfinite(values).all();guess=int(np.argmax(values));pred=dict(**item,task='word',prediction=guess,choice_logits=values)
+    if item['gold'] is not None:pred['correct']=guess==item['gold']
+    word_preds.append(pred)
+    with (out/'task-predictions.jsonl').open('a') as f:f.write(json.dumps(pred)+'\n')
+  assert len(word_preds)==133;event('word_quality_complete',task_predictions=133)
