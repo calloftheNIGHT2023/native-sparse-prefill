@@ -13987,10 +13987,10 @@
     {
       "path": "scripts/export_github_snapshot_v1.py",
       "source": "scripts/export_github_snapshot_v1.py",
-      "source_sha256": "c9cd052ecdb4e7974108dd603df4771d47b9fe5db2acf0a546d8969010b67f63",
-      "source_bytes": 20888,
-      "export_sha256": "c9cd052ecdb4e7974108dd603df4771d47b9fe5db2acf0a546d8969010b67f63",
-      "export_bytes": 20888,
+      "source_sha256": "505b8cd7339c9cc2a605653d0dbfcccb8c1f51000fdc7982ed8e7210eb22eb09",
+      "source_bytes": 15601,
+      "export_sha256": "505b8cd7339c9cc2a605653d0dbfcccb8c1f51000fdc7982ed8e7210eb22eb09",
+      "export_bytes": 15601,
       "decompressed_sha256": null,
       "redacted": false,
       "byte_preserved": true
@@ -24425,11 +24425,11 @@
     },
     {
       "path": "README.md",
-      "source": null,
-      "source_sha256": "14fbdffa3d749a2739add594c74e52d808bc6b510c97d437ade29a9ecd7842a6",
-      "source_bytes": 4085,
-      "export_sha256": "14fbdffa3d749a2739add594c74e52d808bc6b510c97d437ade29a9ecd7842a6",
-      "export_bytes": 4085,
+      "source": "README.md",
+      "source_sha256": "4cada594645689cbff98ca29e70ebcc9585f4602077cf0e1c5a0f5f236ab5dc5",
+      "source_bytes": 10975,
+      "export_sha256": "4cada594645689cbff98ca29e70ebcc9585f4602077cf0e1c5a0f5f236ab5dc5",
+      "export_bytes": 10975,
       "decompressed_sha256": null,
       "redacted": false,
       "byte_preserved": true
@@ -24463,6 +24463,17 @@
       "source_bytes": 66,
       "export_sha256": "9a4e9aafbfa44dde34322b72746a23c55af65ee8015d93559b69abd9298d8b85",
       "export_bytes": 66,
+      "decompressed_sha256": null,
+      "redacted": false,
+      "byte_preserved": true
+    },
+    {
+      "path": "docs/research-history-and-roadmap-2026-09-22.md",
+      "source": "docs/research-history-and-roadmap-2026-09-22.md",
+      "source_sha256": "94a9462e6def8d009358ee126e5bb5b5744c38d34f5da5749c4dd14039e2e237",
+      "source_bytes": 31054,
+      "export_sha256": "94a9462e6def8d009358ee126e5bb5b5744c38d34f5da5749c4dd14039e2e237",
+      "export_bytes": 31054,
       "decompressed_sha256": null,
       "redacted": false,
       "byte_preserved": true
@@ -24659,7 +24670,9 @@
     "known_connection_values": 0,
     "concrete_ssh_relays": 0,
     "private_key_paths": 0,
-    "scanned_files": 2224,
+    "scanned_files": 2225,
     "limitations": "Pattern and metadata-value scan; not a guarantee against every possible unknown secret."
-  }
+  },
+  "updated_utc": "2026-09-22T00:14:20.810538+00:00",
+  "update_note": "Expanded maintained README focused on sparse training improvements; full research history and conditional roadmap in separate document. Scientific source/evidence unchanged."
 }

@@ -1,36 +1,102 @@
-# Native sparse prefill 研究快照
+# Native Sparse Prefill：怎样把稀疏训练做得更好
 
-当前结果：从随机初始化、全参数、第一步固定局部稀疏注意力开始，完成两个配对初始化种子的 BabyLM 一轮训练。W 在两个种子的完整开发集上都低于密集 D 的 NLL；PPL 分别为 50.07 对 51.33、50.56 对 54.40。这是小型混合模型上固定局部基线的质量证据，不是新路由方法、完整 Qwen 架构复现或论文创新已成立。
+**目标：从随机初始化开始，全参数、第一步就使用稀疏注意力，在质量接近密集模型的前提下，降低真实训练成本。** 当前用 BabyLM 上约 95M 参数的 GDN＋注意力混合模型研究这个问题；不是完整 Qwen 架构复现。
 
-另已完成约 44 秒的小型工程诊断：在固定的八窗口样本和共享 GPU 上，GDN 占仪器化前向流耗时约 82.5%（D）与 80.1%（W）。这只是定位开销：不代表全训练前向加反向占比，也不能据此宣称端到端加速或成本降低。诊断共 36 次前向、32 次反向、0 次参数更新，与科学训练分开记账。
+**下一步的具体方向：先让已有的固定局部稀疏基线真正少算，再测全训练是否省时。** 学习式选块的分数尺度修正已经改善质量，但仍没有超过简单局部窗口；暂不继续堆路由模块。共同 GDN 路径优化是公平测量前的工程准备，本身不算稀疏方法创新。
 
-Current work: random-initialized, full-parameter BabyLM pretraining in a small 95.391M-parameter hybrid model. D uses dense global attention; W uses the fixed most-recent 64 complete blocks (4 tokens per block) plus the original causal tail. W has no learned indexer or auxiliary routing objective.
+完整的已做实验、失败、中止原因、训练配置、末 100 步指标和所有后续候选见 [研究全记录与计划](docs/research-history-and-roadmap-2026-09-22.md)。本页重点说明**改哪里、如何验证、何时继续或停止**。下述未执行项不是已取得的结果，当前自动监控暂停。
 
-## Verified development-set results
+## 1. 已经知道什么，缺什么
 
-Each arm trained for one epoch: 10,001,709 word exposures, 16,325,414 input tokens, 1,413 updates. Evaluation covers all 18,792 fixed dev windows and 17,418,742 target tokens. Lower is better.
+一轮训练：22,598 窗，16,325,414 输入 token，1,413 更新。完整 dev：18,792 窗、17,418,742 监督 token；指标越低越好。
 
-| Backbone initialization seed | D NLL | W NLL | D PPL | W PPL | W minus D NLL |
-|---|---:|---:|---:|---:|---:|
-| 20260917 | 3.938299515 | 3.913459397 | 51.331239 | 50.071871 | -0.024840118 |
-| 20260921 | 3.996446633 | 3.923130225 | 54.404487 | 50.558457 | -0.073316408 |
+| 初始化 seed | 条件 | 改了什么 | 完整 dev PPL |
+|---|---|---|---:|
+| 20260917 | D | 密集全局注意力 | 51.331239 |
+| 20260917 | E | 第一步起学习式稀疏路由，原分数尺度 | 53.688862 |
+| 20260917 | F | 只把 E 的索引分数尺度改为 1/√128 | 51.782507 |
+| 20260917 | W | 固定最近局部块，无索引器／辅助损失 | **50.071871** |
+| 20260921 | D | 第二个初始化，密集 | 54.404487 |
+| 20260921 | W | 第二个初始化，固定局部 | **50.558457** |
 
-The fixed-local baseline has lower dev NLL in both matched initializations. Data order is held fixed; this is not two fully independent dataset/optimizer sweeps. The dev set was already used during development. Two seeds do not establish statistical equivalence, broad generalization, a novel method, or paper-level sufficiency.
+W 在两个初始化下都比 D 低；F 改善 E，却仍未超过 D/W。两个种子用了同一数据顺序和已观察的开发集，不能据此声称统计等价、广泛泛化或新方法成立。官方语言任务、独立长依赖任务、真实成本证据仍未补齐。
 
-**No acceleration or cost reduction is established.** Both implementations allocate full attention-score reference tensors. Hardware migration and shared-GPU timing are not matched speed evidence. The latest host price is unknown and monetary cost remains null. Failed earlier work and the interrupted initial three-hour allocation remain in the reports.
+**关键实现问题：W/E/F 当前仍计算完整 QK 分数，再用 mask 去掉连接。模型“看得少”了，但 GPU 还在“全算”。** 所以这批质量结果不等于加速结果。证据见 [W 完整比较](evidence/reports/babylm-stage-w-complete-20260921/REPORT.md)、[两种子审计](evidence/reports/babylm-dw-seed-full-dev-audit-20260921/metrics-audit.md)。
 
-## Inspect and verify
+## 2. 质量侧已做的改进：缩放路由分数，但不夸大其作用
 
-Run `python scripts/verify_github_evidence_v1.py` from this snapshot. It uses only the Python standard library: hash checks, decompression, original raw-counter and token-weighted metric recomputation, and the unchanged historical verifier. It performs no model calls, downloads, training, or network operations.
+代码入口：[attention.py](src/babylm_hybrid/attention.py) 的 `_QSAIndexer.forward`，配置为 `index_score_scale`。
 
-- `evidence/seed-20260921/`: 45 hash-verified terminal text artifacts; raw events and dev windows are gzipped.
-- `evidence/seed-20260917/`: first-seed D dev rows and the disjoint W prefix/remainder rows.
-- `evidence/reports/`: detailed training, quality, execution, and cost audits with their limitations.
-- `archives/first-pair-20260919/`: prior published first-pair evidence with its original sources and unchanged verifier. This earlier ten-pass experiment is historical, not the current one-epoch result.
-- `EXPORT_MANIFEST.json`: original-byte SHA, exported-byte SHA, and redaction/compression accounting.
+原 E 随训练出现大量全零路由分数，稳定排序在并列时会偏向较早块。B1 固定特征筛查后，F 只将尺度从 1 改为 `1/sqrt(128)`，保持索引器 LR、主干 LR、初始化、数据和一轮调度一致。F 的完整 dev PPL 从 E 的 53.689 改善到 51.783，仍不如局部 W 的 50.072。
 
-## Reproduction boundary
+**正的统一缩放不会在同一组固定分数上改变 top-k 排序，也不会把零分数直接变成非零。** 它会改变辅助 softmax 的分布及训练梯度，进而可能改变后续训练轨迹；这是待细分的机制，不能称为“当场选块更准确”。尺度修正也不自动构成新方法。
 
-This is an auditable source-and-text-evidence package, **not a complete runnable reproduction bundle**. Raw/tokenized BabyLM corpora, model weights, environment binaries, private keys, API tokens, and live connection settings are excluded. Scientific source bytes are preserved. Exported protocols and metadata may be redacted; embedded source/original-file hashes refer to pre-redaction evidence and must not be treated as hashes of the exported JSON. Cloud launch authorization and connection files are not provided. The public verifier never loads model tensors and does not establish numerical replay.
+当前不优先新增路由器：先回答简单 W 能否真正省成本。若之后要恢复学习式路由研究，必须在密集模型确实需要远程信息的设置中，同时比较 D、W、E/F 和相应预热对照，测选中块覆盖的密集注意力质量、全零率、早期块偏置及语言损失。固定特征指标、临时 mask 干预都不能替代从头训练质量。
 
-The small hybrid-model results do not reproduce or establish claims about the full Qwen architecture. Earlier LoRA/CPT experiments are historical and do not answer random-initialized pretraining.
+## 3. 计算侧的核心改动：保留 W 的规则，真正跳过远处 QK
+
+**状态：方案，尚未实现。** 参考入口是 [local_attention_v0.py](src/babylm_hybrid/local_attention_v0.py) 的 `LocalGlobalAttention._segment`。保留这个冻结版本作为数值对照，新实现单独放置。
+
+W 的规则不是笼统的“256-token 窗口”：每个 query 保留最近 **64 个完整的 4-token 块**，再加当前未完成块的因果尾部。文档内零基位置 q 的可见区间为：
+
+```text
+left(q) = 4 * max(0, floor((q + 1) / 4) - 64)
+support(q) = [left(q), q]
+```
+
+实际可见长度随尾部变化，长段上为 256～259 token；在文档起点截断并重置。直接换成固定 256 窗口会改变实验条件，不能当同一个模型的加速。
+
+拟采用**分块局部计算**：
+
+1. 保持原 Q/K/V 投影、RoPE、GQA、归一化、门控和输出投影，按一小组连续 query 分 tile。
+2. 只取该 tile 各 query 所需 K/V 区间的并集，跳过并集之外的 QK 点积；并集内仍可能多算某些 query 不需要的边，按每行精确左边界和因果 mask 丢弃，并将这些额外计算计入开销。
+3. 对保留区间做数值稳定的 softmax 与加权 V；不生成整段 `T×T` 分数或布尔 mask，反向也不能重建整段矩阵。
+4. 分别核对文档边界、短尾、GQA 和全部参数梯度。先做可审查的少算参考，达标后才选择能表达该精确支持集的高效局部／块稀疏内核；Python tile 循环不保证更快。
+
+对固定 tile 大小与局部宽度，注意力主要点积工作量可由全量的 `O(T²d)` 变为随局部宽度增长的 `O(Twd)`，另有边界 tile 的额外计算。**这是局部算子的复杂度目标，不是已经测得的训练加速倍数。** GDN、FFN、LM head、反向和优化器仍需计算。
+
+## 4. 为什么先处理共同 GDN 路径
+
+已完成的固定 8 窗诊断中，GDN 占带计时钩子的前向约 **80%～82%**。该诊断只有 36 次前向、32 次反向、0 更新；共享 GPU 上的这个前向比例不能当作整步训练占比，也不能直接推导训练加速上限。[诊断报告](evidence/reports/babylm-dw-cost-profile-audit-20260921/REPORT.md)
+
+眼下最小改动在 [model.py](src/babylm_hybrid/model.py) 的 `SegmentedGDN.forward`：对于已验证的 batch=1、单个有效计算 segment、无 padding、每窗重置输入，直接调用原 `self.core(x, cache_params=None)`，省掉每层的 GPU `tolist()` 分段及 `zeros_like → index_copy → stack` 重排。单计算 segment 不等于已认证上游自然文档连续性。
+
+这条快速路径只能由与实际输入绑定、核验过清单及 token SHA 的可信 CPU 元数据启用；多文档、padding、其他 batch 或信息缺失，退回原实现。不能直接忽略 segment IDs，也不更换 GDN 数学算子或精度。**D/W 必须同时获得这项优化**，否则比较会偏向稀疏组。
+
+先用现有检查点测正确性和短 F/B 开销，不重新训练。没收益就停止扩大该适配器。具体门槛见 [GDN 快速路径计划](docs/babylm-common-gdn-next-step-2026-09-21.md)。
+
+## 5. 实施顺序与过关标准
+
+| 顺序 | 做什么 | 通过标准；失败怎么办 |
+|---|---|---|
+| ① 共同路径 | 新增 GDN 单文档适配器，D/W 同用；原路径保留。 | tiny 覆盖 63/64/65-token、padding、多文档及回退；真实窗口输出／梯度达原阈值。失败则修实现，不放宽阈值。 |
+| ② 精确少算 | 实现上述局部 tile 路径；覆盖 4-token 块边界及局部历史饱和前后的边界。 | 与 W 参考的支持集完全相同；检查前反向未构建整段分数／mask；数值与梯度等价门槛通过后才量速度。 |
+| ③ 公平短测 | 固定已有 D/W 权重、输入、精度、batch；合理优化密集实现和共同主干。 | 同一受控 GPU、交替多次，分开冷启动／编译与稳态；完整 F/B、峰值显存与波动可核查。没端到端潜力就不扩大。 |
+| ④ 完整训练成本 | 有价值才冻结一小批训练对照，计入梯度累积、裁剪、AdamW、数据、评测和保存。 | 同曝光下预先约定的质量容差内，同时降低实际墙时／费用；或等预算达到更好质量。失败如实报告。 |
+| ⑤ 独立质量确认 | 真实 BabyLM 任务、自然长依赖条件，必要时更多配对种子。 | 看分前固定数据／评分／容差；不能用“不显著”代替非劣，也不能只报告有利子集。 |
+
+步骤①②均是**未执行计划**。新路径分别与自身 D 或 W 参考对齐，不要求 D 与 W 输出相等。保留 FP64 oracle 与既有 GPU FP32 `atol=1e-6, rtol=1e-5` 门槛，核对 logits、纯 LM loss、所有具名梯度、状态重置与权重不变；精度变化另立验证。计时、部署失败和重跑都记账。详细成本口径见 [成本验证计划](docs/babylm-dw-cost-validation-next-2026-09-21.md)。
+
+## 6. 什么才算“改进稀疏化”
+
+- **质量改进：** 在相同初始化、数据与曝光、合理学习率控制下，比原稀疏方案好，并能说明相对固定局部等强基线的价值。F 目前只满足前半项。
+- **计算改进：** 在相同数学支持集和数值精度下，真正减少运算／访存，并降低完整训练成本。只把分数 mask 掉、算子快一点或共享卡的一次计时都不够。
+- **研究贡献：** 除上述结果，还需要前人未回答的问题、可解释机制与独立确认。固定局部注意力和数值尺度调整已有广泛背景；工程有效不自动等于论文创新。
+
+若 W 在独立任务掉分，先定位依赖跨度与模型容量；若质量合格但不省时间，检查全训练瓶颈并接受当前设置收益有限。只有真实远程需求下 W 不够、学习式路由有希望补上时，再考虑路由改进或先密集后稀疏的 L 对照；不因想要创新而添加模块。**原目标仍是“低成本下接近密集质量”，不是把当前局部基线包装成 QSA 冷启动已解决。**
+
+## 7. 历史、代码与复核入口
+
+- [全部研究记录与后续计划](docs/research-history-and-roadmap-2026-09-22.md)：早期索引器／MQAR／内核／LoRA／QK 恢复、BabyLM 重启、十遍过拟合、一轮 D/E、B1/B2/C2、W、第二种子、失败与暂缓计划。
+- [STATE.md](STATE.md)、[TIMELINE.md](TIMELINE.md)：状态和逐次 UTC 时间轴。
+- [src/](src/)、[scripts/](scripts/)、[configs/](configs/)：实现、执行／审计工具与协议。配置存在不表示跑过。
+- [EVIDENCE_INDEX.json](EVIDENCE_INDEX.json)、[evidence/reports/](evidence/reports/)、[EXPORT_MANIFEST.json](EXPORT_MANIFEST.json)：公开原始记录、审计与文件哈希。
+- [archives/first-pair-20260919/](archives/first-pair-20260919/)：旧十遍首对的冻结代码和证据，不与一轮结果混用。
+
+仓库根目录可运行标准库离线复核：
+
+```bash
+python scripts/verify_github_evidence_v1.py
+```
+
+它校验文件 SHA、原始计数、逐窗加权指标与成本诊断，不调用模型或联网，不等于权重数值重放。仓库是**代码＋精选文本证据包**，不含语料、权重、优化器、环境、凭据或实际云连接，不能直接一键重跑全部实验。公开协议可能脱敏，内嵌原始文件 SHA 与导出 JSON 的 SHA 分开记录。
